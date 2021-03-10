@@ -1,12 +1,39 @@
 <template>
   <div>
 
-    <navbar />
+    <navbar></navbar>
+    <menuOverlay 
+                
+    ></menuOverlay>
 
     <Nuxt />
 
   </div>
 </template>
+
+<script>
+import menuOverlay from '@/components/menuOverlay.vue'
+import navbar from '@/components/navbar.vue'
+
+export default {
+  data(){
+    return{
+     
+    }
+  },
+  methods:{
+
+  },
+  components:{
+    navbar,
+    menuOverlay
+  },
+
+}
+  
+</script>
+
+
 
 <style>
 html {

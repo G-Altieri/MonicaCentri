@@ -1,4 +1,7 @@
 {
+  "MenuOverlay": {
+    "description": "Auto imported from components/menuOverlay.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/navbar.vue"
   }

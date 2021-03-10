@@ -6,7 +6,9 @@
         MonicaCentri
       </h1>
 
-    <h3>{{ $t("hero.title") }}</h3>
+    <h3>{{ $t("hero.developer") }}</h3>
+    <h3>{{ $t("hero.designer") }}</h3>
+    <h3>{{ $t("hero.marketing") }}</h3>
 
      </div>
   </div>
@@ -44,7 +46,7 @@ export default {}
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 3rem;
   color: #35495e;
   letter-spacing: 1px;
 }

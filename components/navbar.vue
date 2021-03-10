@@ -1,17 +1,16 @@
 <template>
   <!-- NAVBAR -->
-  <nav class="bg-white fixed py-2 w-full mynav">
+  <nav class="bg-white fixed py-2 w-full z-50">
     <div class="mx-auto" :class="navPadding">
       <div class="text-white space-x-4 flex">
         <!-- Hamburger Menu -->
         <div class="flex-1 text-left grid">
-          <div class="containerHam">
-            <span @click="activatMenu()">
+          <span class="spanClick" @click="activatMenu()">
+            <div class="containerHam">
               <svg
                 class="ham hamRotate ham4 justify-self-start"
                 :class="{ active: hasHamburger }"
                 viewBox="0 0 100 100"
-               
                 id="myham"
               >
                 <path
@@ -26,8 +25,8 @@
                   d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
                 />
               </svg>
-            </span>
-          </div>
+            </div>
+          </span>
         </div>
         <!--** Hamburger Menu **-->
         <!-- Logo Center -->
@@ -50,6 +49,7 @@
         <!--** Icon Account **-->
       </div>
     </div>
+
   </nav>
   <!-- **NAVBAR** -->
 </template>
@@ -77,7 +77,9 @@ export default {
   methods: {
     activatMenu() {
       this.hasHamburger = !this.hasHamburger;
-      this.$emit("eventoMenu", "WEOA");
+      this.ciao =  "234"
+     // this.$emit('eventoDiReset', this.ciao);
+     $nuxt.$emit('eventoX')
     },
   },
   components: {},
@@ -85,14 +87,15 @@ export default {
 </script>
 
 <style >
-.containerHam{
-    width: 40px;
-    transform: translateX(-11px);
+.spanClick {
+  width: 50%;
 }
 
-.mynav {
-  z-index: 100;
+.containerHam {
+  width: 40px;
+  transform: translateX(-11px);
 }
+
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -151,9 +154,4 @@ export default {
 @media screen and (max-width: 600px) {
 }
 
-.overlayMenu {
-  background: green;
-  color: #af384f;
-  z-index: 5;
-}
 </style>

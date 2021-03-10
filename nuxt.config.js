@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 export default {
   server: {
     port: 8000, // default: 3000
@@ -27,17 +29,25 @@ export default {
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
-      href: '/favicon.ico'
+      href: '/favicon.svg'
     }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    // Load a Node.js module directly (here it's a Sass file)
+    // 'bulma',
+    // CSS file in the project
+    '~/assets/css/main.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     /*Plugin media query */
-    {src: '~/plugins/vueMq'}
+    {
+      src: '~/plugins/vueMq'
+    }
+    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -65,6 +75,12 @@ export default {
           iso: 'en-US',
           file: 'en-US.js'
         },
+        {
+          name: 'Spagnolo',
+          code: 'es',
+          iso: 'es-ES',
+          file: 'es-ES.js'
+        },
       ],
       lazy: true,
       langDir: 'lang/',
@@ -72,6 +88,24 @@ export default {
     }]
   ],
 
+
+  //Import Script
+  script: [{
+    
+    },
+
+  ],
+
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+//*Jquery  */
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ]
+  },//build 
 }

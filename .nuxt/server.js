@@ -139,7 +139,7 @@ const { app, router } = await createApp(ssrContext, ssrContext.runtimeConfig.pri
   /*
   ** Call global middleware (nuxt.config.js)
   */
-  let midd = []
+  let midd = ["nuxti18n"]
   midd = midd.map((name) => {
     if (typeof name === 'function') {
       return name

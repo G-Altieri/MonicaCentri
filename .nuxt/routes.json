@@ -1,6 +1,13 @@
 [
   {
-    "name": "index",
+    "name": "index___en",
+    "path": "/en",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2da87d57"
+  },
+  {
+    "name": "index___it",
     "path": "/",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
     "chunkName": "pages/index",

@@ -1,6 +1,8 @@
 export default{
     hero : {
-        title : 'Sviluppatore: Giovanni'
+        developer : 'Sviluppatore: Giovanni Altieri',
+        designer : 'Grafico: Fabrizio Bevilacua',
+        marketing : 'Marketing : Oscar Bevilacqua',
     },
     
 }

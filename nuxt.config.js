@@ -55,6 +55,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    //GSAP
+    'nuxt-gsap',
+    ['nuxt-gsap-module'],
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
@@ -90,12 +93,14 @@ export default {
 
 
   //Import Script
-  script: [{
-    
-    },
-
+  script: [
+  
   ],
 
+  //Gsap Options
+  gsap: {
+    /* module options */
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

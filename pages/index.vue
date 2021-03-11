@@ -7,6 +7,12 @@
       <h3>{{ $t("hero.designer") }}</h3>
       <h3>{{ $t("hero.marketing") }}</h3>
 
+<br><br><br><br><br><br><br><br><br><br>
+<Nuxt-Link to="/laser">{{$t("hero.lang")}}</Nuxt-Link>
+<!-- <Nuxt-Link to="/test">test</Nuxt-Link> -->
+<br><br><br><br><br><br><br><br><br><br>
+
+
       <div class="giu">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi
         alias veniam! Omnis, nostrum. Similique officia nam tenetur quas
@@ -18,7 +24,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
 <style>

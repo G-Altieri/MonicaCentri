@@ -37,11 +37,10 @@ export default {
   },
   created() {
     this.$nuxt.$on("eventoX", () => {
-      this.openMenu();
+    this.openMenu();
     });
   },
   mounted() {
-    const gsap = this.$gsap;
     t1 = this.$gsap.timeline();
   },
   methods: {

@@ -12,6 +12,8 @@
     "core-js": "^3.8.3",
     "jquery": "^3.6.0",
     "nuxt": "^2.14.12",
+    "nuxt-gsap": "^0.1.4",
+    "nuxt-gsap-module": "^1.2.1",
     "nuxt-i18n": "^6.21.0",
     "vue-mq": "^1.0.1"
   },

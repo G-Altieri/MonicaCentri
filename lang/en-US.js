@@ -3,6 +3,7 @@ export default{
             developer : 'Developer: Giovanni Altieri',
             designer : 'Designer: Fabrizio Bevilacua',
             marketing : 'Marketing : Oscar Bevilacqua',
+            lang: 'Change language',
         },
     
 }

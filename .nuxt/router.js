@@ -5,6 +5,8 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
+const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
 
@@ -25,6 +27,30 @@ export const routerOptions = {
     path: "/es",
     component: _2da87d57,
     name: "index___es"
+  }, {
+    path: "/laser",
+    component: _85a12260,
+    name: "laser___it"
+  }, {
+    path: "/test",
+    component: _82c91cc6,
+    name: "test___it"
+  }, {
+    path: "/en/laser",
+    component: _85a12260,
+    name: "laser___en"
+  }, {
+    path: "/en/test",
+    component: _82c91cc6,
+    name: "test___en"
+  }, {
+    path: "/es/laser",
+    component: _85a12260,
+    name: "laser___es"
+  }, {
+    path: "/es/test",
+    component: _82c91cc6,
+    name: "test___es"
   }, {
     path: "/",
     component: _2da87d57,

@@ -9,9 +9,8 @@
             <div class="containerHam">
               <svg
                 class="ham hamRotate ham4 justify-self-start"
-                :class="{ active: hasHamburger }"
                 viewBox="0 0 100 100"
-                id="myham"
+                id="myHam"
               >
                 <path
                   class="line top"
@@ -49,7 +48,6 @@
         <!--** Icon Account **-->
       </div>
     </div>
-
   </nav>
   <!-- **NAVBAR** -->
 </template>
@@ -59,7 +57,7 @@
 export default {
   data() {
     return {
-      hasHamburger: false,
+     // hasHamburger = false
     };
   },
   computed: {
@@ -76,10 +74,9 @@ export default {
   },
   methods: {
     activatMenu() {
-      this.hasHamburger = !this.hasHamburger;
-      this.ciao =  "234"
-     // this.$emit('eventoDiReset', this.ciao);
-     $nuxt.$emit('eventoX')
+      //  this.hasHamburger = !this.hasHamburger;
+
+      $nuxt.$emit("eventoX");
     },
   },
   components: {},
@@ -153,5 +150,4 @@ export default {
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
 }
-
 </style>

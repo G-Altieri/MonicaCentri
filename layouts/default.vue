@@ -3,10 +3,12 @@
 
     <navbar></navbar>
     <menuOverlay 
-                
+               
     ></menuOverlay>
 
+    <div id="webSite" class="duration-300">
     <Nuxt />
+    </div>
 
   </div>
 </template>

@@ -1,21 +1,24 @@
 <template>
   <div class="container">
     <div>
-      
-      <h1 class="title">
-        MonicaCentri
-      </h1>
+      <h1 class="title">MonicaCentri</h1>
 
-    <h3>{{ $t("hero.developer") }}</h3>
-    <h3>{{ $t("hero.designer") }}</h3>
-    <h3>{{ $t("hero.marketing") }}</h3>
+      <h3>{{ $t("hero.developer") }}</h3>
+      <h3>{{ $t("hero.designer") }}</h3>
+      <h3>{{ $t("hero.marketing") }}</h3>
 
-     </div>
+      <div class="giu">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi
+        alias veniam! Omnis, nostrum. Similique officia nam tenetur quas
+        recusandae unde obcaecati, suscipit vitae distinctio id laborum sit
+        aperiam. Molestias?
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
@@ -33,17 +36,21 @@ export default {}
   text-align: center;
 }
 
+.giu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 1180px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 3rem;

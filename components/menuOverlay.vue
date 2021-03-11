@@ -1,21 +1,22 @@
 <template>
-  <div class="containerMenu z-40 box" :class="{ hidden: !view }">
+  <!-- :class="{ hidden: !view }" -->
+  <div class="containerMenu z-40 box">
     <div class="container txtRed test">
       <ul class="textMenu">
         <li>
-          <a href=""><b>TEST1</b></a>
+          <a href=""><b>Laser</b></a>
         </li>
         <li>
-          <a href=""><b>TEST2</b></a>
+          <a href=""><b>Bailando</b></a>
         </li>
         <li>
-          <a href=""><b>TEST3</b></a>
+          <a href=""><b>Amigos</b></a>
         </li>
         <li>
-          <a href=""><b>TEST4</b></a>
+          <a href=""><b>Adios</b></a>
         </li>
         <li>
-          <a href=""><b>TEST5</b></a>
+          <a href=""><b>Vamos</b></a>
         </li>
       </ul>
     </div>
@@ -24,11 +25,14 @@
 
 
 <script>
+//import { gsap, TweenMax } from 'gsap/all'
+
+var t1;
+
 export default {
   data() {
     return {
       open: false,
-      view:false,
     };
   },
   created() {
@@ -36,61 +40,76 @@ export default {
       this.openMenu();
     });
   },
-  mounted() {},
+  mounted() {
+    const gsap = this.$gsap;
+    t1 = this.$gsap.timeline();
+  },
   methods: {
     //Metodo Che apre e chiude il menu
     openMenu() {
-      this.open = !this.open; //hidden menu
-      if (this.open) {
-        //hidden scrollbar
-        this.animateMenuOpen();
-        $("body").addClass("overflow-hidden");
-        this.view=true;
-      } else {
-        this.animateMenuClose();
-        $("body").removeClass("overflow-hidden");
-        this.view=false;
-         //hidden menu
-      }
+      if (!t1.isActive()) {
+        this.open = !this.open; //hidden menu
+        if (this.open) {
+          //hidden scrollbar
+          this.animateMenuOpen();
+          $("body").addClass("overflow-hidden");
+          $("#myHam").addClass("active");
+          $("#webSite").addClass("filter");
+        } else {
+          this.animateMenuClose();
+          $("body").removeClass("overflow-hidden");
+          $("#myHam").removeClass("active");
+          $("#webSite").removeClass("filter");
+
+          //hidden menu
+        } //if open
+      } //is Active
     },
 
+    /*Animazione Apertura Menu*/
     animateMenuOpen() {
       const gsap = this.$gsap;
-      var t1 = this.$gsap.timeline();
 
-      t1.from(".box", {
-        width: "0%",
-        duration: 0.3,
+      /*Animazione Container */
+      t1.to(".box", {
+        width: "100%",
+        opacity: 1,
+        duration: 0.5,
       });
 
-      t1.from(".test ul li",{
-        x: -400,
+      /*Animazione Testo menu */
+      t1.from(".test ul li", {
+        x: -100,
         stagger: 0.1,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
+        delay: -0.3,
       });
     },
-    animateMenuClose() {
-      const gsap = this.$gsap;
-      var t1 = this.$gsap.timeline();
 
-        console.log(t1.isActive());
+    /*Animazione Chiusura Menu*/
+    animateMenuClose() {
+      /*Animazione Container */
+      t1.to(".test ul li", {
+        x: -100,
+        stagger: 0.05,
+        duration: 0.3,
+        opacity: 0,
+      });
+
+      /*Animazione Testo menu */
       t1.to(".box", {
         width: "0%",
-        duration: 0.3,
-      });
-
-      t1.to(".test ul li", -0.3, {
-        x: -400,
-        stagger: 0.1,
-        duration: 0.5,
         opacity: 0,
+        duration: 0.5,
+        delay: -0.5,
       });
-
-  console.log(t1.isActive());
-
+      /*Risetto il menu al centro**/
+      t1.set(".test ul li", {
+        x: 0,
+        opacity: 1,
+      });
     },
-
   }, //methods
   props: {},
 };
@@ -98,9 +117,18 @@ export default {
 
 <style >
 .containerMenu {
-  background: red;
-  width: 100%;
+  /* backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  background-color:rgba(255, 255, 255, 0.5); */
+
+  width: 0%;
   height: 100vh;
+  opacity: 0;
+  position: fixed;
+}
+
+.filter {
+  filter: blur(10px);
 }
 
 .textMenu {

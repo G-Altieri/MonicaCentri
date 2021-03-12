@@ -8,8 +8,8 @@
       <h3>{{ $t("hero.marketing") }}</h3>
 
 <br><br><br><br><br><br><br><br><br><br>
-<Nuxt-Link to="/laser">{{$t("hero.lang")}}</Nuxt-Link>
-<!-- <Nuxt-Link to="/test">test</Nuxt-Link> -->
+<Nuxt-Link :to="localePath('/laser')" >{{$t("hero.lang")}}</Nuxt-Link>
+<Nuxt-Link :to="localePath('/test')" >test</Nuxt-Link>
 <br><br><br><br><br><br><br><br><br><br>
 
 

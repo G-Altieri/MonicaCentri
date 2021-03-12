@@ -3,7 +3,7 @@
   <div>
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
-      <h1 class="text-white text-center">El tiempo</h1>
+      <h1 class="text-white text-center">{{ $t("header.title") }}</h1>
       <!--*** Div header home page*** -->
     </div>
     <img
@@ -23,9 +23,19 @@
       />
     </div>
 
+    <div class="containerInfoCovid grid flex items-center">
+      <nuxt-link
+        type="button"
+        class="text-center text-white font-semibold px-6 py-3 rounded-lg btnInfoCovid duration-300"
+        :to="localePath('/test')"
+      >
+        Info Covid
+      </nuxt-link>
+    </div>
 
-    <div class="containerInfoCovid">
-      <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-lg">Info Covid</button>
+
+    <div class="containerBox">
+    Component 
     </div>
 
     <div class="containerStronzata">
@@ -38,15 +48,8 @@
 
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <Nuxt-Link :to="localePath('/laser')">{{ $t("hero.lang") }}</Nuxt-Link>
-        <Nuxt-Link :to="localePath('/test')">test</Nuxt-Link>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-        <div class="giu">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-          excepturi alias veniam! Omnis, nostrum. Similique officia nam tenetur
-          quas recusandae unde obcaecati, suscipit vitae distinctio id laborum
-          sit aperiam. Molestias?
-        </div>
       </div>
     </div>
     <!-- div generale -->
@@ -79,11 +82,11 @@ export default {};
   position: absolute;
   /* border-radius: 20px;
     top: 333px;*/
-    -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
-    box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4); 
-      left: 50%;
-    top: 373px;
-    transform: translateX(-50%);
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
+  left: 50%;
+  top: 373px;
+  transform: translateX(-50%);
 }
 
 .imgRenderCarta {
@@ -93,37 +96,44 @@ export default {};
   height: auto;
 }
 
+.containerInfoCovid {
+  /* width: 100%; */
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 870px;
+}
 
+.btnInfoCovid {
+  background: #af384f;
+  border-radius: 50px;
+  width: 200px;
+}
+.btnInfoCovid:hover {
+  transform: scale(0.9);
+}
 
-.containerInfoCovid{
-    margin: 0 auto;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.containerBox{
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 950px;
+  width: 100%;
+  background: #35495e;
+  color: white;
 }
 
 .containerStronzata {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.giu {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  top: 1180px;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-}
 
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,

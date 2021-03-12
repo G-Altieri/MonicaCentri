@@ -5,5 +5,8 @@ export default{
         marketing : 'Marketing : Oscar Bevilacqua',
         lang: 'Cambia lingua',
     },
+    header: {
+        title: "Acquistate il premium",
+    },
     
 }

@@ -1,4 +1,7 @@
 {
+  "BoxHome": {
+    "description": "Auto imported from components/boxHome.vue"
+  },
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },

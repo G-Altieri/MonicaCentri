@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Laser</h1>
+      <h1 class="title">Current: {{this.$i18n.locale}}</h1>
       <br /><br /><br />
       <nuxt-link
         v-for="language in langAvailable"
@@ -11,7 +11,7 @@
         {{ language.name }}
       </nuxt-link>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <Nuxt-Link :to="localePath('/test')"   >Home</Nuxt-Link>
+      <Nuxt-Link :to="localePath('/')"   >Home</Nuxt-Link>
       <Nuxt-Link :to="localePath('/test')" >Test</Nuxt-Link>
    
     

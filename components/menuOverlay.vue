@@ -1,7 +1,7 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
-  <div class="containerMenu z-40 box">
-    <div class="container txtRed test">
+  <div class="containerMenu z-40 box  flex items-center grid">
+    <div class="text-center txtRed test">
       <ul class="textMenu">
         <li>
           <a href=""><b>Laser</b></a>
@@ -124,6 +124,7 @@ export default {
   height: 100vh;
   opacity: 0;
   position: fixed;
+  background-color:rgba(255, 255, 255, 0.5);
 }
 
 .filter {

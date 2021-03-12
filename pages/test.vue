@@ -3,17 +3,14 @@
     <div>
       <h1 class="title">MonicaCentri</h1>
 
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <Nuxt-Link :to="localePath('/')" ><h1>Home</h1></Nuxt-Link>
 
-<br><br><br><br><br><br><br><br><br><br>
-<Nuxt-Link to="/"><h1>Test</h1></Nuxt-Link>
+      <br /><br /><br /><br />
 
+      State: {{ $store.getters["getLang"] }}
 
-
-<br><br><br><br>
-State: {{ this.$store.state.lang}}
-<br><br><br><br><br><br>
-
-<button @click="cambioLingua()">Cia</button>
+      <br /><br /><br /><br /><br /><br />
 
     </div>
   </div>
@@ -21,16 +18,19 @@ State: {{ this.$store.state.lang}}
 
 <script>
 export default {
-    data() {
-    return {
-    
-    };
+  data() {
+    return {};
+  },
+  created() {},
+  methods: {
+   /* cambioLingua() {
+      this.$store.dispatch("setLang", this.$i18n.locale);
     },
-    methods:{
-        cambioLingua(){
-            this.$store.commit('index/changeLang')
-        }
-    },
+    cambioT() {
+      console.log(this.$store.getters["getLang"]);
+      this.switchLocalePath(this.$store.getters["getLang"]);
+    },*/
+  },
 };
 </script>
 
@@ -49,7 +49,6 @@ export default {
   text-align: center;
 }
 
-
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -59,7 +58,6 @@ export default {
   color: #35495e;
   letter-spacing: 1px;
 }
-
 
 .links {
   padding-top: 15px;

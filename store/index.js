@@ -4,12 +4,20 @@ export const state = () => ({
 
 })
 
-export const mutation = {
-
+export const mutations = {
+    changeLang(state,x){
+        state.lang = x;
+    }
 }
 
-export const setter = {
-    changeLang(state){
-        state.lang = "asddas";
+export const actions = {
+    setLang({commit}, x){
+        commit('changeLang',x)
+    }
+}
+
+export const getters = {
+    getLang(state){
+        return state.lang
     }
 }

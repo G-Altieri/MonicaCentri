@@ -11,7 +11,10 @@
         {{ language.name }}
       </nuxt-link>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <Nuxt-Link :to="languageGet">Home</Nuxt-Link>
+      <Nuxt-Link :to="localePath('/test')"   >Home</Nuxt-Link>
+      <Nuxt-Link :to="localePath('/test')" >Test</Nuxt-Link>
+   
+    
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   </div>
@@ -29,16 +32,12 @@ export default {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
 
-     languageGet() {
-      if (this.$i18n.locale == "it") {
-      return  this.languageSet = "/";
-      } else {
-       return this.languageSet = "/" + this.$i18n.locale + "/";
-      } //metodo
-    },
-
   },//computed
-  method: {
+  methods: {
+     /* languageSetter(){
+        console.log("Lingua Salvata")
+        this.$store.dispatch("setLang",this.$i18n.locale)
+      }*/
    
   },//metodi
 };

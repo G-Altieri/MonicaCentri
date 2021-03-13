@@ -33,9 +33,10 @@
       </nuxt-link>
     </div>
 
-
-    <div class="containerBox">
-    Component 
+    <div class="containerBoxHome">
+      <div v-for="i in 5" :key="i">
+        <boxHome :margin="i"></boxHome>
+      </div>
     </div>
 
     <div class="containerStronzata">
@@ -49,7 +50,6 @@
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <Nuxt-Link :to="localePath('/laser')">{{ $t("hero.lang") }}</Nuxt-Link>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
       </div>
     </div>
     <!-- div generale -->
@@ -57,7 +57,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+
+};
 </script>
 
 <style>
@@ -114,7 +117,7 @@ export default {};
   transform: scale(0.9);
 }
 
-.containerBox{
+.containerBox {
   margin: 0 auto;
   position: absolute;
   left: 50%;
@@ -133,7 +136,6 @@ export default {};
   align-items: center;
   text-align: center;
 }
-
 
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,

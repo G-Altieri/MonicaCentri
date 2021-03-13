@@ -33,10 +33,27 @@
       </nuxt-link>
     </div>
 
-
-    <div class="containerBox">
-    Component 
+    <div class="containerBoxHome grid grid-col-1 gap-6 ">
+      <boxHome class="" :title="$t('hero.developer')"></boxHome>
+      <boxHome class="" :title="$t('hero.designer')"></boxHome>
+      <boxHome class="" :title="$t('hero.marketing')"></boxHome>
+      <boxHome class="" :title="$t('header.k')"></boxHome>
     </div>
+
+<div class="clientsReviewsHome">
+  <img
+      class="z-10"
+      src="~/assets/img/home/bg-clientsReviews.png"
+      alt=""
+      width="100%"
+      height="100%"
+    />
+    <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-6xl ">
+       {{ $t("header.cosa") }}
+    </div>
+  
+</div>
+
 
     <div class="containerStronzata">
       <div>
@@ -49,7 +66,6 @@
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <Nuxt-Link :to="localePath('/laser')">{{ $t("hero.lang") }}</Nuxt-Link>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
       </div>
     </div>
     <!-- div generale -->
@@ -57,7 +73,13 @@
 </template>
 
 <script>
-export default {};
+import boxHome from "@/components/boxHome.vue";
+export default {
+  components: {
+    boxHome,
+  },
+
+};
 </script>
 
 <style>
@@ -114,16 +136,35 @@ export default {};
   transform: scale(0.9);
 }
 
-.containerBox{
-  margin: 0 auto;
+.containerBoxHome {
+  /* background: #35495e; */
+  top: 966px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 950px;
-  width: 100%;
-  background: #35495e;
-  color: white;
+  /* width: 100%; */
 }
+
+
+.clientsReviewsHome{
+  position: absolute;
+  top:2270px;
+  width: 100%;
+}
+
+.TitleClientsReviews{
+color: #af384f;
+  /* font-size: 3rem; */
+  text-align: center;
+  
+position: absolute;
+top: 40%;
+width: 100%;
+
+
+
+}
+
 
 .containerStronzata {
   margin: 0 auto;
@@ -132,8 +173,11 @@ export default {};
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3000px;
 }
-
 
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
@@ -145,15 +189,5 @@ export default {};
   letter-spacing: 1px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
 
-.links {
-  padding-top: 15px;
-}
 </style>

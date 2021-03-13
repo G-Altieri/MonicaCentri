@@ -1,6 +1,6 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
-  <div class="containerMenu z-40 box  flex items-center grid">
+  <div id="idMenu" class="containerMenu z-40 box  flex items-center grid hidden">
     <div class="text-center txtRed test">
       <ul class="textMenu">
         <li>
@@ -51,11 +51,13 @@ export default {
         if (this.open) {
           //hidden scrollbar
           this.animateMenuOpen();
+          $("#idMenu").removeClass("hidden");
           $("body").addClass("overflow-hidden");
           $("#myHam").addClass("active");
           $("#webSite").addClass("filter");
         } else {
           this.animateMenuClose();
+          $("#idMenu").addClass("hidden");
           $("body").removeClass("overflow-hidden");
           $("#myHam").removeClass("active");
           $("#webSite").removeClass("filter");

@@ -10,6 +10,8 @@ export default {
   },
   header: {
     title: "Compra la prima",
+    cosa: "Que dicen de nosotros",
+    k:"No supe que agregar",
 },
 
 }

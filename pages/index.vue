@@ -6,16 +6,17 @@
       <h1 class="text-white text-center">{{ $t("header.title") }}</h1>
       <!--*** Div header home page*** -->
     </div>
-    <img
+    <div class="bg-header z-10"></div>
+    <!-- <img
       class="z-10"
       src="~/assets/img/home/bg-header.svg"
       alt=""
       width="100%"
       height="100%"
-    />
-    <div class="box-card">
+    /> -->
+    <div class="box-card z-20">
       <img
-        class="z-20 imgRenderCarta"
+        class="imgRenderCarta"
         src="~/assets/img/home/render-carta.jpg"
         alt=""
         width="100%"
@@ -33,27 +34,18 @@
       </nuxt-link>
     </div>
 
-    <div class="containerBoxHome grid grid-col-1 gap-6 ">
+    <div class="containerBoxHome grid grid-col-1 gap-6">
       <boxHome class="" :title="$t('hero.developer')"></boxHome>
       <boxHome class="" :title="$t('hero.designer')"></boxHome>
       <boxHome class="" :title="$t('hero.marketing')"></boxHome>
       <boxHome class="" :title="$t('header.k')"></boxHome>
     </div>
 
-<div class="clientsReviewsHome">
-  <img
-      class="z-10"
-      src="~/assets/img/home/bg-clientsReviews.png"
-      alt=""
-      width="100%"
-      height="100%"
-    />
-    <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-6xl ">
-       {{ $t("header.cosa") }}
+    <div class="clientsReviewsHome">
+      <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
+        {{ $t("header.cosa") }}
+      </div>
     </div>
-  
-</div>
-
 
     <div class="containerStronzata">
       <div>
@@ -78,7 +70,6 @@ export default {
   components: {
     boxHome,
   },
-
 };
 </script>
 
@@ -109,6 +100,20 @@ export default {
   left: 50%;
   top: 373px;
   transform: translateX(-50%);
+}
+
+.bg-header {
+  background-image: url("~/assets/img/home/bg-header.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-color: #999; */
+  width: 100vw;
+  height: 70vh;
+  position: absolute;
+  left: 0;
+  top: 490px;
 }
 
 .imgRenderCarta {
@@ -145,26 +150,29 @@ export default {
   /* width: 100%; */
 }
 
-
-.clientsReviewsHome{
+.clientsReviewsHome {
+  background-image: url("~assets/img/home/bg-cosadiconodinoi.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-color: #999; */
+  width: 100vw;
+  height: 50vh;
   position: absolute;
-  top:2270px;
+  left: 0;
+  top: 2230px;
+}
+
+.TitleClientsReviews {
+  color: #af384f;
+  position: relative;
   width: 100%;
-}
-
-.TitleClientsReviews{
-color: #af384f;
-  /* font-size: 3rem; */
+  top: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  
-position: absolute;
-top: 40%;
-width: 100%;
-
-
-
 }
-
 
 .containerStronzata {
   margin: 0 auto;
@@ -188,6 +196,4 @@ width: 100%;
   color: #35495e;
   letter-spacing: 1px;
 }
-
-
 </style>

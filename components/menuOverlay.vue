@@ -57,15 +57,18 @@ export default {
           $("#webSite").addClass("filter");
         } else {
           this.animateMenuClose();
-          $("#idMenu").addClass("hidden");
           $("body").removeClass("overflow-hidden");
           $("#myHam").removeClass("active");
           $("#webSite").removeClass("filter");
-
           //hidden menu
         } //if open
       } //is Active
     },
+
+  after(){
+    $("#idMenu").addClass("hidden");
+    
+  },
 
     /*Animazione Apertura Menu*/
     animateMenuOpen() {
@@ -85,6 +88,7 @@ export default {
         duration: 0.3,
         opacity: 0,
         delay: -0.3,
+        onComplete: this.after(),
       });
     },
 

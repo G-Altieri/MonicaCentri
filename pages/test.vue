@@ -4,14 +4,13 @@
       <h1 class="title">MonicaCentri</h1>
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <Nuxt-Link :to="localePath('/')" ><h1>Home</h1></Nuxt-Link>
+      <Nuxt-Link :to="localePath('/')"><h1>Home</h1></Nuxt-Link>
 
       <br /><br /><br /><br />
 
-      State: {{ $store.getters["getLang"] }}
+      <div class="testbg" width="100px" >Dio Puerco 2</div>
 
       <br /><br /><br /><br /><br /><br />
-
     </div>
   </div>
 </template>
@@ -23,7 +22,7 @@ export default {
   },
   created() {},
   methods: {
-   /* cambioLingua() {
+    /* cambioLingua() {
       this.$store.dispatch("setLang", this.$i18n.locale);
     },
     cambioT() {
@@ -61,5 +60,19 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.testbg {
+  background-image: url("~assets/img/home/bg-cosadiconodinoi.svg");
+  background-position: center ;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-color: #999; */
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  top: 1000px;
 }
 </style>

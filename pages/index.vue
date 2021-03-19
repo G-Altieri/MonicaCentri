@@ -6,7 +6,7 @@
       <h1 class="text-white text-center">{{ $t("header.title") }}</h1>
       <!--*** Div header home page*** -->
     </div>
-    <div class="bg-header z-10"></div>
+    <div class="bg-header"></div>
     <!-- <img
       class="z-10"
       src="~/assets/img/home/bg-header.svg"
@@ -45,9 +45,17 @@
       <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
         {{ $t("header.cosa") }}
       </div>
+
+<div class="containerReviews">
+    <clientReview title="Giovanni lorem asda sdhsdik jhfksjdhf sdjgfjh agdjh sagfjhgdsj hasgfhjd gsdjh" img="img_review1"></clientReview>
+    <clientReview title="Posto Stupendo personale gentilissimo super consigliato" img="img_review2"></clientReview>
+    <clientReview title="Posto Stupendo personale gentilissimo super consigliato" img="img_review3"></clientReview>
+</div>
+
+
     </div>
 
-    <div class="containerStronzata">
+    <!-- <div class="containerStronzata">
       <div>
         <h1 class="title">MonicaCentri</h1>
 
@@ -59,16 +67,18 @@
         <Nuxt-Link :to="localePath('/laser')">{{ $t("hero.lang") }}</Nuxt-Link>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
-    </div>
+    </div> -->
     <!-- div generale -->
   </div>
 </template>
 
 <script>
 import boxHome from "@/components/boxHome.vue";
+import clientReview from "@/components/clientReview.vue";
 export default {
   components: {
     boxHome,
+    clientReview
   },
 };
 </script>
@@ -136,10 +146,26 @@ export default {
   background: #af384f;
   border-radius: 50px;
   width: 200px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
+  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
 }
+
 .btnInfoCovid:hover {
-  transform: scale(0.9);
+   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
+.btnInfoCovid:active {
+   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+
+
 
 .containerBoxHome {
   /* background: #35495e; */
@@ -174,9 +200,18 @@ export default {
   text-align: center;
 }
 
+
+.containerReviews{
+  position: relative;
+  width: 90%;
+  top: 335px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .containerStronzata {
   margin: 0 auto;
-  min-height: 200vh;
+  min-height: 600vh;
   display: flex;
   justify-content: center;
   align-items: center;

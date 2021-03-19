@@ -2,6 +2,9 @@
   "BoxHome": {
     "description": "Auto imported from components/boxHome.vue"
   },
+  "ClientReview": {
+    "description": "Auto imported from components/clientReview.vue"
+  },
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },

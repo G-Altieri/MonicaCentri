@@ -2,9 +2,8 @@
   <div>
 
     <navbar></navbar>
-    <menuOverlay 
-               
-    ></menuOverlay>
+    <menuOverlay></menuOverlay>
+    <modal></modal>
 
     <div id="webSite" class="duration-300">
     <Nuxt />
@@ -16,6 +15,7 @@
 <script>
 import menuOverlay from '@/components/menuOverlay.vue'
 import navbar from '@/components/navbar.vue'
+import modal from '@/components/modal.vue'
 
 export default {
   data(){
@@ -28,7 +28,8 @@ export default {
   },
   components:{
     navbar,
-    menuOverlay
+    menuOverlay,
+    modal
   },
 
 }

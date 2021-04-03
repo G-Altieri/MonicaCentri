@@ -36,7 +36,7 @@ export default {
     };
   },
   created() {
-    this.$nuxt.$on("eventoX", () => {
+    this.$nuxt.$on("eventoMenu", () => {
     this.openMenu();
     });
   },

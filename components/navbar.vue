@@ -40,6 +40,7 @@
         <!-- Icon Account -->
         <div class="flex-1 grid">
           <img
+            @click="activatModal()"
             class="h-10 w-6 justify-self-end"
             src="~/assets/img/navbar/enter.svg"
             alt="Logo Monica Centri"
@@ -74,9 +75,10 @@ export default {
   },
   methods: {
     activatMenu() {
-      //  this.hasHamburger = !this.hasHamburger;
-
-      $nuxt.$emit("eventoX");
+      $nuxt.$emit("eventoMenu");
+    },
+    activatModal(){
+      $nuxt.$emit("eventModal");
     },
   },
   components: {},

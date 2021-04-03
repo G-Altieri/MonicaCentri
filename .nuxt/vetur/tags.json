@@ -8,6 +8,9 @@
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },
+  "Modal": {
+    "description": "Auto imported from components/modal.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/navbar.vue"
   }

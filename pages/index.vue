@@ -1,6 +1,7 @@
 <template>
   <!-- div generale -->
   <div>
+
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center">{{ $t("header.title") }}</h1>
@@ -46,30 +47,41 @@
         {{ $t("header.cosa") }}
       </div>
 
-<div class="containerReviews">
-    <clientReview title="Giovanni lorem asda sdhsdik jhfksjdhf sdjgfjh agdjh sagfjhgdsj hasgfhjd gsdjh" img="img_review1"></clientReview>
-    <clientReview title="Posto Stupendo personale gentilissimo super consigliato" img="img_review2"></clientReview>
-    <clientReview title="Posto Stupendo personale gentilissimo super consigliato" img="img_review3"></clientReview>
-</div>
-
-
+      <div class="containerReviews">
+        <clientReview
+          class=""
+          :text="$t('review.text1')"
+          name="Giovanni Altieri"
+          :ruolo="$t('review.ruolo1')"
+          img="img-review1"
+        ></clientReview>
+        <clientReview
+          class=""
+          :text="$t('review.text2')"
+          name="Oscar Bevilacqua"
+          :ruolo="$t('review.ruolo2')"
+          img="img-review2"
+        ></clientReview>
+        <clientReview
+          class=""
+          :text="$t('review.text3')"
+          name="Fabrizio Bevilacqua"
+          :ruolo="$t('review.ruolo3')"
+          img="img-review3"
+        ></clientReview>
+      </div>
     </div>
 
-    <!-- <div class="containerStronzata">
+    <!-- 
+    <div class="containerStronzata">
       <div>
-        <h1 class="title">MonicaCentri</h1>
-
-        <h3>{{ $t("hero.developer") }}</h3>
-        <h3>{{ $t("hero.designer") }}</h3>
-        <h3>{{ $t("hero.marketing") }}</h3>
-
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <Nuxt-Link :to="localePath('/laser')">{{ $t("hero.lang") }}</Nuxt-Link>
+       
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     </div> -->
-    <!-- div generale -->
   </div>
+  <!-- div generale -->
 </template>
 
 <script>
@@ -78,18 +90,12 @@ import clientReview from "@/components/clientReview.vue";
 export default {
   components: {
     boxHome,
-    clientReview
+    clientReview,
   },
 };
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-
 .bgred {
   background: #af384f; /*#af384f*/
   width: 100%;
@@ -119,7 +125,7 @@ export default {
   /* background-attachment: fixed; */
   background-size: cover;
   /* background-color: #999; */
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   position: absolute;
   left: 0;
@@ -152,20 +158,17 @@ export default {
 }
 
 .btnInfoCovid:hover {
-   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 .btnInfoCovid:active {
-   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   -webkit-transform: scale(0.98);
   transform: scale(0.98);
 }
-
-
-
 
 .containerBoxHome {
   /* background: #35495e; */
@@ -183,7 +186,7 @@ export default {
   /* background-attachment: fixed; */
   background-size: cover;
   /* background-color: #999; */
-  width: 100vw;
+  width: 100%;
   height: 50vh;
   position: absolute;
   left: 0;
@@ -200,11 +203,10 @@ export default {
   text-align: center;
 }
 
-
-.containerReviews{
-  position: relative;
+.containerReviews {
+  position: absolute;
   width: 90%;
-  top: 335px;
+  top: 450px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -230,5 +232,14 @@ export default {
   font-size: 3rem;
   color: #35495e;
   letter-spacing: 1px;
+}
+
+@media screen and (max-height: 700px) {
+  .containerReviews {
+    top: 290px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
 }
 </style>

@@ -9,6 +9,7 @@
     <Nuxt />
     </div>
 
+    <myfooter2></myfooter2>
   </div>
 </template>
 
@@ -16,6 +17,7 @@
 import menuOverlay from '@/components/menuOverlay.vue'
 import navbar from '@/components/navbar.vue'
 import modal from '@/components/modal.vue'
+import myfooter from '@/components/footer.vue'
 
 export default {
   data(){
@@ -29,7 +31,8 @@ export default {
   components:{
     navbar,
     menuOverlay,
-    modal
+    modal,
+    myfooter,
   },
 
 }

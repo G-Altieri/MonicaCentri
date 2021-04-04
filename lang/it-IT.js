@@ -18,4 +18,10 @@ export default {
         text3: "Super consigliato",
         ruolo3: "Marketing",
     },
+    titolare: {
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore nam atque fuga officia eaque ut nostrum velit sed ad, deleniti distinctio itaque maiores incidunt nesciunt adipisci eum officiis natus",
+    },
+    footer: {
+        content: "Il Footer ;)",
+    },
 }

@@ -1,20 +1,16 @@
 <template>
   <!-- div generale -->
   <div>
-
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
-      <h1 class="text-white text-center">{{ $t("header.title") }}</h1>
+      <h1 class="text-white text-center text-4xl">{{ $t("header.title") }}</h1>
       <!--*** Div header home page*** -->
     </div>
+
+    <!-- Bg-Header -->
     <div class="bg-header"></div>
-    <!-- <img
-      class="z-10"
-      src="~/assets/img/home/bg-header.svg"
-      alt=""
-      width="100%"
-      height="100%"
-    /> -->
+
+    <!-- Box Carta con render -->
     <div class="box-card z-20">
       <img
         class="imgRenderCarta"
@@ -25,6 +21,7 @@
       />
     </div>
 
+    <!-- Bottone Info Covid -->
     <div class="containerInfoCovid grid flex items-center">
       <nuxt-link
         type="button"
@@ -35,18 +32,20 @@
       </nuxt-link>
     </div>
 
+    <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
       <boxHome class="" :title="$t('hero.developer')"></boxHome>
       <boxHome class="" :title="$t('hero.designer')"></boxHome>
       <boxHome class="" :title="$t('hero.marketing')"></boxHome>
       <boxHome class="" :title="$t('header.k')"></boxHome>
     </div>
-
+    <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">
       <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
         {{ $t("header.cosa") }}
       </div>
 
+      <!-- box recensioni clienti -->
       <div class="containerReviews">
         <clientReview
           class=""
@@ -72,16 +71,18 @@
       </div>
     </div>
 
-    <!-- 
-    <div class="containerStronzata">
-      <div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-       
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- bg titolare -->
+    <div class="bg-titolare">
+      <div class="bg-titolare-color">
+        <div class="title-titolare">Monica</div>
+        <img src="~/assets/img/home/monica.png" class="img-titolare" alt="" />
+        <div class="text-titolare">{{ $t("titolare.content") }}</div>
+        <div class="bg-titolare-footer"></div>
       </div>
-    </div> -->
+    </div>
+
+    <!-- div generale -->
   </div>
-  <!-- div generale -->
 </template>
 
 <script>
@@ -95,13 +96,72 @@ export default {
 };
 </script>
 
-<style>
+<style >
+
+/* Titotlare */
+.bg-titolare {
+  background-image: url("~/assets/img/home/bg-titolare.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 3800px;
+  height: 70vh;
+  z-index: 10;
+}
+.bg-titolare-footer {
+  background-image: url("~/assets/img/home/bg-titolare-footer.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 148vh;
+  height: 40vh;
+  z-index: 10;
+}
+.bg-titolare-color {
+  background: #ffd2d2;
+  width: 100%;
+  position: relative;
+  height: 150vh;
+  top: 45vh;
+}
+.img-titolare {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 40vh;
+  margin-top: 100px;
+}
+
+.text-titolare {
+  font-size: 1.5rem;
+  color: #af384f;
+  text-align: center;
+  width: 85%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.title-titolare {
+  font-size: 5rem;
+  color: #af384f;
+  text-align: center;
+}
+
+/* Css Home */
 .bgred {
   background: #af384f; /*#af384f*/
   width: 100%;
   height: 500px;
 }
 
+/* Header */
 .box-card {
   background: white;
   border-radius: 15px;
@@ -139,6 +199,7 @@ export default {
   height: auto;
 }
 
+/* Button Info Covid */
 .containerInfoCovid {
   /* width: 100%; */
   margin: 0 auto;
@@ -170,6 +231,7 @@ export default {
   transform: scale(0.98);
 }
 
+/* Box Home */
 .containerBoxHome {
   /* background: #35495e; */
   top: 966px;
@@ -179,6 +241,7 @@ export default {
   /* width: 100%; */
 }
 
+/* Clienti Review */
 .clientsReviewsHome {
   background-image: url("~assets/img/home/bg-cosadiconodinoi.svg");
   background-position: center;
@@ -204,13 +267,14 @@ export default {
 }
 
 .containerReviews {
-  position: absolute;
+  position: relative;
   width: 90%;
-  top: 450px;
+  top: 40vh; /*450px*/
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* Test Zone */
 .containerStronzata {
   margin: 0 auto;
   min-height: 600vh;
@@ -234,10 +298,8 @@ export default {
   letter-spacing: 1px;
 }
 
+/* Media Query */
 @media screen and (max-height: 700px) {
-  .containerReviews {
-    top: 290px;
-  }
 }
 
 @media screen and (min-width: 1100px) {

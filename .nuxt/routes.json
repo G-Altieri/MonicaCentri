@@ -3,63 +3,54 @@
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2da87d57"
+    "chunkName": "pages/index"
   },
   {
     "name": "index___es",
     "path": "/es",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2da87d57"
+    "chunkName": "pages/index"
   },
   {
     "name": "laser___it",
     "path": "/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser",
-    "_name": "_85a12260"
+    "chunkName": "pages/laser"
   },
   {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test",
-    "_name": "_82c91cc6"
+    "chunkName": "pages/test"
   },
   {
     "name": "laser___en",
     "path": "/en/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser",
-    "_name": "_85a12260"
+    "chunkName": "pages/laser"
   },
   {
     "name": "test___en",
     "path": "/en/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test",
-    "_name": "_82c91cc6"
+    "chunkName": "pages/test"
   },
   {
     "name": "laser___es",
     "path": "/es/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser",
-    "_name": "_85a12260"
+    "chunkName": "pages/laser"
   },
   {
     "name": "test___es",
     "path": "/es/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test",
-    "_name": "_82c91cc6"
+    "chunkName": "pages/test"
   },
   {
     "name": "index___it",
     "path": "/",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2da87d57"
+    "chunkName": "pages/index"
   }
 ]

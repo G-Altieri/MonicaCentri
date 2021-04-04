@@ -5,6 +5,9 @@
   "ClientReview": {
     "description": "Auto imported from components/clientReview.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/footer.vue"
+  },
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },

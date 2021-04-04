@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Current: {{this.$i18n.locale}}</h1>
+      <h1 class="title my-24">Current: {{this.$i18n.locale}}</h1>
       <br /><br /><br />
       <nuxt-link
         v-for="language in langAvailable"

@@ -1,6 +1,6 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
-  <div id="idMenu" class="containerMenu z-40 box  flex items-center grid hidden">
+  <div id="idMenu" class="containerMenu z-40 box flex items-center grid hidden">
     <div class="text-center txtRed test">
       <ul class="textMenu">
         <li>
@@ -33,42 +33,62 @@ export default {
   data() {
     return {
       open: false,
+      modal_open: false,
     };
   },
   created() {
-    this.$nuxt.$on("eventoMenu", () => {
-    this.openMenu();
+    //Ricezione evento apertura chiusura menu
+    this.$nuxt.$on("showMenu", () => {
+      this.Menu();
     });
+    this.$nuxt.$on("StatusModal", (e) => {
+     // console.log("evento "+e)
+      this.modal_open = e;
+    });
+   
   },
   mounted() {
     t1 = this.$gsap.timeline();
   },
   methods: {
     //Metodo Che apre e chiude il menu
-    openMenu() {
+    Menu() {
       if (!t1.isActive()) {
         this.open = !this.open; //hidden menu
         if (this.open) {
-          //hidden scrollbar
-          this.animateMenuOpen();
-          $("#idMenu").removeClass("hidden");
-          $("body").addClass("overflow-hidden");
-          $("#myHam").addClass("active");
-          $("#webSite").addClass("filter");
+          this.openMenu();
+          this.bodyOpen();
         } else {
-          this.animateMenuClose();
-          $("body").removeClass("overflow-hidden");
-          $("#myHam").removeClass("active");
-          $("#webSite").removeClass("filter");
-          //hidden menu
+          this.closeMenu();
+          if(!this.modal_open){
+            this.bodyClose();
+          }
         } //if open
-      } //is Active
+      } //menu
+    },
+    openMenu() {
+      $nuxt.$emit("StatusMenu",true);
+      this.animateMenuOpen();
+      $("#idMenu").removeClass("hidden");
+      $("#myHam").addClass("active");
+    },
+    closeMenu() {
+       $nuxt.$emit("StatusMenu",false);
+      this.animateMenuClose();
+      $("#myHam").removeClass("active");
+    },
+    bodyOpen() {
+      $("body").addClass("overflow-hidden");
+      $("#webSite").addClass("filter");
+    },
+    bodyClose() {
+      $("body").removeClass("overflow-hidden");
+      $("#webSite").removeClass("filter");
     },
 
-  after(){
-    $("#idMenu").addClass("hidden");
-    
-  },
+    after() {
+      $("#idMenu").addClass("hidden");
+    },
 
     /*Animazione Apertura Menu*/
     animateMenuOpen() {
@@ -130,7 +150,7 @@ export default {
   height: 100vh;
   opacity: 0;
   position: fixed;
-  background-color:rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .filter {

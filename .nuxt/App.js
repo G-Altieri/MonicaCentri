@@ -6,6 +6,10 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
+import '..\\node_modules\\mdbvue\\lib\\css\\mdb.min.css'
+
+import '..\\node_modules\\@fortawesome\\fontawesome-free\\css\\all.min.css'
+
 import '..\\node_modules\\@nuxtjs\\tailwindcss\\lib\\files\\tailwind.css'
 
 import '..\\assets\\css\\main.css'

@@ -38,13 +38,14 @@
         </div>
         <!--** Logo Center **-->
         <!-- Icon Account -->
-        <div class="flex-1 grid">
+        <div class="flex-1 grid text-right float-right">
+        <span class="spanClick justify-self-end grid" @click="activatModal()">
           <img
-            @click="activatModal()"
             class="h-10 w-6 justify-self-end"
             src="~/assets/img/navbar/enter.svg"
             alt="Logo Monica Centri"
           />
+         </span>
         </div>
         <!--** Icon Account **-->
       </div>
@@ -74,11 +75,13 @@ export default {
     },
   },
   methods: {
+    //Evento Attavazione Menu
     activatMenu() {
-      $nuxt.$emit("eventoMenu");
+      $nuxt.$emit("showMenu");
     },
+    //Evento Attavazione Modal
     activatModal(){
-      $nuxt.$emit("eventModal");
+      $nuxt.$emit("showModal");
     },
   },
   components: {},

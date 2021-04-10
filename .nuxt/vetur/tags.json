@@ -8,6 +8,9 @@
   "Footer": {
     "description": "Auto imported from components/footer.vue"
   },
+  "InputLabel": {
+    "description": "Auto imported from components/inputLabel.vue"
+  },
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },

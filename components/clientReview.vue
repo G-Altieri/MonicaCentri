@@ -32,7 +32,7 @@
         class="flex items-center space-x-4 p-6 md:px-10 md:py-6 rounded-b-xl leading-6 font-semibold text-white bg-footer-review"
       >
         <div
-          class="flex-none w-14 h-14 bg-white rounded-full flex items-center justify-center"
+          class="flex-none w-14 h-14 rounded-full items-center justify-center"
         >
           <!-- Img profilo -->
           <img

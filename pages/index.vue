@@ -89,6 +89,9 @@
 import boxHome from "@/components/boxHome.vue";
 import clientReview from "@/components/clientReview.vue";
 export default {
+  mounted() {
+   $("body").addClass("scrollbar");
+  },
   components: {
     boxHome,
     clientReview,
@@ -214,6 +217,7 @@ export default {
   border-radius: 50px;
   width: 200px;
   cursor: pointer;
+  color: white;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
   box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
 }

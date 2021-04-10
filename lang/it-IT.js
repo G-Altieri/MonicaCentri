@@ -21,6 +21,13 @@ export default {
     titolare: {
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore nam atque fuga officia eaque ut nostrum velit sed ad, deleniti distinctio itaque maiores incidunt nesciunt adipisci eum officiis natus",
     },
+    modal: {
+        login: "Accedi",
+        email: "Email o Numero di Telefono",
+        password: "Password",
+        register: "Registrati",
+        credenzialiDimenticate: "Email o Password dimenticate? Recuperale!!!",
+    },
     footer: {
         content: "Il Footer ;)",
     },

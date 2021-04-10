@@ -1,57 +1,43 @@
 <template>
   <div>
-
     <navbar></navbar>
     <menuOverlay></menuOverlay>
     <modal></modal>
 
     <div id="webSite" class="duration-300">
-    <Nuxt />
+      <Nuxt />
     </div>
 
-    <myfooter2></myfooter2>
+    <!-- <myfooter2></myfooter2> -->
   </div>
 </template>
 
 <script>
-import menuOverlay from '@/components/menuOverlay.vue'
-import navbar from '@/components/navbar.vue'
-import modal from '@/components/modal.vue'
-import myfooter from '@/components/footer.vue'
+import menuOverlay from "@/components/menuOverlay.vue";
+import navbar from "@/components/navbar.vue";
+import modal from "@/components/modal.vue";
+import myfooter from "@/components/footer.vue";
 
 export default {
-  data(){
-    return{
-     
-    }
+  data() {
+    return {};
   },
-  methods:{
-
-  },
-  components:{
+  methods: {},
+  components: {
     navbar,
     menuOverlay,
     modal,
     myfooter,
   },
-
-}
-  
+};
 </script>
 
 
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

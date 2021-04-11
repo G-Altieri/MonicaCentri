@@ -39,13 +39,13 @@
         <!--** Logo Center **-->
         <!-- Icon Account -->
         <div class="flex-1 grid text-right float-right">
-        <span class="spanClick justify-self-end grid" @click="activatModal()">
-          <img
-            class="h-10 w-6 justify-self-end"
-            src="~/assets/img/navbar/enter.svg"
-            alt="Logo Monica Centri"
-          />
-         </span>
+          <span class="spanClick justify-self-end grid" @click="activatModal()">
+            <img
+              class="h-10 w-6 justify-self-end"
+              src="~/assets/img/navbar/enter.svg"
+              alt="Logo Monica Centri"
+            />
+          </span>
         </div>
         <!--** Icon Account **-->
       </div>
@@ -59,7 +59,8 @@
 export default {
   data() {
     return {
-     // hasHamburger = false
+      statusMenu: false,
+      statusModal: false,
     };
   },
   computed: {
@@ -73,15 +74,27 @@ export default {
           return "px-10";
       }
     },
+    // a computed getter
+    Status_menu: function () {
+      return this.statusMenu;
+    },
+    Status_modal: function () {
+      return this.statusModal;
+    },
   },
   methods: {
     //Evento Attavazione Menu
     activatMenu() {
       $nuxt.$emit("showMenu");
+      this.statusMenu = !this.statusMenu;
     },
     //Evento Attavazione Modal
-    activatModal(){
-      $nuxt.$emit("showModal");
+    activatModal() {
+      if(!this.statusMenu){
+        //console.log("Apro Modal")
+        $nuxt.$emit("showModal");
+        this.statusModal = !this.statusModal;
+      }
     },
   },
   components: {},

@@ -4,7 +4,7 @@
     <menuOverlay></menuOverlay>
     <modal></modal>
 
-    <div id="webSite" class="duration-300">
+    <div id="webSite" class="duration-500">
       <Nuxt />
     </div>
 

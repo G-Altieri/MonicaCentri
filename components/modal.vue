@@ -6,10 +6,11 @@
     <!-- @click="eventModal()" per lo span che sta sotto per fa chiudere -->
     <span>
       <div
-        class="modal flex transition duration-300"
+        class="modal flex transition duration-300 overflow-y-auto "
         v-show="Show_modal"
         id="id_modal"
       >
+        <div @click="closeModal()" class="bg-transparent w-full h-full"></div>
         <div class="box-modal" v-bind:class="{ filter: Show_blur }">
           <div class="grid grid-cols-1 gap-4">
             <!-- Title Modal -->
@@ -33,7 +34,7 @@
 
             <!-- Input Email -->
             <div
-              class="h-12 rounded-md flex items-center justify-center text-2xl font-extrabold"
+              class="h-12 rounded-md flex items-center justify-center text-2xl"
             >
               <inputLabel
                 :text="$t('modal.email')"
@@ -44,7 +45,7 @@
 
             <!-- Input Password -->
             <div
-              class="h-20 rounded-md flex items-center justify-center text-2xl font-extrabold"
+              class="h-20 rounded-md flex items-center justify-center text-2xl"
             >
               <inputLabel
                 :text="$t('modal.password')"
@@ -56,7 +57,7 @@
 
             <!-- Password Dimenticata -->
             <div
-              class="h-10 rounded-md flex items-center justify-left text-2xl font-extrabold"
+              class="h-10 rounded-md flex items-center justify-left text-2xl"
             >
               <div class="passowordDimenticata duration-300">
                 <Nuxt-Link
@@ -70,7 +71,7 @@
 
             <!-- Error Login -->
             <div
-              class="h-10 rounded-md flex items-center justify-center text-2xl font-extrabold"
+              class="h-10 rounded-md flex items-center justify-center text-2xl"
             >
               <div class="alertError" id="ErroreLogin" v-show="Show_error">
                 Opsss!!!!!!
@@ -79,7 +80,7 @@
 
             <!-- Button Login -->
             <div
-              class="h-20 rounded-md flex items-center justify-center text-2xl font-extrabold"
+              class="h-20 rounded-md flex items-center justify-center text-2xl"
             >
               <div
                 class="buttonLogin duration-300 cursor-pointer"
@@ -91,7 +92,7 @@
 
             <!-- Button Register -->
             <div
-              class="h-0 rounded-md flex items-center justify-center text-2xl font-extrabold"
+              class="h-0 rounded-md flex items-center justify-center text-2xl"
             >
               <div
                 class="buttonLogin buttonRegister duration-300 cursor-pointer"
@@ -112,6 +113,8 @@
 import inputLabel from "@/components/inputLabel.vue";
 import { mdbIcon } from "mdbvue";
 
+var t_modal;
+
 export default {
   data() {
     return {
@@ -120,6 +123,17 @@ export default {
       show_blur: false,
       menu_open: false,
     };
+  },
+  mounted() {
+    t_modal = this.$gsap.timeline();
+    /*Animazione Modal */
+    t_modal.pause();
+    t_modal.from(".box-modal", {
+      scale: 0,
+      opacity: 0,
+      duration: 0.5,
+      onComplete: this.changeStatusModal(),
+    });
   },
   computed: {
     // a computed getter
@@ -149,10 +163,12 @@ export default {
   methods: {
     //Metodo Che apre e chiude il menu
     eventModal() {
-      if (!this.Show_modal) {
-        this.openModal();
-      } else {
-        this.closeModal();
+      if (!t_modal.isActive()) {
+        if (!this.Show_modal) {
+          this.openModal();
+        } else {
+          this.closeModal();
+        }
       }
     },
     closeModal() {
@@ -160,12 +176,13 @@ export default {
       if (!this.menu_open) {
         this.bodyClose();
       }
+        this.animateMenuClose();
       //console.log("Chiuso");
-      this.show_modal = !this.show_modal;
     },
     openModal() {
       $nuxt.$emit("StatusModal", true);
       this.bodyOpen();
+      this.animateMenuOpen();
       //console.log("Aperto");
       this.show_modal = !this.show_modal;
     },
@@ -177,6 +194,19 @@ export default {
       $("#webSite").removeClass("filter");
       $("body").removeClass("overflow-hidden");
     },
+    changeStatusModal() {},
+    /*Animazione Apertura Modal*/
+    animateMenuOpen() {
+      /*Restarta l apertura del modal*/
+      t_modal.restart();
+    },
+
+    /*Animazione Chiusura Menu*/
+    animateMenuClose() {
+      /*Riversa l aniamzione e toglie il modal dopo 500 millisecondi*/
+      t_modal.reverse();
+      setTimeout(() => (this.show_modal = !this.show_modal), 500);
+    },
   }, //methods
   components: {
     inputLabel,
@@ -186,6 +216,9 @@ export default {
 </script>
 
 <style lang="scss" scope>
+$altezzaNav: 56px;
+$heightModal: 525px;
+
 /*Effetto Blur */
 
 /*Allert Error */
@@ -203,8 +236,8 @@ export default {
 /*Text passowordDimenticata*/
 .passowordDimenticata {
   color: rgba(175, 175, 175, 0.7);
-  font-size: 1rem;
-  margin-left: 30px;
+  font-size: 15px;
+  margin-left: 33px;
   a {
     &:hover {
       color: rgb(121, 121, 121) !important;
@@ -247,13 +280,14 @@ export default {
   position: absolute;
   width: 90%;
   max-width: 500px;
-  height: 90%;
-  max-height: 525px;
+  //height: 90%;
+  height: 525px;
+  //max-height: 525px;
   background: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   border-radius: 40px;
   color: #af384f;
-  top: calc(50% + 40px);
+  top: calc(50% + 20px);
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -264,6 +298,14 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 30;
   position: fixed;
+}
+/* Media Query */
+$mediaHeightModal: calc(56 + 525);
+@media screen and (max-height: 618px) {
+  .box-modal {
+    top: calc(0% + 65px);
+    transform: translate(-50%, 0%);
+  }
 }
 </style>
 

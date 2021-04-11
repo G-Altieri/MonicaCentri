@@ -134,6 +134,7 @@ export default {
       duration: 0.5,
       onComplete: this.changeStatusModal(),
     });
+  
   },
   computed: {
     // a computed getter
@@ -289,7 +290,7 @@ $heightModal: 525px;
   color: #af384f;
   top: calc(50% + 20px);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
 }
 
 .modal {
@@ -304,7 +305,7 @@ $mediaHeightModal: calc(56 + 525);
 @media screen and (max-height: 618px) {
   .box-modal {
     top: calc(0% + 65px);
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%) !important;
   }
 }
 </style>

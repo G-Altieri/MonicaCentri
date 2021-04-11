@@ -14,6 +14,8 @@ import '..\\node_modules\\@nuxtjs\\tailwindcss\\lib\\files\\tailwind.css'
 
 import '..\\assets\\css\\main.css'
 
+import '..\\assets\\font\\Montserrat.css'
+
 import _6f6c098b from '..\\layouts\\default.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }

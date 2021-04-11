@@ -48,6 +48,7 @@ export default {
             },
 
 
+
         ],
 
     },
@@ -58,6 +59,7 @@ export default {
         // 'bulma',
         // CSS file in the project
         '~/assets/css/main.css',
+        '~/assets/font/Montserrat.css',
 
 
     ],

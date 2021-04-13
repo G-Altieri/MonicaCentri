@@ -21,6 +21,13 @@
     "_name": "_85a12260"
   },
   {
+    "name": "lingue___it",
+    "path": "/lingue",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
+    "chunkName": "pages/lingue",
+    "_name": "_1565495e"
+  },
+  {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
@@ -35,6 +42,13 @@
     "_name": "_85a12260"
   },
   {
+    "name": "lingue___en",
+    "path": "/en/lingue",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
+    "chunkName": "pages/lingue",
+    "_name": "_1565495e"
+  },
+  {
     "name": "test___en",
     "path": "/en/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
@@ -47,6 +61,13 @@
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
     "chunkName": "pages/laser",
     "_name": "_85a12260"
+  },
+  {
+    "name": "lingue___es",
+    "path": "/es/lingue",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
+    "chunkName": "pages/lingue",
+    "_name": "_1565495e"
   },
   {
     "name": "test___es",

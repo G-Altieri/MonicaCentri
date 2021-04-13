@@ -10,8 +10,12 @@ a:hover {
     transition: all 0.2s ease-in-out; */
 }
 
-.txtRed {
+.text-red {
     color: #af384f !important;
+}
+
+.text-pink {
+    color: #d16a7d !important;
 }
 
 .scrollbar {}
@@ -31,4 +35,12 @@ a:hover {
     border-radius: 10px;
     /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);*/
     background-color: #af384f;
+}
+
+.w-max {
+    width: max-content;
+}
+
+.w-96 {
+    width: 24rem;
 }

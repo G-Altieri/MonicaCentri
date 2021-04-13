@@ -29,6 +29,7 @@
         </div>
         <!--** Hamburger Menu **-->
         <!-- Logo Center -->
+        <nuxt-link  :to="localePath('/')">
         <div class="flex-1 text-center grid">
           <img
             class="h-10 w-10 text-center justify-self-center logo-centraln"
@@ -36,6 +37,7 @@
             alt="Logo Monica Centri"
           />
         </div>
+        </nuxt-link>
         <!--** Logo Center **-->
         <!-- Icon Account -->
         <div class="flex-1 grid text-right float-right">

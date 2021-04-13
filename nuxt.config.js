@@ -86,6 +86,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+        '@nuxtjs/axios',
         //Libreria per la gestione delle lingue
         ['nuxt-i18n', {
             lazy: true,

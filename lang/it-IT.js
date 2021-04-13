@@ -5,6 +5,24 @@ export default {
         marketing: 'Marketing : Oscar Bevilacqua',
         lang: 'Cambia lingua',
     },
+    navBuy: {
+        buy: "Acquista"
+    },
+    laser: {
+        info: {
+            title1: "FOTOEPILAZIONE",
+            title2: "Per sempre.",
+            btnVideo: "GUARDA VIDEO"
+        },
+        info2: {
+            content1: "Diodo 808",
+            content2: "incisivo",
+            content3: "efficace",
+        },
+        info3: {
+            content1: "La lunghezza del suo raggio arriva alla papilla germinativa  del pelo, abbattendolo alla nascita",
+        },
+    },
     header: {
         title: "Acquistate il premium",
         cosa: "Cosa dicono di noi",

@@ -1,7 +1,7 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
   <div id="idMenu" class="containerMenu z-40 box flex items-center grid hidden">
-    <div class="text-center txtRed test">
+    <div class="text-center text-red test">
       <ul class="textMenu">
         <li>
           <a href=""><b>Laser</b></a>

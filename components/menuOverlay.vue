@@ -1,22 +1,34 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
   <div id="idMenu" class="containerMenu z-40 box flex items-center grid hidden">
-    <div class="text-center txtRed test">
-      <ul class="textMenu">
+    <div class="text-center text-red test">
+      <ul class="textMenu" @click="Menu()">
         <li>
-          <a href=""><b>Laser</b></a>
+          <nuxt-link :to="localePath('/laser')">
+            <div class="font-bold">
+              {{ $t("menu.item1") }}
+            </div>
+          </nuxt-link>
         </li>
         <li>
-          <a href=""><b>Bailando</b></a>
+          <nuxt-link :to="localePath('/')">
+            <div class="font-bold">{{ $t("menu.item2") }}</div></nuxt-link
+          >
         </li>
         <li>
-          <a href=""><b>Amigos</b></a>
+          <nuxt-link :to="localePath('/laser')">
+            <div class="font-bold">{{ $t("menu.item3") }}</div></nuxt-link
+          >
         </li>
         <li>
-          <a href=""><b>Adios</b></a>
+          <nuxt-link :to="localePath('/')">
+            <div class="font-bold">{{ $t("menu.item4") }}</div></nuxt-link
+          >
         </li>
         <li>
-          <a href=""><b>Vamos</b></a>
+          <nuxt-link :to="localePath('/laser')">
+            <div class="font-bold">{{ $t("menu.item5") }}</div></nuxt-link
+          >
         </li>
       </ul>
     </div>
@@ -42,10 +54,9 @@ export default {
       this.Menu();
     });
     this.$nuxt.$on("StatusModal", (e) => {
-     // console.log("evento "+e)
+      // console.log("evento "+e)
       this.modal_open = e;
     });
-   
   },
   mounted() {
     t1 = this.$gsap.timeline();
@@ -60,20 +71,20 @@ export default {
           this.bodyOpen();
         } else {
           this.closeMenu();
-          if(!this.modal_open){
+          if (!this.modal_open) {
             this.bodyClose();
           }
         } //if open
       } //menu
     },
     openMenu() {
-      $nuxt.$emit("StatusMenu",true);
+      $nuxt.$emit("StatusMenu", true);
       this.animateMenuOpen();
       $("#idMenu").removeClass("hidden");
       $("#myHam").addClass("active");
     },
     closeMenu() {
-       $nuxt.$emit("StatusMenu",false);
+      $nuxt.$emit("StatusMenu", false);
       this.animateMenuClose();
       $("#myHam").removeClass("active");
     },

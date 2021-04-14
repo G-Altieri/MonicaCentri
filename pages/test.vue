@@ -5,10 +5,11 @@
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <Nuxt-Link :to="localePath('/')"><h1>Home</h1></Nuxt-Link>
-
-      <br /><br /><br /><br />
-
-      <div class="testbg" width="100px" >Dio Puerco 2</div>
+      <client-only>
+        {{ ip }}
+        {{ result }}
+      </client-only>
+      <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
 
       <br /><br /><br /><br /><br /><br />
     </div>
@@ -18,18 +19,37 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      ip: "NotApi",
+      result: "",
+    };
+  },
+  async asyncData({ $axios }) {
+    /*let payload = { nome: "test", score: "1000", difficolta: "imposibile" };
+     const params = "nome=test&score=1000&difficolta=cazzova";
+    const ip = await $axios.$get(
+      `https://inf5.altervista.org/scoreGame/insertDato.php?${params}`,
+      payload,
+      {
+        headers: {
+         CORS: "Access-Control-Allow-Origin",
+        },
+      }
+    );*/
+
+    const result = await $axios.$get(
+      "https://inf5.altervista.org/scoreGame/view.php","",
+      {
+        headers: {
+          CORS: "Access-Control-Allow-Origin",
+        },
+      }
+    );
+    //console.log(result);
+    return { result };
   },
   created() {},
-  methods: {
-    /* cambioLingua() {
-      this.$store.dispatch("setLang", this.$i18n.locale);
-    },
-    cambioT() {
-      console.log(this.$store.getters["getLang"]);
-      this.switchLocalePath(this.$store.getters["getLang"]);
-    },*/
-  },
+  methods: {},
 };
 </script>
 
@@ -64,7 +84,7 @@ export default {
 
 .testbg {
   background-image: url("~assets/img/home/bg-cosadiconodinoi.svg");
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;

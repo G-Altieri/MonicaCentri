@@ -1,11 +1,13 @@
 <template>
+<nuxt-link :to="localePath('/'+link)">
   <div class="containerBoxComponent text-white duration-300 shadow-lg">
     <div class="title">
       <h4>
         {{ title }}
       </h4>
     </div>
-  </div>
+  </div>  
+</nuxt-link>
 
 </template>
 
@@ -14,6 +16,7 @@
 export default {
   props: {
     title: String,
+    link:String,
   },
 };
 </script>

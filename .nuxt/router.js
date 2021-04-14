@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
+const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
 const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -32,6 +33,10 @@ export const routerOptions = {
     component: _85a12260,
     name: "laser___it"
   }, {
+    path: "/lingue",
+    component: _1565495e,
+    name: "lingue___it"
+  }, {
     path: "/test",
     component: _82c91cc6,
     name: "test___it"
@@ -40,6 +45,10 @@ export const routerOptions = {
     component: _85a12260,
     name: "laser___en"
   }, {
+    path: "/en/lingue",
+    component: _1565495e,
+    name: "lingue___en"
+  }, {
     path: "/en/test",
     component: _82c91cc6,
     name: "test___en"
@@ -47,6 +56,10 @@ export const routerOptions = {
     path: "/es/laser",
     component: _85a12260,
     name: "laser___es"
+  }, {
+    path: "/es/lingue",
+    component: _1565495e,
+    name: "lingue___es"
   }, {
     path: "/es/test",
     component: _82c91cc6,

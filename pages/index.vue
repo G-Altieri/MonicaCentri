@@ -11,15 +11,18 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <div class="box-card z-20">
+    <nuxt-link  :to="localePath('/laser')">
+    <div class="box-card z-20" >
       <img
         class="imgRenderCarta"
         src="~/assets/img/home/render-carta.jpg"
         alt=""
         width="100%"
         height="100%"
+        
       />
     </div>
+    </nuxt-link>
 
     <!-- Bottone Info Covid -->
     <div class="containerInfoCovid grid flex items-center">
@@ -34,10 +37,10 @@
 
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome class="" :title="$t('hero.developer')"></boxHome>
-      <boxHome class="" :title="$t('hero.designer')"></boxHome>
-      <boxHome class="" :title="$t('hero.marketing')"></boxHome>
-      <boxHome class="" :title="$t('header.k')"></boxHome>
+      <boxHome class="text-center" title="laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
+      <boxHome class="text-center" title="laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">

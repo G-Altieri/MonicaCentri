@@ -6,12 +6,15 @@
     <!-- @click="eventModal()" per lo span che sta sotto per fa chiudere -->
     <span>
       <div
-        class="modal flex transition duration-300 overflow-y-auto "
+        class="modal flex transition duration-300 overflow-y-auto"
         v-show="Show_modal"
         id="id_modal"
       >
-        <div @click="closeModal()" class="bg-transparent w-full h-full"></div>
-        <div class="box-modal" v-bind:class="{ filter: Show_blur }">
+        <div
+          @click="closeModal()"
+          class="absolute flex items-stretch bg-transparent w-full h-full"
+        ></div>
+        <div class="box-modal self-center" v-bind:class="{ filter: Show_blur }">
           <div class="grid grid-cols-1 gap-4">
             <!-- Title Modal -->
             <div
@@ -125,6 +128,8 @@ export default {
     };
   },
   mounted() {
+    var a = $(window).height();
+    var b = a ;
     t_modal = this.$gsap.timeline();
     /*Animazione Modal */
     t_modal.pause();
@@ -132,9 +137,13 @@ export default {
       scale: 0,
       opacity: 0,
       duration: 0.5,
+      x: "50%",
+      y: "50%",
+      xPercent: -50,
+      yPercent: -50,
       onComplete: this.changeStatusModal(),
     });
-  
+    //.set ( ".box-modal" , { xPercent:-50, yPercent:-50});
   },
   computed: {
     // a computed getter
@@ -177,7 +186,7 @@ export default {
       if (!this.menu_open) {
         this.bodyClose();
       }
-        this.animateMenuClose();
+      this.animateMenuClose();
       //console.log("Chiuso");
     },
     openModal() {
@@ -278,7 +287,7 @@ $heightModal: 525px;
 }
 /* Container Modal-- */
 .box-modal {
-  position: absolute;
+  position: relative;
   width: 90%;
   max-width: 500px;
   //height: 90%;
@@ -288,9 +297,10 @@ $heightModal: 525px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   border-radius: 40px;
   color: #af384f;
-  top: calc(50% + 20px);
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
+  //top: calc(50% + 60px);
+  margin: 0 auto;
+  // left: 50%;
+  //transform: translate(-50%, -50%) ;
 }
 
 .modal {
@@ -305,7 +315,7 @@ $mediaHeightModal: calc(56 + 525);
 @media screen and (max-height: 618px) {
   .box-modal {
     top: calc(0% + 65px);
-    transform: translate(-50%, 0%) !important;
+    //  transform: translate(-50%, 0%) !important;
   }
 }
 </style>

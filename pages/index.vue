@@ -37,10 +37,10 @@
 
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome class="" :title="$t('hero.developer')" link="lingue"></boxHome>
-      <boxHome class="" :title="$t('hero.designer')" link="laser"></boxHome>
-      <boxHome class="" :title="$t('hero.marketing')" link="lingue"></boxHome>
-      <boxHome class="" :title="$t('header.k')" link="laser"></boxHome>
+      <boxHome class="text-center" title="laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
+      <boxHome class="text-center" title="laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">

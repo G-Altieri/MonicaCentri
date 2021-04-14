@@ -29,14 +29,14 @@
         </div>
         <!--** Hamburger Menu **-->
         <!-- Logo Center -->
-        <nuxt-link  :to="localePath('/')">
-        <div class="flex-1 text-center grid">
-          <img
-            class="h-10 w-10 text-center justify-self-center logo-centraln"
-            src="~/assets/img/navbar/logo.svg"
-            alt="Logo Monica Centri"
-          />
-        </div>
+        <nuxt-link :to="localePath('/')">
+          <div class="flex-1 text-center grid">
+            <img
+              class="h-10 w-10 text-center justify-self-center logo-centraln"
+              src="~/assets/img/navbar/logo.svg"
+              alt="Logo Monica Centri"
+            />
+          </div>
         </nuxt-link>
         <!--** Logo Center **-->
         <!-- Icon Account -->
@@ -65,6 +65,18 @@ export default {
       statusModal: false,
     };
   },
+  created() {
+    //Ricezione evento apertura chiusura menu
+    this.$nuxt.$on("StatusMenu", (e) => {
+      // console.log("evento "+ e)
+      this.statusMenu = e;
+    });
+    //Ricezione evento apertura chiusura Modal
+    this.$nuxt.$on("StatusModal", (e) => {
+      // console.log("evento "+e)
+      this.statusModal = e;
+    });
+  },
   computed: {
     navPadding() {
       switch (this.$mq) {
@@ -88,14 +100,14 @@ export default {
     //Evento Attavazione Menu
     activatMenu() {
       $nuxt.$emit("showMenu");
-      this.statusMenu = !this.statusMenu;
+      //this.statusMenu = !this.statusMenu;
     },
     //Evento Attavazione Modal
     activatModal() {
-      if(!this.statusMenu){
+      if (!this.statusMenu) {
         //console.log("Apro Modal")
         $nuxt.$emit("showModal");
-        this.statusModal = !this.statusModal;
+        //this.statusModal = !this.statusModal;
       }
     },
   },

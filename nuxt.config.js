@@ -87,6 +87,7 @@ export default {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         '@nuxtjs/axios',
+        '@nuxtjs/auth-next',
         //Libreria per la gestione delle lingue
         ['nuxt-i18n', {
             lazy: true,
@@ -116,7 +117,65 @@ export default {
         'mdbvue/nuxt',
 
     ],
+    //*Impostazioni Auth */
+    auth: {
+        strategies: {
+            local: {
+                //scheme: 'refresh',
+                token: {
+                    property: 'data.token',
+                    maxAge: 5,
+                    // type: 'Bearer'
+                },
 
+                /* refreshToken: {
+                     property: 'access_token',
+                     data: 'refresh_token',
+                     maxAge: 60 * 60 * 24 * 30
+                 },*/
+                user: {
+                    property: 'data',
+                    //         autoFetch: false,
+
+                },
+                endpoints: {
+                    login: {
+                        url: '/auth/login',
+                        method: 'post',
+                        //property: "data.token"
+                    },
+                    refresh: {
+                        url: '/auth/refresh',
+                        method: 'post'
+                    },
+                    logout: {
+                        url: '/auth/logout',
+                        method: 'post'
+                    },
+                    user: {
+                        url: '/auth/me',
+                        method: 'get',
+                        //property: "data"
+                    }
+                },
+                redirect: {
+                    /*  login: '/login',
+                      logout: '/',
+                      callback: '/login',
+                      home: '/dashboard'*/
+                },
+                // rewriteRedirects: true,
+            }
+        },
+
+    },
+
+    axios: {
+        baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
+        //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/me
+        //local confing http://127.0.0.1:8000/api
+
+    },
     mdbvue: {
         // icons: false, // FA5
         roboto: false, // font Roboto

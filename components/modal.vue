@@ -43,6 +43,8 @@
                 :text="$t('modal.email')"
                 Size="95%"
                 id="EmailInput"
+                event="email"
+          
               ></inputLabel>
             </div>
 
@@ -55,6 +57,7 @@
                 Size="95%"
                 type="password"
                 id="PasswordInput"
+                event="password"
               ></inputLabel>
             </div>
 
@@ -89,6 +92,7 @@
                 class="buttonLogin duration-300 cursor-pointer"
                 @click="show_error = true"
               >
+                <!-- show_error = true -->
                 {{ $t("modal.login") }}
               </div>
             </div>
@@ -125,11 +129,15 @@ export default {
       show_error: false,
       show_blur: false,
       menu_open: false,
+      form: {
+        email: "1232@gmail.com",
+        password: "123",
+      },
     };
   },
   mounted() {
     var a = $(window).height();
-    var b = a ;
+    var b = a;
     t_modal = this.$gsap.timeline();
     /*Animazione Modal */
     t_modal.pause();
@@ -158,6 +166,12 @@ export default {
     },
   },
   created() {
+   /* this.$nuxt.$on("email", () => {
+      console.log("Cambio email");
+      });
+    this.$nuxt.$on("password", () => {
+      console.log("Cambio password");
+      });*/
     //Ricezione Evento Apertura Chiusura Modal
     this.$nuxt.$on("showModal", () => {
       this.eventModal();
@@ -171,6 +185,16 @@ export default {
   },
 
   methods: {
+    //Metodo Login per effettuare la chiamata
+    async login() {
+      console.log(this.form.email);
+      try {
+        let response = await this.$auth.loginWith("local", {
+          data: this.form,
+        });
+        console.log(response);
+      } catch (error) {}
+    },
     //Metodo Che apre e chiude il menu
     eventModal() {
       if (!t_modal.isActive()) {

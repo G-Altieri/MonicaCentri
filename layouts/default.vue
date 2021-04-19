@@ -8,7 +8,7 @@
       <Nuxt />
     </div>
 
-    <!-- <myfooter2></myfooter2> -->
+    <!-- <myfooter></myfooter> -->
   </div>
 </template>
 

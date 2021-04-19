@@ -4,9 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _602760ce = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
 const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
 const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
+const _115fbf24 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _3fc4f5d5 = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
 const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -21,6 +24,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/dashboard",
+    component: _602760ce,
+    name: "dashboard___it"
+  }, {
     path: "/en",
     component: _2da87d57,
     name: "index___en"
@@ -37,9 +44,21 @@ export const routerOptions = {
     component: _1565495e,
     name: "lingue___it"
   }, {
+    path: "/login",
+    component: _115fbf24,
+    name: "login___it"
+  }, {
+    path: "/logout",
+    component: _3fc4f5d5,
+    name: "logout___it"
+  }, {
     path: "/test",
     component: _82c91cc6,
     name: "test___it"
+  }, {
+    path: "/en/dashboard",
+    component: _602760ce,
+    name: "dashboard___en"
   }, {
     path: "/en/laser",
     component: _85a12260,
@@ -49,9 +68,21 @@ export const routerOptions = {
     component: _1565495e,
     name: "lingue___en"
   }, {
+    path: "/en/login",
+    component: _115fbf24,
+    name: "login___en"
+  }, {
+    path: "/en/logout",
+    component: _3fc4f5d5,
+    name: "logout___en"
+  }, {
     path: "/en/test",
     component: _82c91cc6,
     name: "test___en"
+  }, {
+    path: "/es/dashboard",
+    component: _602760ce,
+    name: "dashboard___es"
   }, {
     path: "/es/laser",
     component: _85a12260,
@@ -60,6 +91,14 @@ export const routerOptions = {
     path: "/es/lingue",
     component: _1565495e,
     name: "lingue___es"
+  }, {
+    path: "/es/login",
+    component: _115fbf24,
+    name: "login___es"
+  }, {
+    path: "/es/logout",
+    component: _3fc4f5d5,
+    name: "logout___es"
   }, {
     path: "/es/test",
     component: _82c91cc6,

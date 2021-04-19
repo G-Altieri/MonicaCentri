@@ -1,6 +1,15 @@
 <template>
   <div :style="SizeWidth">
-    <mdb-input :type="type" size="lg" :label="text" outline counter :id="id"/>
+    <mdb-input
+      :type="type"
+      size="lg"
+      :label="text"
+      outline
+      counter
+      :id="id"
+      :v-model="value"
+      :event="event"
+    />
   </div>
 </template>
 
@@ -12,9 +21,12 @@ import { mdbIcon } from "mdbvue";
 
 export default {
   data() {
-    return {};
+    return {
+      value: "",
+    };
   },
   computed: {
+
     SizeWidth() {
       return {
         width: this.Size,
@@ -22,14 +34,17 @@ export default {
         margin: "0 auto",
       };
     },
-   /* InputDiverso() {
+    /* InputDiverso() {
           if(this.id=="EmailInput"){
             return ""
           }
     },*/
   }, //computed
+  created() {},
   methods: {
-
+   /* updateData() {
+      $nuxt.$emit(this.event, this.Value);
+    },*/
   }, //metodi
 
   components: {
@@ -38,6 +53,10 @@ export default {
   },
   props: {
     id: {
+      type: String,
+      default: "",
+    },
+    event: {
       type: String,
       default: "",
     },
@@ -178,10 +197,9 @@ export default {
   width: 100%;
 }
 
-
-.md-form.md-outline.form-lg label{
+.md-form.md-outline.form-lg label {
   font-size: 1.1rem !important;
-  top: 3px ;
+  top: 3px;
 }
 </style>
 

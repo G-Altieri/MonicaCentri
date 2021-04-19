@@ -11,7 +11,7 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <nuxt-link  :to="localePath('/laser')">
+    <nuxt-link  :to="localePath('/login')">
     <div class="box-card z-20" >
       <img
         class="imgRenderCarta"
@@ -39,8 +39,8 @@
     <div class="containerBoxHome grid grid-col-1 gap-6">
       <boxHome class="text-center" title="laser" link="laser"></boxHome>
       <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
-      <boxHome class="text-center" title="laser" link="laser"></boxHome>
-      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
+      <boxHome class="text-center" title="dashboard" link="dashboard"></boxHome>
+      <boxHome class="text-center" title="logout" link="logout"></boxHome>
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">

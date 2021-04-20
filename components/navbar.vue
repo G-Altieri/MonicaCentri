@@ -40,8 +40,9 @@
         </nuxt-link>
         <!--** Logo Center **-->
         <!-- Icon Account -->
+        
         <div class="flex-1 grid text-right float-right">
-          <span class="spanClick justify-self-end grid" @click="activatModal()">
+          <span class="spanClick justify-self-end grid" @click="activatNewLogin()">
             <img
               class="h-10 w-6 justify-self-end"
               src="~/assets/img/navbar/enter.svg"
@@ -110,6 +111,9 @@ export default {
         //this.statusModal = !this.statusModal;
       }
     },
+    activatNewLogin(){
+      this.$router.push({ path: "/newLogin" });
+    }
   },
   components: {},
 };

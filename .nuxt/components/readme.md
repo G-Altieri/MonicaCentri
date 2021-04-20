@@ -9,6 +9,8 @@ You can directly use them in pages and other components without the need to impo
 - `<BoxHome>` | `<box-home>` (components/boxHome.vue)
 - `<ClientReview>` | `<client-review>` (components/clientReview.vue)
 - `<Footer>` | `<footer>` (components/footer.vue)
+- `<Gbutton>` | `<gbutton>` (components/gbutton.vue)
+- `<Ginput>` | `<ginput>` (components/ginput.vue)
 - `<InputLabel>` | `<input-label>` (components/inputLabel.vue)
 - `<MenuOverlay>` | `<menu-overlay>` (components/menuOverlay.vue)
 - `<Modal>` | `<modal>` (components/modal.vue)

@@ -82,6 +82,8 @@ export default {
         'nuxt-gsap', ['nuxt-gsap-module'],
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
+        //Anime js
+        ['nuxt-animejs'],
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
@@ -114,7 +116,7 @@ export default {
             defaultLocale: 'it',
         }],
 
-        'mdbvue/nuxt',
+        //  'mdbvue/nuxt',
 
     ],
     //*Impostazioni Auth */
@@ -182,6 +184,47 @@ export default {
         // css: false, // MDB CSS
         bootstrap: false // Bootstrap CSS
     },
+
+    //**Barra Loading tra pagine */
+    loading: {
+        color: '#af384f',
+        height: '5px'
+    },
+
+
+    // Add global page transition
+    pageTransition: {
+        name: 'page',
+        mode: 'out-in',
+        css: false,
+
+        beforeEnter(el) {
+            this.$anime.set(el, {
+                opacity: 0
+            })
+        },
+
+        enter(el, done) {
+            this.$anime({
+                targets: el,
+                opacity: [0, 1],
+                duration: 500,
+                easing: 'easeInOutSine',
+                complete: done
+            })
+        },
+
+        leave(el, done) {
+            this.$anime({
+                targets: el,
+                opacity: [1, 0],
+                duration: 500,
+                easing: 'easeInOutSine',
+                complete: done
+            })
+        }
+    },
+
 
     //Import Script
     script: [

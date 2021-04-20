@@ -9,6 +9,11 @@
         {{ ip }}
         {{ result }}
       </client-only>
+
+      <div>
+        <button @click="animeEl">Click me</button>
+        <p class="p1">Nuxt Animejs Module</p>
+      </div>
       <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
 
       <br /><br /><br /><br /><br /><br />
@@ -38,7 +43,8 @@ export default {
     );*/
 
     const result = await $axios.$get(
-      "https://inf5.altervista.org/scoreGame/view.php","",
+      "https://inf5.altervista.org/scoreGame/view.php",
+      "",
       {
         headers: {
           CORS: "Access-Control-Allow-Origin",
@@ -49,7 +55,17 @@ export default {
     return { result };
   },
   created() {},
-  methods: {},
+  methods: {
+    animeEl() {
+      this.$anime({
+        targets: ".p1",
+        translateX: 250,
+        rotate: "1turn",
+        backgroundColor: "#FFF",
+        duration: 800,
+      });
+    },
+  },
 };
 </script>
 

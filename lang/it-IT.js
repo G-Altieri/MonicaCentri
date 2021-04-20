@@ -64,9 +64,13 @@ export default {
     },
     modal: {
         login: "Accedi",
-        email: "Email o Numero di Telefono",
+        email: "Indirizzo Email",
         password: "Password",
         register: "Registrati",
+        forgotPassword: "Password dimenticata?",
+        hrLogin: "usa uno dei tuoi account",
+        loginPrivacy: "Continuando, dichiari di aver accettato l’informativa sulla privacy e i termini di utilizzo. Monica Centri userà informazioni fornite da terzi, selezionati su tua scelta, per effettuare la registrazione o l’accesso.",
+        loginRegistration: "Crea il tuo account Monica Centri",
         credenzialiDimenticate: "Email o Password dimenticate? Recuperale!!!",
     },
     footer: {

@@ -11,7 +11,7 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <nuxt-link  :to="localePath('/login')">
+    <nuxt-link  :to="localePath('/newLogin')">
     <div class="box-card z-20" >
       <img
         class="imgRenderCarta"

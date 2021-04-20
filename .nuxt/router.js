@@ -10,6 +10,7 @@ const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackC
 const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
 const _115fbf24 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _3fc4f5d5 = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
+const _35979c98 = () => interopDefault(import('..\\pages\\newLogin.vue' /* webpackChunkName: "pages/newLogin" */))
 const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -52,6 +53,10 @@ export const routerOptions = {
     component: _3fc4f5d5,
     name: "logout___it"
   }, {
+    path: "/newLogin",
+    component: _35979c98,
+    name: "newLogin___it"
+  }, {
     path: "/test",
     component: _82c91cc6,
     name: "test___it"
@@ -76,6 +81,10 @@ export const routerOptions = {
     component: _3fc4f5d5,
     name: "logout___en"
   }, {
+    path: "/en/newLogin",
+    component: _35979c98,
+    name: "newLogin___en"
+  }, {
     path: "/en/test",
     component: _82c91cc6,
     name: "test___en"
@@ -99,6 +108,10 @@ export const routerOptions = {
     path: "/es/logout",
     component: _3fc4f5d5,
     name: "logout___es"
+  }, {
+    path: "/es/newLogin",
+    component: _35979c98,
+    name: "newLogin___es"
   }, {
     path: "/es/test",
     component: _82c91cc6,

@@ -11,12 +11,10 @@
     "dependencies": {
         "@nuxtjs/auth-next": "5.0.0-1618502945.2770f1f",
         "@nuxtjs/axios": "^5.13.1",
+        "axios": "^0.21.1",
         "core-js": "^3.8.3",
         "jquery": "^3.6.0",
-        "mdbvue": "^6.7.2",
         "nuxt": "^2.14.12",
-        "nuxt-gsap": "^0.1.4",
-        "nuxt-gsap-module": "^1.2.1",
         "nuxt-i18n": "^6.21.0",
         "vue-mq": "^1.0.1"
     },

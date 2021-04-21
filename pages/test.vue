@@ -17,17 +17,24 @@
       <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
 
       <br /><br /><br /><br /><br /><br />
+      {{lang}}
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
       ip: "NotApi",
       result: "",
     };
+  },
+  computed:{
+    lang () {
+      return this.$store.state.lang
+    }
   },
   async asyncData({ $axios }) {
     /*let payload = { nome: "test", score: "1000", difficolta: "imposibile" };

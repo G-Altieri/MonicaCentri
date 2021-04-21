@@ -96,7 +96,7 @@
         </div>
 
         <!-- Testo Registrazione  -->
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath('/register')">
           <div class="my-10 text-red text-lg w-48 text-center mx-auto">
             {{ $t("modal.loginRegistration") }}
           </div>

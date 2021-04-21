@@ -79,7 +79,7 @@ export default {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         //GSAP
-        'nuxt-gsap', ['nuxt-gsap-module'],
+        //  'nuxt-gsap', ['nuxt-gsap-module'],
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
         //Anime js

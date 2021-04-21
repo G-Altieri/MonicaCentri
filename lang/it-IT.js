@@ -73,6 +73,18 @@ export default {
         loginRegistration: "Crea il tuo account Monica Centri",
         credenzialiDimenticate: "Email o Password dimenticate? Recuperale!!!",
     },
+    auth: {
+        register: {
+            title: "Registrazione con Email",
+            email: "Indirizzo Email",
+            password: "Password",
+            confirmPassword: "Reinserisci nuova password",
+            btnRegister: "Registrati",
+            btnLogin: "Accedi",
+            checkPolicy1: "Ricevi notifiche, consigli e aggiornamenti su prodotti, servizi, software e tanto altro da Monica Centri",
+            checkPolicy2: "Ho letto e accettato l’informativa sulla privacy e le condizioni di utilizzo del servizio Monica Centri",
+        },
+    },
     footer: {
         content: "Il Footer ;)",
     },

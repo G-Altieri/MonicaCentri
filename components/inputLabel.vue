@@ -1,5 +1,6 @@
-<template>
-  <div :style="SizeWidth">
+ <template>
+ <div></div>
+ <!-- <div :style="SizeWidth">
     <mdb-input
       :type="type"
       size="lg"
@@ -10,14 +11,15 @@
       :v-model="value"
       :event="event"
     />
-  </div>
+  </div> -->
 </template>
 
 
 
 <script>
+/*
 import { mdbInput } from "mdbvue";
-import { mdbIcon } from "mdbvue";
+import { mdbIcon } from "mdbvue";*/
 
 export default {
   data() {
@@ -48,8 +50,8 @@ export default {
   }, //metodi
 
   components: {
-    mdbInput,
-    mdbIcon,
+ //   mdbInput,
+   // mdbIcon,
   },
   props: {
     id: {

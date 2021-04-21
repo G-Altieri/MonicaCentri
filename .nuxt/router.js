@@ -11,6 +11,7 @@ const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpack
 const _115fbf24 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _3fc4f5d5 = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
 const _35979c98 = () => interopDefault(import('..\\pages\\newLogin.vue' /* webpackChunkName: "pages/newLogin" */))
+const _58820ca4 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
 const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -57,6 +58,10 @@ export const routerOptions = {
     component: _35979c98,
     name: "newLogin___it"
   }, {
+    path: "/register",
+    component: _58820ca4,
+    name: "register___it"
+  }, {
     path: "/test",
     component: _82c91cc6,
     name: "test___it"
@@ -85,6 +90,10 @@ export const routerOptions = {
     component: _35979c98,
     name: "newLogin___en"
   }, {
+    path: "/en/register",
+    component: _58820ca4,
+    name: "register___en"
+  }, {
     path: "/en/test",
     component: _82c91cc6,
     name: "test___en"
@@ -112,6 +121,10 @@ export const routerOptions = {
     path: "/es/newLogin",
     component: _35979c98,
     name: "newLogin___es"
+  }, {
+    path: "/es/register",
+    component: _58820ca4,
+    name: "register___es"
   }, {
     path: "/es/test",
     component: _82c91cc6,

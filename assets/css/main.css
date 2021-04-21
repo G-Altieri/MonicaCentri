@@ -26,6 +26,10 @@ a:hover {
     border-color: #af384f;
 }
 
+.border-1 {
+    border-width: 1px;
+}
+
 .scrollbar {}
 
 .scrollbar::-webkit-scrollbar-track {
@@ -47,6 +51,10 @@ a:hover {
 
 .w-max {
     width: max-content;
+}
+
+.top-0_5 {
+    top: 0.125rem;
 }
 
 .w-96 {

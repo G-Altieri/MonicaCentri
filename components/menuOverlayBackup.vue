@@ -1,10 +1,6 @@
 <template>
   <!-- :class="{ hidden: !view }" -->
-  <div
-    id="idMenu"
-    class="containerMenu z-40 box flex items-center grid"
-    :class="{ hidden: !hiddenMenu }"
-  >
+  <div id="idMenu" class="containerMenu z-40 box flex items-center grid hidden">
     <div class="text-center text-red test">
       <ul class="textMenu" @click="Menu()">
         <li>
@@ -50,8 +46,6 @@ export default {
     return {
       open: false,
       modal_open: false,
-      animeInCorso: false,
-      hiddenMenu: false,
     };
   },
   created() {
@@ -65,68 +59,24 @@ export default {
     });
   },
   mounted() {
-    t1 = this.$anime.timeline({
-      easing: "easeOutExpo",
-      duration: 500,
-      autoplay: false,
-      complete: () => {
-        //imposto l animazione finita
-        this.animeInCorso = false;
-        //reverso l animazione per il prossimo click
-        t1.reverse();
-        //se il menu e chiuso lo nascondo dal DOM
-        if (!this.open) {
-          this.hiddenMenu = false;
-        }
-      },
-    });
-    //aniamzione del container del menu
-    t1.add({
-      targets: ".box",
-      width: "100%",
-      opacity: "1",
-    });
-
-    //animazione del testo del menu
-    t1.add(
-      {
-        targets: ".test ul li",
-        translateX: ["-270", "0"],
-        opacity: ["0", "1"],
-        delay: this.$anime.stagger(100),
-      },
-      50
-    );
+ //   t1 = this.$gsap.timeline();
   },
   methods: {
     //Metodo Che apre e chiude il menu
     Menu() {
-      //controllo se l animazione e in corso
-      if (!this.animeInCorso) {
-        //controllo se aprire o chiuder e il menu
-        if (!this.open) {
-          //apro il menu animazione
-          t1.play();
-
+      if (!t1.isActive()) {
+        this.open = !this.open; //hidden menu
+        if (this.open) {
+          this.openMenu();
           this.bodyOpen();
-
-          this.hiddenMenu = true;
-          this.animeInCorso = true;
-          this.open = true;
-          //  console.log("openMenu:" +this.open + " animeincorso: " +this.animeInCorso);
         } else {
-          //lo imposto a false per evitare il lampeggio, (soluzione trovata su git)
-          t1.completed = false;
-          //chiudo il menu anime
-          t1.play();
-          $("body").removeClass("overflow-hidden");
-          this.animeInCorso = true;
-          this.open = false;
-          //  console.log("openMenu:" +this.open + " animeincorso: " +this.animeInCorso);
-        }
+          this.closeMenu();
+          if (!this.modal_open) {
+            this.bodyClose();
+          }
+        } //if open
       } //menu
     },
-
     openMenu() {
       $nuxt.$emit("StatusMenu", true);
       this.animateMenuOpen();
@@ -140,11 +90,11 @@ export default {
     },
     bodyOpen() {
       $("body").addClass("overflow-hidden");
-      //  $("#webSite").addClass("filter");
+      $("#webSite").addClass("filter");
     },
     bodyClose() {
       $("body").removeClass("overflow-hidden");
-      //  $("#webSite").removeClass("filter");
+      $("#webSite").removeClass("filter");
     },
 
     after() {

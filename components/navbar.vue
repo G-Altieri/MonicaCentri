@@ -9,6 +9,7 @@
             <div class="containerHam">
               <svg
                 class="ham hamRotate ham4 justify-self-start"
+                :class="{active:getStatusMenu}"
                 viewBox="0 0 100 100"
                 id="myHam"
               >
@@ -59,6 +60,7 @@
 
 
 <script>
+  import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -79,6 +81,7 @@ export default {
     });
   },
   computed: {
+    ...mapGetters(["getStatusMenu"]),
     navPadding() {
       switch (this.$mq) {
         case "sm":

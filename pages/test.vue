@@ -17,13 +17,16 @@
       <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
 
       <br /><br /><br /><br /><br /><br />
-      {{lang}}
+      {{ getStatusMenu }}
+
+      <br /><br /><br />
+      <button @click="storeTest()">Click me Store</button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -31,10 +34,11 @@ export default {
       result: "",
     };
   },
-  computed:{
-    lang () {
-      return this.$store.state.lang
-    }
+  computed: {
+    ...mapGetters(["getStatusMenu"]),
+    lang() {
+      return this.$store.state.lang;
+    },
   },
   async asyncData({ $axios }) {
     /*let payload = { nome: "test", score: "1000", difficolta: "imposibile" };
@@ -63,6 +67,11 @@ export default {
   },
   created() {},
   methods: {
+
+    storeTest() {
+    this.$store.commit('setStatus_menu', !this.getStatusMenu)
+    },
+
     animeEl() {
       this.$anime({
         targets: ".p1",

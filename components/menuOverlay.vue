@@ -42,7 +42,7 @@
 
 <script>
 //import { gsap, TweenMax } from 'gsap/all'
-
+//IMPORTANTE PER EVITARE LO SCROLL SENZA TOGLIERE LA BARRA class: overflow-y-scroll fixed w-full
 var t1;
 
 export default {
@@ -66,7 +66,7 @@ export default {
   },
   mounted() {
     t1 = this.$anime.timeline({
-      easing: "easeOutExpo",
+      easing: "easeInOutCubic", //https://easings.net/it
       duration: 500,
       autoplay: false,
       complete: () => {
@@ -95,7 +95,7 @@ export default {
         opacity: ["0", "1"],
         delay: this.$anime.stagger(100),
       },
-      50
+      0
     );
   },
   methods: {
@@ -105,21 +105,27 @@ export default {
       if (!this.animeInCorso) {
         //controllo se aprire o chiuder e il menu
         if (!this.open) {
-          //apro il menu animazione
+          //faccio visulizzare subito il menu prima del animazione
+          this.hiddenMenu = true;
+
+          //parte animazione apertura
           t1.play();
 
-          this.bodyOpen();
-
-          this.hiddenMenu = true;
+          //cambio il valore nello store su aperto, aggiungera il filtro e togliera lo scrool
+            this.$store.commit('setStatus_menu', true)
+          
           this.animeInCorso = true;
           this.open = true;
+
           //  console.log("openMenu:" +this.open + " animeincorso: " +this.animeInCorso);
         } else {
           //lo imposto a false per evitare il lampeggio, (soluzione trovata su git)
           t1.completed = false;
           //chiudo il menu anime
           t1.play();
-          $("body").removeClass("overflow-hidden");
+          //cambio il valore nello store su chiuso, rimettera lo scroll e togliera il filtro
+              this.$store.commit('setStatus_menu', false)
+
           this.animeInCorso = true;
           this.open = false;
           //  console.log("openMenu:" +this.open + " animeincorso: " +this.animeInCorso);
@@ -129,73 +135,14 @@ export default {
 
     openMenu() {
       $nuxt.$emit("StatusMenu", true);
-      this.animateMenuOpen();
-      $("#idMenu").removeClass("hidden");
-      $("#myHam").addClass("active");
     },
     closeMenu() {
       $nuxt.$emit("StatusMenu", false);
-      this.animateMenuClose();
-      $("#myHam").removeClass("active");
-    },
-    bodyOpen() {
-      $("body").addClass("overflow-hidden");
-      //  $("#webSite").addClass("filter");
-    },
-    bodyClose() {
-      $("body").removeClass("overflow-hidden");
-      //  $("#webSite").removeClass("filter");
+    
     },
 
-    after() {
-      $("#idMenu").addClass("hidden");
-    },
 
-    /*Animazione Apertura Menu*/
-    animateMenuOpen() {
-      const gsap = this.$gsap;
-
-      /*Animazione Container */
-      t1.to(".box", {
-        width: "100%",
-        opacity: 1,
-        duration: 0.5,
-      });
-
-      /*Animazione Testo menu */
-      t1.from(".test ul li", {
-        x: -100,
-        stagger: 0.1,
-        duration: 0.3,
-        opacity: 0,
-        delay: -0.3,
-        onComplete: this.after(),
-      });
-    },
-
-    /*Animazione Chiusura Menu*/
-    animateMenuClose() {
-      /*Animazione Container */
-      t1.to(".test ul li", {
-        x: -100,
-        stagger: 0.05,
-        duration: 0.3,
-        opacity: 0,
-      });
-
-      /*Animazione Testo menu */
-      t1.to(".box", {
-        width: "0%",
-        opacity: 0,
-        duration: 0.5,
-        delay: -0.5,
-      });
-      /*Risetto il menu al centro**/
-      t1.set(".test ul li", {
-        x: 0,
-        opacity: 1,
-      });
-    },
+   
   }, //methods
   props: {},
 };

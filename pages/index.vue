@@ -11,17 +11,16 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <nuxt-link  :to="localePath('/newLogin')">
-    <div class="box-card z-20" >
-      <img
-        class="imgRenderCarta"
-        src="~/assets/img/home/render-carta.jpg"
-        alt=""
-        width="100%"
-        height="100%"
-        
-      />
-    </div>
+    <nuxt-link :to="localePath('/newLogin')">
+      <div class="box-card z-20">
+        <img
+          class="imgRenderCarta"
+          src="~/assets/img/home/render-carta.jpg"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
     </nuxt-link>
 
     <!-- Bottone Info Covid -->
@@ -92,8 +91,9 @@
 import boxHome from "@/components/boxHome.vue";
 import clientReview from "@/components/clientReview.vue";
 export default {
+
   mounted() {
-   $("body").addClass("scrollbar");
+    //$("body").addClass("scrollbar");
   },
   components: {
     boxHome,
@@ -103,7 +103,6 @@ export default {
 </script>
 
 <style >
-
 /* Titotlare */
 .bg-titolare {
   background-image: url("~/assets/img/home/bg-titolare.svg");

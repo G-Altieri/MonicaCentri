@@ -4,7 +4,7 @@
     <menuOverlay></menuOverlay>
     <modal></modal>
 
-    <div id="webSite" class="duration-500">
+    <div id="webSite" class="duration-700" :class="{ filter: getStatusMenu, 'Tscale-110' : getStatusMenu }">
       <Nuxt />
     </div>
 
@@ -17,16 +17,29 @@ import menuOverlay from "@/components/menuOverlay.vue";
 import navbar from "@/components/navbar.vue";
 //import modal from "@/components/modal.vue";
 import myfooter from "@/components/footer.vue";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {};
   },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.getStatusMenu
+          ? "scrollbar overflow-hidden" //overflow-y-scroll fixed w-full lasciano la barra
+          : "scrollbar",                               //overflow-hidden rimuovolo la barra
+      },
+    };
+  },
+  computed: {
+    ...mapGetters(["getStatusMenu"]),
+  },
   methods: {},
   components: {
     navbar,
     menuOverlay,
-  //  modal,
+    //  modal,
     myfooter,
   },
 };

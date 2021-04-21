@@ -117,8 +117,8 @@
 </template>
 
 <script>
-import inputLabel from "@/components/inputLabel.vue";
-import { mdbIcon } from "mdbvue";
+//import inputLabel from "@/components/inputLabel.vue";
+//import { mdbIcon } from "mdbvue";
 
 var t_modal;
 
@@ -136,22 +136,8 @@ export default {
     };
   },
   mounted() {
-    var a = $(window).height();
-    var b = a;
-    t_modal = this.$gsap.timeline();
-    /*Animazione Modal */
-    t_modal.pause();
-    t_modal.from(".box-modal", {
-      scale: 0,
-      opacity: 0,
-      duration: 0.5,
-      x: "50%",
-      y: "50%",
-      xPercent: -50,
-      yPercent: -50,
-      onComplete: this.changeStatusModal(),
-    });
-    //.set ( ".box-modal" , { xPercent:-50, yPercent:-50});
+
+
   },
   computed: {
     // a computed getter
@@ -197,7 +183,7 @@ export default {
     },
     //Metodo Che apre e chiude il menu
     eventModal() {
-      if (!t_modal.isActive()) {
+      if (true) {
         if (!this.Show_modal) {
           this.openModal();
         } else {
@@ -232,19 +218,19 @@ export default {
     /*Animazione Apertura Modal*/
     animateMenuOpen() {
       /*Restarta l apertura del modal*/
-      t_modal.restart();
+     // t_modal.restart();
     },
 
     /*Animazione Chiusura Menu*/
     animateMenuClose() {
       /*Riversa l aniamzione e toglie il modal dopo 500 millisecondi*/
-      t_modal.reverse();
+     // t_modal.reverse();
       setTimeout(() => (this.show_modal = !this.show_modal), 500);
     },
   }, //methods
   components: {
-    inputLabel,
-    mdbIcon,
+    //inputLabel,
+   // mdbIcon,
   },
 };
 </script>

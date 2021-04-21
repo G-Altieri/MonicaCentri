@@ -2,7 +2,15 @@
   <div>
     <div v-if="typeButton == 'normal'">
       <button
-        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all"
+        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all" :class="{uppercase:uppercase}"
+      >
+        {{ text }}
+      </button>
+    </div>
+
+    <div v-if="typeButton == 'outline'">
+      <button
+        class="bg-white border-red px-4 py-3 text-sm font-normal tracking-wider text-red border-1 rounded-md w-full leading-4 duration-300 transition-all btnOutline"
       >
         {{ text }}
       </button>
@@ -105,6 +113,10 @@ export default {
       type: String,
       default: "",
     },
+     uppercase: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -130,5 +142,10 @@ export default {
 }
 .bg-red:hover {
   background: #882c3e;
+}
+
+.btnOutline:hover{
+      background: #af384f;
+      color: white !important;
 }
 </style>

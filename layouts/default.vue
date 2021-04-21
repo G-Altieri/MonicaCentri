@@ -15,7 +15,7 @@
 <script>
 import menuOverlay from "@/components/menuOverlay.vue";
 import navbar from "@/components/navbar.vue";
-import modal from "@/components/modal.vue";
+//import modal from "@/components/modal.vue";
 import myfooter from "@/components/footer.vue";
 
 export default {
@@ -26,7 +26,7 @@ export default {
   components: {
     navbar,
     menuOverlay,
-    modal,
+  //  modal,
     myfooter,
   },
 };

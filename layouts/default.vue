@@ -4,7 +4,7 @@
     <menuOverlay></menuOverlay>
     <modal></modal>
 
-    <div id="webSite" class="duration-700" :class="{ filter: getStatusMenu, 'Tscale-110' : getStatusMenu }">
+    <div id="webSite" class="duration-700" :class="{ filter: getStatusMenu, }"> <!-- '-mx-2_5' : getStatusMenu  per togliere il bordino bianco-->
       <Nuxt />
     </div>
 

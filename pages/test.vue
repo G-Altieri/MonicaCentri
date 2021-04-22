@@ -6,7 +6,6 @@
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <Nuxt-Link :to="localePath('/')"><h1>Home</h1></Nuxt-Link>
       <client-only>
-        {{ ip }}
         {{ result }}
       </client-only>
 
@@ -21,16 +20,105 @@
 
       <br /><br /><br />
       <button @click="storeTest()">Click me Store</button>
+
+      <br /><br /><br /><br />
+
+
+
+        <div
+          class="opacity-1 dropdown-menu  absolute transition-all duration-300 transform origin-top-right -translate-y-2 scale-95"
+        >
+          <div
+            class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+            aria-labelledby="headlessui-menu-button-1"
+            id="headlessui-menu-items-117"
+            role="menu"
+          >
+
+          <div v-if="!$auth.loggedIn">
+           <Nuxt-Link :to="localePath('/newLogin')">
+            <div class="px-4 py-3">
+              <p class="text-sm leading-5">Accedi</p>
+            </div>
+              </Nuxt-Link>
+          </div>
+          <div v-else>
+             <div class="px-4 py-3">
+              <p class="text-sm leading-5">Ciao {{$auth.user.name}}</p>
+            </div>
+          </div>
+
+
+            <div class="py-1">
+
+               <Nuxt-Link :to="localePath('/register')"
+                v-if="!$auth.loggedIn"
+                href="javascript:void(0)"
+                tabindex="0"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Registrati</Nuxt-Link>
+
+               <Nuxt-Link :to="localePath('/dashboard')"
+                v-if="$auth.loggedIn"
+                href="javascript:void(0)"
+                tabindex="0"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Dashboard</Nuxt-Link>
+
+
+                <Nuxt-Link :to="localePath('/')"
+                href="javascript:void(0)"
+                tabindex="1"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Contattaci</Nuxt-Link>
+
+
+              <!-- <span
+                role="menuitem"
+                tabindex="-1"
+                class="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
+                aria-disabled="true"
+                >New feature (soon)</span> -->
+              
+              <!-- <a
+                href="javascript:void(0)"
+                tabindex="2"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Contatti</a> -->
+              
+            </div>
+            <div class="py-1">
+              <Nuxt-Link :to="localePath('/logout')"
+                v-if="$auth.loggedIn"
+                href="javascript:void(0)"
+                tabindex="3"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Logout </Nuxt-Link>
+              
+            </div>
+          </div>
+        </div>
+   
+
+
+
     </div>
   </div>
 </template>
+
+
+
 
 <script>
 import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      ip: "NotApi",
       result: "",
     };
   },
@@ -40,36 +128,11 @@ export default {
       return this.$store.state.lang;
     },
   },
-  async asyncData({ $axios }) {
-    /*let payload = { nome: "test", score: "1000", difficolta: "imposibile" };
-     const params = "nome=test&score=1000&difficolta=cazzova";
-    const ip = await $axios.$get(
-      `https://inf5.altervista.org/scoreGame/insertDato.php?${params}`,
-      payload,
-      {
-        headers: {
-         CORS: "Access-Control-Allow-Origin",
-        },
-      }
-    );*/
 
-    const result = await $axios.$get(
-      "https://inf5.altervista.org/scoreGame/view.php",
-      "",
-      {
-        headers: {
-          CORS: "Access-Control-Allow-Origin",
-        },
-      }
-    );
-    //console.log(result);
-    return { result };
-  },
   created() {},
   methods: {
-
     storeTest() {
-    this.$store.commit('setStatus_menu', !this.getStatusMenu)
+      this.$store.commit("setStatus_menu", !this.getStatusMenu);
     },
 
     animeEl() {
@@ -91,6 +154,13 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+/*
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  transform: translate(0) scale(1   );
+  visibility: visible;
+}*/
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

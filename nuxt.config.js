@@ -161,10 +161,10 @@ export default {
                     }
                 },
                 redirect: {
-                    /*  login: '/login',
-                      logout: '/',
-                      callback: '/login',
-                      home: '/dashboard'*/
+                    login: '/login',
+                    logout: '/',
+                    callback: '/login',
+                    home: '/dashboard'
                 },
                 // rewriteRedirects: true,
             }

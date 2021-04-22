@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-          <div class="cursor-pointer" @click="$router.go(-1)">
+          <div class="cursor-pointer mt-20" @click="$router.go(-1)">
             <svg
               width="19"
               height="19"
@@ -26,50 +26,25 @@
               />
             </svg>
           </div>
+
           <!-- Title Accedi -->
-          <div
-            class="text-lg font-semibold mx-auto text-red pt-6"
-            style="width: 230px"
-          >
-            {{ $t("auth.register.title") }}
+          <div class="text-2xl font-semibold mx-auto text-red pt-6">
+            {{ $t("auth.forgotPassword.title") }}
           </div>
 
           <!-- Input Email -->
-          <div class="mt-11">
+          <div class="mt-20">
             <ginput
-              :text="$t('auth.register.name')"
-              id="registerEmail"
-              name="registerEmail"
-              type="text"
-              v-model="form.name"
-              :errorMsg="error_name"
-            />
-          </div>
-
-          <!-- Input Password -->
-          <div class="mt-4">
-            <ginput
-              :text="$t('auth.register.email')"
-              id="registerPassword"
-              name="registerPassword"
+              :text="$t('modal.email')"
+              id="loginEmail"
+              name="loginEmail"
               type="email"
               v-model="form.email"
               :errorMsg="error_email"
             />
           </div>
 
-          <!-- Input ConfirmPassword -->
-          <div class="mt-4">
-            <ginput
-              :text="$t('auth.register.password')"
-              id="registerConfirmPassword"
-              name="registerConfirmPassword"
-              type="password"
-              v-model="form.password"
-              :errorMsg="error_password"
-            />
-          </div>
-
+          <!-- REcapcha -->
           <div class="mt-4">
             <svg
               width="278"
@@ -267,85 +242,23 @@
             </svg>
           </div>
 
-          <!-- Check Policy Privacy e newsLetter -->
-          <div
-            class="text-xs font-light text-black mt-3 text-left"
-            style="font-size: 10px; color: #8a91b4"
-          >
-            <div class="relative inline">
-              <svg
-                class="checkIn"
-                viewBox="0 0 24 24"
-                @click="check1 = !check1"
-              >
-                <path
-                  d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"
-                />
-              </svg>
-              <input type="checkbox" v-model="check1" class="top-0_5 mx-1" />
-
-              <div class="cursor-pointer inline" @click="check1 = !check1">
-                {{ $t("auth.register.checkPolicy1") }}
-              </div>
-            </div>
-          </div>
-          <!-- Check Policy Privacy e newsLetter -->
-          <div
-            class="text-xs font-light text-black mt-3 text-left"
-            style="font-size: 10px; color: #8a91b4"
-          >
-            <div class="relative inline">
-              <svg
-                class="checkIn2"
-                viewBox="0 0 24 24"
-                @click="check2 = !check2"
-              >
-                <path
-                  d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"
-                />
-              </svg>
-              <input
-                type="checkbox"
-                v-model="check2"
-                class="relative top-0_5 mx-1"
-              />
-
-              <div class="cursor-pointer inline" @click="check2 = !check2">
-                {{ $t("auth.register.checkPolicy2") }}
-              </div>
-            </div>
-          </div>
-
-          <!--Button Register-->
-          <div class="mt-8 uppercase">
-            <div @click="register()">
-              <gbutton
-                :text="$t('auth.register.btnRegister')"
-                id="buttolRegister"
-                name="buttolRegister"
-                typeButton="normal"
-                uppercase
-              />
-            </div>
-          </div>
-
           <!--Button Login Local-->
-          <div class="mt-4">
-            <nuxt-link :to="localePath('/newLogin')">
+          <div class="mt-8">
+            <div @click="recupera()">
               <gbutton
-                :text="$t('auth.register.btnLogin')"
+                :text="$t('auth.forgotPassword.action')"
                 id="buttolLoginLocal"
                 name="buttolLoginLocal"
-                typeButton="outline"
+                typeButton="normal"
               />
-            </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
       <!-- <pre><code>{{form}}</code></pre> -->
     </div>
-    <!-- Footer Temporaneo
-      <div class="h-10 footerTemp w-full relative"></div>-->
+    <!-- Footer Temporaneo -->
+    <!-- <div class="h-10 footerTemp w-full relative"></div> -->
   </div>
 </template>
 
@@ -356,16 +269,10 @@ export default {
   data() {
     return {
       form: {
-        name: "",
         email: "",
-        password: "",
       },
       error_email: "",
-      error_password: "",
-      error_name: "",
       capchaCheck: false,
-      check1: false,
-      check2: false,
     };
   }, //data
   mounted() {}, //mounted
@@ -384,64 +291,7 @@ export default {
   created() {}, //created
 
   methods: {
-    //Chiamata per registrare l utente
-    register() {
-      var x = this.controlloDatiInseriti();
-      if (x) {
-        console.log("Richiesta di Registrazione");
-        const axios = require("axios");
-        axios
-          .post(
-            "https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register",
-            {
-              //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register
-              //local http://127.0.0.1:8000/api/auth/register
-              name: this.form.name,
-              email: this.form.email,
-              password: this.form.password,
-            }
-          )
-          .then( (response) => {
-            console.log("Registrazione Effettuata:");
-            console.log(response);
-            this.loginAfterRegister();
-          })
-          .catch((error) => {
-            this.error_email = "Ops qualcosa e andato storto";
-            this.error_password = "Ops qualcosa e andato storto";
-            this.error_name = "Ops qualcosa e andato storto";
-            console.error("Oh Error");
-            console.error(error);
-          });
-      } else {
-        }
-    },
-
-    //Effettuo una chiamata di login dopo la register per far loggare l utente appena registrato
-    async loginAfterRegister() {
-       try {
-          //Effettuo la chiamata al server
-          let response = await this.$auth.loginWith("local", {
-            data: this.form,
-          });
-          //Debug di RIsposta riuscita
-          console.log("Login Effettuato:");
-          console.log(response);
-        } catch (error) {
-          //Catturo l errore e lo gestisco
-          console.log("Error Login:");
-          if (error.response.data.code == 406) {
-            this.error_email = "Credenziali Errate";
-            this.error_password = "Credenziali Errate";
-          }
-        }
-      
-    },
-
-    //Controllo dati nel form se sono del formato giusto
-    controlloDatiInseriti() {
-      return true;
-    },
+    recupera() {},
   }, //methods
   components: {
     ginput,
@@ -454,45 +304,6 @@ export default {
 .footerTemp {
   top: 50px;
   background: rgba(175, 56, 79, 0.2);
-}
-
-input[type="checkbox"] {
-  border-radius: 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  height: 13px;
-  width: 13px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid #af384f;
-}
-input[type="checkbox"]:hover {
-  background: rgba($color: #af384f, $alpha: 0.5);
-}
-input[type="checkbox"]:checked {
-  background: #af384f;
-}
-
-.checkIn {
-  cursor: pointer;
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: 0.3px;
-  left: 8px;
-  fill: white;
-  z-index: 5;
-}
-
-.checkIn2 {
-  cursor: pointer;
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: 2.2px;
-  left: 8px;
-  fill: white;
-  z-index: 5;
 }
 </style>
 

@@ -31,7 +31,7 @@
                 @click="closeModal()"
                 class="flex-none w-20 items-center justify-center self-center"
               >
-                <mdb-icon icon="times" />
+                <!-- <mdb-icon icon="times" /> -->
               </div>
             </div>
 

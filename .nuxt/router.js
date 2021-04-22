@@ -6,11 +6,11 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _602760ce = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
 const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _165be229 = () => interopDefault(import('..\\pages\\forgotPassword.vue' /* webpackChunkName: "pages/forgotPassword" */))
 const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
 const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
 const _115fbf24 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _3fc4f5d5 = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
-const _35979c98 = () => interopDefault(import('..\\pages\\newLogin.vue' /* webpackChunkName: "pages/newLogin" */))
 const _58820ca4 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
 const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
@@ -38,6 +38,10 @@ export const routerOptions = {
     component: _2da87d57,
     name: "index___es"
   }, {
+    path: "/forgotPassword",
+    component: _165be229,
+    name: "forgotPassword___it"
+  }, {
     path: "/laser",
     component: _85a12260,
     name: "laser___it"
@@ -54,10 +58,6 @@ export const routerOptions = {
     component: _3fc4f5d5,
     name: "logout___it"
   }, {
-    path: "/newLogin",
-    component: _35979c98,
-    name: "newLogin___it"
-  }, {
     path: "/register",
     component: _58820ca4,
     name: "register___it"
@@ -69,6 +69,10 @@ export const routerOptions = {
     path: "/en/dashboard",
     component: _602760ce,
     name: "dashboard___en"
+  }, {
+    path: "/en/forgotPassword",
+    component: _165be229,
+    name: "forgotPassword___en"
   }, {
     path: "/en/laser",
     component: _85a12260,
@@ -86,10 +90,6 @@ export const routerOptions = {
     component: _3fc4f5d5,
     name: "logout___en"
   }, {
-    path: "/en/newLogin",
-    component: _35979c98,
-    name: "newLogin___en"
-  }, {
     path: "/en/register",
     component: _58820ca4,
     name: "register___en"
@@ -101,6 +101,10 @@ export const routerOptions = {
     path: "/es/dashboard",
     component: _602760ce,
     name: "dashboard___es"
+  }, {
+    path: "/es/forgotPassword",
+    component: _165be229,
+    name: "forgotPassword___es"
   }, {
     path: "/es/laser",
     component: _85a12260,
@@ -117,10 +121,6 @@ export const routerOptions = {
     path: "/es/logout",
     component: _3fc4f5d5,
     name: "logout___es"
-  }, {
-    path: "/es/newLogin",
-    component: _35979c98,
-    name: "newLogin___es"
   }, {
     path: "/es/register",
     component: _58820ca4,

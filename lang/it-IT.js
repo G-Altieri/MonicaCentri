@@ -77,6 +77,7 @@ export default {
         register: {
             title: "Registrazione con Email",
             email: "Indirizzo Email",
+            name: "Nome",
             password: "Password",
             confirmPassword: "Reinserisci nuova password",
             btnRegister: "Registrati",
@@ -84,6 +85,10 @@ export default {
             checkPolicy1: "Ricevi notifiche, consigli e aggiornamenti su prodotti, servizi, software e tanto altro da Monica Centri",
             checkPolicy2: "Ho letto e accettato l’informativa sulla privacy e le condizioni di utilizzo del servizio Monica Centri",
         },
+        forgotPassword: {
+            title: "Recupera Password",
+            action: "Recupera",
+        }
     },
     footer: {
         content: "Il Footer ;)",

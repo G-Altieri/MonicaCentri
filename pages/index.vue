@@ -11,7 +11,7 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <nuxt-link :to="localePath('/newLogin')">
+    <nuxt-link :to="localePath('/dashboard')">
       <div class="box-card z-20">
         <img
           class="imgRenderCarta"
@@ -30,7 +30,7 @@
         class="text-center text-white font-semibold px-6 py-3 rounded-lg btnInfoCovid duration-300"
         :to="localePath('/test')"
       >
-        Info Covid
+        Test Zone
       </nuxt-link>
     </div>
 
@@ -39,7 +39,7 @@
       <boxHome class="text-center" title="laser" link="laser"></boxHome>
       <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
       <boxHome class="text-center" title="dashboard" link="dashboard"></boxHome>
-      <boxHome class="text-center" title="logout" link="logout"></boxHome>
+      <boxHome class="text-center" title="laser" link="laser"></boxHome>
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">

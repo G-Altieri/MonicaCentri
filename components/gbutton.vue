@@ -2,7 +2,8 @@
   <div>
     <div v-if="typeButton == 'normal'">
       <button
-        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all" :class="{uppercase:uppercase}"
+        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all" :class="{uppercase:uppercase}" 
+       
       >
         {{ text }}
       </button>
@@ -110,6 +111,10 @@ export default {
       require: true,
     },
     name: {
+      type: String,
+      default: "",
+    },
+    click: {
       type: String,
       default: "",
     },

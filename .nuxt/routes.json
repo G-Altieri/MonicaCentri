@@ -21,6 +21,13 @@
     "_name": "_2da87d57"
   },
   {
+    "name": "forgotPassword___it",
+    "path": "/forgotPassword",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
+    "chunkName": "pages/forgotPassword",
+    "_name": "_165be229"
+  },
+  {
     "name": "laser___it",
     "path": "/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
@@ -49,13 +56,6 @@
     "_name": "_3fc4f5d5"
   },
   {
-    "name": "newLogin___it",
-    "path": "/newLogin",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\newLogin.vue",
-    "chunkName": "pages/newLogin",
-    "_name": "_35979c98"
-  },
-  {
     "name": "register___it",
     "path": "/register",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\register.vue",
@@ -75,6 +75,13 @@
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\dashboard.vue",
     "chunkName": "pages/dashboard",
     "_name": "_602760ce"
+  },
+  {
+    "name": "forgotPassword___en",
+    "path": "/en/forgotPassword",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
+    "chunkName": "pages/forgotPassword",
+    "_name": "_165be229"
   },
   {
     "name": "laser___en",
@@ -105,13 +112,6 @@
     "_name": "_3fc4f5d5"
   },
   {
-    "name": "newLogin___en",
-    "path": "/en/newLogin",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\newLogin.vue",
-    "chunkName": "pages/newLogin",
-    "_name": "_35979c98"
-  },
-  {
     "name": "register___en",
     "path": "/en/register",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\register.vue",
@@ -131,6 +131,13 @@
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\dashboard.vue",
     "chunkName": "pages/dashboard",
     "_name": "_602760ce"
+  },
+  {
+    "name": "forgotPassword___es",
+    "path": "/es/forgotPassword",
+    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
+    "chunkName": "pages/forgotPassword",
+    "_name": "_165be229"
   },
   {
     "name": "laser___es",
@@ -159,13 +166,6 @@
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\logout.vue",
     "chunkName": "pages/logout",
     "_name": "_3fc4f5d5"
-  },
-  {
-    "name": "newLogin___es",
-    "path": "/es/newLogin",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\newLogin.vue",
-    "chunkName": "pages/newLogin",
-    "_name": "_35979c98"
   },
   {
     "name": "register___es",

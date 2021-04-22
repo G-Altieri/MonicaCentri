@@ -1,7 +1,9 @@
 <template>
-  <div class="pt-24">
+<div class="w-full h-screen flex flex justify-center">
+  <div class=" text-red text-5xl text-center self-center">
     <h1>Logout in corso...</h1>
   </div>
+</div>
 </template>
 
 <script>

@@ -6,12 +6,11 @@
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <Nuxt-Link :to="localePath('/')"><h1>Home</h1></Nuxt-Link>
       <client-only>
-        {{ ip }}
         {{ result }}
       </client-only>
-
+<br><br>
       <div>
-        <button @click="animeEl">Click me</button>
+        <button @click="animeEl">Click me for animation</button>
         <p class="p1">Nuxt Animejs Module</p>
       </div>
       <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
@@ -20,17 +19,29 @@
       {{ getStatusMenu }}
 
       <br /><br /><br />
-      <button @click="storeTest()">Click me Store</button>
+      <button @click="storeTest()">Click me Change Store and Blur</button>
+
+      <br /><br /><br /><br />
+
+
+
+   
+   
+
+
+
     </div>
   </div>
 </template>
+
+
+
 
 <script>
 import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      ip: "NotApi",
       result: "",
     };
   },
@@ -40,36 +51,11 @@ export default {
       return this.$store.state.lang;
     },
   },
-  async asyncData({ $axios }) {
-    /*let payload = { nome: "test", score: "1000", difficolta: "imposibile" };
-     const params = "nome=test&score=1000&difficolta=cazzova";
-    const ip = await $axios.$get(
-      `https://inf5.altervista.org/scoreGame/insertDato.php?${params}`,
-      payload,
-      {
-        headers: {
-         CORS: "Access-Control-Allow-Origin",
-        },
-      }
-    );*/
 
-    const result = await $axios.$get(
-      "https://inf5.altervista.org/scoreGame/view.php",
-      "",
-      {
-        headers: {
-          CORS: "Access-Control-Allow-Origin",
-        },
-      }
-    );
-    //console.log(result);
-    return { result };
-  },
   created() {},
   methods: {
-
     storeTest() {
-    this.$store.commit('setStatus_menu', !this.getStatusMenu)
+      this.$store.commit("setStatus_menu", !this.getStatusMenu);
     },
 
     animeEl() {
@@ -91,6 +77,13 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+/*
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  transform: translate(0) scale(1   );
+  visibility: visible;
+}*/
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

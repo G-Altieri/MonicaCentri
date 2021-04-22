@@ -17,12 +17,12 @@
     loggato = {{ this.$auth.loggedIn }} <br />
 
     <br /><br /><br /><br /><br />
-    <button
+    <!-- <button
       class="border-red-500 p-5 mx-auto text-center font-5xl"
       @click="refreshToken()"
     >
      Auto RefreshToken 15s
-    </button>
+    </button> -->
 
        <!-- <button
       class="border-red-500 p-5 mx-auto text-center font-5xl"

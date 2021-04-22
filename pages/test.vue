@@ -8,9 +8,9 @@
       <client-only>
         {{ result }}
       </client-only>
-
+<br><br>
       <div>
-        <button @click="animeEl">Click me</button>
+        <button @click="animeEl">Click me for animation</button>
         <p class="p1">Nuxt Animejs Module</p>
       </div>
       <!-- <div class="testbg" width="100px">{{ ip2 }}</div> -->
@@ -19,90 +19,13 @@
       {{ getStatusMenu }}
 
       <br /><br /><br />
-      <button @click="storeTest()">Click me Store</button>
+      <button @click="storeTest()">Click me Change Store and Blur</button>
 
       <br /><br /><br /><br />
 
 
 
-        <div
-          class="opacity-1 dropdown-menu  absolute transition-all duration-300 transform origin-top-right -translate-y-2 scale-95"
-        >
-          <div
-            class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
-            aria-labelledby="headlessui-menu-button-1"
-            id="headlessui-menu-items-117"
-            role="menu"
-          >
-
-          <div v-if="!$auth.loggedIn">
-           <Nuxt-Link :to="localePath('/newLogin')">
-            <div class="px-4 py-3">
-              <p class="text-sm leading-5">Accedi</p>
-            </div>
-              </Nuxt-Link>
-          </div>
-          <div v-else>
-             <div class="px-4 py-3">
-              <p class="text-sm leading-5">Ciao {{$auth.user.name}}</p>
-            </div>
-          </div>
-
-
-            <div class="py-1">
-
-               <Nuxt-Link :to="localePath('/register')"
-                v-if="!$auth.loggedIn"
-                href="javascript:void(0)"
-                tabindex="0"
-                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                role="menuitem"
-                >Registrati</Nuxt-Link>
-
-               <Nuxt-Link :to="localePath('/dashboard')"
-                v-if="$auth.loggedIn"
-                href="javascript:void(0)"
-                tabindex="0"
-                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                role="menuitem"
-                >Dashboard</Nuxt-Link>
-
-
-                <Nuxt-Link :to="localePath('/')"
-                href="javascript:void(0)"
-                tabindex="1"
-                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                role="menuitem"
-                >Contattaci</Nuxt-Link>
-
-
-              <!-- <span
-                role="menuitem"
-                tabindex="-1"
-                class="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
-                aria-disabled="true"
-                >New feature (soon)</span> -->
-              
-              <!-- <a
-                href="javascript:void(0)"
-                tabindex="2"
-                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                role="menuitem"
-                >Contatti</a> -->
-              
-            </div>
-            <div class="py-1">
-              <Nuxt-Link :to="localePath('/logout')"
-                v-if="$auth.loggedIn"
-                href="javascript:void(0)"
-                tabindex="3"
-                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                role="menuitem"
-                >Logout </Nuxt-Link>
-              
-            </div>
-          </div>
-        </div>
+   
    
 
 

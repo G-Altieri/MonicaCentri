@@ -22,7 +22,7 @@
       {{ text }}
     </label>
     <!-- Error Email -->
-      <div class="text-red-600 font-normal text-xs left-2-5 my-1-5 relative">{{errorMsg}}</div>
+      <div class="text-red-600 font-normal text-xs left-2-5 mb-1-5 relative text-left">{{errorMsg}}</div>
   </div>
 </template>
 

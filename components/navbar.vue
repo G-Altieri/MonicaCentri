@@ -49,7 +49,7 @@
               @click="activatNewLogin()"
             >
               <img
-                class="h-10 w-6 justify-self-end"
+                class="h-10 w-6 justify-self-end cursor-pointer"
                 id="navIconAccount"
                 :class="{
                   /*'scale-125':Status_dropMenu,'transform':Status_dropMenu*/
@@ -78,7 +78,7 @@
         role="menu"
       >
         <div v-if="!$auth.loggedIn">
-          <Nuxt-Link :to="localePath('/newLogin')">
+          <Nuxt-Link :to="localePath('/login')">
             <div class="px-4 py-3">
               <p class="text-sm leading-5">Accedi</p>
             </div>

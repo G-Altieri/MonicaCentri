@@ -18,7 +18,9 @@
     <div class="container-fluid mx-auto grid">
       <!-- Video or GIF -->
       <div class="videoLaser grid">
-        <div class="text-center self-center text-red text-2xl">Video</div>
+          <video class="mx-auto " src="~/assets/videos/test.mp4" autoplay type="video/mp4" height="100%" controls></video>
+        <div class="text-center self-center text-red text-2xl">
+          Video Page Laser</div>
       </div>
 
       <!-- Sezione di info -->

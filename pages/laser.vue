@@ -18,9 +18,8 @@
     <div class="container-fluid mx-auto grid">
       <!-- Video or GIF -->
       <div class="videoLaser grid">
-          <video class="mx-auto " src="~/assets/videos/test.mp4" autoplay type="video/mp4" height="100%" controls></video>
-        <div class="text-center self-center text-red text-2xl">
-          Video Page Laser</div>
+          <video class="mx-auto" src="~/assets/videos/test1.mp4" type="video/mp4"  autoplay loop muted></video>
+        <!-- <div class="text-center self-center text-red text-2xl">Video Page Laser</div> -->
       </div>
 
       <!-- Sezione di info -->
@@ -202,6 +201,20 @@ export default {
   data() {
     return {};
   },
+  computed:{
+      MediaQuery() {
+      switch (this.$mq) {
+        case "sm":
+          return "mobile";
+        case "md":
+          return "tablet";
+        case "prelg":
+          return "pc";
+        case "lg":
+          return "pc";
+      }
+  },
+  }//computed
 };
 </script>
 <style lang="scss" scoped>
@@ -243,7 +256,8 @@ export default {
 }
 .videoLaser {
   background: #fad1d2;
-  height: 800px;
+ // height: 800px;
+ margin-top: 104px;
   border-bottom: solid 10px #b13850;
 }
 .navBuy {

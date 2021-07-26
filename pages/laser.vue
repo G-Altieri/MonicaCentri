@@ -18,7 +18,7 @@
     <div class="container-fluid mx-auto grid">
       <!-- Video or GIF -->
       <div class="videoLaser grid">
-          <video class="mx-auto" src="~/assets/videos/test1.mp4" type="video/mp4"  autoplay loop muted></video>
+          <video class="mx-auto" src="~/assets/videos/test1.mp4" type="video/mp4"  autoplay loop muted playsinline></video>
         <!-- <div class="text-center self-center text-red text-2xl">Video Page Laser</div> -->
       </div>
 

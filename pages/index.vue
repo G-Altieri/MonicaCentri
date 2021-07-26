@@ -36,10 +36,10 @@
 
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome class="text-center" title="laser" link="laser"></boxHome>
-      <boxHome class="text-center" title="lingue" link="lingue"></boxHome>
-      <boxHome class="text-center" title="dashboard" link="dashboard"></boxHome>
-      <boxHome class="text-center" title="laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="Laser" link="laser"></boxHome>
+      <boxHome class="text-center" title="BioLifting" link="biolifting"></boxHome>
+      <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
+      <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome>
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">

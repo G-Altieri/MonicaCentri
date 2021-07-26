@@ -14,7 +14,10 @@ export default {
     },
     navBuy: {
         buy: "Acquista",
-        fotoepilazione: "FotoEpilazione"
+        fotoepilazione: "FotoEpilazione",
+        biolifting: "Biolifting",
+        puliziaevolution: "Pulizia Evolution",
+        maipiuxl: "Mai Più XL",
     },
     laser: {
         info: {
@@ -42,6 +45,36 @@ export default {
             three: {
                 title: "Pelle perfetta",
                 content: "L’epidermide diventerà liscia, levigata, vengono eliminate machhie, discromie e follicolite per una pelle meravigliosa e senza più peli",
+            },
+        },
+        BtnBuyNow: "Acquista Ora",
+    },
+    biolifting: {
+        info: {
+            title1: "BIOLIFTING",
+            title2: "Giovani subito.",
+            btnVideo: "GUARDA VIDEO"
+        },
+        info2: {
+            content1: "Il nostro Biolifting",
+            content2: "innovativo",
+            content3: "avanzato",
+        },
+        info3: {
+            content1: "Agisce in profondità fino a raggiungere l’ipoderma per un effetto emozionante",
+        },
+        illustration: {
+            one: {
+                title: "Riattiva le cellule",
+                content: "L’onda di radiofrequenza genera calore endogeno, che colpendo le cellule crea un importante aumento del microcircolo e migliore ossigenazione dei tessuti",
+            },
+            two: {
+                title: "Stimola la memoria cellulare ",
+                content: "I risultati del nostro biolifting sono visibili sin dalle prime sedute ed i progressi conseguiti si mostrano stabili nel  tempo ",
+            },
+            three: {
+                title: "Azione naturale",
+                content: "Il nostro biolifting, non invasivo, stimola la produzione biologica di acido ialuronico, collagene ed elastina, cursori principali del ringiovanimento della pelle",
             },
         },
         BtnBuyNow: "Acquista Ora",

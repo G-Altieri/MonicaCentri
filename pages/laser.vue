@@ -18,7 +18,7 @@
     <div class="container-fluid mx-auto grid">
       <!-- Video or GIF -->
       <div class="videoLaser grid">
-          <video class="mx-auto" src="~/assets/videos/biolifting.mp4" type="video/mp4"  autoplay loop muted playsinline></video>
+          <video class="mx-auto   " src="~/assets/videos/biolifting.mp4" type="video/mp4"  autoplay loop muted playsinline></video>
         <!-- <div class="text-center self-center text-red text-2xl">Video Page Laser</div> -->
       </div>
 
@@ -218,12 +218,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.BtnBuyNow {
-  background: #b13850;
-  padding: 10px;
-  border-radius: 10px;
-  width: 150px;
-}
+
 
 .bg_illustrationContainer {
   position: relative;
@@ -245,20 +240,19 @@ export default {
   //   height: auto;
   transform: scale(-1);
 }
-.box_Illustrazioni_content {
-  background: #ffd2d2;
-}
 
 
-.btnVideo {
-  background: #b13850;
-  border-radius: 25px;
-}
+
 .videoLaser {
-  background: #fad1d2;
+  background: white;
+ // background: #fad1d2;
+ // background: #b13850;
  // height: 800px;
  margin-top: 104px;
-  border-bottom: solid 10px #b13850;
+border-bottom: solid 10px #b13850;
+}
+.borderVideoLaser{
+   border-bottom: solid 10px #b13850;
 }
 .navBuy {
   top: 56px;

@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 a:hover {
@@ -19,7 +19,7 @@ a:hover {
 }
 
 .text-gray {
-    color: #C4C4C4;
+    color: #c4c4c4;
 }
 
 .border-red {
@@ -30,12 +30,13 @@ a:hover {
     border-width: 1px;
 }
 
-.scrollbar {}
+.scrollbar {
+}
 
 .scrollbar::-webkit-scrollbar-track {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);*/
     /* border-radius: 10px; */
-    background-color: rgba(255, 210, 210, .5);
+    background-color: rgba(255, 210, 210, 0.5);
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -115,3 +116,28 @@ a:hover {
 .separeNavBar {
     top: 57px;
 }
+
+.videoDemoPage {
+    background: white;
+    margin-top: 88px;
+}
+
+.borderbottomred{
+    border-bottom: solid 10px #b13850;
+}
+
+.btnVideo {
+    background: #b13850;
+    border-radius: 25px;
+  }
+
+  .box_Illustrazioni_content {
+    background: #ffd2d2;
+  }
+
+  .BtnBuyNow {
+    background: #b13850;
+    padding: 12px;
+    border-radius: 6px;
+    width: 150px;
+  }

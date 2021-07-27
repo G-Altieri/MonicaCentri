@@ -61,6 +61,9 @@ export default {
         '~/assets/css/main.css',
         '~/assets/font/Montserrat.css',
 
+        'vue-slick-carousel/dist/vue-slick-carousel-theme.css',
+        'vue-slick-carousel/dist/vue-slick-carousel.css',
+
 
     ],
 
@@ -69,7 +72,9 @@ export default {
         /*Plugin media query */
         {
             src: '~/plugins/vueMq'
-        }
+        },
+
+        '~/plugins/vue-slick-carousel.js',
 
     ],
 

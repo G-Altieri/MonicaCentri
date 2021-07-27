@@ -27,6 +27,10 @@
 
    
    
+      <!-- Carosello Review Clienti -->
+      <div class="">
+     
+      </div>
 
 
 
@@ -38,10 +42,19 @@
 
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
 import { mapGetters } from "vuex";
 export default {
   data() {
     return {
+       settings: {
+        dots: true,
+        dotsClass: "slick-dots custom-dot-class",
+     
+
+        autoplay: false,
+
+      },
       result: "",
     };
   },
@@ -68,6 +81,9 @@ export default {
       });
     },
   },
+    components: {
+    VueSlickCarousel
+  },
 };
 </script>
 
@@ -86,7 +102,7 @@ export default {
 
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+ /* min-height: 100vh;*/
   display: flex;
   justify-content: center;
   align-items: center;

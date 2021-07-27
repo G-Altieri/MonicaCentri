@@ -4,16 +4,16 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2a57c35e = () => interopDefault(import('..\\pages\\biolifting.vue' /* webpackChunkName: "pages/biolifting" */))
-const _fde94cbc = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
-const _e0301840 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _606eb5c0 = () => interopDefault(import('..\\pages\\forgotPassword.vue' /* webpackChunkName: "pages/forgotPassword" */))
-const _1f6ee559 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
-const _4a069430 = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
-const _598f96f7 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _2574506c = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
-const _0b020a85 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
-const _be82f418 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
+const _7811e73a = () => interopDefault(import('..\\pages\\biolifting.vue' /* webpackChunkName: "pages/biolifting" */))
+const _602760ce = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _165be229 = () => interopDefault(import('..\\pages\\forgotPassword.vue' /* webpackChunkName: "pages/forgotPassword" */))
+const _85a12260 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
+const _1565495e = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
+const _115fbf24 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _3fc4f5d5 = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages/logout" */))
+const _58820ca4 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _82c91cc6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
 
@@ -28,123 +28,123 @@ export const routerOptions = {
 
   routes: [{
     path: "/biolifting",
-    component: _2a57c35e,
+    component: _7811e73a,
     name: "biolifting___it"
   }, {
     path: "/dashboard",
-    component: _fde94cbc,
+    component: _602760ce,
     name: "dashboard___it"
   }, {
     path: "/en",
-    component: _e0301840,
+    component: _2da87d57,
     name: "index___en"
   }, {
     path: "/es",
-    component: _e0301840,
+    component: _2da87d57,
     name: "index___es"
   }, {
     path: "/forgotPassword",
-    component: _606eb5c0,
+    component: _165be229,
     name: "forgotPassword___it"
   }, {
     path: "/laser",
-    component: _1f6ee559,
+    component: _85a12260,
     name: "laser___it"
   }, {
     path: "/lingue",
-    component: _4a069430,
+    component: _1565495e,
     name: "lingue___it"
   }, {
     path: "/login",
-    component: _598f96f7,
+    component: _115fbf24,
     name: "login___it"
   }, {
     path: "/logout",
-    component: _2574506c,
+    component: _3fc4f5d5,
     name: "logout___it"
   }, {
     path: "/register",
-    component: _0b020a85,
+    component: _58820ca4,
     name: "register___it"
   }, {
     path: "/test",
-    component: _be82f418,
+    component: _82c91cc6,
     name: "test___it"
   }, {
     path: "/en/biolifting",
-    component: _2a57c35e,
+    component: _7811e73a,
     name: "biolifting___en"
   }, {
     path: "/en/dashboard",
-    component: _fde94cbc,
+    component: _602760ce,
     name: "dashboard___en"
   }, {
     path: "/en/forgotPassword",
-    component: _606eb5c0,
+    component: _165be229,
     name: "forgotPassword___en"
   }, {
     path: "/en/laser",
-    component: _1f6ee559,
+    component: _85a12260,
     name: "laser___en"
   }, {
     path: "/en/lingue",
-    component: _4a069430,
+    component: _1565495e,
     name: "lingue___en"
   }, {
     path: "/en/login",
-    component: _598f96f7,
+    component: _115fbf24,
     name: "login___en"
   }, {
     path: "/en/logout",
-    component: _2574506c,
+    component: _3fc4f5d5,
     name: "logout___en"
   }, {
     path: "/en/register",
-    component: _0b020a85,
+    component: _58820ca4,
     name: "register___en"
   }, {
     path: "/en/test",
-    component: _be82f418,
+    component: _82c91cc6,
     name: "test___en"
   }, {
     path: "/es/biolifting",
-    component: _2a57c35e,
+    component: _7811e73a,
     name: "biolifting___es"
   }, {
     path: "/es/dashboard",
-    component: _fde94cbc,
+    component: _602760ce,
     name: "dashboard___es"
   }, {
     path: "/es/forgotPassword",
-    component: _606eb5c0,
+    component: _165be229,
     name: "forgotPassword___es"
   }, {
     path: "/es/laser",
-    component: _1f6ee559,
+    component: _85a12260,
     name: "laser___es"
   }, {
     path: "/es/lingue",
-    component: _4a069430,
+    component: _1565495e,
     name: "lingue___es"
   }, {
     path: "/es/login",
-    component: _598f96f7,
+    component: _115fbf24,
     name: "login___es"
   }, {
     path: "/es/logout",
-    component: _2574506c,
+    component: _3fc4f5d5,
     name: "logout___es"
   }, {
     path: "/es/register",
-    component: _0b020a85,
+    component: _58820ca4,
     name: "register___es"
   }, {
     path: "/es/test",
-    component: _be82f418,
+    component: _82c91cc6,
     name: "test___es"
   }, {
     path: "/",
-    component: _e0301840,
+    component: _2da87d57,
     name: "index___it"
   }],
 

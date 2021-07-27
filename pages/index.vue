@@ -27,7 +27,15 @@
     <div class="containerInfoCovid grid flex items-center">
       <nuxt-link
         type="button"
-        class="text-center text-white font-semibold px-6 py-3 rounded-lg btnInfoCovid duration-300"
+        class="
+          text-center text-white
+          font-semibold
+          px-6
+          py-3
+          rounded-lg
+          btnInfoCovid
+          duration-300
+        "
         :to="localePath('/test')"
       >
         Test Zone
@@ -37,7 +45,11 @@
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
       <boxHome class="text-center" title="Laser" link="laser"></boxHome>
-      <boxHome class="text-center" title="BioLifting" link="biolifting"></boxHome>
+      <boxHome
+        class="text-center"
+        title="BioLifting"
+        link="biolifting"
+      ></boxHome>
       <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
       <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome>
     </div>
@@ -49,27 +61,53 @@
 
       <!-- box recensioni clienti -->
       <div class="containerReviews">
-        <clientReview
-          class=""
-          :text="$t('review.text1')"
-          name="Giovanni Altieri"
-          :ruolo="$t('review.ruolo1')"
-          img="img-review1"
-        ></clientReview>
-        <clientReview
-          class=""
-          :text="$t('review.text2')"
-          name="Oscar Bevilacqua"
-          :ruolo="$t('review.ruolo2')"
-          img="img-review2"
-        ></clientReview>
-        <clientReview
-          class=""
-          :text="$t('review.text3')"
-          name="Fabrizio Bevilacqua"
-          :ruolo="$t('review.ruolo3')"
-          img="img-review3"
-        ></clientReview>
+        <!-- Carosello Review Clienti -->
+        <div class="mx-auto mt-36 text-black">
+          <VueSlickCarousel v-bind="settings">
+            <clientReview
+              class=""
+              :text="$t('review.text1')"
+              name="Giovanni Altieri"
+              :ruolo="$t('review.ruolo1')"
+              img="img-review1"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text2')"
+              name="Oscar Bevilacqua"
+              :ruolo="$t('review.ruolo2')"
+              img="img-review2"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text3')"
+              name="Fabrizio Bevilacqua"
+              :ruolo="$t('review.ruolo3')"
+              img="img-review3"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text1')"
+              name="Giovanni Altieri"
+              :ruolo="$t('review.ruolo1')"
+              img="img-review1"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text2')"
+              name="Oscar Bevilacqua"
+              :ruolo="$t('review.ruolo2')"
+              img="img-review2"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text3')"
+              name="Fabrizio Bevilacqua"
+              :ruolo="$t('review.ruolo3')"
+              img="img-review3"
+            ></clientReview>
+          </VueSlickCarousel>
+        </div>
       </div>
     </div>
 
@@ -90,7 +128,58 @@
 <script>
 import boxHome from "@/components/boxHome.vue";
 import clientReview from "@/components/clientReview.vue";
+import VueSlickCarousel from "vue-slick-carousel";
+
 export default {
+  data() {
+    return {
+      settings: {
+        dots: false,
+        arrows: false,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        speed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+
+        centerMode: true,
+centerPadding: "0px",
+        slidesPerRow: 1,
+        touchMove: true,
+        variableWidth: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnDotsHover: false,
+        pauseOnFocus: true,
+        pauseOnHover: false,
+
+        swipe: true,
+
+         responsive: [
+    {
+      "breakpoint": 1024,
+      "settings": {
+        "slidesToShow": 2,
+        "slidesToScroll": 2,
+        "infinite": true,
+        "dots": true
+      }
+    },
+    {
+      "breakpoint": 600,
+      "settings": {
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "initialSlide": 1
+      }
+    },
+  ]
+
+
+      },
+    };
+  },
 
   mounted() {
     //$("body").addClass("scrollbar");
@@ -98,6 +187,7 @@ export default {
   components: {
     boxHome,
     clientReview,
+    VueSlickCarousel,
   },
 };
 </script>

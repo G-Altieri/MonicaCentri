@@ -1,6 +1,6 @@
 <template>
   <div class="container2">
-    <div class="shadow-lg rounded-xl flex-none w-80 md:w-xl" style="">
+    <div class="shadow-lg ombrareview rounded-xl flex-none w-80 md:w-xl mx-2" style="">
       <div
         class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-8 md:leading-8 font-semibold text-gray-900"
       >
@@ -108,6 +108,10 @@ export default {
   margin-top: 50px;
 }
 
+.ombrareview {
+-webkit-box-shadow: 0px 4px 8px -1px rgba(0,0,0,0.6); 
+box-shadow: 0px 4px 8px -1px rgba(0,0,0,0.6);
+}
 
 .bg-footer-review{
   /* bg-gradient-to-br from-orange-400 to-pink-600*/

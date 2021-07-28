@@ -30,7 +30,7 @@
       <div class="videoDemoPage borderbottomred grid">
         <video
           class="mx-auto"
-          src="~/assets/videos/biolifting.mp4"
+          src="~/assets/videos/DemoBiolifting.mp4"
           type="video/mp4"
           autoplay
           loop

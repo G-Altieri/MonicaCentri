@@ -16,10 +16,17 @@
 
     <!-- Container -->
     <div class="container-fluid mx-auto grid">
-      <!-- Video or GIF -->
-      <div class="videoLaser grid">
-          <video class="mx-auto" src="~/assets/videos/biolifting.mp4" type="video/mp4"  autoplay loop muted playsinline></video>
-        <!-- <div class="text-center self-center text-red text-2xl">Video Page Laser</div> -->
+       <!-- Video or GIF -->
+      <div class="videoDemoPage borderbottomred grid">
+        <video
+          class="mx-auto"
+          src="~/assets/videos/DemoLaser.mp4"
+          type="video/mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
       </div>
 
       <!-- Sezione di info -->

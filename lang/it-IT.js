@@ -85,12 +85,13 @@ export default {
         k: "Non sapevo cosa aggiungere",
     },
     review: {
-        text1: "Centro Estetico fantastico",
-        ruolo1: "Sviluppatore",
-        text2: "I risultati del nuovo laser sono ben evidenti, ho una ricrescita nulla o molto debole. Sono davvero contento",
-        ruolo2: "Grafico",
-        text3: "Super consigliato",
-        ruolo3: "Marketing",
+        text1: "Gentili, raffinate, accoglienti e professionali. Oggi più che mai la cura del cliente diventa il valore aggiunto di primaria importanza . Esperte nelle tecniche di rimodellamento corpo . Ormai da anni mi ricevono e si prendono cura di me con la stessa amorevole attenzione del primo giorno .",
+        text2: "Un luogo in cui ho trovato la massima cordialità e professionalità ma soprattutto dedizione e reale interesse nei confronti delle esigenze del cliente. Centro curato, ordinato ed estremamente pulito. Esperienza davvero piacevole oltre le aspettative.",
+        text3: "Centro estetico di classe, giusto di dimensione, molto professionale; titolare e collaboratori molto gentili ed educati, mettono la clientela a proprio agio. Le prestazioni estetiche sono molto curate nei dettagli. Professionalità e serietà garantita. Clientela molto selezionata e seria. eccellenti condizioni igieniche in particolare per ciò che concerne gli strumenti da lavoro e degli stessi locali dove si effettuano i trattamenti. Aggiornato sui trattamenti per uomini e donne, con tantissime novità. Sempre soddisfacenti; un piacere andarci.",
+        text4: "A volte facciamo tanti km per recarci nella Spa e invece abbiamo un’oasi della bellezza dentro casa. Un ambiente super accogliente, rilassante, dove per qualche ora ti liberi da tutti i pensieri e ti affidi alla grande professionalità di Monica e delle sue collaboratrici per rigenerarti e diventare più bella. Grandioso il nuovo metodo per l’epilazione totale che ho da poco iniziato!  Merita 10 stelle, altro che 5!",
+        text5: "Conosco Monica da anni e frequento il suo centro estetico da quando ero una ragazzina. Professionalità e passione la fanno da padrone  😊. Monica è sempre all avanguardia!! Si tiene costantemente aggiornata su tecniche e strumenti nuovi ed esclusivi. Il laser per l epilazione definitiva fa miracoli ma anche i massaggi sono super!!!",
+        text6: "Come rimanere eternamente giovani e belli? Affidandosi costantemente a chi del suo lavoro ne ha fatto un'arte. Capacità, impegno, costanza, professionalità, innovazione fanno di Monica Centri un gioiello inestimabile nel cuore di un paesino meraviglioso di nome Lentella. Dal giorno in cui ho avuto modo di affidarmi al suo team non l'ho più lasciato. Oggi sono per me piu di un momento di benessere, ma amiche accoglienti, calorose, disponibili dove ritrovare la forma del corpo ed il benessere della mente. Semplicemente grazie.",
+
     },
     titolare: {
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore nam atque fuga officia eaque ut nostrum velit sed ad, deleniti distinctio itaque maiores incidunt nesciunt adipisci eum officiis natus",

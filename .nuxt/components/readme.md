@@ -16,3 +16,4 @@ You can directly use them in pages and other components without the need to impo
 - `<MenuOverlayBackup>` | `<menu-overlay-backup>` (components/menuOverlayBackup.vue)
 - `<Modal>` | `<modal>` (components/modal.vue)
 - `<Navbar>` | `<navbar>` (components/navbar.vue)
+- `<NavbarBuy>` | `<navbar-buy>` (components/navbarBuy.vue)

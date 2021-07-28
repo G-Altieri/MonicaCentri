@@ -1,6 +1,6 @@
 <template>
   <div class="container2">
-    <div class="shadow-lg ombrareview rounded-xl flex-none w-80 md:w-xl mx-2" style="">
+    <div class="shadow-lg ombrareview rounded-xl flex-none w-80 md:w-xl mx-2 mb-2" style="">
       <div
         class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-8 md:leading-8 font-semibold text-gray-900"
       >
@@ -36,9 +36,9 @@
         >
           <!-- Img profilo -->
           <img
-            :src="require(`~/assets/img/home/${img}.jpg`)"
+            :src="require(`~/assets/img/home/review/${img}.jpg`)"
             alt=""
-            class="w-16 h-16 bg-trasparent"
+            class="w-16 h-16 bg-trasparent rounded-full"
             loading="lazy"
           />
         </div>
@@ -47,7 +47,7 @@
           {{ name }}<br /><span class="text-orange-100"> {{ ruolo }}</span>
         </div>
 
-        <!-- Icona di twitter -->
+        <!-- Icona di facebook -->
         <div class="flex">
           <a
             target="_blank"

@@ -10,7 +10,8 @@ const components = {
   MenuOverlay: () => import('../..\\components\\menuOverlay.vue' /* webpackChunkName: "components/menu-overlay" */).then(c => c.default || c),
   MenuOverlayBackup: () => import('../..\\components\\menuOverlayBackup.vue' /* webpackChunkName: "components/menu-overlay-backup" */).then(c => c.default || c),
   Modal: () => import('../..\\components\\modal.vue' /* webpackChunkName: "components/modal" */).then(c => c.default || c),
-  Navbar: () => import('../..\\components\\navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c)
+  Navbar: () => import('../..\\components\\navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c),
+  NavbarBuy: () => import('../..\\components\\navbarBuy.vue' /* webpackChunkName: "components/navbar-buy" */).then(c => c.default || c)
 }
 
 for (const name in components) {

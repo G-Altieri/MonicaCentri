@@ -1,22 +1,11 @@
 <template>
   <div>
     <!-- Navbar Acquisto -->
-    <div class="navBuy fixed w-full h-12 grid grid-cols-2">
-      <div class="text-white text-left flex self-center ml-2 md:ml-5">
-        {{ $t("navBuy.fotoepilazione") }}
-      </div>
-      <div
-        class="text-white text-right flex justify-end self-center mr-2 md:mr-5"
-      >
-        <div class="btnBuy p-1 px-3">
-          {{ $t("navBuy.buy") }}
-        </div>
-      </div>
-    </div>
+    <navbarBuy :name="$t('navBuy.fotoepilazione')" link="/"></navbarBuy>
 
     <!-- Container -->
     <div class="container-fluid mx-auto grid">
-       <!-- Video or GIF -->
+      <!-- Video or GIF -->
       <div class="videoDemoPage borderbottomred grid">
         <video
           class="mx-auto"
@@ -45,7 +34,18 @@
         <div class="mx-auto my-6">
           <nuxt-link :to="localePath('/')">
             <div
-              class="btnVideo text-white p-2 px-3 font-bold uppercase text-sm w-max btnShadow duration-300"
+              class="
+                btnVideo
+                text-white
+                p-2
+                px-3
+                font-bold
+                uppercase
+                text-sm
+                w-max
+                btnShadow
+                duration-300
+              "
             >
               {{ $t("laser.info.btnVideo") }}
             </div>
@@ -79,21 +79,21 @@
         <!-- Bg Header Sezione Illustrazioni -->
         <div class="bg_illustrationContainer">
           <svg
-            viewBox="0 0 414 85"
-            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 375 210"
             class="relative"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M235 34.5C164.2 62.1 48.8333 23 0 0V18.5C19.5 28.5 139 69 249 47.5C337 30.3 395.667 62 414 80V55C383.833 36.6667 305.8 6.9 235 34.5Z"
+              d="M179.739 25.3825C105.76 40.8042 28.538 11.1152 0 0V108H376V81.1244C334.445 40.8111 301.5 0 179.739 25.3825Z"
               fill="#AF384F"
             />
             <path
-              d="M210 50.2481C139.2 60.9669 40.5 32.5489 0 17V70.594L414 83V77.5414C355 31.391 298.5 36.8496 210 50.2481Z"
+              d="M188.5 47C99 56 38.8734 33.4488 0 19V160H376V89.9067C274 89.9067 278 38 188.5 47Z"
               fill="#D16A7D"
             />
             <path
-              d="M205.252 60.1195C154.114 75.4151 47.1098 53.7463 0 41V121H414V82.2579C355.571 52.0692 269.175 41 205.252 60.1195Z"
-              fill="#FFD2D2"
+              d="M194.5 84.5C122.539 30.5291 38.8734 83.4487 0 69V210H376V113.5C341.418 89.8207 266.5 138.5 194.5 84.5Z"
+              fill="#FED1D1"
             />
           </svg>
         </div>
@@ -105,7 +105,7 @@
             <img
               src="~/assets/img/laser/illustration1.svg"
               alt=""
-              class="mt-20 mx-auto"
+              class="mx-auto"
               width="125px"
               height="auto"
             />
@@ -163,24 +163,24 @@
         </div>
         <!-- **Fine sezione content illutrazioni** -->
 
-        <!-- Bg Footer Sezione Illustrazioni -->
+        <!-- Bg Header Sezione Illustrazioni -->
         <div class="bg_illustrationContainer">
           <svg
-            viewBox="0 0 414 85"
+            viewBox="0 0 375 210"
+            class="relative"
             xmlns="http://www.w3.org/2000/svg"
-            class="bg_illustrationFooter"
           >
             <path
-              d="M235 34.5C164.2 62.1 48.8333 23 0 0V18.5C19.5 28.5 139 69 249 47.5C337 30.3 395.667 62 414 80V55C383.833 36.6667 305.8 6.9 235 34.5Z"
+              d="M196.261 184.617C270.24 169.196 347.462 198.885 376 210L376 102L9.44166e-06 102L7.09212e-06 128.876C41.5553 169.189 74.5 210 196.261 184.617Z"
               fill="#AF384F"
             />
             <path
-              d="M210 50.2481C139.2 60.9669 40.5 32.5489 0 17V70.594L414 83V77.5414C355 31.391 298.5 36.8496 210 50.2481Z"
+              d="M187.5 163C277 154 337.127 176.551 376 191L376 50L1.23266e-05 50L6.19886e-06 120.093C102 120.093 98 172 187.5 163Z"
               fill="#D16A7D"
             />
             <path
-              d="M205.252 60.1195C154.114 75.4151 47.1098 53.7463 0 41V121H414V82.2579C355.571 52.0692 269.175 41 205.252 60.1195Z"
-              fill="#FFD2D2"
+              d="M181.5 125.5C253.461 179.471 337.127 126.551 376 141L376 4.57764e-05L1.31451e-05 1.29054e-05L4.7088e-06 96.5001C34.5815 120.179 109.5 71.5 181.5 125.5Z"
+              fill="#FED1D1"
             />
           </svg>
         </div>
@@ -190,7 +190,16 @@
       <!-- Button Acquista Ora -->
       <div class="mx-auto my-16">
         <nuxt-link :to="localePath('/')">
-          <div class="BtnBuyNow text-white font-bold text-center btnShadow duration-300">
+          <div
+            class="
+              BtnBuyNow
+              text-white
+              font-bold
+              text-center
+              btnShadow
+              duration-300
+            "
+          >
             {{ $t("laser.BtnBuyNow") }}
           </div>
         </nuxt-link>
@@ -204,12 +213,14 @@
   </div>
 </template>
 <script>
+import navbarBuy from "@/components/navbarBuy.vue";
+
 export default {
   data() {
     return {};
   },
-  computed:{
-      MediaQuery() {
+  computed: {
+    MediaQuery() {
       switch (this.$mq) {
         case "sm":
           return "mobile";
@@ -220,13 +231,14 @@ export default {
         case "lg":
           return "pc";
       }
-  },
-  }//computed
+    },
+    components: {
+      navbarBuy,
+    },
+  }, //computed
 };
 </script>
 <style lang="scss" scoped>
-
-
 .bg_illustrationContainer {
   position: relative;
   margin: 0;
@@ -248,18 +260,16 @@ export default {
   transform: scale(-1);
 }
 
-
-
 .videoLaser {
   background: white;
- // background: #fad1d2;
- // background: #b13850;
- // height: 800px;
- margin-top: 104px;
-border-bottom: solid 10px #b13850;
+  // background: #fad1d2;
+  // background: #b13850;
+  // height: 800px;
+  margin-top: 104px;
+  border-bottom: solid 10px #b13850;
 }
-.borderVideoLaser{
-   border-bottom: solid 10px #b13850;
+.borderVideoLaser {
+  border-bottom: solid 10px #b13850;
 }
 .navBuy {
   top: 56px;

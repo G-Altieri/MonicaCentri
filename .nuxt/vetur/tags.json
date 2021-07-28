@@ -28,5 +28,8 @@
   },
   "Navbar": {
     "description": "Auto imported from components/navbar.vue"
+  },
+  "NavbarBuy": {
+    "description": "Auto imported from components/navbarBuy.vue"
   }
 }

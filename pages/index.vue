@@ -67,44 +67,38 @@
             <clientReview
               class=""
               :text="$t('review.text1')"
-              name="Giovanni Altieri"
-              :ruolo="$t('review.ruolo1')"
-              img="img-review1"
+              name="Umberto Giuliani"
+              img="Annalisa Bucciarelli"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text2')"
-              name="Oscar Bevilacqua"
-              :ruolo="$t('review.ruolo2')"
-              img="img-review2"
+              name="Gianrocco Reale"
+              img="Chiara Battista"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text3')"
-              name="Fabrizio Bevilacqua"
-              :ruolo="$t('review.ruolo3')"
-              img="img-review3"
+              name="Donatella Longo"
+              img="Domenica Albanese"
             ></clientReview>
             <clientReview
               class=""
-              :text="$t('review.text1')"
-              name="Giovanni Altieri"
-              :ruolo="$t('review.ruolo1')"
-              img="img-review1"
+              :text="$t('review.text4')"
+              name="Domenica Albanese"
+              img="Donatella Longo"
             ></clientReview>
             <clientReview
               class=""
-              :text="$t('review.text2')"
-              name="Oscar Bevilacqua"
-              :ruolo="$t('review.ruolo2')"
-              img="img-review2"
+              :text="$t('review.text5')"
+              name="Chiara Battista"
+              img="Gianrocco Reale"
             ></clientReview>
             <clientReview
               class=""
-              :text="$t('review.text3')"
-              name="Fabrizio Bevilacqua"
-              :ruolo="$t('review.ruolo3')"
-              img="img-review3"
+              :text="$t('review.text6')"
+              name="Annalisa Bucciarelli"
+              img="Umberto Giuliani"
             ></clientReview>
           </VueSlickCarousel>
         </div>
@@ -134,16 +128,16 @@ export default {
   data() {
     return {
       settings: {
-        dots: false,
+        dots: true,
         arrows: false,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
-        speed: 2000,
+        speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
 
         centerMode: true,
-centerPadding: "0px",
+        centerPadding: "0px",
         slidesPerRow: 1,
         touchMove: true,
         variableWidth: false,
@@ -156,27 +150,26 @@ centerPadding: "0px",
 
         swipe: true,
 
-         responsive: [
-    {
-      "breakpoint": 1024,
-      "settings": {
-        "slidesToShow": 2,
-        "slidesToScroll": 2,
-        "infinite": true,
-        "dots": true
-      }
-    },
-    {
-      "breakpoint": 600,
-      "settings": {
-        "slidesToShow": 1,
-        "slidesToScroll": 1,
-        "initialSlide": 1
-      }
-    },
-  ]
-
-
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1,
+              dots: false,
+            },
+          },
+        ],
       },
     };
   },

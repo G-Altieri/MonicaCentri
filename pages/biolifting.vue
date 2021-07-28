@@ -1,28 +1,12 @@
 <template>
   <div>
-    <!-- Navbar Acquisto -->
-    <div class="navBuy fixed w-full h-8 grid grid-cols-2">
-      <div
-        class="
-          text-white
-          font-medium
-          text-xs text-left
-          flex
-          self-center
-          ml-2
-          md:ml-5
-        "
-      >
-        {{ $t("navBuy.biolifting") }}
-      </div>
-      <div
-        class="text-white text-right flex justify-end self-center mr-2 md:mr-5"
-      >
-        <div class="btnBuy p-1 px-2 text-xs font-normal self-center">
-          {{ $t("navBuy.buy") }}
-        </div>
-      </div>
-    </div>
+
+        <!-- Navbar Acquisto -->
+    <navbarBuy
+    :name="$t('navBuy.biolifting')"
+    link="/"
+    ></navbarBuy>
+
 
     <!-- Container -->
     <div class="container-fluid mx-auto grid">
@@ -202,11 +186,19 @@
       </div>
       <!-- **Fine sezione content illutrazioni** -->
 
-
- <!-- Button Acquista Ora -->
+      <!-- Button Acquista Ora -->
       <div class="mx-auto my-16">
         <nuxt-link :to="localePath('/')">
-          <div class="BtnBuyNow text-white font-bold text-center btnShadow duration-300">
+          <div
+            class="
+              BtnBuyNow
+              text-white
+              font-bold
+              text-center
+              btnShadow
+              duration-300
+            "
+          >
             {{ $t("laser.BtnBuyNow") }}
           </div>
         </nuxt-link>
@@ -216,8 +208,6 @@
       <div class="footerLaser grid flex text-2xl mt-16">
         <div class="self-center text-red">Footer</div>
       </div>
-
-
     </div>
     <!-- Container Page -->
   </div>
@@ -226,27 +216,19 @@
 
 
 <script>
+import navbarBuy from "@/components/navbarBuy.vue";
+
 export default {
   data() {
     return {};
+  },
+  components: {
+    navbarBuy,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.navBuy {
-  top: 56px;
-  z-index: 50;
-  background: #b13850;
-}
 
-.btnBuy {
-  background: #3791ff;
-  /*width: 48.46px;
-height: 15px;*/
-  border-radius: 25px;
-  //  font-weight: 500;
-  font-size: 7px;
-  font-family: "Montserrat", sans-serif;
-}
+
 </style>

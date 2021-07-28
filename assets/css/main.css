@@ -97,6 +97,10 @@ a:hover {
     padding-bottom: 2.25rem;
 }
 
+.h-9{
+    height: 2.25rem;
+}
+
 .btnShadow {
     box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
 }
@@ -419,19 +423,19 @@ a:hover {
     font-size: 40px;
     line-height: 20px;
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 20px;
     height: 20px;
     content: '•';
     text-align: center;
     opacity: 0.5;
-    color: white;
+    color: #ffd2d2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots li.slick-active button:before {
     opacity: 0.9;
-    color: white;
+    color: #af384f;
 }

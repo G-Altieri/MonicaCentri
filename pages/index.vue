@@ -50,6 +50,11 @@
         title="BioLifting"
         link="biolifting"
       ></boxHome>
+      <boxHome
+        class="text-center"
+        title="Mai + XL"
+        link="mai+xl"
+      ></boxHome>
       <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
       <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome>
     </div>

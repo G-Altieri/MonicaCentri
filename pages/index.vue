@@ -52,11 +52,16 @@
       ></boxHome>
       <boxHome
         class="text-center"
+        title="Pulizia Evo"
+        link="puliziaevo"
+      ></boxHome>
+      <boxHome
+        class="text-center"
         title="Mai + XL"
         link="mai+xl"
       ></boxHome>
-      <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
-      <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome>
+      <!-- <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
+      <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome> -->
     </div>
     <!-- Bg recensioni clienti con titolo -->
     <div class="clientsReviewsHome">
@@ -149,9 +154,9 @@ export default {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 4000,
-        pauseOnDotsHover: false,
+        pauseOnDotsHover: true,
         pauseOnFocus: true,
-        pauseOnHover: false,
+        pauseOnHover: true,
 
         swipe: true,
 

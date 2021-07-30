@@ -3,7 +3,7 @@
 
         <!-- Navbar Acquisto -->
     <navbarBuy
-    :name="$t('navBuy.maipiuxl')"
+    :name="$t('navBuy.puliziaevo')"
     link="/"
     ></navbarBuy>
 
@@ -28,10 +28,10 @@
         <!-- Prima parte -->
         <div class="text-left my-10 justify-self-center">
           <div class="text-red text-4xl font-bold uppercase">
-            {{ $t("maipiuxl.info.title1") }}
+            {{ $t("puliziaevo.info.title1") }}
           </div>
           <div class="text-pink text-2xl font-bold">
-            {{ $t("maipiuxl.info.title2") }}
+            {{ $t("puliziaevo.info.title2") }}
           </div>
         </div>
 
@@ -52,7 +52,7 @@
                 duration-300
               "
             >
-              {{ $t("maipiuxl.info.btnVideo") }}
+              {{ $t("puliziaevo.info.btnVideo") }}
             </div>
           </nuxt-link>
         </div>
@@ -60,11 +60,11 @@
         <!-- Seconda Parte -->
         <div class="text-left my-10 text-center">
           <div class="text-red text-2xl font-bold">
-            {{ $t("maipiuxl.info2.content1") }}
+            {{ $t("puliziaevo.info2.content1") }}
           </div>
           <div class="text-pink text-2xl font-bold">
-            {{ $t("maipiuxl.info2.content2") }} <br />
-            {{ $t("maipiuxl.info2.content3") }}
+            {{ $t("puliziaevo.info2.content2") }} <br />
+            {{ $t("puliziaevo.info2.content3") }}
           </div>
         </div>
 
@@ -73,7 +73,7 @@
           <div
             class="text-red text-2xl font-normalmx-auto max-w-sm md:text-2xl"
           >
-            {{ $t("maipiuxl.info3.content1") }}
+            {{ $t("puliziaevo.info3.content1") }}
           </div>
         </div>
       </div>
@@ -108,57 +108,57 @@
           <!-- Illustration One -->
           <div class="">
             <img
-              src="~/assets/img/biolifting/illustration1.svg"
+              src="~/assets/img/pulizia evo/illustration1.svg"
               alt=""
               class="mx-auto"
               width="200px"
               height="auto"
             />
-            <div class="text-red font-bold text-2xl my-3 mx-auto text-center">
-              {{ $t("maipiuxl.illustration.one.title") }}
+            <div class="text-red font-bold text-2xl my-3 mt-6 mx-auto text-center">
+              {{ $t("puliziaevo.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
-              {{ $t("maipiuxl.illustration.one.content") }}
+              {{ $t("puliziaevo.illustration.one.content") }}
             </div>
           </div>
           <!-- Illustration  Two -->
           <div class="mt-26">
             <img
-              src="~/assets/img/biolifting/illustration2.svg"
+              src="~/assets/img/pulizia evo/illustration2.svg"
               alt=""
               class="mt-20 mx-auto"
               width="200px"
               height="auto"
             />
             <div
-              class="text-red font-bold text-2xl w-64 my-3 mx-auto text-center"
+              class="text-red font-bold text-2xl w-64 my-3 mt-6 mx-auto text-center"
             >
-              {{ $t("maipiuxl.illustration.two.title") }}
+              {{ $t("puliziaevo.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
-              {{ $t("maipiuxl.illustration.two.content") }}
+              {{ $t("puliziaevo.illustration.two.content") }}
             </div>
           </div>
           <!-- Illustration  Three-->
           <div class="mt-26 mb-16">
             <img
-              src="~/assets/img/biolifting/illustration3.svg"
+              src="~/assets/img/pulizia evo/illustration3.svg"
               alt=""
               class="mt-20 mx-auto"
               width="200px"
               height="auto"
             />
-            <div class="text-red font-bold text-2xl my-3 mx-auto text-center">
-              {{ $t("maipiuxl.illustration.three.title") }}
+            <div class="text-red font-bold text-2xl my-3 mt-8 mx-auto text-center">
+              {{ $t("puliziaevo.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
-              {{ $t("maipiuxl.illustration.three.content") }}
+              {{ $t("puliziaevo.illustration.three.content") }}
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@
               duration-300
             "
           >
-            {{ $t("maipiuxl.BtnBuyNow") }}
+            {{ $t("puliziaevo.BtnBuyNow") }}
           </div>
         </nuxt-link>
       </div>

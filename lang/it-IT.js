@@ -16,7 +16,7 @@ export default {
         buy: "Acquista",
         fotoepilazione: "FotoEpilazione",
         biolifting: "Biolifting",
-        puliziaevolution: "Pulizia Evolution",
+        puliziaevo: "Pulizia Evo",
         maipiuxl: "Mai Più XL",
     },
     laser: {
@@ -75,6 +75,66 @@ export default {
             three: {
                 title: "Azione naturale",
                 content: "Il nostro biolifting, non invasivo, stimola la produzione biologica di acido ialuronico, collagene ed elastina, cursori principali del ringiovanimento della pelle",
+            },
+        },
+        BtnBuyNow: "Acquista Ora",
+    },
+    puliziaevo: {
+        info: {
+            title1: "Pulizia Evo",
+            title2: "Rigenera il tuo viso",
+            btnVideo: "GUARDA VIDEO"
+        },
+        info2: {
+            content1: "Pulizia evolution",
+            content2: "profonda",
+            content3: "efficace",
+        },
+        info3: {
+            content1: "Connubio perfetto fra pulizia e trattamento, per soddisfare le esigenze di una pelle sana e luminosa ",
+        },
+        illustration: {
+            one: {
+                title: "Profondità",
+                content: "Pulizia profonda che elimina le impurità che vanno a depositarsi nello strato sub-superficiale della pelle",
+            },
+            two: {
+                title: "Riattivazione cellulare",
+                content: "Ossigenazione dei tessuti tramite radiofrequenza tripolare in grado di stimolare la produzione biologica di collagene, elastina e acido ialuronico, fondamentali per una pelle sana, nutrita e levigata ",
+            },
+            three: {
+                title: "Trattamento specifico",
+                content: "Trattamento personalizzato con prodotti altamente professionali per garantire alla pelle bellezza e luminosità",
+            },
+        },
+        BtnBuyNow: "Acquista Ora",
+    },
+    maipiuxl: {
+        info: {
+            title1: "Mai + XL",
+            title2: "Giovani subito.",
+            btnVideo: "GUARDA VIDEO"
+        },
+        info2: {
+            content1: "Il nostro Biolifting",
+            content2: "innovativo",
+            content3: "avanzato",
+        },
+        info3: {
+            content1: "lorem",
+        },
+        illustration: {
+            one: {
+                title: "lorem",
+                content: "lorem",
+            },
+            two: {
+                title: "lorem",
+                content: "lorem ",
+            },
+            three: {
+                title: "lorem",
+                content: "lorem",
             },
         },
         BtnBuyNow: "Acquista Ora",

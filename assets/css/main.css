@@ -68,6 +68,9 @@ a:hover {
 .wMax-72 {
     max-width: 21rem;
 }
+.wMax-18 {
+    max-width: 18rem;
+}
 
 .mt-11 {
     margin-top: 2.7rem;
@@ -126,7 +129,8 @@ a:hover {
 }
 
 .borderbottomred {
-    border-bottom: solid 10px #b13850;
+    border-bottom: solid 10px #b13850 ;
+    border-collapse: collapse;
 }
 
 .btnVideo {

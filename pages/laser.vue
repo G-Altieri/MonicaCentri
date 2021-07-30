@@ -115,7 +115,7 @@
               {{ $t("laser.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
               {{ $t("laser.illustration.one.content") }}
             </div>
@@ -135,7 +135,7 @@
               {{ $t("laser.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
               {{ $t("laser.illustration.two.content") }}
             </div>
@@ -155,7 +155,7 @@
               {{ $t("laser.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-xl text-center wMax-72"
+              class="text-pink font-normal mx-auto text-md text-center wMax-18"
             >
               {{ $t("laser.illustration.three.content") }}
             </div>

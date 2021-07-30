@@ -1,14 +1,29 @@
 <template>
-<nuxt-link :to="localePath('/'+link)">
-  <div class="containerBoxComponent text-white duration-300 shadow-lg">
-    <div class="title">
-      <h4>
-        {{ title }}
-      </h4>
-    </div>
-  </div>  
-</nuxt-link>
+  <div>
+ 
+      <nuxt-link :to="localePath('/' + link)" v-if="type">
+        <div class="containerBoxComponent text-white duration-300 shadow-lg">
+          <div class="title">
+            <h4>
+              {{ title }}
+            </h4>
+          </div>
+        </div>
+      </nuxt-link>
 
+
+  
+      <nuxt-link :to="localePath('/' + link)" v-else>
+        <!-- <img :src="'~/assets/img/home/box/box'+title+'.png'" :alt="title" class="boxContentImg" />  -->
+        <img
+          :src="require(`~/assets/img/home/box/box${title}.png`)"
+          :alt="title"
+          class="boxContentImg duration-300"
+        />
+    
+      </nuxt-link>
+
+    </div>
 </template>
 
 
@@ -16,7 +31,8 @@
 export default {
   props: {
     title: String,
-    link:String,
+    link: String,
+    type: Boolean,
   },
 };
 </script>
@@ -36,13 +52,13 @@ export default {
 }
 
 .containerBoxComponent:hover {
-   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 .containerBoxComponent:active {
-   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
   -webkit-transform: scale(0.98);
   transform: scale(0.98);
@@ -54,5 +70,22 @@ export default {
   font-size: 2.5rem;
   line-height: 1.2;
   letter-spacing: 1.5px;
+}
+
+.boxContentImg {
+  width: 300px;
+  height: 300px;
+}
+.boxContentImg:hover {
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.boxContentImg:active {
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
 }
 </style>

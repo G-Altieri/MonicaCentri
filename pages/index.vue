@@ -44,21 +44,29 @@
 
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome class="text-center" title="Laser" link="laser"></boxHome>
+      <boxHome 
+      class="text-center"
+       title="Laser"
+        link="laser"
+        :type="false"
+         ></boxHome>
       <boxHome
         class="text-center"
-        title="BioLifting"
+        title="Biolifting"
         link="biolifting"
+        :type="false"
       ></boxHome>
       <boxHome
         class="text-center"
         title="Pulizia Evo"
         link="puliziaevo"
+       :type="true"
       ></boxHome>
       <boxHome
         class="text-center"
         title="Mai + XL"
         link="mai+xl"
+        :type="true"
       ></boxHome>
       <!-- <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
       <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome> -->

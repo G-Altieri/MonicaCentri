@@ -5,6 +5,13 @@ export default {
         marketing: 'Marketing : Oscar Bevilacqua',
         lang: 'Change language',
     },
+    menu: {
+        item1: "Laser",
+        item2: "Bio Lifting",
+        item3: "Pulizia Evo",
+        item4: "Mai + XL",
+        item5: "",
+    },
     header: {
         title: "Buy the premium",
         cosa: "What they say about us",

@@ -3,216 +3,168 @@
     "name": "biolifting___it",
     "path": "/biolifting",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\biolifting.vue",
-    "chunkName": "pages/biolifting"
+    "chunkName": "pages/biolifting",
+    "_name": "_7811e73a"
   },
   {
     "name": "dashboard___it",
     "path": "/dashboard",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard"
+    "chunkName": "pages/dashboard",
+    "_name": "_602760ce"
   },
   {
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
-  },
-  {
-    "name": "index___es",
-    "path": "/es",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_2da87d57"
   },
   {
     "name": "forgotPassword___it",
     "path": "/forgotPassword",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
-    "chunkName": "pages/forgotPassword"
+    "chunkName": "pages/forgotPassword",
+    "_name": "_165be229"
   },
   {
     "name": "laser___it",
     "path": "/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser"
+    "chunkName": "pages/laser",
+    "_name": "_85a12260"
   },
   {
     "name": "lingue___it",
     "path": "/lingue",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
-    "chunkName": "pages/lingue"
+    "chunkName": "pages/lingue",
+    "_name": "_1565495e"
   },
   {
     "name": "login___it",
     "path": "/login",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_115fbf24"
   },
   {
     "name": "logout___it",
     "path": "/logout",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\logout.vue",
-    "chunkName": "pages/logout"
+    "chunkName": "pages/logout",
+    "_name": "_3fc4f5d5"
   },
   {
     "name": "mai+xl___it",
     "path": "/mai+xl",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
-    "chunkName": "pages/mai+xl"
+    "chunkName": "pages/mai+xl",
+    "_name": "_40ce8196"
   },
   {
     "name": "puliziaevo___it",
     "path": "/puliziaevo",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
-    "chunkName": "pages/puliziaevo"
+    "chunkName": "pages/puliziaevo",
+    "_name": "_b5eb79ce"
   },
   {
     "name": "register___it",
     "path": "/register",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\register.vue",
-    "chunkName": "pages/register"
+    "chunkName": "pages/register",
+    "_name": "_58820ca4"
   },
   {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test"
+    "chunkName": "pages/test",
+    "_name": "_82c91cc6"
   },
   {
     "name": "biolifting___en",
     "path": "/en/biolifting",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\biolifting.vue",
-    "chunkName": "pages/biolifting"
+    "chunkName": "pages/biolifting",
+    "_name": "_7811e73a"
   },
   {
     "name": "dashboard___en",
     "path": "/en/dashboard",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard"
+    "chunkName": "pages/dashboard",
+    "_name": "_602760ce"
   },
   {
     "name": "forgotPassword___en",
     "path": "/en/forgotPassword",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
-    "chunkName": "pages/forgotPassword"
+    "chunkName": "pages/forgotPassword",
+    "_name": "_165be229"
   },
   {
     "name": "laser___en",
     "path": "/en/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser"
+    "chunkName": "pages/laser",
+    "_name": "_85a12260"
   },
   {
     "name": "lingue___en",
     "path": "/en/lingue",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
-    "chunkName": "pages/lingue"
+    "chunkName": "pages/lingue",
+    "_name": "_1565495e"
   },
   {
     "name": "login___en",
     "path": "/en/login",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_115fbf24"
   },
   {
     "name": "logout___en",
     "path": "/en/logout",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\logout.vue",
-    "chunkName": "pages/logout"
+    "chunkName": "pages/logout",
+    "_name": "_3fc4f5d5"
   },
   {
     "name": "mai+xl___en",
     "path": "/en/mai+xl",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
-    "chunkName": "pages/mai+xl"
+    "chunkName": "pages/mai+xl",
+    "_name": "_40ce8196"
   },
   {
     "name": "puliziaevo___en",
     "path": "/en/puliziaevo",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
-    "chunkName": "pages/puliziaevo"
+    "chunkName": "pages/puliziaevo",
+    "_name": "_b5eb79ce"
   },
   {
     "name": "register___en",
     "path": "/en/register",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\register.vue",
-    "chunkName": "pages/register"
+    "chunkName": "pages/register",
+    "_name": "_58820ca4"
   },
   {
     "name": "test___en",
     "path": "/en/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test"
-  },
-  {
-    "name": "biolifting___es",
-    "path": "/es/biolifting",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\biolifting.vue",
-    "chunkName": "pages/biolifting"
-  },
-  {
-    "name": "dashboard___es",
-    "path": "/es/dashboard",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard"
-  },
-  {
-    "name": "forgotPassword___es",
-    "path": "/es/forgotPassword",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\forgotPassword.vue",
-    "chunkName": "pages/forgotPassword"
-  },
-  {
-    "name": "laser___es",
-    "path": "/es/laser",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser"
-  },
-  {
-    "name": "lingue___es",
-    "path": "/es/lingue",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\lingue.vue",
-    "chunkName": "pages/lingue"
-  },
-  {
-    "name": "login___es",
-    "path": "/es/login",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
-  },
-  {
-    "name": "logout___es",
-    "path": "/es/logout",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\logout.vue",
-    "chunkName": "pages/logout"
-  },
-  {
-    "name": "mai+xl___es",
-    "path": "/es/mai+xl",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
-    "chunkName": "pages/mai+xl"
-  },
-  {
-    "name": "puliziaevo___es",
-    "path": "/es/puliziaevo",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
-    "chunkName": "pages/puliziaevo"
-  },
-  {
-    "name": "register___es",
-    "path": "/es/register",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\register.vue",
-    "chunkName": "pages/register"
-  },
-  {
-    "name": "test___es",
-    "path": "/es/test",
-    "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test"
+    "chunkName": "pages/test",
+    "_name": "_82c91cc6"
   },
   {
     "name": "index___it",
     "path": "/",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Progetti\\\\www\\\\Monica Centri\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_2da87d57"
   }
 ]

@@ -62,7 +62,7 @@ export default {
         '~/assets/font/Montserrat.css',
 
         //'vue-slick-carousel/dist/vue-slick-carousel-theme.css',
-       // 'vue-slick-carousel/dist/vue-slick-carousel.css',
+        // 'vue-slick-carousel/dist/vue-slick-carousel.css',
 
 
     ],
@@ -110,12 +110,7 @@ export default {
                     iso: 'en-US',
                     file: 'en-US.js'
                 },
-                {
-                    name: 'Spagnolo',
-                    code: 'es',
-                    iso: 'es-ES',
-                    file: 'es-ES.js'
-                },
+
             ],
             langDir: 'lang/',
             defaultLocale: 'it',

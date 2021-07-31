@@ -75,9 +75,9 @@
       <!--** Fine Sezione info** -->
 
       <!-- Sezione Illustrazioni -->
-      <div class="grid text-center self-center">
+      <div class="grid text-center self-center ">
         <!-- Bg Header Sezione Illustrazioni -->
-        <div class="bg_illustrationContainer">
+        <div class="bg_illustrationContainer transform1pxY">
           <svg
             viewBox="0 0 375 210"
             class="relative"
@@ -99,9 +99,9 @@
         </div>
 
         <!-- Box content Illustrazioni -->
-        <div class="box_Illustrazioni_content flex grid text-center">
+        <div class="box_Illustrazioni_content flex grid text-center lg:grid-cols-3 pt-1">
           <!-- Illustration One -->
-          <div class="">
+          <div class="mt-32">
             <div>
               <!-- <img
               src="~/assets/img/laser/illustration1.svg"
@@ -186,8 +186,8 @@
             <img
               src="~/assets/img/laser/illustration2.svg"
               alt=""
-              id="illustrationtwoice2"
-              class="mt-20 mx-auto"
+              id="illustrationtwoice"
+              class=" mx-auto"
               width="125px"
             />
             <div
@@ -203,13 +203,75 @@
           </div>
           <!-- Illustration  Three-->
           <div class="mt-32 mb-16">
-            <img
+            <!-- <img
               src="~/assets/img/laser/illustration3.svg"
               alt=""
               class="mt-20 mx-auto"
               width="125px"
               height="auto"
-            />
+            /> -->
+            <div>
+              <svg
+                class="mt-20 mx-auto"
+                width="125px"
+                height="auto"
+                viewBox="0 0 477 106"
+              >
+                <g id="Livello_2" data-name="Livello 2">
+                  <g id="Livello_1-2" data-name="Livello 1">
+                    <rect
+                      y="68"
+                      width="477"
+                      height="38"
+                      rx="5.29"
+                      style="fill: #b13850"
+                    />
+                    <line
+                      id="illustrationtwopelle"
+                      x1="90"
+                      y1="48.5"
+                      x2="387"
+                      y2="48.5"
+                      style="
+                        fill: none;
+                        stroke: #d16a7d;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                      "
+                    />
+                    <line
+                      id="illustrationtwopelle"
+                      x1="90"
+                      y1="25.5"
+                      x2="387"
+                      y2="25.5"
+                      style="
+                        fill: none;
+                        stroke: #d16a7d;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                      "
+                    />
+                    <line
+                      id="illustrationtwopelle"
+                      x1="90"
+                      y1="2.5"
+                      x2="387"
+                      y2="2.5"
+                      style="
+                        fill: none;
+                        stroke: #d16a7d;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                      "
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
             <div
               class="text-red font-bold text-2xl w-36 my-3 mx-auto text-center"
             >
@@ -293,25 +355,39 @@ export default {
           return "pc";
       }
     },
-      mounted() {
-
+  }, //computed
+  mounted() {
     //Illustration 2 Ice
     this.$anime({
       targets: "#illustrationtwoice",
-      scale: ["70%", "110%"],
-     //rotate:'360deg',
-      easing: "easeInOutQuad",
-      direction: "alternate",
+      // scale: ["70%", "110%"],
+      rotate: "360deg",
+      easing: "linear",
+      direction: "normal",
       autoplay: true,
       loop: true,
-      duration: 1500,
+      duration: 15000,
+      complete: () => {},
+    });
+    //Illustration 3 Pelle
+    this.$anime({
+      targets: "#illustrationtwopelle",
+      //scale: ["80%", "100%"],
+      //rotate: "360deg",
+     // opacity:["100%","50%"],
+      translateY:["-40px","25px"],
+      easing: "linear",
+      //direction: "alternate",
+      autoplay: true,
+      loop: true,
+      duration: 3000,
+      delay: this.$anime.stagger(100),
       complete: () => {},
     });
   },
-    components: {
-      navbarBuy,
-    },
-  }, //computed
+  components: {
+    navbarBuy,
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -372,6 +448,7 @@ export default {
   height: 110px;
   text-align: center;
 }
+
 #illustrationonelinestroke {
   stroke-dasharray: 130;
   stroke-dashoffset: 1172;
@@ -385,7 +462,10 @@ export default {
   }
 }
 
-#illustrationtwoice{
+#illustrationtwoice {
   transform-origin: center;
+}
+#illustrationtwopelle {
+  transform-origin: bottom;
 }
 </style>

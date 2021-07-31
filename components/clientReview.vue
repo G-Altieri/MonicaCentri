@@ -2,7 +2,7 @@
   <div class="container2">
     <div class="shadow-lg ombrareview rounded-xl flex-none w-80 md:w-xl mx-2 mb-2" style="">
       <div
-        class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-5 md:leading-8 font-semibold text-gray-900"
+        class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-5  font-semibold text-gray-900"
       >
         <!-- Virgolette -->
         <svg width="45" height="36" class="mb-5 fill-current text-pink">

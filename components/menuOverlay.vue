@@ -15,24 +15,34 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link :to="localePath('/')">
+          <nuxt-link :to="localePath('/biolifting')">
             <div class="font-bold">{{ $t("menu.item2") }}</div></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link :to="localePath('/laser')">
+          <nuxt-link :to="localePath('/puliziaevo')">
             <div class="font-bold">{{ $t("menu.item3") }}</div></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link :to="localePath('/')">
+          <nuxt-link :to="localePath('/mai+xl')">
             <div class="font-bold">{{ $t("menu.item4") }}</div></nuxt-link
           >
         </li>
-        <li>
-          <nuxt-link :to="localePath('/laser')">
-            <div class="font-bold">{{ $t("menu.item5") }}</div></nuxt-link
-          >
+        <li class="mt-16" id="lang">
+          <!-- <nuxt-link :to="localePath('/laser')">
+            <div class="font-normal text-sm">
+              {{ $t("menu.changeLang") }}
+            </div></nuxt-link
+          > -->
+          <nuxt-link
+          class="font-bold text-sm"
+        v-for="language in langAvailable"
+        :key="language.code"
+        :to="switchLocalePath(language.code)"
+      >
+        {{ language.name }}
+      </nuxt-link>
         </li>
       </ul>
     </div>
@@ -53,6 +63,11 @@ export default {
       animeInCorso: false,
       hiddenMenu: false,
     };
+  },
+  computed: {
+    langAvailable() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
   },
   created() {
     //Ricezione evento apertura chiusura menu
@@ -90,7 +105,7 @@ export default {
     //animazione del testo del menu
     t1.add(
       {
-        targets: ".test ul li",
+        targets: ".test ul li,#lang",
         translateX: ["-270", "0"],
         opacity: ["0", "1"],
         delay: this.$anime.stagger(100),
@@ -112,8 +127,8 @@ export default {
           t1.play();
 
           //cambio il valore nello store su aperto, aggiungera il filtro e togliera lo scrool
-            this.$store.commit('setStatus_menu', true)
-          
+          this.$store.commit("setStatus_menu", true);
+
           this.animeInCorso = true;
           this.open = true;
 
@@ -124,7 +139,7 @@ export default {
           //chiudo il menu anime
           t1.play();
           //cambio il valore nello store su chiuso, rimettera lo scroll e togliera il filtro
-              this.$store.commit('setStatus_menu', false)
+          this.$store.commit("setStatus_menu", false);
 
           this.animeInCorso = true;
           this.open = false;
@@ -138,11 +153,7 @@ export default {
     },
     closeMenu() {
       $nuxt.$emit("StatusMenu", false);
-    
     },
-
-
-   
   }, //methods
   props: {},
 };

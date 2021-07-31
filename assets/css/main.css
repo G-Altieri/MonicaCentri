@@ -68,6 +68,7 @@ a:hover {
 .wMax-72 {
     max-width: 21rem;
 }
+
 .wMax-18 {
     max-width: 18rem;
 }
@@ -100,7 +101,7 @@ a:hover {
     padding-bottom: 2.25rem;
 }
 
-.h-9{
+.h-9 {
     height: 2.25rem;
 }
 
@@ -129,7 +130,7 @@ a:hover {
 }
 
 .borderbottomred {
-    border-bottom: solid 10px #b13850 ;
+    border-bottom: solid 10px #b13850;
     border-collapse: collapse;
 }
 
@@ -147,6 +148,10 @@ a:hover {
     padding: 12px;
     border-radius: 6px;
     width: 150px;
+}
+
+.transform1pxY {
+    transform: translateY(1px);
 }
 
 .slick-dots li button {

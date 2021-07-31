@@ -7,10 +7,10 @@ export default {
     },
     menu: {
         item1: "Laser",
-        item2: "Bailando",
-        item3: "Amigos",
-        item4: "Adios",
-        item5: "Vamos",
+        item2: "Bio Lifting",
+        item3: "Pulizia Evo",
+        item4: "Mai + XL",
+        item5: "",
     },
     navBuy: {
         buy: "Acquista",

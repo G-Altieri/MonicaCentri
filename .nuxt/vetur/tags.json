@@ -20,9 +20,6 @@
   "MenuOverlay": {
     "description": "Auto imported from components/menuOverlay.vue"
   },
-  "MenuOverlayBackup": {
-    "description": "Auto imported from components/menuOverlayBackup.vue"
-  },
   "Modal": {
     "description": "Auto imported from components/modal.vue"
   },

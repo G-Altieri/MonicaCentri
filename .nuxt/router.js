@@ -41,10 +41,6 @@ export const routerOptions = {
     component: _2da87d57,
     name: "index___en"
   }, {
-    path: "/es",
-    component: _2da87d57,
-    name: "index___es"
-  }, {
     path: "/forgotPassword",
     component: _165be229,
     name: "forgotPassword___it"
@@ -124,50 +120,6 @@ export const routerOptions = {
     path: "/en/test",
     component: _82c91cc6,
     name: "test___en"
-  }, {
-    path: "/es/biolifting",
-    component: _7811e73a,
-    name: "biolifting___es"
-  }, {
-    path: "/es/dashboard",
-    component: _602760ce,
-    name: "dashboard___es"
-  }, {
-    path: "/es/forgotPassword",
-    component: _165be229,
-    name: "forgotPassword___es"
-  }, {
-    path: "/es/laser",
-    component: _85a12260,
-    name: "laser___es"
-  }, {
-    path: "/es/lingue",
-    component: _1565495e,
-    name: "lingue___es"
-  }, {
-    path: "/es/login",
-    component: _115fbf24,
-    name: "login___es"
-  }, {
-    path: "/es/logout",
-    component: _3fc4f5d5,
-    name: "logout___es"
-  }, {
-    path: "/es/mai+xl",
-    component: _40ce8196,
-    name: "mai+xl___es"
-  }, {
-    path: "/es/puliziaevo",
-    component: _b5eb79ce,
-    name: "puliziaevo___es"
-  }, {
-    path: "/es/register",
-    component: _58820ca4,
-    name: "register___es"
-  }, {
-    path: "/es/test",
-    component: _82c91cc6,
-    name: "test___es"
   }, {
     path: "/",
     component: _2da87d57,

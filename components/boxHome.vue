@@ -75,6 +75,11 @@ export default {
 .boxContentImg {
   width: 300px;
   height: 300px;
+  border-radius: 11px;
+  position: relative;
+  margin: 0 auto;
+  /* margin-bottom: 30px; */
+  cursor: pointer;
 }
 .boxContentImg:hover {
   -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);

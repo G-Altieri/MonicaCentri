@@ -77,7 +77,7 @@
       <!-- Sezione Illustrazioni -->
       <div class="grid text-center self-center">
         <!-- Bg Header Sezione Illustrazioni -->
-        <div class="bg_illustrationContainer">
+        <div class="bg_illustrationContainer transform1pxY ">
           <svg
             viewBox="0 0 375 210"
             class="relative"
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Box content Illustrazioni -->
-        <div class="box_Illustrazioni_content flex grid text-center">
+        <div class="box_Illustrazioni_content flex grid text-center lg:grid-cols-3 pt-1">
           <!-- Illustration One -->
           <div class="">
             <div class="">
@@ -196,7 +196,7 @@
             </div>
           </div>
           <!-- Illustration  Two -->
-          <div class="my-20">
+          <div class="my-20 lg:my-0">
             <div class="">
               <svg
                 class="mx-auto"

@@ -102,13 +102,74 @@
         <div class="box_Illustrazioni_content flex grid text-center">
           <!-- Illustration One -->
           <div class="">
-            <img
+            <div>
+              <!-- <img
               src="~/assets/img/laser/illustration1.svg"
               alt=""
               class="mx-auto"
               width="125px"
               height="auto"
-            />
+            /> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 283.27 342.71"
+                class="mx-auto"
+                width="125px"
+                height="auto"
+              >
+                <g id="Livello_2" data-name="Livello 2">
+                  <g id="Livello_1-2" data-name="Livello 1">
+                    <rect
+                      x="135.01"
+                      y="-1.78"
+                      width="15.4"
+                      height="31.19"
+                      rx="3.44"
+                      transform="translate(73.63 -111.83) rotate(55.67)"
+                      style="fill: #d16a7d"
+                    />
+                    <path
+                      d="M232.87,239.28c5.29-6.95,49.33-73.36,49.33-73.36s3.79-3.54-2.9-14.75c-.64-1.06-1.51-2.75-2.59-4.95a352.16,352.16,0,0,0-37.65,63.27c-3.22,6.49-6.65,12.66-10.19,19.38-2.19,4.36-4.44,8.85-6.21,13.45C224.59,243.27,228.92,244.49,232.87,239.28Z"
+                      style="fill: #d16a7d"
+                    />
+                    <path
+                      d="M239.06,209.49a352.16,352.16,0,0,1,37.65-63.27c-10.29-20.9-39.9-88.89-75.1-128.42,0,0-4.65-4-12.18-1.72,0,0-17.17-8.35-19.36-8.76s-5.27-.71-9.93,2.95S119.89,33.94,115.35,49s-8.84,22.76-8.84,22.76-7,7.19-5.63,14.84c0,0,27.47,57.73,35.24,67.71,0,0-42,26.71-31.56,46.89l-85.2,79.22a29.21,29.21,0,0,1,5.05,3.95,467.06,467.06,0,0,1,34.12,40.93c33.75-30,106.11-93.28,117.15-94.51,14.21-1.58,20.46-6.09,45.94,10.93a6.66,6.66,0,0,0,1,.61c1.77-4.6,4-9.09,6.21-13.45C232.41,222.15,235.84,216,239.06,209.49Z"
+                      style="fill: #b13850"
+                    />
+                    <path
+                      d="M19.36,280.41,1.94,296.6s-3.14,3.11-1.43,4.56l34.94,40.67s1.79,2.61,5.9-1.16c.93-.84,7.45-6.73,17.18-15.38a467.06,467.06,0,0,0-34.12-40.93A29.21,29.21,0,0,0,19.36,280.41Z"
+                      style="fill: #d16a7d"
+                    />
+                    <circle
+                      cx="150.6"
+                      cy="146.81"
+                      r="6.32"
+                      style="fill: #d16a7d"
+                    />
+                    <rect
+                      x="158.04"
+                      y="101.38"
+                      width="84.49"
+                      height="56.45"
+                      rx="28.22"
+                      transform="translate(194.37 -108.88) rotate(55.67)"
+                      style="fill: #fff"
+                    />
+                    <path
+                      id="illustrationonelinestroke"
+                      d="M191.3,98c4.37,6.4-16.75,20.82-12.38,27.22s25.48-8,29.85-1.63S192,144.39,196.39,150.79s25.49-8,29.86-1.63"
+                      style="
+                        fill: none;
+                        stroke: #b13850;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                      "
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
             <div
               class="text-red font-bold text-2xl w-36 my-3 mx-auto text-center"
             >
@@ -125,9 +186,9 @@
             <img
               src="~/assets/img/laser/illustration2.svg"
               alt=""
+              id="illustrationtwoice2"
               class="mt-20 mx-auto"
               width="125px"
-              height="auto"
             />
             <div
               class="text-red font-bold text-2xl w-36 my-3 mx-auto text-center"
@@ -232,6 +293,21 @@ export default {
           return "pc";
       }
     },
+      mounted() {
+
+    //Illustration 2 Ice
+    this.$anime({
+      targets: "#illustrationtwoice",
+      scale: ["70%", "110%"],
+     //rotate:'360deg',
+      easing: "easeInOutQuad",
+      direction: "alternate",
+      autoplay: true,
+      loop: true,
+      duration: 1500,
+      complete: () => {},
+    });
+  },
     components: {
       navbarBuy,
     },
@@ -295,5 +371,21 @@ export default {
   width: 100%;
   height: 110px;
   text-align: center;
+}
+#illustrationonelinestroke {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 1172;
+  animation: illustrationonelinestrokeanime 40s linear forwards infinite;
+}
+
+@keyframes illustrationonelinestrokeanime {
+  to {
+    stroke-dasharray: 130;
+    stroke-dashoffset: 0;
+  }
+}
+
+#illustrationtwoice{
+  transform-origin: center;
 }
 </style>

@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-         <div class="cursor-pointer mt-20" @click="UnStep()">
+          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step > 0">
             <svg
               width="19"
               height="19"
@@ -28,74 +28,144 @@
           </div>
 
           <!-- Div Per Spazziare -->
-          <div class="mt-20"></div>
+          <div class="mt-6"></div>
 
-<!-- step2 -->
-<div class="" v-if="step==1">
-          <!-- Title step1 -->
-          <div class="text-2xl font-semibold mx-auto text-red pt-6">
-            {{ $t("lp.page1.title") }}
-          </div>
+          <VueSlickCarousel v-bind="settings" class="" ref="carouselLP">
+            <!-- step1 -->
+            <div
+              class="transitionTest transition-all duration-300"
+              v-show="step == 1"
+              id="step1"
+            >
+              <!-- Title step1 -->
+              <div class="text-2xl font-semibold mx-auto text-red pt-6">
+                {{ $t("lp.page1.title") }}
+              </div>
 
-          <!-- Input Nome -->
-          <div class="mt-11">
-            <ginput
-              :text="$t('lp.page1.content')"
-              id="page1Content"
-              name="page1Content"
-              type="name"
-              v-model="form.name"
-              :errorMsg="error_name"
-            />
-          </div>
+              <!-- Input Nome -->
+              <div class="mt-11">
+                <ginput
+                  :text="$t('lp.page1.content')"
+                  id="page1Content"
+                  name="page1Content"
+                  type="name"
+                  v-model="form.name"
+                  :errorMsg="error_name"
+                />
+              </div>
 
-          <!--Button Avanti step1-->
-          <div class="mt-8">
-            <div @click="nextStep()">
-              <gbutton
-                :text="$t('lp.avanti')"
-                id="buttonAvantiPasso1"
-                name="buttonAvantiPasso1"
-                typeButton="normal"
-              />
+              <!--Button Avanti step1-->
+              <div class="mt-8">
+                <div @click="nextStep()">
+                  <gbutton
+                    :text="$t('lp.avanti')"
+                    id="buttonAvantiPasso1"
+                    name="buttonAvantiPasso1"
+                    typeButton="normal"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-          <!-- // step1 -->
+            <!-- // step1 -->
 
-<!-- step2 -->
-<div class="" v-if="step==2">
-          <!-- Title step2 -->
-          <div class="text-2xl font-semibold mx-auto text-red pt-6">
-            {{ $t("lp.page2.title")+" "+form.name }}
-          </div>
+            <!-- step2 -->
+            <div class="transitionTest" v-show="step == 1" id="step2">
+              <!-- Title step2 -->
+              <div class="text-2xl font-semibold mx-auto text-red pt-6">
+                {{ $t("lp.page2.title") + " " + form.name }}
+              </div>
 
-          <!-- Input Numero Telefono -->
-          <div class="mt-11">
-            <ginput
-              :text="$t('lp.page2.content')"
-              id="page1Content"
-              name="page1Content"
-              type="number"
-              v-model="form.number"
-              :errorMsg="error_number"
-            />
-          </div>
+              <!-- Input Numero Telefono -->
+              <div class="mt-11">
+                <ginput
+                  :text="$t('lp.page2.content')"
+                  id="page1Content"
+                  name="page1Content"
+                  type="number"
+                  v-model="form.number"
+                  :errorMsg="error_number"
+                />
+              </div>
 
-          <!--Button Avanti step2-->
-          <div class="mt-8">
-            <div @click="nextStep()">
-              <gbutton
-                :text="$t('lp.avanti')"
-                id="buttonAvantiPasso1"
-                name="buttonAvantiPasso1"
-                typeButton="normal"
-              />
+              <!-- Spiegazione Step 2 -->
+              <div class="mt-8">
+                <div
+                  class="text-md mx-auto text-left font-medium text-red"
+                  @click="showResponseStep = !showResponseStep"
+                >
+                  {{ $t("lp.page2.domanda") }}
+                </div>
+                <div
+                  class="text-md mx-auto text-left font-light text-red"
+                  v-show="showResponseStep"
+                >
+                  {{ $t("lp.page2.risposta") }}
+                </div>
+              </div>
+
+              <!--Button Avanti step2-->
+              <div class="mt-8">
+                <div @click="nextStep()">
+                  <gbutton
+                    :text="$t('lp.avanti')"
+                    id="buttonAvantiPasso2"
+                    name="buttonAvantiPasso2"
+                    typeButton="normal"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-          <!-- // step2 -->
+            <!-- // step2 -->
 
+            <!-- step3 -->
+            <div class="transitionTest" v-show="step == 1" id="step3">
+              <!-- Title step3 -->
+              <div class="text-2xl font-semibold mx-auto text-red pt-6">
+                {{ $t("lp.page3.title") + " " + form.name }}
+              </div>
+
+              <!-- Input Dove vivi -->
+              <div class="mt-11">
+                <ginput
+                  :text="$t('lp.page3.content')"
+                  id="page3Content"
+                  name="page3Content"
+                  type="text"
+                  v-model="form.city"
+                  :errorMsg="error_city"
+                />
+              </div>
+
+              <!-- Spiegazione Step 3 -->
+              <div class="mt-8">
+                <div
+                  class="text-md mx-auto text-left font-medium text-red"
+                  @click="showResponseStep = !showResponseStep"
+                >
+                  {{ $t("lp.page3.domanda") }}
+                </div>
+                <div
+                  class="text-md mx-auto text-left font-light text-red"
+                  v-show="showResponseStep"
+                >
+                  {{ $t("lp.page3.risposta") }}
+                </div>
+              </div>
+
+              <!--Button Avanti step2-->
+              <div class="mt-8">
+                <div @click="nextStep()">
+                  <gbutton
+                    :text="$t('lp.avanti')"
+                    id="buttonAvantiPasso3"
+                    name="buttonAvantiPasso3"
+                    typeButton="normal"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- // step3 -->
+          </VueSlickCarousel>
           <br /><br /><br /><br />
 
           <pre><code>{{form}}</code></pre>
@@ -108,19 +178,124 @@
 <script>
 import ginput from "@/components/ginput.vue";
 import gbutton from "@/components/gbutton.vue";
+import VueSlickCarousel from "vue-slick-carousel";
+
+var t1;
+var t2;
 export default {
   data() {
     return {
-        step:1,
+      step: 1,
+      showResponseStep: true,
       form: {
         name: "",
         number: "",
+        city: "",
       },
       error_name: "",
       error_number: "",
+      error_city: "",
+
+      settings: {
+        dots: false,
+        arrows: false,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+        centerPadding: "0px",
+        slidesPerRow: 1,
+        touchMove: false,
+        variableWidth: false,
+        infinite: false,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        pauseOnDotsHover: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        fade: false,
+        useCSS: true,
+        swipe: false,
+
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              /*  slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,*/
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              /*  slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1,
+              dots: false,*/
+            },
+          },
+        ],
+      },
     };
   }, //data
-  mounted() {}, //mounted
+  mounted() {
+    /*  t1 = this.$anime
+      .timeline({
+        easing: "easeInOutCubic",
+        direction: "normal",
+        duration: 1000,
+        autoplay: false,
+        complete: () => {
+          //this.step += 1;
+        },
+      })
+
+      .add({
+        targets: "#step1",
+        translateX: "-150",
+        opacity: "0",
+      })
+      .add({
+        targets: "#step2",
+        translateX:["150","0"],
+        opacity: ["0","1"],
+
+        begin: () => {
+          this.step += 1;
+        },
+        complete: () => {},
+      });
+    t2 = this.$anime
+      .timeline({
+        easing: "easeInOutCubic",
+        direction: "normal",
+        duration: 1000,
+        autoplay: false,
+        complete: () => {
+          //this.step += 1;
+        },
+      })
+
+      .add({
+        targets: "#step2",
+         translateX: "+150",
+        opacity: ["1","0"],
+        complete: () => {},
+      })
+      .add({
+        targets: "#step1",
+        translateX: "-150", 
+        opacity: "1",
+
+         begin: () => {
+          this.step -= 1;
+        },
+      });*/
+  }, //mounted
   computed: {
     responsive() {
       switch (this.$mq) {
@@ -136,16 +311,36 @@ export default {
   created() {}, //created
 
   methods: {
-      nextStep(){
-          this.step += 1;
-      },
-      UnStep(){
-          this.step -= 1;
-      },
+    nextStep() {
+      //if (this.step < 3) {
+      // this.step += 1;
+      //  t1.play();
+      // }
+
+      if (
+        this.form.name == "" ||
+        this.form.name == null ||
+        this.form.name == undefined
+      ) {
+        this.error_name = "Inserire un Nome";
+      } else {
+        this.error_name = "";
+        this.$refs.carouselLP.next();
+      }
+    },
+    UnStep() {
+      this.$refs.carouselLP.prev();
+      //t1.reverse();
+      /* if (this.step > 1) {
+        //  t2.play();
+        this.step -= 1;
+      }*/
+    },
   }, //methods
   components: {
     ginput,
     gbutton,
+    VueSlickCarousel,
   },
 };
 </script>
@@ -155,5 +350,17 @@ export default {
   top: 50px;
   background: rgba(175, 56, 79, 0.2);
 }
+
+/*
+.transitionTest{
+  vertical-align: top;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.transitionTest,slick-active {
+  opacity: 0.5;
+}*/
 </style>
 

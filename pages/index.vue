@@ -36,9 +36,9 @@
           btnInfoCovid
           duration-300
         "
-        :to="localePath('/test')"
+        :to="localePath('/lp')"
       >
-        Test Zone
+        LP
       </nuxt-link>
     </div>
 

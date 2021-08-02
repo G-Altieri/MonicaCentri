@@ -197,6 +197,13 @@ export default {
             title: "Ciao",
             content:"Qual è il tuo numero di telefono?",
             domanda:"Perché abbiamo bisogno del tuo numero di telefono?",
+            risposta:"Monica Centri chiede il tuo numero per prenotazioni, consulenze e comunicazioni.Non preoccuparti, il tuo numero non verrà condiviso a terzi.",
+        },
+        page3:{
+            title: "Ciao",
+            content:"Dove vivi?",
+            domanda:"Perché abbiamo bisogno di sapere dove vivi?",
+            risposta:"Monica Centri chiede di sapere dove vivi per consigliarti il centro a te piu vicino.",
         },
     },
 }

@@ -124,14 +124,14 @@ a:hover {
     top: 57px;
 }
 
-.videoDemoPage {
+/* .videoDemoPage {
     background: white;
     background-image: url('~/assets/img/laser/frame.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin-top: 88px;
-}
+} */
 
 .borderbottomred {
     border-bottom: solid 10px #b13850;

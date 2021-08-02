@@ -187,4 +187,16 @@ export default {
     footer: {
         content: "Il Footer ;)",
     },
+    lp:{
+        avanti:"Avanti",
+        page1:{
+            title: "Ciao, giusto due domande",
+            content:"Come ti chiami?",
+        },
+        page2:{
+            title: "Ciao",
+            content:"Qual è il tuo numero di telefono?",
+            domanda:"Perché abbiamo bisogno del tuo numero di telefono?",
+        },
+    },
 }

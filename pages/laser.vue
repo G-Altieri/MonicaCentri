@@ -375,7 +375,7 @@ export default {
       //scale: ["80%", "100%"],
       //rotate: "360deg",
      // opacity:["100%","50%"],
-      translateY:["-40px","25px"],
+      translateY:["-40px","20px"],
       easing: "linear",
       //direction: "alternate",
       autoplay: true,

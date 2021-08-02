@@ -105,7 +105,7 @@ export default {
                     file: 'it-IT.js'
                 },
                 {
-                    name: 'Inglese',
+                    name: 'English',
                     code: 'en',
                     iso: 'en-US',
                     file: 'en-US.js'

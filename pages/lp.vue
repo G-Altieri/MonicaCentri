@@ -32,11 +32,7 @@
 
           <VueSlickCarousel v-bind="settings" class="" ref="carouselLP">
             <!-- step1 -->
-            <div
-              class="transitionTest transition-all duration-300"
-              v-show="step == 1"
-              id="step1"
-            >
+            <div class="p-3" id="step1">
               <!-- Title step1 -->
               <div class="text-2xl font-semibold mx-auto text-red pt-6">
                 {{ $t("lp.page1.title") }}
@@ -46,11 +42,12 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page1.content')"
-                  id="page1Content"
-                  name="page1Content"
+                  id="step1Content"
+                  name="step1Content"
                   type="name"
                   v-model="form.name"
                   :errorMsg="error_name"
+                  ref="step1Input"
                 />
               </div>
 
@@ -69,7 +66,7 @@
             <!-- // step1 -->
 
             <!-- step2 -->
-            <div class="transitionTest" v-show="step == 1" id="step2">
+            <div class="p-3" id="step2">
               <!-- Title step2 -->
               <div class="text-2xl font-semibold mx-auto text-red pt-6">
                 {{ $t("lp.page2.title") + " " + form.name }}
@@ -79,11 +76,12 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page2.content')"
-                  id="page1Content"
-                  name="page1Content"
+                  id="step2Content"
+                  name="step2Content"
                   type="number"
                   v-model="form.number"
                   :errorMsg="error_number"
+                  ref="step2Input"
                 />
               </div>
 
@@ -118,7 +116,7 @@
             <!-- // step2 -->
 
             <!-- step3 -->
-            <div class="transitionTest" v-show="step == 1" id="step3">
+            <div class="p-3" id="step3">
               <!-- Title step3 -->
               <div class="text-2xl font-semibold mx-auto text-red pt-6">
                 {{ $t("lp.page3.title") + " " + form.name }}
@@ -128,11 +126,12 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page3.content')"
-                  id="page3Content"
-                  name="page3Content"
+                  id="step3Content"
+                  name="step3Content"
                   type="text"
                   v-model="form.city"
                   :errorMsg="error_city"
+                  ref="step3Input"
                 />
               </div>
 
@@ -180,11 +179,10 @@ import ginput from "@/components/ginput.vue";
 import gbutton from "@/components/gbutton.vue";
 import VueSlickCarousel from "vue-slick-carousel";
 
-var t1;
-var t2;
 export default {
   data() {
     return {
+      optionsFullPage: {},
       step: 1,
       showResponseStep: true,
       form: {
@@ -204,7 +202,7 @@ export default {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: false,
+        centerMode: true,
         centerPadding: "0px",
         slidesPerRow: 1,
         touchMove: false,
@@ -218,83 +216,13 @@ export default {
         fade: false,
         useCSS: true,
         swipe: false,
-
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              /*  slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: false,*/
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              /*  slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 1,
-              dots: false,*/
-            },
-          },
-        ],
       },
     };
   }, //data
   mounted() {
-    /*  t1 = this.$anime
-      .timeline({
-        easing: "easeInOutCubic",
-        direction: "normal",
-        duration: 1000,
-        autoplay: false,
-        complete: () => {
-          //this.step += 1;
-        },
-      })
-
-      .add({
-        targets: "#step1",
-        translateX: "-150",
-        opacity: "0",
-      })
-      .add({
-        targets: "#step2",
-        translateX:["150","0"],
-        opacity: ["0","1"],
-
-        begin: () => {
-          this.step += 1;
-        },
-        complete: () => {},
-      });
-    t2 = this.$anime
-      .timeline({
-        easing: "easeInOutCubic",
-        direction: "normal",
-        duration: 1000,
-        autoplay: false,
-        complete: () => {
-          //this.step += 1;
-        },
-      })
-
-      .add({
-        targets: "#step2",
-         translateX: "+150",
-        opacity: ["1","0"],
-        complete: () => {},
-      })
-      .add({
-        targets: "#step1",
-        translateX: "-150", 
-        opacity: "1",
-
-         begin: () => {
-          this.step -= 1;
-        },
-      });*/
+    setTimeout(() => {
+      this.$refs.step1Input.$el.firstChild.focus();
+    }, 600);
   }, //mounted
   computed: {
     responsive() {
@@ -312,29 +240,70 @@ export default {
 
   methods: {
     nextStep() {
-      //if (this.step < 3) {
-      // this.step += 1;
-      //  t1.play();
-      // }
+      /*Step 1*/
+      if (this.step == 1) {
+        if (
+          this.form.name == "" ||
+          this.form.name == null ||
+          this.form.name == undefined
+        ) {
+          this.error_name = "Inserire un Nome";
+        } else {
+          this.error_name = "";
+          this.$refs.carouselLP.next();
+          setTimeout(() => {
+            this.$refs.step2Input.$el.firstChild.focus();
+          }, 600);
+          this.step += 1;
+        }
 
-      if (
-        this.form.name == "" ||
-        this.form.name == null ||
-        this.form.name == undefined
-      ) {
-        this.error_name = "Inserire un Nome";
-      } else {
-        this.error_name = "";
-        this.$refs.carouselLP.next();
+        /*Step 2*/
+      } else if (this.step == 2) {
+        if (
+          this.form.number == "" ||
+          this.form.number == null ||
+          this.form.number == undefined
+        ) {
+          this.error_number = "Inserire il Numero";
+        } else {
+          this.error_number = "";
+          this.step += 1;
+          this.$refs.carouselLP.next();
+          setTimeout(() => {
+            this.$refs.step3Input.$el.firstChild.focus();
+          }, 600);
+        }
+
+        /*Step 3*/
+      } else if (this.step == 3) {
+        if (
+          this.form.city == "" ||
+          this.form.city == null ||
+          this.form.city == undefined
+        ) {
+          this.error_city = "Inserire una Cittá";
+        } else {
+          this.error_city = "";
+          this.step += 1;
+          this.$refs.carouselLP.next();
+        }
       }
     },
     UnStep() {
-      this.$refs.carouselLP.prev();
-      //t1.reverse();
-      /* if (this.step > 1) {
-        //  t2.play();
+      /*Step 1*/
+      if (this.step == 1) {
+        /*Step 2*/
+      } else if (this.step == 2) {
         this.step -= 1;
-      }*/
+        this.$refs.carouselLP.prev();
+        this.$refs.step1Input.$el.firstChild.focus();
+
+        /*Step 3*/
+      } else if (this.step == 3) {
+        this.step -= 1;
+        this.$refs.carouselLP.prev();
+        this.$refs.step2Input.$el.firstChild.focus();
+      }
     },
   }, //methods
   components: {
@@ -350,17 +319,5 @@ export default {
   top: 50px;
   background: rgba(175, 56, 79, 0.2);
 }
-
-/*
-.transitionTest{
-  vertical-align: top;
-  transition: opacity 0.3s;
-  -webkit-transition: opacity 0.3s;
-  opacity: 0;
-}
-
-.transitionTest,slick-active {
-  opacity: 0.5;
-}*/
 </style>
 

@@ -4,25 +4,58 @@
     class="relative h-10 input-component transition-all duration-150 box-border"
     v-bind:class="{ empty: isEmpty }"
   >
-  <!-- Input Area -->
+    <!-- Input Area -->
     <input
       :id="id"
       :type="type"
       :name="name"
-      class="h-full w-full border-gray-300 px-2 transition-all duration-150 border-red rounded-md box-border"
+      class="
+        h-full
+        w-full
+        border-gray-300
+        px-2
+        transition-all
+        duration-150
+        border-red
+        rounded-md
+        box-border
+      "
       v-bind:value="value"
       v-on:input="$emit('input', $event.target.value)"
       :input="labelFocus()"
+      v-on:keyup.enter="nextStepEnter()"
     />
     <!-- Label -->
     <label
       :for="id"
-      class="absolute left-2 transition-all bg-white px-1 text-red duration-150 cursor-text"
+      class="
+        absolute
+        left-2
+        transition-all
+        bg-white
+        px-1
+        text-red
+        duration-150
+        cursor-text
+      "
     >
       {{ text }}
     </label>
     <!-- Error Email -->
-      <div class="text-red-600 font-bold text-md left-2-5 mb-1-5 my-1 relative text-left">{{errorMsg}}</div>
+    <div
+      class="
+        text-red-600
+        font-bold
+        text-md
+        left-2-5
+        mb-1-5
+        my-1
+        relative
+        text-left
+      "
+    >
+      {{ errorMsg }}
+    </div>
   </div>
 </template>
 
@@ -34,9 +67,7 @@ export default {
       isEmpty: false,
     };
   },
-  computed: {
-
-  }, //computed
+  computed: {}, //computed
 
   created() {},
   methods: {
@@ -46,6 +77,13 @@ export default {
       } else {
         this.isEmpty = false;
       }
+    },
+
+    nextStepEnter() {
+      console.log("Enter");
+      $nuxt.$emit("EnterEvent");
+     // console.log(this.$parent.nextStep());
+      //this.$parent.nextStep();
     },
   }, //metodi
 

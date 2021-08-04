@@ -317,6 +317,12 @@ export default {
       this.$refs.step1Input.$el.firstChild.focus();
     }, 600);
   }, //mounted
+  created() {
+    //Ricezione evento Enter Event
+    this.$nuxt.$on("EnterEvent", () => {
+      this.nextStep();
+    });
+  },
   computed: {
     responsive() {
       switch (this.$mq) {
@@ -329,7 +335,6 @@ export default {
       }
     },
   },
-  created() {}, //created
 
   methods: {
     nextStep() {

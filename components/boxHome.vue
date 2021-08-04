@@ -16,7 +16,7 @@
       <nuxt-link :to="localePath('/' + link)" v-else>
         <!-- <img :src="'~/assets/img/home/box/box'+title+'.png'" :alt="title" class="boxContentImg" />  -->
         <img
-          :src="require(`~/assets/img/home/box/box${title}.png`)"
+          :src="require(`~/assets/img/home/box/box${title}.jpg`)"
           :alt="title"
           class="boxContentImg duration-300"
         />

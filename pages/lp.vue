@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step > 0">
+          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step < 4">
             <svg
               width="19"
               height="19"
@@ -164,10 +164,100 @@
               </div>
             </div>
             <!-- // step3 -->
+
+            <!-- step4 -->
+            <div class="p-3" id="step4" v-show="viewSendForm">
+              <!-- Title step3 -->
+              <!-- Mentre Carica -->
+              <div
+                class="text-3xl font-semibold mx-auto text-red pt-6"
+                v-show="!viewRingraziamenti"
+              >
+                {{ $t("lp.send.loading") }}
+              </div>
+
+              <!-- Ringraziamenti -->
+              <div
+                class="text-3xl font-semibold mx-auto text-red pt-6"
+                v-show="viewRingraziamenti"
+              >
+                <div v-if="!viewErrorRingraziamenti">
+                  {{ $t("lp.send.content") }}
+                </div>
+                <!-- Errori -->
+                <div v-if="viewErrorRingraziamenti">
+                  {{ $t("lp.send.error") }}
+                </div>
+              </div>
+              <!-- Button Step 4 -->
+              <div class="mt-8">
+                <nuxt-link
+                  :to="viewRingraziamenti == true ? localePath('/') : ''"
+                >
+                  <button
+                    class="
+                      bg-red
+                      px-4
+                      py-3
+                      text-sm
+                      font-normal
+                      tracking-wider
+                      text-white
+                      rounded-md
+                      w-full
+                      leading-4
+                      duration-300
+                      transition-all
+                      text-center
+                      flex
+                      items-stretch
+                      inline-flex
+                    "
+                  >
+                    <!-- Animation Loading -->
+                    <svg
+                      class="flex-auto animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      v-show="!viewRingraziamenti"
+                    >
+                      <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+
+                    <!-- Scritta nel Bottone -->
+                    <div
+                      class="flex-auto self-center"
+                      v-bind:class="{ 'text-left': !viewRingraziamenti }"
+                    >
+                      <div v-show="!viewRingraziamenti">
+                        {{ $t("lp.send.sendRequest") }}
+                      </div>
+                      <div v-show="viewRingraziamenti">
+                        {{ $t("lp.send.home") }}
+                      </div>
+                    </div>
+                  </button>
+                </nuxt-link>
+              </div>
+            </div>
+            <!-- // step4 -->
           </VueSlickCarousel>
           <br /><br /><br /><br />
 
-          <pre><code>{{form}}</code></pre>
+          <!-- <pre><code>{{form}}</code></pre> -->
         </div>
       </div>
     </div>
@@ -184,6 +274,9 @@ export default {
     return {
       optionsFullPage: {},
       step: 1,
+      viewSendForm: false,
+      viewRingraziamenti: false,
+      viewErrorRingraziamenti: false,
       showResponseStep: true,
       form: {
         name: "",
@@ -285,7 +378,7 @@ export default {
         } else {
           this.error_city = "";
           this.step += 1;
-          this.$refs.carouselLP.next();
+          this.sendForm();
         }
       }
     },
@@ -305,6 +398,20 @@ export default {
         this.$refs.step2Input.$el.firstChild.focus();
       }
     },
+    sendForm() {
+      this.viewSendForm = true;
+      this.$refs.carouselLP.next();
+      console.log("Invio Form" + this.form);
+      setTimeout(() => {
+        this.ringrazziamenti();
+      }, 3000);
+    },
+    ringrazziamenti() {
+      this.viewRingraziamenti = true;
+    },
+    tornaAllaHome() {
+      this.localePath("/");
+    },
   }, //methods
   components: {
     ginput,
@@ -318,6 +425,13 @@ export default {
 .footerTemp {
   top: 50px;
   background: rgba(175, 56, 79, 0.2);
+}
+
+.bg-red {
+  background: #af384f;
+}
+.bg-red:hover {
+  background: #882c3e;
 }
 </style>
 

@@ -25,7 +25,7 @@
 
     <!-- Bottone Info Covid -->
     <div class="containerInfoCovid grid flex items-center">
-      <nuxt-link
+      <!-- <nuxt-link
         type="button"
         class="
           text-center text-white
@@ -37,19 +37,22 @@
           duration-300
         "
         :to="localePath('/lp')"
-      >
+      > 
         LP
-      </nuxt-link>
+      </nuxt-link> -->
+      <nuxt-link  :to="localePath('/lp')">
+        <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
+     </nuxt-link>
     </div>
 
     <!-- Box home con i vari servizi -->
     <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome 
-      class="text-center"
-       title="Laser"
+      <boxHome
+        class="text-center"
+        title="Laser"
         link="laser"
         :type="false"
-         ></boxHome>
+      ></boxHome>
       <boxHome
         class="text-center"
         title="Biolifting"
@@ -60,7 +63,7 @@
         class="text-center"
         title="Pulizia Evo"
         link="puliziaevo"
-       :type="true"
+        :type="true"
       ></boxHome>
       <boxHome
         class="text-center"
@@ -139,6 +142,7 @@
 
 <script>
 import boxHome from "@/components/boxHome.vue";
+import gbutton from "@/components/gbutton.vue";
 import clientReview from "@/components/clientReview.vue";
 import VueSlickCarousel from "vue-slick-carousel";
 
@@ -197,6 +201,7 @@ export default {
   },
   components: {
     boxHome,
+    gbutton,
     clientReview,
     VueSlickCarousel,
   },

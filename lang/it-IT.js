@@ -187,23 +187,31 @@ export default {
     footer: {
         content: "Il Footer ;)",
     },
-    lp:{
-        avanti:"Avanti",
-        page1:{
+    lp: {
+        avanti: "Avanti",
+        page1: {
             title: "Ciao, giusto due domande",
-            content:"Come ti chiami?",
+            content: "Come ti chiami?",
         },
-        page2:{
+        page2: {
             title: "Ciao",
-            content:"Qual è il tuo numero di telefono?",
-            domanda:"Perché abbiamo bisogno del tuo numero di telefono?",
-            risposta:"Monica Centri chiede il tuo numero per prenotazioni, consulenze e comunicazioni.Non preoccuparti, il tuo numero non verrà condiviso a terzi.",
+            content: "Qual è il tuo numero di telefono?",
+            domanda: "Perché abbiamo bisogno del tuo numero di telefono?",
+            risposta: "Monica Centri chiede il tuo numero per prenotazioni, consulenze e comunicazioni.Non preoccuparti, il tuo numero non verrà condiviso a terzi.",
         },
-        page3:{
+        page3: {
             title: "Ciao",
-            content:"Dove vivi?",
-            domanda:"Perché abbiamo bisogno di sapere dove vivi?",
-            risposta:"Monica Centri chiede di sapere dove vivi per consigliarti il centro a te piu vicino.",
+            content: "Dove vivi?",
+            domanda: "Perché abbiamo bisogno di sapere dove vivi?",
+            risposta: "Monica Centri chiede di sapere dove vivi per consigliarti il centro a te piu vicino.",
+        },
+        send: {
+            loading: "1 secondo, stiamo inviando i tuoi dati",
+            sendRequest: "Invio richiesta",
+            home: "Torna alla home",
+            content: "Grazie per averci contattati",
+            error: "Ops, qualcosa é andato storto",
+
         },
     },
 }

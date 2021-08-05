@@ -112,29 +112,33 @@ export default {
     maipiuxl: {
         info: {
             title1: "Mai + XL",
-            title2: "Giovani subito.",
+            title2: "Perdere peso in salute.",
             btnVideo: "GUARDA VIDEO"
         },
         info2: {
-            content1: "Il nostro Biolifting",
-            content2: "innovativo",
-            content3: "avanzato",
+            content1: "Sorprendente",
+            content2: "Personalizzato",
+            content3: "",
         },
         info3: {
-            content1: "lorem",
+            content1: "Mai + XL è un percorso di dimagrimento personalizzato dove il cliente viene accompagnato a 360 gradi. Si parte da un’attenta consulenza, studiando il percorso in maniera sartoriale tenendo conto di tutti gli aspetti, tutti i dati importanti che ci fanno arrivare a creare un protocollo personalizzato e infallibile.",
         },
         illustration: {
             one: {
-                title: "lorem",
-                content: "lorem",
+                title: "G.E.M.",
+                content: "La G.E.M. (ginnastica estetica mirata) ci aiuta nei risultati studiando un’attività motoria personalizzandola e adattandola al tuo corpo per eliminare i centimetri in eccesso.",
             },
             two: {
-                title: "lorem",
-                content: "lorem ",
+                title: "Protocollo cabina",
+                content: "In cabina avviene una rivoluzione su tutti i punti di vista: attacco posturale dove si va a lavorare sulla postura, attacco sugli accumuli di grasso con manualità, tecnologie e prodotti mirati. Durante il percorso analizziamo e cambiamo il protocollo in base alle risposte del tuo corpo. Per finire si passa alla fase di ricompattamento e tonificazione. ",
             },
             three: {
-                title: "lorem",
-                content: "lorem",
+                title: "Psicoterapeuta",
+                content: "La figura della psicologa specializzata in disturbi alimentari, che ti accompagnerà in tutto il percorso, è fondamentale per aiutarti a raggiungere la serenità e consapevolezza del tuo corpo e per non perdere mai di vista l’obiettivo.",
+            },
+            four: {
+                title: "Biologa nutrizionista",
+                content: "La nostra biologa nutrizionista studierà un piano alimentare personalizzato per te, facendo varie analisi tra cui una bioimpedenziometria per calibrare un’alimentazione precisamente mirata.",
             },
         },
         BtnBuyNow: "Acquista Ora",

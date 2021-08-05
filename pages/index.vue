@@ -89,37 +89,37 @@
               class=""
               :text="$t('review.text1')"
               name="Umberto Giuliani"
-              img="Annalisa Bucciarelli"
+              img="Umberto Giuliani"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text2')"
               name="Gianrocco Reale"
-              img="Chiara Battista"
+              img="Gianrocco Reale"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text3')"
               name="Donatella Longo"
-              img="Domenica Albanese"
+              img="Donatella Longo"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text4')"
               name="Domenica Albanese"
-              img="Donatella Longo"
+              img="Domenica Albanese"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text5')"
               name="Chiara Battista"
-              img="Gianrocco Reale"
+              img="Chiara Battista"
             ></clientReview>
             <clientReview
               class=""
               :text="$t('review.text6')"
               name="Annalisa Bucciarelli"
-              img="Umberto Giuliani"
+              img="Annalisa Bucciarelli"
             ></clientReview>
           </VueSlickCarousel>
         </div>

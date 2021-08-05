@@ -82,7 +82,7 @@ export default {
     puliziaevo: {
         info: {
             title1: "Pulizia Evo",
-            title2: "Rigenera il tuo viso",
+            title2: "Rigenera il tuo viso.",
             btnVideo: "GUARDA VIDEO"
         },
         info2: {

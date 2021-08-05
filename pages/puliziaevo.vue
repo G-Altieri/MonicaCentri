@@ -22,7 +22,7 @@
       <div class="grid text-center justify-center self-center">
         <!-- Prima parte -->
         <div class="text-left my-10 justify-self-center">
-          <div class="text-red text-4xl font-bold uppercase">
+          <div class="text-red text-3xl font-bold uppercase">
             {{ $t("puliziaevo.info.title1") }}
           </div>
           <div class="text-pink text-2xl font-bold">
@@ -330,7 +330,7 @@
                 alt="Trattamento Specifico illustration"
                 class="mx-auto"
                 width="200px"
-                height="auto"
+                height="180px"
                 viewBox="0 0 149 118"
                 fill="none"
               >

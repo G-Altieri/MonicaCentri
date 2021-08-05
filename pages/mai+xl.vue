@@ -27,8 +27,8 @@
       <div class="grid text-center justify-center self-center">
         <!-- Prima parte -->
         <div class="text-left my-10 justify-self-center">
-          <div class="text-red text-4xl font-bold uppercase">
-            {{ $t("maipiuxl.info.title1") }}
+          <div class="text-red text-3xl font-bold uppercase">
+            {{ $t("maipiuxl.info.title1")   }}
           </div>
           <div class="text-pink text-2xl font-bold">
             {{ $t("maipiuxl.info.title2") }}

@@ -22,7 +22,7 @@
       <div class="grid text-center justify-center self-center">
         <!-- Prima parte -->
         <div class="text-left my-10 justify-self-center">
-          <div class="text-red text-2xl font-bold uppercase">
+          <div class="text-red text-3xl font-bold uppercase">
             {{ $t("laser.info.title1") }}
           </div>
           <div class="text-pink text-2xl font-bold">

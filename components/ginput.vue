@@ -80,7 +80,7 @@ export default {
     },
 
     nextStepEnter() {
-      console.log("Enter");
+  //    console.log("Enter");
       $nuxt.$emit("EnterEvent");
      // console.log(this.$parent.nextStep());
       //this.$parent.nextStep();

@@ -1,25 +1,24 @@
 <template>
   <div>
-
     <div class="mx-auto">
+      <div class="w-full grid relative mx-auto bg-white">
+        <div class="text-center text-xl p-16">
+          {{ ip.ip }} <br />
+          {{ loading }}
+        </div>
 
-      <div
-        class="w-full grid relative mx-auto bg-white">
-      <div class="text-center text-xl p-16">
-          {{ip.ip}} <br>
-          {{loading}}
-      </div>
+        <div
+          v-for="utente in request"
+          :key="utente.id"
+          class="text-center text-xl p-3 mx-auto"
+        >
+          {{ utente.id + " " }}
+          {{ utente.name + " " }}
+          {{ utente.number + " " }}
+          {{ utente.city }} <br />
+        </div>
 
-
-<div v-for="utente in request" :key="utente.id" class="text-center text-xl p-3 mx-auto">
-    {{utente.id +" "}} 
-    {{utente.name +" "}} 
-    {{utente.number +" "}} 
-    {{utente.city}} <br>
-</div>
-
-          <!-- <pre><code>{{request }}</code></pre> -->
-
+        <!-- <pre><code>{{request }}</code></pre> -->
       </div>
     </div>
   </div>
@@ -29,28 +28,39 @@
 export default {
   data() {
     return {
-      ip:null,
+      ip: "no ip",
       loading: "Caricamento Dati",
-      request:null,
+      request: null,
     };
   }, //data
   mounted() {}, //mounted
   created() {
-    this.renderRequest()
-    
+    this.renderRequest();
+
     this.$axios
-        .$get("https://api.ipify.org/?format=json")
-          .then((response) => {
-            this.ip = response;
-          // console.log(response);
-        })
-        .catch((error) => {
-          //this.loading = "Ops, qualcosa é andato storto";
-          console.error("Oh Error, ip");
-          console.error(error);
-        });
-     
-    },
+      .$get("https://api.ipify.org/?format=json", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          " Host": "api.ipify.org",
+          "Accept":
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+          "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Connection": "keep-alive",
+          "Upgrade-Insecure-Requests": "1",
+          "Cache-Control": "no-cache",
+        },
+      })
+      .then((response) => {
+        this.ip = response;
+        // console.log(response);
+      })
+      .catch((error) => {
+        //this.loading = "Ops, qualcosa é andato storto";
+        console.error("Oh Error, ip");
+        console.error(error);
+      });
+  },
   computed: {
     responsive() {
       switch (this.$mq) {
@@ -66,10 +76,10 @@ export default {
 
   methods: {
     async renderRequest() {
-       await this.$axios
+      await this.$axios
         .$get("http://127.0.0.1:8000/api/client")
-          .then((response) => {
-            this.loading = "";
+        .then((response) => {
+          this.loading = "";
           // console.log(response);
           this.request = response;
         })
@@ -78,9 +88,7 @@ export default {
           console.error("Oh Error");
           console.error(error);
         });
-     
     },
-
   }, //methods
   components: {},
 };

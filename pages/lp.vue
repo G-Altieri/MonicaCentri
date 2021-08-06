@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step<3">
+          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step < 3">
             <svg
               width="19"
               height="19"
@@ -177,10 +177,7 @@
               </div>
 
               <!-- Ringraziamenti -->
-              <div
-                class="text-3xl font-semibold mx-auto text-red pt-6"
-                
-              >
+              <div class="text-3xl font-semibold mx-auto text-red pt-6">
                 <div v-show="!viewErrorRingraziamenti">
                   {{ $t("lp.send.content") }}
                 </div>
@@ -278,11 +275,12 @@ export default {
       viewRingraziamenti: false,
       viewErrorRingraziamenti: false,
       showResponseStep: true,
-      
+
       form: {
         name: "",
         number: "",
         city: "",
+        ip: "null",
       },
       error_name: "",
       error_number: "",
@@ -322,7 +320,12 @@ export default {
     this.$nuxt.$on("EnterEvent", () => {
       this.nextStep();
     });
-  },
+
+      this.$axios.$get("https://api.ipify.org/?format=json").then((response) => {
+        this.form.ip = response.ip;
+        console.log(response.ip);
+      });
+  }, //created
   computed: {
     responsive() {
       switch (this.$mq) {
@@ -413,22 +416,21 @@ export default {
       }, 3000);*/
 
       console.log("Richiesta di inserimento Contatto");
+      console.log(this.form);
       const axios = require("axios");
       axios
-        .post(
-          "http://127.0.0.1:8000/api/client",
-          {
-            //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register
-            //local http://127.0.0.1:8000/api/auth/register
-            name: this.form.name,
-            number: this.form.number,
-            city: this.form.city,
-          }
-        )
+        .post("http://127.0.0.1:8000/api/client", {
+          //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register
+          //local http://127.0.0.1:8000/api/auth/register
+          name: this.form.name,
+          number: this.form.number,
+          city: this.form.city,
+          ip: this.form.ip,
+        })
         .then((response) => {
           console.log("Inserimento Effettuato:");
           console.log(response);
-           this.ringrazziamenti();
+          this.ringrazziamenti();
         })
         .catch((error) => {
           this.viewErrorRingraziamenti = true;

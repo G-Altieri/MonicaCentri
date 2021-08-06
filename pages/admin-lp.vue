@@ -40,15 +40,7 @@ export default {
     this.$axios
       .$get("https://api.ipify.org/?format=json", {
         headers: {
-          "Access-Control-Allow-Origin": "*",
-          " Host": "api.ipify.org",
-          "Accept":
-            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-          "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
-          "Accept-Encoding": "gzip, deflate, br",
-          "Connection": "keep-alive",
-          "Upgrade-Insecure-Requests": "1",
-          "Cache-Control": "no-cache",
+        
         },
       })
       .then((response) => {
@@ -77,7 +69,9 @@ export default {
   methods: {
     async renderRequest() {
       await this.$axios
-        .$get("http://127.0.0.1:8000/api/client")
+        .$get("https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client")
+        //Local http://127.0.0.1:8000/api/client
+        //Production https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
         .then((response) => {
           this.loading = "";
           // console.log(response);

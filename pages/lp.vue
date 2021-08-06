@@ -419,9 +419,9 @@ export default {
       console.log(this.form);
       const axios = require("axios");
       axios
-        .post("http://127.0.0.1:8000/api/client", {
-          //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register
-          //local http://127.0.0.1:8000/api/auth/register
+        .post("https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client", {
+          //production confing https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
+          //local http://127.0.0.1:8000/api/client
           name: this.form.name,
           number: this.form.number,
           city: this.form.city,

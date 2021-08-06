@@ -11,7 +11,7 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <nuxt-link :to="localePath('/dashboard')">
+    <nuxt-link :to="localePath('/admin-lp')">
       <div class="box-card z-20">
         <img
           class="imgRenderCarta"
@@ -25,21 +25,6 @@
 
     <!-- Bottone Info Covid -->
     <div class="containerInfoCovid grid flex items-center">
-      <!-- <nuxt-link
-        type="button"
-        class="
-          text-center text-white
-          font-semibold
-          px-6
-          py-3
-          rounded-lg
-          btnInfoCovid
-          duration-300
-        "
-        :to="localePath('/lp')"
-      > 
-        LP
-      </nuxt-link> -->
       <nuxt-link  :to="localePath('/lp')">
         <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
      </nuxt-link>

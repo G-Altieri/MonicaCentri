@@ -4,6 +4,7 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _63473f66 = () => interopDefault(import('..\\pages\\admin-lp.vue' /* webpackChunkName: "pages/admin-lp" */))
 const _7811e73a = () => interopDefault(import('..\\pages\\biolifting.vue' /* webpackChunkName: "pages/biolifting" */))
 const _602760ce = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
 const _2da87d57 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -30,6 +31,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/admin-lp",
+    component: _63473f66,
+    name: "admin-lp___it"
+  }, {
     path: "/biolifting",
     component: _7811e73a,
     name: "biolifting___it"
@@ -81,6 +86,10 @@ export const routerOptions = {
     path: "/test",
     component: _82c91cc6,
     name: "test___it"
+  }, {
+    path: "/en/admin-lp",
+    component: _63473f66,
+    name: "admin-lp___en"
   }, {
     path: "/en/biolifting",
     component: _7811e73a,

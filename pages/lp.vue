@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step < 4">
+          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step<3">
             <svg
               width="19"
               height="19"
@@ -171,7 +171,7 @@
               <!-- Mentre Carica -->
               <div
                 class="text-3xl font-semibold mx-auto text-red pt-6"
-                v-show="!viewRingraziamenti"
+                v-show="!viewErrorRingraziamenti && !viewRingraziamenti"
               >
                 {{ $t("lp.send.loading") }}
               </div>
@@ -179,13 +179,13 @@
               <!-- Ringraziamenti -->
               <div
                 class="text-3xl font-semibold mx-auto text-red pt-6"
-                v-show="viewRingraziamenti"
+                
               >
-                <div v-if="!viewErrorRingraziamenti">
+                <div v-show="!viewErrorRingraziamenti">
                   {{ $t("lp.send.content") }}
                 </div>
                 <!-- Errori -->
-                <div v-if="viewErrorRingraziamenti">
+                <div v-show="viewErrorRingraziamenti">
                   {{ $t("lp.send.error") }}
                 </div>
               </div>
@@ -278,6 +278,7 @@ export default {
       viewRingraziamenti: false,
       viewErrorRingraziamenti: false,
       showResponseStep: true,
+      
       form: {
         name: "",
         number: "",
@@ -286,7 +287,6 @@ export default {
       error_name: "",
       error_number: "",
       error_city: "",
-
       settings: {
         dots: false,
         arrows: false,
@@ -390,6 +390,7 @@ export default {
     UnStep() {
       /*Step 1*/
       if (this.step == 1) {
+        this.$router.go(-1);
         /*Step 2*/
       } else if (this.step == 2) {
         this.step -= 1;
@@ -406,16 +407,46 @@ export default {
     sendForm() {
       this.viewSendForm = true;
       this.$refs.carouselLP.next();
-      console.log("Invio Form" + this.form);
+      /* console.log("Invio Form" + this.form);
       setTimeout(() => {
         this.ringrazziamenti();
-      }, 3000);
+      }, 3000);*/
+
+      console.log("Richiesta di inserimento Contatto");
+      const axios = require("axios");
+      axios
+        .post(
+          "http://127.0.0.1:8000/api/client",
+          {
+            //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/register
+            //local http://127.0.0.1:8000/api/auth/register
+            name: this.form.name,
+            number: this.form.number,
+            city: this.form.city,
+          }
+        )
+        .then((response) => {
+          console.log("Inserimento Effettuato:");
+          console.log(response);
+           this.ringrazziamenti();
+        })
+        .catch((error) => {
+          this.viewErrorRingraziamenti = true;
+          console.error("Oh Error");
+          console.error(error);
+        });
     },
     ringrazziamenti() {
       this.viewRingraziamenti = true;
     },
     tornaAllaHome() {
       this.localePath("/");
+    },
+
+    async renderDB() {
+      const a = await this.$axios.$get("http://127.0.0.1:8000/api/client");
+      console.log(a);
+      return a;
     },
   }, //methods
   components: {

@@ -389,7 +389,7 @@
 
       <!-- Button Acquista Ora -->
       <div class="mx-auto my-16">
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath('/lp')">
           <div
             class="
               BtnBuyNow

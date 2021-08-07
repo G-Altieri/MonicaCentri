@@ -321,10 +321,13 @@ export default {
       this.nextStep();
     });
 
+    /* Richiede Ip
       this.$axios.$get("https://api.ipify.org/?format=json").then((response) => {
         this.form.ip = response.ip;
         console.log(response.ip);
       });
+    */
+
   }, //created
   computed: {
     responsive() {

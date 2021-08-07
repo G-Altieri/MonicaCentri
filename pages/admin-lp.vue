@@ -2,21 +2,30 @@
   <div>
     <div class="mx-auto">
       <div class="w-full grid relative mx-auto bg-white">
-        <div class="text-center text-xl p-16">
-          {{ ip.ip }} <br />
-          {{ loading }}
-        </div>
-
-        <div
-          v-for="utente in request"
-          :key="utente.id"
-          class="text-center text-xl p-3 mx-auto"
+        <!-- Table -->
+        <table
+          class="rounded-t-lg m-5 w-5/6 mx-auto bg-red-200 text-gray-800 mt-20"
         >
-          {{ utente.id + " " }}
-          {{ utente.name + " " }}
-          {{ utente.number + " " }}
-          {{ utente.city }} <br />
-        </div>
+          <tr class="text-left border-my-red border-b-2">
+            <th class="px-4 py-3">#</th>
+            <th class="px-4 py-3">Nome</th>
+            <th class="px-4 py-3">Numero</th>
+            <th class="px-4 py-3">Cittá</th>
+          </tr>
+
+          <tr
+            class="bg-gray-100 border-b border-my-pink"
+            v-for="(utente, index) in request"
+            :key="utente.id"
+          >
+            <td class="px-4 py-3" @click="copyToClipBoard(utente.id)">{{ index+1 }}</td>
+            <td class="px-4 py-3" @click="copyToClipBoard(utente.name)">{{ utente.name }}</td>
+            <td class="px-4 py-3" @click="copyToClipBoard(utente.number)">{{ utente.number }}</td>
+            <td class="px-4 py-3" @click="copyToClipBoard(utente.city)">{{ utente.city }}</td>
+          </tr>
+
+        </table>
+        <!--**Table -->
 
         <!-- <pre><code>{{request }}</code></pre> -->
       </div>
@@ -37,6 +46,7 @@ export default {
   created() {
     this.renderRequest();
 
+    /* Richiede Ip
     this.$axios
       .$get("https://api.ipify.org/?format=json", {
         headers: {
@@ -51,7 +61,7 @@ export default {
         //this.loading = "Ops, qualcosa é andato storto";
         console.error("Oh Error, ip");
         console.error(error);
-      });
+      });*/
   },
   computed: {
     responsive() {
@@ -67,14 +77,20 @@ export default {
   },
 
   methods: {
+    copyToClipBoard(params) {
+      console.log(params);
+    },
+
     async renderRequest() {
       await this.$axios
-        .$get("https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client")
+        .$get(
+          "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
+        )
         //Local http://127.0.0.1:8000/api/client
         //Production https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
         .then((response) => {
           this.loading = "";
-          // console.log(response);
+           console.log(response);
           this.request = response;
         })
         .catch((error) => {
@@ -89,5 +105,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.border-my-table-admin {
+  border-radius: 25px;
+}
+
+.border-my-red {
+  border-color: #af384f !important;
+}
+.border-my-pink {
+  border-color: #d16a7d !important;
+}
 </style>
 

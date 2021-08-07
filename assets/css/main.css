@@ -135,7 +135,8 @@ a:hover {
 } */
 
 .borderbottomred {
-    border-bottom: solid 10px #b13850;
+    border-bottom: solid 10px #af384f;
+    /* border-bottom: solid 10px #b13850;*/
     border-collapse: collapse;
 }
 
@@ -149,7 +150,7 @@ a:hover {
 }
 
 .BtnBuyNow {
-    background: #b13850;
+    background: #af384f;
     padding: 12px;
     border-radius: 6px;
     width: 150px;

@@ -36,25 +36,25 @@
         class="text-center"
         title="Laser"
         link="laser"
-        :type="false"
+        :type="3"
       ></boxHome>
       <boxHome
         class="text-center"
         title="Biolifting"
         link="biolifting"
-        :type="false"
+        :type="3"
       ></boxHome>
       <boxHome
         class="text-center"
         title="Pulizia Evo"
         link="puliziaevo"
-        :type="true"
+        :type="2"
       ></boxHome>
       <boxHome
         class="text-center"
         title="Mai + XL"
         link="mai+xl"
-        :type="true"
+        :type="2"
       ></boxHome>
       <!-- <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
       <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome> -->

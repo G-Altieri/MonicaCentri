@@ -44,7 +44,7 @@ export default {
             },
             three: {
                 title: "Pelle perfetta",
-                content: "L’epidermide diventerà liscia, levigata, vengono eliminate machhie, discromie e follicolite per una pelle meravigliosa e senza più peli",
+                content: "L’epidermide diventerà liscia, levigata, vengono eliminate macchie, discromie e follicolite per una pelle meravigliosa e senza più peli",
             },
         },
         BtnBuyNow: "Acquista Ora",

@@ -384,10 +384,7 @@
         </nuxt-link>
       </div>
 
-      <div
-        class="w-32 bg-red-900 mx-auto m-16 p-5"
-        id="illustrationline1"
-      ></div>
+    
 
       <!-- Footer -->
       <div class="footerLaser grid flex text-2xl mt-16">

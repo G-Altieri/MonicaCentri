@@ -19,19 +19,19 @@
       </div>
 
       <!-- Sezione di info -->
-      <div class="grid text-center justify-center self-center">
+      <div class="grid text-center justify-center self-center ">
         <!-- Prima parte -->
-        <div class="text-left my-10 justify-self-center">
-          <div class="text-red text-3xl font-bold uppercase">
+        <div class="text-left my-10 justify-self-center ">
+          <div class="text-red text-4xl font-bold uppercase">
             {{ $t("maipiuxl.info.title1") }}
           </div>
-          <div class="text-pink text-2xl font-bold">
+          <div class="text-pink w-44 font-semibold leading-6" style="font-size: 1.45rem;">
             {{ $t("maipiuxl.info.title2") }}
           </div>
         </div>
 
         <!-- Button Video -->
-        <div class="mx-auto my-6">
+        <div class="mx-auto my-10">
           <nuxt-link :to="localePath('/')">
             <div
               class="
@@ -66,7 +66,7 @@
         <!-- Terza Parte -->
         <div class="text-center my-16">
           <div
-            class="text-red text-2xl font-normal text-maixl-content mx-auto max-w-sm md:text-2xl"
+            class="text-red text-xl font-normal text-maixl-content mx-auto max-w-sm md:text-2xl"
           >
             {{ $t("maipiuxl.info3.content1") }}
           </div>
@@ -116,7 +116,7 @@
               class="mx-auto"
               width="250px"
               alt="G.E.M."
-              height="auto"
+           
               viewBox="0 0 198 123"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -167,13 +167,14 @@
             </div>
           </div>
           <!-- Illustration  Two -->
-          <div class="mt-26">
+          <div class="mt-20 ">
             <!-- Svg illustration 2 -->
+           
             <svg
               alt="Protocollo Cabina"
-              class="mt-20 md:mt-0 mx-auto"
+              class="mx-auto"
               width="200px"
-              height="auto"
+             
               viewBox="0 0 193 199"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -230,6 +231,7 @@
                 />
           
             </svg>
+           
             <!--*** Svg illustration 2 -->
 
             <div
@@ -250,7 +252,7 @@
               alt="Psicoterapeuta"
               class="mt-20 mx-auto"
               width="200px"
-              height="auto"
+             
               viewBox="0 0 163 146"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -306,7 +308,7 @@
               alt="Biologa Nutrizionista"
               class="mt-20 mx-auto"
               width="200px"
-              height="auto"
+            
               viewBox="0 0 172 176"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

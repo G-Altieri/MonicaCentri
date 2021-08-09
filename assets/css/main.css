@@ -52,6 +52,9 @@ a:hover {
 .w-max {
     width: max-content;
 }
+.w-44 {
+    width: 11rem;
+}
 
 .top-0_5 {
     top: 0.125rem;

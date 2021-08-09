@@ -14,11 +14,11 @@
 
       <nuxt-link :to="localePath('/' + link)" v-if="type == 2">
         <div class="Box2 duration-300 shadow-lg">
-          <div class="titleBox2  font-semibold text-left pt-2 pl-5">
+          <div class="titleBox2 font-semibold text-left pt-2 pl-5">
             <h4>
               {{ title }}
             </h4>
-            <img src="~/assets/img/home/box/laser.png" alt="laser" class="imgBox2">
+            <img   :src="require(`~/assets/img/home/box/${title}.png`)" alt="laser" class="imgBox2">
           </div>
         </div>
       </nuxt-link>

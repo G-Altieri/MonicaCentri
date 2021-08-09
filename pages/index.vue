@@ -1,132 +1,160 @@
 <template>
   <!-- div generale -->
   <div>
-    <!-- Div header home page -->
-    <div class="bgred flex items-center grid">
-      <h1 class="text-white text-center text-4xl">{{ $t("header.title") }}</h1>
-      <!--*** Div header home page*** -->
-    </div>
-
-    <!-- Bg-Header -->
-    <div class="bg-header"></div>
-
-    <!-- Box Carta con render -->
-    <nuxt-link :to="localePath('/admin-lp')">
-      <div class="box-card z-20">
-        <img
-          class="imgRenderCarta"
-          src="~/assets/img/home/render-carta.jpg"
-          alt=""
-          width="100%"
-          height="100%"
-        />    
-      </div>
-    </nuxt-link>
-
-    <!-- Bottone Info Covid -->
-    <div class="containerInfoCovid grid flex items-center">
-      <nuxt-link  :to="localePath('/lp')">
-        <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
-     </nuxt-link>
-    </div>
-
-    <!-- Box home con i vari servizi -->
-    <div class="containerBoxHome grid grid-col-1 gap-6">
-      <boxHome
-        class="text-center"
-        title="Laser"
-        link="laser"
-        :type="3"
-      ></boxHome>
-      <boxHome
-        class="text-center"
-        title="Biolifting"
-        link="biolifting"
-        :type="3"
-      ></boxHome>
-      <boxHome
-        class="text-center"
-        title="Pulizia Evo"
-        link="puliziaevo"
-        :type="2"
-      ></boxHome>
-      <boxHome
-        class="text-center"
-        title="Mai + XL"
-        link="mai+xl"
-        :type="2"
-      ></boxHome>
-      <!-- <boxHome class="text-center" title="Lingue" link="lingue"></boxHome>
-      <boxHome class="text-center" title="Dashboard" link="dashboard"></boxHome> -->
-    </div>
-    <!-- Bg recensioni clienti con titolo -->
-    <div class="clientsReviewsHome">
-      <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
-        {{ $t("header.cosa") }}
+    <!-- Container -->
+    <div class="container-fluid mx-auto grid">
+      <!-- Div header home page -->
+      <div class="bgred flex items-center grid">
+        <h1 class="text-white text-center text-4xl">
+          {{ $t("header.title") }}
+        </h1>
+        <!--*** Div header home page*** -->
       </div>
 
-      <!-- box recensioni clienti -->
-      <div class="containerReviews">
-        <!-- Carosello Review Clienti -->
-        <div class="mx-auto mt-36 text-black">
-          <VueSlickCarousel v-bind="settings">
-            <clientReview
-              class=""
-              :text="$t('review.text1')"
-              name="Umberto Giuliani"
-              img="Umberto Giuliani"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text2')"
-              name="Gianrocco Reale"
-              img="Gianrocco Reale"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text3')"
-              name="Donatella Longo"
-              img="Donatella Longo"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text4')"
-              name="Domenica Albanese"
-              img="Domenica Albanese"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text5')"
-              name="Chiara Battista"
-              img="Chiara Battista"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text6')"
-              name="Annalisa Bucciarelli"
-              img="Annalisa Bucciarelli"
-            ></clientReview>
-          </VueSlickCarousel>
+      <!-- Bg-Header -->
+      <div class="bg-header"></div>
+
+
+</div>
+
+      <!-- Box Carta con render -->
+      <div>
+        <nuxt-link :to="localePath('/admin-lp')">
+          <div class="box-card z-20">
+            <img
+              class="imgRenderCarta"
+              src="~/assets/img/home/render-carta.jpg"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+          </div>
+        </nuxt-link>
+      </div>
+
+      <!-- Bottone Info Covid -->
+      <div class=" w-44 mx-auto grid flex items-center">
+        <nuxt-link :to="localePath('/lp')">
+          <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
+        </nuxt-link>
+      </div>
+
+      <!-- Box home con i vari servizi -->
+      <div class="containerBoxHome grid grid-col-1 gap-6">
+        <!-- Box Laser 1 -->
+        <nuxt-link :to="localePath('/laser')">
+          <div class="BoxHome duration-300 shadow-lg">
+            <div
+              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+            >
+              <h4>
+                {{ $t("navBuy.fotoepilazione") }}
+              </h4>
+              <img
+                src="~/assets/img/home/box/laser.png"
+                alt="laser"
+                class="BoxHomeLaser"
+              />
+            </div>
+          </div>
+        </nuxt-link>
+        <!-- Box Biolifting 2 -->
+        <nuxt-link :to="localePath('/biolifting')">
+          <div class="BoxHome duration-300 shadow-lg">
+            <div
+              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+            >
+              <h4>
+                {{ $t("navBuy.biolifting") }}
+              </h4>
+              <img
+                src="~/assets/img/home/box/biolifting.png"
+                alt="laser"
+                class="BoxHomeBiolifting"
+              />
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
+      <!-- Bg recensioni clienti con titolo -->
+      <div class="clientsReviewsHome">
+        <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
+          {{ $t("header.cosa") }}
+        </div>
+
+        <!-- box recensioni clienti -->
+        <div class="containerReviews">
+          <!-- Carosello Review Clienti -->
+          <div class="mx-auto mt-12 text-black">
+            <VueSlickCarousel v-bind="settings">
+              <clientReview
+                class=""
+                :text="$t('review.text1')"
+                name="Umberto Giuliani"
+                img="Umberto Giuliani"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text2')"
+                name="Gianrocco Reale"
+                img="Gianrocco Reale"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text3')"
+                name="Donatella Longo"
+                img="Donatella Longo"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text4')"
+                name="Domenica Albanese"
+                img="Domenica Albanese"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text5')"
+                name="Chiara Battista"
+                img="Chiara Battista"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text6')"
+                name="Annalisa Bucciarelli"
+                img="Annalisa Bucciarelli"
+              ></clientReview>
+            </VueSlickCarousel>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- bg titolare -->
-    <div class="bg-titolare">
-      <div class="bg-titolare-color">
-        <div class="title-titolare">Monica</div>
-        <img src="~/assets/img/home/monica.png" class="img-titolare" alt="" />
-        <div class="text-titolare">{{ $t("titolare.content") }}</div>
-        <div class="bg-titolare-footer"></div>
+      <!-- Bg Header Sezione Illustrazioni -->
+      <div class="bg_illustrationContainer transform1pxY relative">
+        <svg
+          viewBox="0 0 375 210"
+          class="relative"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M179.739 25.3825C105.76 40.8042 28.538 11.1152 0 0V108H376V81.1244C334.445 40.8111 301.5 0 179.739 25.3825Z"
+            fill="#AF384F"
+          />
+          <path
+            d="M188.5 47C99 56 38.8734 33.4488 0 19V160H376V89.9067C274 89.9067 278 38 188.5 47Z"
+            fill="#D16A7D"
+          />
+          <path
+            d="M194.5 84.5C122.539 30.5291 38.8734 83.4487 0 69V210H376V113.5C341.418 89.8207 266.5 138.5 194.5 84.5Z"
+            fill="#FED1D1"
+          />
+        </svg>
       </div>
     </div>
-
     <!-- div generale -->
   </div>
 </template>
 
 <script>
-import boxHome from "@/components/boxHome.vue";
 import gbutton from "@/components/gbutton.vue";
 import clientReview from "@/components/clientReview.vue";
 import VueSlickCarousel from "vue-slick-carousel";
@@ -185,7 +213,6 @@ export default {
     //$("body").addClass("scrollbar");
   },
   components: {
-    boxHome,
     gbutton,
     clientReview,
     VueSlickCarousel,
@@ -194,56 +221,6 @@ export default {
 </script>
 
 <style >
-/* Titotlare */
-.bg-titolare {
-  background-image: url("~/assets/img/home/bg-titolare.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 3800px;
-  height: 70vh;
-  z-index: 10;
-}
-.bg-titolare-footer {
-  background-image: url("~/assets/img/home/bg-titolare-footer.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 148vh;
-  height: 40vh;
-  z-index: 10;
-}
-.bg-titolare-color {
-  background: #ffd2d2;
-  width: 100%;
-  position: relative;
-  height: 150vh;
-  top: 45vh;
-}
-.img-titolare {
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
-  width: 40vh;
-  margin-top: 100px;
-}
-
-.text-titolare {
-  font-size: 1.5rem;
-  color: #af384f;
-  text-align: center;
-  width: 85%;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 60px;
-}
-
 .title-titolare {
   font-size: 5rem;
   color: #af384f;
@@ -283,9 +260,9 @@ export default {
   /* background-color: #999; */
   width: 100%;
   height: 70vh;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 490px;
+  /*top: 490px;*/
 }
 
 .imgRenderCarta {
@@ -295,41 +272,8 @@ export default {
   height: auto;
 }
 
-/* Button Info Covid */
-.containerInfoCovid {
-  /* width: 100%; */
-  margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 870px;
-}
-
-.btnInfoCovid {
-  background: #af384f;
-  border-radius: 50px;
-  width: 200px;
-  cursor: pointer;
-  color: white;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
-  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.22);
-}
-
-.btnInfoCovid:hover {
-  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
-  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-.btnInfoCovid:active {
-  -webkit-box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
-  box-shadow: 0px 15px 25px -5px rgba(50, 50, 50, 0.23);
-  -webkit-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
 /* Box Home */
-.containerBoxHome {
+.containerBoxHome2 {
   /* background: #35495e; */
   top: 966px;
   position: absolute;
@@ -348,7 +292,7 @@ export default {
   /* background-color: #999; */
   width: 100%;
   height: 50vh;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 2230px;
 }
@@ -371,20 +315,6 @@ export default {
   transform: translateX(-50%);
 }
 
-/* Test Zone */
-.containerStronzata {
-  margin: 0 auto;
-  min-height: 600vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 3000px;
-}
-
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -400,5 +330,51 @@ export default {
 }
 
 @media screen and (min-width: 1100px) {
+}
+
+.BoxHome {
+  width: 300px;
+  height: 300px;
+  border-radius: 14px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
+}
+
+.BoxHome:hover {
+  -webkit-box-shadow: 0px 1px 38px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 38px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.BoxHome:active {
+  -webkit-box-shadow: 0px 1px 9px 0px #000000;
+  box-shadow: 0px 1px 9px 0px #000000;
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.titleBoxHome {
+  color: #af384f;
+  /*font-size: 2.5rem;*/
+}
+
+.BoxHomeLaser {
+  position: absolute;
+  border-radius: 14px;
+  transform: scale(0.9);
+  float: right;
+  right: -14px;
+  top: 32px;
+}
+.BoxHomeBiolifting {
+  position: absolute;
+  border-radius: 14px;
+  transform: scale(0.9);
+  float: right;
+  right: -12px;
+  top: 35px;
 }
 </style>

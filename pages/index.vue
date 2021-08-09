@@ -1,39 +1,36 @@
 <template>
   <!-- div generale -->
   <div>
-    <!-- Container -->
-    <div class="container-fluid mx-auto grid">
-      <!-- Div header home page -->
-      <div class="bgred flex items-center grid">
-        <h1 class="text-white text-center text-4xl">
-          {{ $t("header.title") }}
-        </h1>
-        <!--*** Div header home page*** -->
-      </div>
+    <!-- Div header home page -->
+    <div class="bgred flex items-center grid">
+      <h1 class="text-white text-center text-4xl">
+        {{ $t("header.title") }}
+      </h1>
+      <!--*** Div header home page*** -->
+    </div>
 
-      <!-- Bg-Header -->
-      <div class="bg-header"></div>
+    <!-- Bg-Header -->
+    <div class="bg-header"></div>
 
+    <!-- Box Carta con render -->
+    <div>
+      <nuxt-link :to="localePath('/admin-lp')">
+        <div class="box-card z-20">
+          <img
+            class="imgRenderCarta"
+            src="~/assets/img/home/render-carta.jpg"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </nuxt-link>
+    </div>
 
-</div>
-
-      <!-- Box Carta con render -->
-      <div>
-        <nuxt-link :to="localePath('/admin-lp')">
-          <div class="box-card z-20">
-            <img
-              class="imgRenderCarta"
-              src="~/assets/img/home/render-carta.jpg"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-
+    <!-- Containet Body Page -->
+    <div class="grid mx-auto container-fluid -mt-44 lg:mt-0" style="">
       <!-- Bottone Info Covid -->
-      <div class=" w-44 mx-auto grid flex items-center">
+      <div class="w-44 mx-auto grid flex items-center my-16">
         <nuxt-link :to="localePath('/lp')">
           <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
         </nuxt-link>
@@ -58,6 +55,7 @@
             </div>
           </div>
         </nuxt-link>
+
         <!-- Box Biolifting 2 -->
         <nuxt-link :to="localePath('/biolifting')">
           <div class="BoxHome duration-300 shadow-lg">
@@ -75,81 +73,138 @@
             </div>
           </div>
         </nuxt-link>
-      </div>
-      <!-- Bg recensioni clienti con titolo -->
-      <div class="clientsReviewsHome">
-        <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
-          {{ $t("header.cosa") }}
-        </div>
-
-        <!-- box recensioni clienti -->
-        <div class="containerReviews">
-          <!-- Carosello Review Clienti -->
-          <div class="mx-auto mt-12 text-black">
-            <VueSlickCarousel v-bind="settings">
-              <clientReview
-                class=""
-                :text="$t('review.text1')"
-                name="Umberto Giuliani"
-                img="Umberto Giuliani"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text2')"
-                name="Gianrocco Reale"
-                img="Gianrocco Reale"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text3')"
-                name="Donatella Longo"
-                img="Donatella Longo"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text4')"
-                name="Domenica Albanese"
-                img="Domenica Albanese"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text5')"
-                name="Chiara Battista"
-                img="Chiara Battista"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text6')"
-                name="Annalisa Bucciarelli"
-                img="Annalisa Bucciarelli"
-              ></clientReview>
-            </VueSlickCarousel>
+    
+      <!--/// Box Biolifting 2 -->
+      <!-- Box Laser 3 -->
+      <nuxt-link :to="localePath('/puliziaevo')">
+        <div class="BoxHome duration-300 shadow-lg">
+          <div class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5">
+            <h4>
+              {{ $t("navBuy.puliziaevo") }}
+            </h4>
+            <img
+              src="~/assets/img/home/box/laser.png"
+              alt="pulizia evolution"
+              class="BoxHomeLaser"
+            />
           </div>
         </div>
+      </nuxt-link>
+      <!-- Box Laser 3 -->
+
+      <!-- Box Biolifting 4 -->
+      <nuxt-link :to="localePath('/mai+xl')">
+        <div class="BoxHome duration-300 shadow-lg">
+          <div class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5">
+            <h4>
+              {{ $t("navBuy.maipiuxl") }}
+            </h4>
+            <img
+              src="~/assets/img/home/box/biolifting.png"
+              alt="maipiuxl"
+              class="BoxHomeBiolifting"
+            />
+          </div>
+        </div>
+      </nuxt-link>
+  </div>
+      <!--/// Box Biolifting 4 -->
+    </div>
+    <!-- Container Body -->
+
+    <!-- Bg recensioni clienti con titolo -->
+    <div class="clientsReviewsHome">
+      <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
+        {{ $t("header.cosa") }}
       </div>
 
-      <!-- Bg Header Sezione Illustrazioni -->
-      <div class="bg_illustrationContainer transform1pxY relative">
-        <svg
-          viewBox="0 0 375 210"
-          class="relative"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M179.739 25.3825C105.76 40.8042 28.538 11.1152 0 0V108H376V81.1244C334.445 40.8111 301.5 0 179.739 25.3825Z"
-            fill="#AF384F"
-          />
-          <path
-            d="M188.5 47C99 56 38.8734 33.4488 0 19V160H376V89.9067C274 89.9067 278 38 188.5 47Z"
-            fill="#D16A7D"
-          />
-          <path
-            d="M194.5 84.5C122.539 30.5291 38.8734 83.4487 0 69V210H376V113.5C341.418 89.8207 266.5 138.5 194.5 84.5Z"
-            fill="#FED1D1"
-          />
-        </svg>
+      <!-- box recensioni clienti -->
+      <div class="containerReviews">
+        <!-- Carosello Review Clienti -->
+        <div class="mx-auto mt-12 text-black">
+          <VueSlickCarousel v-bind="settings">
+            <clientReview
+              class=""
+              :text="$t('review.text1')"
+              name="Umberto Giuliani"
+              img="Umberto Giuliani"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text2')"
+              name="Gianrocco Reale"
+              img="Gianrocco Reale"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text3')"
+              name="Donatella Longo"
+              img="Donatella Longo"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text4')"
+              name="Domenica Albanese"
+              img="Domenica Albanese"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text5')"
+              name="Chiara Battista"
+              img="Chiara Battista"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text6')"
+              name="Annalisa Bucciarelli"
+              img="Annalisa Bucciarelli"
+            ></clientReview>
+          </VueSlickCarousel>
+        </div>
       </div>
     </div>
+
+    <!-- Bg Header Sezione Illustrazioni -->
+    <div
+      class="bg_illustrationContainer transform1pxY relative grid mt-40"
+      style="margin-top: 33.5rem"
+    >
+      <svg
+        viewBox="0 0 375 1275"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-5 1074.69C20.5 1074.69 338.5 1085 375 1085V44L-5 44L-5 1074.69Z"
+          fill="#FFD2D2"
+        />
+        <path
+          d="M-5 81.8357L-5 43.6694H374.663V157.774C219.76 5.89761 75.3197 128.761 -5 81.8357Z"
+          fill="#AF384F"
+        />
+        <path
+          d="M374.663 1056.03L374.663 1094.19L-4.99991 1094.19L-4.9999 980.089C149.902 1131.97 294.343 1009.1 374.663 1056.03Z"
+          fill="#AF384F"
+        />
+        <path
+          d="M-5 60.7686C128.979 110.252 184.885 23.3133 374.663 110.742V48.7652L-5 25.4673L-5 60.7686Z"
+          fill="#D16A7D"
+        />
+        <path
+          d="M374.663 1077.09C240.684 1027.61 184.777 1114.55 -4.9999 1027.12L-4.99991 1089.1L374.663 1112.4L374.663 1077.09Z"
+          fill="#D16A7D"
+        />
+        <path
+          d="M-5 50.9706C128.979 100.453 224.822 12.7562 374.663 80.3663L374.663 35.4999C171.838 21.292 166.776 -21.6002 -5 14.1645V50.9706Z"
+          fill="white"
+        />
+        <path
+          d="M374.663 1086.89C240.684 1037.41 144.84 1125.11 -4.99989 1057.5L-4.9999 1202.03C197.824 1216.23 202.886 1301.97 374.663 1266.21L374.663 1086.89Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+
     <!-- div generale -->
   </div>
 </template>
@@ -209,9 +264,7 @@ export default {
     };
   },
 
-  mounted() {
-    //$("body").addClass("scrollbar");
-  },
+  mounted() {},
   components: {
     gbutton,
     clientReview,
@@ -272,16 +325,6 @@ export default {
   height: auto;
 }
 
-/* Box Home */
-.containerBoxHome2 {
-  /* background: #35495e; */
-  top: 966px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  /* width: 100%; */
-}
-
 /* Clienti Review */
 .clientsReviewsHome {
   background-image: url("~assets/img/home/bg-cosadiconodinoi.svg");
@@ -294,7 +337,7 @@ export default {
   height: 50vh;
   position: relative;
   left: 0;
-  top: 2230px;
+  /* top: 2230px;*/
 }
 
 .TitleClientsReviews {
@@ -313,16 +356,6 @@ export default {
   top: 40vh; /*450px*/
   left: 50%;
   transform: translateX(-50%);
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 3rem;
-  color: #35495e;
-  letter-spacing: 1px;
 }
 
 /* Media Query */

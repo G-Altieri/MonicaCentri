@@ -4,8 +4,22 @@
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center text-4xl">
+       <div class="mb-8">
         {{ $t("header.title") }}
+       </div>
+        <svg
+          class="animate-bounce w-6 h-6 text-center mx-auto"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="white"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </h1>
+
       <!--*** Div header home page*** -->
     </div>
 
@@ -95,11 +109,9 @@
         <!-- Box Laser 3 -->
 
         <!-- Box Biolifting 4 -->
-         <nuxt-link :to="localePath('/mai+xl')">
+        <nuxt-link :to="localePath('/mai+xl')">
           <div class="BoxHome duration-300 shadow-lg">
-            <div
-              class=" "
-            >
+            <div class="">
               <!-- <h4>
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
@@ -107,13 +119,13 @@
                 src="~/assets/img/home/box/mai+xl.png"
                 alt="maipiuxl"
                 class="BoxHomeMaipiuxl"
-                style="transform: scale(1.05);"
+                style="transform: scale(1.05)"
               />
             </div>
           </div>
         </nuxt-link>
-      </div> 
-        <!-- <nuxt-link :to="localePath('/mai+xl')">
+      </div>
+      <!-- <nuxt-link :to="localePath('/mai+xl')">
           <div class="BoxHome duration-300 shadow-lg">
             <div
               class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
@@ -134,7 +146,7 @@
       </div>
 
       <!-- box recensioni clienti -->
-      <div class="containerReviews">
+      <div class="containerReviews" style="z-index: 2">
         <!-- Carosello Review Clienti -->
         <div class="mx-auto mt-12 text-black">
           <VueSlickCarousel v-bind="settings">
@@ -181,11 +193,16 @@
 
     <!-- Bg Header Sezione Illustrazioni -->
     <div
-      class="bg_illustrationContainer transform1pxY relative grid mt-40"
-      style=""
+      class="bg_illustrationContainer relative grid mt-40"
+      style="transform: translateY(-1px)"
     >
       <!-- Banner 1 -->
-      <svg viewBox="0 0 380 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 380 136"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style="transform: translateY(1px)"
+      >
         <path
           d="M0 136C136.621 136 218.694 136 380 136L380 41C175.656 41 94.0835 41 0 41V136Z"
           fill="#FFD2D2"
@@ -205,7 +222,7 @@
       </svg>
       <!--// Banner 1 -->
       <!--Container MOnica -->
-      <div class="containerMonica">
+      <div class="containerMonica transform1pxY">
         <!--title -->
         <div class="titleMonica">Monica Sciascia</div>
         <!-- Img Monica -->
@@ -475,7 +492,7 @@ export default {
 }
 
 .bg_illustrationContainer {
-  top: 2000px;
+  top: 2050px;
 }
 .containerMonica {
   background-color: #ffd2d2;

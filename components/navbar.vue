@@ -44,10 +44,11 @@
           <!-- Icon Account -->
 
           <div class="flex-1 grid text-right float-right">
-            <span
+            <nuxt-link
               class="spanClick justify-self-end grid"
-              @click="activatNewLogin()"
+            :to="localePath('/lp')"
             >
+            <!--   @click="activatNewLogin()" -->
               <img
                 class="h-10 w-6 justify-self-end cursor-pointer"
                 id="navIconAccount"
@@ -57,7 +58,7 @@
                 src="~/assets/img/navbar/enter.svg"
                 alt="Logo Monica Centri"
               />
-            </span>
+            </nuxt-link>
           </div>
           <!--** Icon Account **-->
         </div>

@@ -14,7 +14,7 @@
 
     <!-- Box Carta con render -->
     <div>
-      <nuxt-link :to="localePath('/admin-lp')">
+      <nuxt-link :to="localePath('/card')">
         <div class="box-card z-20">
           <img
             class="imgRenderCarta"
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Containet Body Page -->
-    <div class="grid mx-auto container-fluid -mt-44 lg:mt-0" style="">
+    <div class="grid mx-auto container-fluid ContainerBoxHome" style="">
       <!-- Bottone Info Covid -->
       <div class="w-44 mx-auto grid flex items-center my-16">
         <nuxt-link :to="localePath('/lp')">
@@ -73,41 +73,56 @@
             </div>
           </div>
         </nuxt-link>
-    
-      <!--/// Box Biolifting 2 -->
-      <!-- Box Laser 3 -->
-      <nuxt-link :to="localePath('/puliziaevo')">
-        <div class="BoxHome duration-300 shadow-lg">
-          <div class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5">
-            <h4>
-              {{ $t("navBuy.puliziaevo") }}
-            </h4>
-            <img
-              src="~/assets/img/home/box/laser.png"
-              alt="pulizia evolution"
-              class="BoxHomeLaser"
-            />
-          </div>
-        </div>
-      </nuxt-link>
-      <!-- Box Laser 3 -->
 
-      <!-- Box Biolifting 4 -->
-      <nuxt-link :to="localePath('/mai+xl')">
-        <div class="BoxHome duration-300 shadow-lg">
-          <div class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5">
-            <h4>
-              {{ $t("navBuy.maipiuxl") }}
-            </h4>
-            <img
-              src="~/assets/img/home/box/biolifting.png"
-              alt="maipiuxl"
-              class="BoxHomeBiolifting"
-            />
+        <!--/// Box Biolifting 2 -->
+        <!-- Box Laser 3 -->
+        <nuxt-link :to="localePath('/puliziaevo')">
+          <div class="BoxHome duration-300 shadow-lg">
+            <div
+              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+            >
+              <h4>
+                {{ $t("navBuy.puliziaevo") }}
+              </h4>
+              <!-- <img
+                src="~/assets/img/home/box/laser.png"
+                alt="pulizia evolution"
+                class="BoxHomeLaser"
+              /> -->
+            </div>
           </div>
-        </div>
-      </nuxt-link>
-  </div>
+        </nuxt-link>
+        <!-- Box Laser 3 -->
+
+        <!-- Box Biolifting 4 -->
+         <nuxt-link :to="localePath('/mai+xl')">
+          <div class="BoxHome duration-300 shadow-lg">
+            <div
+              class=" "
+            >
+              <!-- <h4>
+                {{ $t("navBuy.maipiuxl") }}
+              </h4> -->
+              <img
+                src="~/assets/img/home/box/mai+xl.png"
+                alt="maipiuxl"
+                class="BoxHomeMaipiuxl"
+                style="transform: scale(1.05);"
+              />
+            </div>
+          </div>
+        </nuxt-link>
+      </div> 
+        <!-- <nuxt-link :to="localePath('/mai+xl')">
+          <div class="BoxHome duration-300 shadow-lg">
+            <div
+              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+            >
+         
+            </div>
+          </div>
+        </nuxt-link> -->
+      <!-- </div> -->
       <!--/// Box Biolifting 4 -->
     </div>
     <!-- Container Body -->
@@ -167,42 +182,68 @@
     <!-- Bg Header Sezione Illustrazioni -->
     <div
       class="bg_illustrationContainer transform1pxY relative grid mt-40"
-      style="margin-top: 33.5rem"
+      style=""
     >
-      <svg
-        viewBox="0 0 375 1275"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <!-- Banner 1 -->
+      <svg viewBox="0 0 380 136" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
-          d="M-5 1074.69C20.5 1074.69 338.5 1085 375 1085V44L-5 44L-5 1074.69Z"
+          d="M0 136C136.621 136 218.694 136 380 136L380 41C175.656 41 94.0835 41 0 41V136Z"
           fill="#FFD2D2"
         />
         <path
-          d="M-5 81.8357L-5 43.6694H374.663V157.774C219.76 5.89761 75.3197 128.761 -5 81.8357Z"
+          d="M0 59.8357L0 21.6694H379.663V135.774C224.76 -16.1024 80.3197 106.761 0 59.8357Z"
           fill="#AF384F"
         />
         <path
-          d="M374.663 1056.03L374.663 1094.19L-4.99991 1094.19L-4.9999 980.089C149.902 1131.97 294.343 1009.1 374.663 1056.03Z"
-          fill="#AF384F"
-        />
-        <path
-          d="M-5 60.7686C128.979 110.252 184.885 23.3133 374.663 110.742V48.7652L-5 25.4673L-5 60.7686Z"
+          d="M0 38.7686C133.979 88.2518 189.885 1.31326 379.663 88.7417V26.7652L0 3.46729L0 38.7686Z"
           fill="#D16A7D"
         />
         <path
-          d="M374.663 1077.09C240.684 1027.61 184.777 1114.55 -4.9999 1027.12L-4.99991 1089.1L374.663 1112.4L374.663 1077.09Z"
-          fill="#D16A7D"
-        />
-        <path
-          d="M-5 50.9706C128.979 100.453 224.822 12.7562 374.663 80.3663L374.663 35.4999C171.838 21.292 166.776 -21.6002 -5 14.1645V50.9706Z"
-          fill="white"
-        />
-        <path
-          d="M374.663 1086.89C240.684 1037.41 144.84 1125.11 -4.99989 1057.5L-4.9999 1202.03C197.824 1216.23 202.886 1301.97 374.663 1266.21L374.663 1086.89Z"
+          d="M0 28.9697C133.979 78.4525 229.822 -9.24472 379.663 58.3654L379.663 -0.00012207C175.5 -0.000136375 94 -9.59295e-05 0 -0.00012207V28.9697Z"
           fill="white"
         />
       </svg>
+      <!--// Banner 1 -->
+      <!--Container MOnica -->
+      <div class="containerMonica">
+        <!--title -->
+        <div class="titleMonica">Monica Sciascia</div>
+        <!-- Img Monica -->
+        <div class="imgMonica mx-auto my-12">
+          <img
+            src="~/assets/img/home/monica.png"
+            class="mx-auto"
+            width="300px"
+            alt="Monica Sciscia"
+          />
+        </div>
+        <!--// Img Monica -->
+        <!-- Content Monica -->
+        <div class="contentMonica">{{ $t("home.contentMonica") }}</div>
+        <!--//Content Monica -->
+        <!--//title -->
+      </div>
+      <!--//Container MOnica -->
+      <!--Banner 2 -->
+      <svg viewBox="0 0 380 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M380 0C243.379 1.19438e-05 161.306 1.91189e-05 -8.30516e-06 3.32207e-05L3.05176e-05 95C204.344 95 285.916 95 380 95L380 0Z"
+          fill="#FFD2D2"
+        />
+        <path
+          d="M380 76.1643L380 114.331L0.337494 114.331L0.337484 0.226107C155.24 152.102 299.68 29.2394 380 76.1643Z"
+          fill="#AF384F"
+        />
+        <path
+          d="M380 97.2314C246.021 47.7483 190.115 134.687 0.337486 47.2583L0.337492 109.235L380 132.533L380 97.2314Z"
+          fill="#D16A7D"
+        />
+        <path
+          d="M380 107.03C246.021 57.5474 150.178 145.245 0.337458 77.6345L0.337494 136C204.5 136 286 136 380 136L380 107.03Z"
+          fill="white"
+        />
+      </svg>
+      <!--// Banner 2 -->
     </div>
 
     <!-- div generale -->
@@ -274,6 +315,28 @@ export default {
 </script>
 
 <style >
+.contentMonica {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  color: #af384f;
+}
+.titleMonica {
+  color: #af384f;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+.ContainerBoxHome {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 822px;
+  z-index: 19;
+}
+
 .title-titolare {
   font-size: 5rem;
   color: #af384f;
@@ -335,9 +398,9 @@ export default {
   /* background-color: #999; */
   width: 100%;
   height: 50vh;
-  position: relative;
+  position: absolute;
   left: 0;
-  /* top: 2230px;*/
+  top: 2230px;
 }
 
 .TitleClientsReviews {
@@ -409,5 +472,15 @@ export default {
   float: right;
   right: -12px;
   top: 35px;
+}
+
+.bg_illustrationContainer {
+  top: 2000px;
+}
+.containerMonica {
+  background-color: #ffd2d2;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
 }
 </style>

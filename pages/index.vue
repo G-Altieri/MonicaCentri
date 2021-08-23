@@ -51,12 +51,12 @@
       </div>
 
       <!-- Box home con i vari servizi -->
-      <div class="containerBoxHome grid grid-col-1 gap-6">
+      <div class="containerBoxHome grid grid-col-1 gap-6 uppercase ">
         <!-- Box Laser 1 -->
         <nuxt-link :to="localePath('/laser')">
           <div class="BoxHome duration-300 shadow-lg">
             <div
-              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+              class="titleBoxHome text-2xl font-semibold text-left pt-2 pl-5"
             >
               <h4>
                 {{ $t("navBuy.fotoepilazione") }}
@@ -88,8 +88,8 @@
           </div>
         </nuxt-link>
 
-        <!--/// Box Biolifting 2 -->
-        <!-- Box Laser 3 -->
+        <!--/// Box puliziaevo 3 -->
+        <!-- Box PuliziaEvo 3 -->
         <nuxt-link :to="localePath('/puliziaevo')">
           <div class="BoxHome duration-300 shadow-lg">
             <div
@@ -98,28 +98,29 @@
               <h4>
                 {{ $t("navBuy.puliziaevo") }}
               </h4>
-              <!-- <img
-                src="~/assets/img/home/box/laser.png"
+               <img
+                src="~/assets/img/home/box/girl.png"
                 alt="pulizia evolution"
-                class="BoxHomeLaser"
-              /> -->
+                class="BoxHomePuliziaEvo"
+                style="transform: translateY(9px);"
+              /> 
             </div>
           </div>
         </nuxt-link>
         <!-- Box Laser 3 -->
 
-        <!-- Box Biolifting 4 -->
+        <!-- Box Mai+Xl 4 -->
         <nuxt-link :to="localePath('/mai+xl')">
-          <div class="BoxHome duration-300 shadow-lg">
+          <div class="BoxHome duration-300 shadow-lgX">
             <div class="">
               <!-- <h4>
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
               <img
-                src="~/assets/img/home/box/mai+xl.png"
+                src="~/assets/img/home/box/mai+xl.svg"
                 alt="maipiuxl"
                 class="BoxHomeMaipiuxl"
-                style="transform: scale(1.05)"
+                style=" transform: scale(1.005);"
               />
             </div>
           </div>
@@ -222,7 +223,7 @@
       </svg>
       <!--// Banner 1 -->
       <!--Container MOnica -->
-      <div class="containerMonica transform1pxY">
+      <div class="containerMonica transform1pxYZ">
         <!--title -->
         <div class="titleMonica">Monica Sciascia</div>
         <!-- Img Monica -->
@@ -264,6 +265,7 @@
     </div>
 
     <!-- div generale -->
+  <foter style="transform:translateY(2048px);"/>
   </div>
 </template>
 
@@ -271,6 +273,7 @@
 import gbutton from "@/components/gbutton.vue";
 import clientReview from "@/components/clientReview.vue";
 import VueSlickCarousel from "vue-slick-carousel";
+import foter from "@/components/footer.vue";
 
 export default {
   data() {
@@ -327,11 +330,12 @@ export default {
     gbutton,
     clientReview,
     VueSlickCarousel,
+    foter,
   },
 };
 </script>
 
-<style >
+<style scope>
 .contentMonica {
   font-size: 18px;
   font-style: normal;
@@ -432,7 +436,7 @@ export default {
 
 .containerReviews {
   position: relative;
-  width: 90%;
+  width: 95%;
   top: 40vh; /*450px*/
   left: 50%;
   transform: translateX(-50%);
@@ -499,5 +503,17 @@ export default {
   width: 100%;
   height: auto;
   padding: 2rem;
+}
+
+.BoxHomeMaipiuxl{
+/*    width: 300px;
+  height: 300px;
+  border-radius: 14px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
+  background-color: transparent;*/
 }
 </style>

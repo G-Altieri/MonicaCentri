@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- Footer -->
-      <div class="footerLaser grid flex text-2xl mt-16">
+      <div class="footer grid flex text-2xl mt-16">
         <div class="self-center text-red">Footer</div>
       </div>
   </div>
@@ -20,7 +20,7 @@
   font-size: 2rem;
   text-align: center;*/
   position: relative;
-  background: #d8d8d8;
+  background: #ffbbff9f;
   bottom: 0;
   width: 100%;
   height: 110px;

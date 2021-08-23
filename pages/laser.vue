@@ -77,7 +77,7 @@
       <!-- Sezione Illustrazioni -->
       <div class="grid text-center self-center ">
         <!-- Bg Header Sezione Illustrazioni -->
-        <div class="bg_illustrationContainer transform1pxY">
+        <div class="bg_illustrationContainerLaser transform1pxY">
           <svg
             viewBox="0 0 375 210"
             class="relative"
@@ -287,7 +287,7 @@
         <!-- **Fine sezione content illutrazioni** -->
 
         <!-- Bg Header Sezione Illustrazioni -->
-        <div class="bg_illustrationContainer">
+        <div class="bg_illustrationContainerLaser">
           <svg
             viewBox="0 0 375 210"
             class="relative"
@@ -329,14 +329,14 @@
       </div>
 
       <!-- Footer -->
-      <div class="footerLaser grid flex text-2xl mt-16">
-        <div class="self-center text-red">Footer</div>
-      </div>
-    </div>
+      <foter />
+  
+    </div> 
   </div>
 </template>
 <script>
 import navbarBuy from "@/components/navbarBuy.vue";
+import foter from "@/components/footer.vue";
 
 export default {
   data() {
@@ -387,11 +387,12 @@ export default {
   },
   components: {
     navbarBuy,
+    foter,
   },
 };
 </script>
 <style lang="scss" scoped>
-.bg_illustrationContainer {
+.bg_illustrationContainerLaser {
   position: relative;
   margin: 0;
   padding: 0;

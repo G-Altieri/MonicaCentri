@@ -18,11 +18,12 @@
       <div
         class="text-white text-right flex justify-end self-center mr-2 md:mr-5"
       >
-        <a :href="link">
+        <!-- <a :href="link"> -->
+       <nuxt-link :to="localePath('/lp')">
           <div class="btnBuy p-1 px-2 text-xs font-normal self-center">
             {{ $t("navBuy.buy") }}
           </div>
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>

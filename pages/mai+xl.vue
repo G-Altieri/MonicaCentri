@@ -467,10 +467,11 @@
         </nuxt-link>
       </div>
 
-      <!-- Footer -->
-      <div class="footerLaser grid flex text-2xl mt-16">
-        <div class="self-center text-red">Footer</div>
-      </div>
+     <!-- Footer -->
+      <foter />
+
+
+
     </div>
     <!-- Container Page -->
   </div>
@@ -480,6 +481,8 @@
 
 <script>
 import navbarBuy from "@/components/navbarBuy.vue";
+import foter from "@/components/footer.vue";
+
 
 export default {
   data() {
@@ -540,6 +543,7 @@ export default {
   },
   components: {
     navbarBuy,
+    foter,
   },
 };
 </script>

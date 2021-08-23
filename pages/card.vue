@@ -1,6 +1,6 @@
 <template>
-    <div class="mx-auto text-5xl title p-16 text-center">
-<div class="mt-44">
+    <div class="mx-auto text-3xl title text-center h-screen flex items-stretch w-screen justify-center ">
+<div class=" self-center">
 
        {{ $t("card.title") }}
 

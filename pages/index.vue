@@ -4,9 +4,9 @@
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center text-4xl">
-       <div class="mb-8">
-        {{ $t("header.title") }}
-       </div>
+        <div class="mb-8">
+          {{ $t("header.title") }}
+        </div>
         <svg
           class="animate-bounce w-6 h-6 text-center mx-auto"
           fill="none"
@@ -51,7 +51,7 @@
       </div>
 
       <!-- Box home con i vari servizi -->
-      <div class="containerBoxHome grid grid-col-1 gap-6 uppercase ">
+      <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">
         <!-- Box Laser 1 -->
         <nuxt-link :to="localePath('/laser')">
           <div class="BoxHome duration-300 shadow-lg">
@@ -98,12 +98,17 @@
               <h4>
                 {{ $t("navBuy.puliziaevo") }}
               </h4>
-               <img
-                src="~/assets/img/home/box/girl.png"
+              <img
+                src="~/assets/img/home/box/render-box-home.png"
                 alt="pulizia evolution"
                 class="BoxHomePuliziaEvo"
-                style="transform: translateY(9px);"
-              /> 
+                style="
+    transform: translate(-20px,-53px);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;"
+              />
             </div>
           </div>
         </nuxt-link>
@@ -120,7 +125,7 @@
                 src="~/assets/img/home/box/mai+xl.svg"
                 alt="maipiuxl"
                 class="BoxHomeMaipiuxl"
-                style=" transform: scale(1.005);"
+                style="transform: scale(1.005)"
               />
             </div>
           </div>
@@ -243,7 +248,12 @@
       </div>
       <!--//Container MOnica -->
       <!--Banner 2 -->
-      <svg viewBox="0 0 380 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 380 136"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate(-1px, -1px)"
+      >
         <path
           d="M380 0C243.379 1.19438e-05 161.306 1.91189e-05 -8.30516e-06 3.32207e-05L3.05176e-05 95C204.344 95 285.916 95 380 95L380 0Z"
           fill="#FFD2D2"
@@ -265,7 +275,7 @@
     </div>
 
     <!-- div generale -->
-  <foter style="transform:translateY(2048px);"/>
+    <foter style="transform: translateY(2048px)" />
   </div>
 </template>
 
@@ -505,8 +515,8 @@ export default {
   padding: 2rem;
 }
 
-.BoxHomeMaipiuxl{
-/*    width: 300px;
+.BoxHomeMaipiuxl {
+  /*    width: 300px;
   height: 300px;
   border-radius: 14px;
   position: relative;

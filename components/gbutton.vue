@@ -2,7 +2,15 @@
   <div>
     <div v-if="typeButton == 'normal'">
       <button
-        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all" :class="{uppercase:uppercase}" 
+        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-md w-full leading-4 duration-300 transition-all btnShadow" :class="{uppercase:uppercase}" 
+       
+      >
+        {{ text }}
+      </button>
+    </div>
+    <div v-if="typeButton == 'rounded'">
+      <button
+        class="bg-red px-4 py-3 text-sm font-normal tracking-wider text-white rounded-full w-full leading-4 duration-300 transition-all btnShadow " :class="{uppercase:uppercase}" 
        
       >
         {{ text }}
@@ -146,7 +154,7 @@ export default {
   background: #af384f;
 }
 .bg-red:hover {
-  background: #882c3e;
+ // background: #882c3e;
 }
 
 .btnOutline:hover{

@@ -49,7 +49,7 @@
       <!-- Bottone Info Covid -->
       <div class="w-44 mx-auto grid flex items-center my-16">
         <nuxt-link :to="localePath('/lp')">
-          <gbutton text="Contattami" id="lp" name="lp" typeButton="normal" />
+          <gbutton text="Contattami" id="lp" name="lp" typeButton="rounded" />
         </nuxt-link>
       </div>
 
@@ -255,24 +255,30 @@
           <nuxt-link :to="localePath('/lp')">
             <div
               class="
-                mx-auto
+                 btnVideo
                 text-white
-                font-normal
-                text-center
+                p-2
+                px-3
+                font-bold
+                uppercase
+                text-sm
+                w-max
                 btnShadow
                 duration-300
+                mx-auto
               "
               style="
                 background: #af384f;
-                padding: 12px;
+               
                 border-radius: 80px;
-                width: 170px;
+               
               "
             >
               {{ $t("laser.info.btnVideo") }}
             </div>
           </nuxt-link>
         </div>
+
         <!--//Content Monica -->
         <!--//title -->
       </div>
@@ -563,11 +569,11 @@ export default {
 }
 
 /*
-1 freccietta che va giu
+1 freccietta che va giu aggiustare iphoe
 2 pulizia evo ridesign
-3 ridesign mai piu xl
-4 spazio giu recensioni
-5 pulsante video monica
+3 ridesign mai piu xl  *******
+4 spazio giu recensioni 
+5 pulsante video monica ****** 
 6 footer
 */
 </style>

@@ -7,17 +7,20 @@
         <div class="mb-8">
           {{ $t("header.title") }}
         </div>
-        <svg
-          class="animate-bounce w-6 h-6 text-center mx-auto"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          stroke="white"
-        >
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+
+        <div @click="ScrollPixel()">
+          <svg
+            class="animate-bounce w-6 h-6 text-center mx-auto"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="white"
+          >
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
       </h1>
 
       <!--*** Div header home page*** -->
@@ -27,7 +30,7 @@
     <div class="bg-header"></div>
 
     <!-- Box Carta con render -->
-    <div>
+    <div name="freccietta">
       <nuxt-link :to="localePath('/card')">
         <div class="box-card z-20">
           <img
@@ -103,11 +106,12 @@
                 alt="pulizia evolution"
                 class="BoxHomePuliziaEvo"
                 style="
-    transform: translate(-20px,-53px);
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    z-index: -1;"
+                  transform: translate(-20px, -53px);
+                  width: 300px;
+                  height: 300px;
+                  position: absolute;
+                  z-index: -1;
+                "
               />
             </div>
           </div>
@@ -122,7 +126,7 @@
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
               <img
-                src="~/assets/img/home/box/mai+xl.svg"
+                src="~/assets/img/home/box/mai+xl2.svg"
                 alt="maipiuxl"
                 class="BoxHomeMaipiuxl"
                 style="transform: scale(1.005)"
@@ -242,7 +246,33 @@
         </div>
         <!--// Img Monica -->
         <!-- Content Monica -->
-        <div class="contentMonica">{{ $t("home.contentMonica") }}</div>
+        <div class="contentMonica" style="max-width: 620px; margin: auto">
+          {{ $t("home.contentMonica") }}
+        </div>
+        <br />
+        <!-- Button guarda Video -->
+        <div class="mx-auto my-16">
+          <nuxt-link :to="localePath('/lp')">
+            <div
+              class="
+                mx-auto
+                text-white
+                font-normal
+                text-center
+                btnShadow
+                duration-300
+              "
+              style="
+                background: #af384f;
+                padding: 12px;
+                border-radius: 80px;
+                width: 170px;
+              "
+            >
+              {{ $t("laser.info.btnVideo") }}
+            </div>
+          </nuxt-link>
+        </div>
         <!--//Content Monica -->
         <!--//title -->
       </div>
@@ -334,7 +364,12 @@ export default {
       },
     };
   },
-
+  methods: {
+    ScrollPixel() {
+      console.log("asd");
+      window.scrollBy({ top: 200, left: 0, behavior: "smooth" });
+    },
+  },
   mounted() {},
   components: {
     gbutton,
@@ -431,7 +466,7 @@ export default {
   height: 50vh;
   position: absolute;
   left: 0;
-  top: 2230px;
+  top: 2280px;
 }
 
 .TitleClientsReviews {
@@ -526,4 +561,15 @@ export default {
   box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
   background-color: transparent;*/
 }
+
+/*
+1 freccietta che va giu
+2 pulizia evo ridesign
+3 ridesign mai piu xl
+4 spazio giu recensioni
+5 pulsante video monica
+6 footer
+*/
 </style>
+
+

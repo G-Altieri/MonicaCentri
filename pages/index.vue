@@ -1,6 +1,21 @@
 <template>
   <!-- div generale -->
   <div>
+    <!-- Video or GIF -->
+    <div class="grid" style="padding-top: 56px">
+      <video
+        class="mx-auto"
+        src="~/assets/videos/CosmeticiLite.mp4"
+        type="video/mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        width="100%"
+        style="max-height: 500px; background: #af384f"
+      ></video>
+    </div>
+
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center text-4xl">
@@ -27,12 +42,10 @@
     </div>
 
     <!-- Bg-Header -->
-    <div class="bg-header"></div>
-
-    <!-- Box Carta con render -->
-    <div name="freccietta">
-      <nuxt-link :to="localePath('/card')">
-        <div class="box-card z-20">
+    <div class="bg-header">
+      <!-- Box Carta con render -->
+      <div class="box-card z-20">
+        <nuxt-link :to="localePath('/card')">
           <img
             class="imgRenderCarta"
             src="~/assets/img/home/render-carta.jpg"
@@ -40,102 +53,101 @@
             width="100%"
             height="100%"
           />
-        </div>
-      </nuxt-link>
-    </div>
-
-    <!-- Containet Body Page -->
-    <div class="grid mx-auto container-fluid ContainerBoxHome" style="">
-      <!-- Bottone Info Covid -->
-      <div class="w-44 mx-auto grid flex items-center my-16">
-        <nuxt-link :to="localePath('/lp')">
-          <gbutton text="Contattami" id="lp" name="lp" typeButton="rounded" />
         </nuxt-link>
       </div>
 
-      <!-- Box home con i vari servizi -->
-      <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">
-        <!-- Box Laser 1 -->
-        <nuxt-link :to="localePath('/laser')">
-          <div class="BoxHome duration-300 shadow-lg">
-            <div
-              class="titleBoxHome text-2xl font-semibold text-left pt-2 pl-5"
-            >
-              <h4>
-                {{ $t("navBuy.fotoepilazione") }}
-              </h4>
-              <img
-                src="~/assets/img/home/box/laser.png"
-                alt="laser"
-                class="BoxHomeLaser"
-              />
-            </div>
-          </div>
-        </nuxt-link>
+      <!-- Containet Body Page -->
+      <div class="grid mx-auto container-fluid ContainerBoxHome" style="">
+        <!-- Bottone Info Covid -->
+        <div class="w-44 mx-auto grid flex items-center my-16">
+          <nuxt-link :to="localePath('/lp')">
+            <gbutton text="Contattami" id="lp" name="lp" typeButton="rounded" />
+          </nuxt-link>
+        </div>
 
-        <!-- Box Biolifting 2 -->
-        <nuxt-link :to="localePath('/biolifting')">
-          <div class="BoxHome duration-300 shadow-lg">
-            <div
-              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
-            >
-              <h4>
-                {{ $t("navBuy.biolifting") }}
-              </h4>
-              <img
-                src="~/assets/img/home/box/biolifting.png"
-                alt="laser"
-                class="BoxHomeBiolifting"
-              />
+        <!-- Box home con i vari servizi -->
+        <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">
+          <!-- Box Laser 1 -->
+          <nuxt-link :to="localePath('/laser')">
+            <div class="BoxHome duration-300 shadow-lg">
+              <div
+                class="titleBoxHome text-2xl font-semibold text-left pt-2 pl-5"
+              >
+                <h4>
+                  {{ $t("navBuy.fotoepilazione") }}
+                </h4>
+                <img
+                  src="~/assets/img/home/box/laser.png"
+                  alt="laser"
+                  class="BoxHomeLaser"
+                />
+              </div>
             </div>
-          </div>
-        </nuxt-link>
+          </nuxt-link>
 
-        <!--/// Box puliziaevo 3 -->
-        <!-- Box PuliziaEvo 3 -->
-        <nuxt-link :to="localePath('/puliziaevo')">
-          <div class="BoxHome duration-300 shadow-lg">
-            <div
-              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
-            >
-              <h4>
-                {{ $t("navBuy.puliziaevo") }}
-              </h4>
-              <img
-                src="~/assets/img/home/box/render-box-home.png"
-                alt="pulizia evolution"
-                class="BoxHomePuliziaEvo"
-                style="
-                  transform: translate(-20px, -53px);
-                  width: 300px;
-                  height: 300px;
-                  position: absolute;
-                  z-index: -1;
-                "
-              />
+          <!-- Box Biolifting 2 -->
+          <nuxt-link :to="localePath('/biolifting')">
+            <div class="BoxHome duration-300 shadow-lg">
+              <div
+                class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+              >
+                <h4>
+                  {{ $t("navBuy.biolifting") }}
+                </h4>
+                <img
+                  src="~/assets/img/home/box/biolifting.png"
+                  alt="laser"
+                  class="BoxHomeBiolifting"
+                />
+              </div>
             </div>
-          </div>
-        </nuxt-link>
-        <!-- Box Laser 3 -->
+          </nuxt-link>
 
-        <!-- Box Mai+Xl 4 -->
-        <nuxt-link :to="localePath('/mai+xl')">
-          <div class="BoxHome duration-300 shadow-lgX">
-            <div class="">
-              <!-- <h4>
+          <!--/// Box puliziaevo 3 -->
+          <!-- Box PuliziaEvo 3 -->
+          <nuxt-link :to="localePath('/puliziaevo')">
+            <div class="BoxHome duration-300 shadow-lg">
+              <div
+                class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
+              >
+                <h4>
+                  {{ $t("navBuy.puliziaevo") }}
+                </h4>
+                <img
+                  src="~/assets/img/home/box/render-box-home.png"
+                  alt="pulizia evolution"
+                  class="BoxHomePuliziaEvo"
+                  style="
+                    transform: translate(-20px, -53px);
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    z-index: -1;
+                  "
+                />
+              </div>
+            </div>
+          </nuxt-link>
+          <!-- Box Laser 3 -->
+
+          <!-- Box Mai+Xl 4 -->
+          <nuxt-link :to="localePath('/mai+xl')">
+            <div class="BoxHome duration-300 shadow-lgX">
+              <div class="">
+                <!-- <h4>
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
-              <img
-                src="~/assets/img/home/box/mai+xl2.svg"
-                alt="maipiuxl"
-                class="BoxHomeMaipiuxl"
-                style="transform: scale(1.005)"
-              />
+                <img
+                  src="~/assets/img/home/box/mai+xl2.svg"
+                  alt="maipiuxl"
+                  class="BoxHomeMaipiuxl"
+                  style="transform: scale(1.005)"
+                />
+              </div>
             </div>
-          </div>
-        </nuxt-link>
-      </div>
-      <!-- <nuxt-link :to="localePath('/mai+xl')">
+          </nuxt-link>
+        </div>
+        <!-- <nuxt-link :to="localePath('/mai+xl')">
           <div class="BoxHome duration-300 shadow-lg">
             <div
               class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
@@ -144,174 +156,177 @@
             </div>
           </div>
         </nuxt-link> -->
-      <!-- </div> -->
-      <!--/// Box Biolifting 4 -->
-    </div>
-    <!-- Container Body -->
-
-    <!-- Bg recensioni clienti con titolo -->
-    <div class="clientsReviewsHome">
-      <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
-        {{ $t("header.cosa") }}
+        <!-- </div> -->
+        <!--/// Box Biolifting 4 -->
       </div>
 
-      <!-- box recensioni clienti -->
-      <div class="containerReviews" style="z-index: 2">
-        <!-- Carosello Review Clienti -->
-        <div class="mx-auto mt-12 text-black">
-          <VueSlickCarousel v-bind="settings">
-            <clientReview
-              class=""
-              :text="$t('review.text1')"
-              name="Umberto Giuliani"
-              img="Umberto Giuliani"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text2')"
-              name="Gianrocco Reale"
-              img="Gianrocco Reale"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text3')"
-              name="Donatella Longo"
-              img="Donatella Longo"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text4')"
-              name="Domenica Albanese"
-              img="Domenica Albanese"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text5')"
-              name="Chiara Battista"
-              img="Chiara Battista"
-            ></clientReview>
-            <clientReview
-              class=""
-              :text="$t('review.text6')"
-              name="Annalisa Bucciarelli"
-              img="Annalisa Bucciarelli"
-            ></clientReview>
-          </VueSlickCarousel>
+      <!-- Container Body -->
+
+      <!-- Bg recensioni clienti con titolo -->
+      <div class="clientsReviewsHome">
+        <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
+          {{ $t("header.cosa") }}
+        </div>
+
+        <!-- box recensioni clienti -->
+        <div class="containerReviews" style="z-index: 2">
+          <!-- Carosello Review Clienti -->
+          <div class="mx-auto mt-12 text-black">
+            <VueSlickCarousel v-bind="settings">
+              <clientReview
+                class=""
+                :text="$t('review.text1')"
+                name="Umberto Giuliani"
+                img="Umberto Giuliani"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text2')"
+                name="Gianrocco Reale"
+                img="Gianrocco Reale"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text3')"
+                name="Donatella Longo"
+                img="Donatella Longo"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text4')"
+                name="Domenica Albanese"
+                img="Domenica Albanese"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text5')"
+                name="Chiara Battista"
+                img="Chiara Battista"
+              ></clientReview>
+              <clientReview
+                class=""
+                :text="$t('review.text6')"
+                name="Annalisa Bucciarelli"
+                img="Annalisa Bucciarelli"
+              ></clientReview>
+            </VueSlickCarousel>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bg Header Sezione Illustrazioni -->
-    <div
-      class="bg_illustrationContainer relative grid mt-40"
-      style="transform: translateY(-1px)"
-    >
-      <!-- Banner 1 -->
-      <svg
-        viewBox="0 0 380 136"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style="transform: translateY(1px)"
+      <!-- Bg Header Sezione Illustrazioni -->
+      <div
+        class="bg_illustrationContainer relative grid mt-40"
+     
+        :style="'top:'+topPostReview+'; transform: translateY(-1px);'"
       >
-        <path
-          d="M0 136C136.621 136 218.694 136 380 136L380 41C175.656 41 94.0835 41 0 41V136Z"
-          fill="#FFD2D2"
-        />
-        <path
-          d="M0 59.8357L0 21.6694H379.663V135.774C224.76 -16.1024 80.3197 106.761 0 59.8357Z"
-          fill="#AF384F"
-        />
-        <path
-          d="M0 38.7686C133.979 88.2518 189.885 1.31326 379.663 88.7417V26.7652L0 3.46729L0 38.7686Z"
-          fill="#D16A7D"
-        />
-        <path
-          d="M0 28.9697C133.979 78.4525 229.822 -9.24472 379.663 58.3654L379.663 -0.00012207C175.5 -0.000136375 94 -9.59295e-05 0 -0.00012207V28.9697Z"
-          fill="white"
-        />
-      </svg>
-      <!--// Banner 1 -->
-      <!--Container MOnica -->
-      <div class="containerMonica transform1pxYZ">
-        <!--title -->
-        <div class="titleMonica">Monica Sciascia</div>
-        <!-- Img Monica -->
-        <div class="imgMonica mx-auto my-12">
-          <img
-            src="~/assets/img/home/monica.png"
-            class="mx-auto"
-            width="300px"
-            alt="Monica Sciscia"
+        <!-- Banner 1 -->
+        <svg
+          viewBox="0 0 380 136"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="transform: translateY(1px)"
+        >
+          <path
+            d="M0 136C136.621 136 218.694 136 380 136L380 41C175.656 41 94.0835 41 0 41V136Z"
+            fill="#FFD2D2"
           />
-        </div>
-        <!--// Img Monica -->
-        <!-- Content Monica -->
-        <div class="contentMonica" style="max-width: 620px; margin: auto">
-          {{ $t("home.contentMonica") }}
-        </div>
-        <br />
-        <!-- Button guarda Video -->
-        <div class="mx-auto my-16">
-          <nuxt-link :to="localePath('/lp')">
-            <div
-              class="
-                 btnVideo
-                text-white
-                p-2
-                px-3
-                font-bold
-                uppercase
-                text-sm
-                w-max
-                btnShadow
-                duration-300
-                mx-auto
-              "
-              style="
-                background: #af384f;
-               
-                border-radius: 80px;
-               
-              "
-            >
-              {{ $t("laser.info.btnVideo") }}
-            </div>
-          </nuxt-link>
-        </div>
+          <path
+            d="M0 59.8357L0 21.6694H379.663V135.774C224.76 -16.1024 80.3197 106.761 0 59.8357Z"
+            fill="#AF384F"
+          />
+          <path
+            d="M0 38.7686C133.979 88.2518 189.885 1.31326 379.663 88.7417V26.7652L0 3.46729L0 38.7686Z"
+            fill="#D16A7D"
+          />
+          <path
+            d="M0 28.9697C133.979 78.4525 229.822 -9.24472 379.663 58.3654L379.663 -0.00012207C175.5 -0.000136375 94 -9.59295e-05 0 -0.00012207V28.9697Z"
+            fill="white"
+          />
+        </svg>
+        <!--// Banner 1 -->
+        <!--Container MOnica -->
+        <div class="containerMonica transform1pxYZ">
+          <!--title -->
+          <div class="titleMonica">Monica Sciascia</div>
+          <!-- Img Monica -->
+          <div class="imgMonica mx-auto my-12">
+            <img
+              src="~/assets/img/home/monica.png"
+              class="mx-auto"
+              width="300px"
+              alt="Monica Sciscia"
+            />
+          </div>
+          <!--// Img Monica -->
+          <!-- Content Monica -->
+          <div class="contentMonica" style="max-width: 620px; margin: auto">
+            {{ $t("home.contentMonica") }}
+          </div>
+          <br />
+          <!-- Button guarda Video -->
+          <div class="mx-auto my-16">
+            <nuxt-link :to="localePath('/lp')">
+              <div
+                class="
+                  btnVideo
+                  text-white
+                  p-2
+                  px-3
+                  font-bold
+                  uppercase
+                  text-sm
+                  w-max
+                  btnShadow
+                  duration-300
+                  mx-auto
+                "
+                style="
+                  background: #af384f;
 
-        <!--//Content Monica -->
-        <!--//title -->
+                  border-radius: 80px;
+                "
+              >
+                {{ $t("laser.info.btnVideo") }}
+              </div>
+            </nuxt-link>
+          </div>
+
+          <!--//Content Monica -->
+          <!--//title -->
+        </div>
+        <!--//Container MOnica -->
+        <!--Banner 2 -->
+        <svg
+          viewBox="0 0 380 136"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="transform: translate(-1px, -1px)"
+        >
+          <path
+            d="M380 0C243.379 1.19438e-05 161.306 1.91189e-05 -8.30516e-06 3.32207e-05L3.05176e-05 95C204.344 95 285.916 95 380 95L380 0Z"
+            fill="#FFD2D2"
+          />
+          <path
+            d="M380 76.1643L380 114.331L0.337494 114.331L0.337484 0.226107C155.24 152.102 299.68 29.2394 380 76.1643Z"
+            fill="#AF384F"
+          />
+          <path
+            d="M380 97.2314C246.021 47.7483 190.115 134.687 0.337486 47.2583L0.337492 109.235L380 132.533L380 97.2314Z"
+            fill="#D16A7D"
+          />
+          <path
+            d="M380 107.03C246.021 57.5474 150.178 145.245 0.337458 77.6345L0.337494 136C204.5 136 286 136 380 136L380 107.03Z"
+            fill="white"
+          />
+        </svg>
+        <!--// Banner 2 -->
       </div>
-      <!--//Container MOnica -->
-      <!--Banner 2 -->
-      <svg
-        viewBox="0 0 380 136"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style="transform: translate(-1px, -1px)"
-      >
-        <path
-          d="M380 0C243.379 1.19438e-05 161.306 1.91189e-05 -8.30516e-06 3.32207e-05L3.05176e-05 95C204.344 95 285.916 95 380 95L380 0Z"
-          fill="#FFD2D2"
-        />
-        <path
-          d="M380 76.1643L380 114.331L0.337494 114.331L0.337484 0.226107C155.24 152.102 299.68 29.2394 380 76.1643Z"
-          fill="#AF384F"
-        />
-        <path
-          d="M380 97.2314C246.021 47.7483 190.115 134.687 0.337486 47.2583L0.337492 109.235L380 132.533L380 97.2314Z"
-          fill="#D16A7D"
-        />
-        <path
-          d="M380 107.03C246.021 57.5474 150.178 145.245 0.337458 77.6345L0.337494 136C204.5 136 286 136 380 136L380 107.03Z"
-          fill="white"
-        />
-      </svg>
-      <!--// Banner 2 -->
-    </div>
 
-    <!-- div generale -->
-    <foter style="transform: translateY(2048px)" />
+      <!-- div generale -->
+      <foter style="transform: translateY(500px)" />
+    </div>
+    <!-- header grid -->
   </div>
 </template>
 
@@ -383,6 +398,18 @@ export default {
     VueSlickCarousel,
     foter,
   },
+  computed: {
+    topPostReview() {
+      switch (this.$mq) {
+        case "sm":
+          return "500px";
+        case "md":
+          return "550px";
+        case "lg":
+          return "600px";
+      }
+    },
+  },
 };
 </script>
 
@@ -402,10 +429,10 @@ export default {
   text-align: center;
 }
 .ContainerBoxHome {
-  position: absolute;
+  position: relative;
   transform: translateX(-50%);
   left: 50%;
-  top: 822px;
+  top: 0px;
   z-index: 19;
 }
 
@@ -419,7 +446,7 @@ export default {
 .bgred {
   background: #af384f; /*#af384f*/
   width: 100%;
-  height: 500px;
+  height: 300px;
 }
 
 /* Header */
@@ -429,14 +456,16 @@ export default {
   height: 450px;
   width: 290px;
   margin: 0 auto;
-  position: absolute;
+  /*position: absolute;
   /* border-radius: 20px;
     top: 333px;*/
   -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
   box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
-  left: 50%;
+  /* left: 50%;
   top: 373px;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
+      top: -30px;
+    position: relative;
 }
 
 .bg-header {
@@ -470,9 +499,9 @@ export default {
   /* background-color: #999; */
   width: 100%;
   height: 50vh;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 2280px;
+  /* top: 2280px;*/
 }
 
 .TitleClientsReviews {
@@ -501,6 +530,7 @@ export default {
 }
 
 .BoxHome {
+  background-color: white;
   width: 300px;
   height: 300px;
   border-radius: 14px;
@@ -547,7 +577,7 @@ export default {
 }
 
 .bg_illustrationContainer {
-  top: 2050px;
+  top: 500px;
 }
 .containerMonica {
   background-color: #ffd2d2;

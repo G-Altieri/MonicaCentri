@@ -5,7 +5,7 @@
     <div class="grid" style="padding-top: 56px">
       <video
         class="mx-auto"
-        src="~/assets/videos/CosmeticiLite.mp4"
+        src="~/assets/videos/cosmetici.mp4"
         type="video/mp4"
         autoplay
         loop
@@ -58,12 +58,28 @@
 
       <!-- Containet Body Page -->
       <div class="grid mx-auto container-fluid ContainerBoxHome" style="">
-        <!-- Bottone Info Covid -->
-        <div class="w-44 mx-auto grid flex items-center my-16">
+        <!-- Button Video -->
+        <div class="mx-auto my-6 mb-12">
           <nuxt-link :to="localePath('/lp')">
-            <gbutton text="Contattami" id="lp" name="lp" typeButton="rounded" />
+            <div
+              class="
+                btnVideo
+                text-white
+                p-2
+                px-3
+                font-bold
+                uppercase
+                text-sm
+                w-max
+                btnShadow
+                duration-300
+              "
+            >
+              Contattami
+            </div>
           </nuxt-link>
         </div>
+         
 
         <!-- Box home con i vari servizi -->
         <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">

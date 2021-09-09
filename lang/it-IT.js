@@ -21,6 +21,7 @@ export default {
     },
     home:{
         contentMonica:"La mia passione per il bello, per l’estetica nasce da quando ero poco più di una bambina. Sognavo di gestire un centro estetico, dritta per i miei obiettivi, a soli 21 anni il sogno si realizza. Continuo a studiare e frequentare accademie professionali per creare protocolli unici e dare sempre più risultati ai miei  clienti. Dopo 22 anni apro il secondo centro specializzandomi sempre di più ottenendo risultati straordinari. Non mi sento mai arrivata, ho sempre sete e voglia di imparare",
+    nascondiVideo:"Nascondi il video",
     },
     laser: {
         info: {

@@ -58,7 +58,7 @@
 
       <!-- Containet Body Page -->
       <div class="grid mx-auto container-fluid ContainerBoxHome" style="">
-        <!-- Button Video -->
+        <!-- Button Contatti -->
         <div class="mx-auto my-6 mb-12">
           <nuxt-link :to="localePath('/lp')">
             <div
@@ -75,7 +75,7 @@
                 duration-300
               "
             >
-              Contattami
+              Contattaci
             </div>
           </nuxt-link>
         </div>
@@ -229,35 +229,15 @@
         </div>
       </div>
 
-      <!-- Bg Header Sezione Illustrazioni -->
+      <!-- Bg Header Sezione Monica-->
       <div
         class="bg_illustrationContainer relative grid mt-40"
-        :style="'top:' + topPostReview + '; transform: translateY(-1px);'"
+        :style="
+          'margin-top:' + topPostReview + '; transform: translateY(-1px);'
+        "
       >
         <!-- Banner 1 -->
-        <svg
-          viewBox="0 0 380 136"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style="transform: translateY(1px)"
-        >
-          <path
-            d="M0 136C136.621 136 218.694 136 380 136L380 41C175.656 41 94.0835 41 0 41V136Z"
-            fill="#FFD2D2"
-          />
-          <path
-            d="M0 59.8357L0 21.6694H379.663V135.774C224.76 -16.1024 80.3197 106.761 0 59.8357Z"
-            fill="#AF384F"
-          />
-          <path
-            d="M0 38.7686C133.979 88.2518 189.885 1.31326 379.663 88.7417V26.7652L0 3.46729L0 38.7686Z"
-            fill="#D16A7D"
-          />
-          <path
-            d="M0 28.9697C133.979 78.4525 229.822 -9.24472 379.663 58.3654L379.663 -0.00012207C175.5 -0.000136375 94 -9.59295e-05 0 -0.00012207V28.9697Z"
-            fill="white"
-          />
-        </svg>
+        <div class="w-full borderBanner"></div>
         <!--// Banner 1 -->
         <!--Container MOnica -->
         <div class="containerMonica transform1pxYZ">
@@ -279,37 +259,41 @@
           </div>
           <br />
           <!-- Button guarda Video -->
-          <div class="mx-auto my-16 cursor-pointer" @click="btnvideo=!btnvideo" v-if="!btnvideo">
+          <div
+            class="mx-auto my-16 cursor-pointer"
+            @click="btnvideo = !btnvideo"
+            v-if="!btnvideo"
+          >
             <!-- <nuxt-link :to="localePath('/lp')"> -->
-              <div
-                class="
-                  btnVideo
-                  text-white
-                  p-2
-                  px-3
-                  font-bold
-                  uppercase
-                  text-sm
-                  w-max
-                  btnShadow
-                  duration-300
-                  mx-auto
-                "
-                style="
-                  background: #af384f;
+            <div
+              class="
+                btnVideo
+                text-white
+                p-2
+                px-3
+                font-bold
+                uppercase
+                text-sm
+                w-max
+                btnShadow
+                duration-300
+                mx-auto
+              "
+              style="
+                background: #af384f;
 
-                  border-radius: 80px;
-                "
-              >
-                {{ $t("laser.info.btnVideo") }}
-              </div>
+                border-radius: 80px;
+              "
+            >
+              {{ $t("laser.info.btnVideo") }}
+            </div>
             <!-- </nuxt-link> -->
           </div>
 
           <!-- Frame Video  -->
           <div v-else class="my-6">
             <iframe
-            class="mx-auto"
+              class="mx-auto"
               width="300px"
               height="540px"
               src="https://www.youtube.com/embed/3nkYsn4GHgU?rel=0"
@@ -319,40 +303,135 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <div
+              class="
+                text-md
+                font-light
+                mx-auto
+                cursor-pointer
+                text-red text-center
+                my-4
+              "
+              @click="btnvideo = !btnvideo"
+            >
+              {{ $t("home.nascondiVideo") }}
+            </div>
           </div>
           <!-- Frame Video ////**** */ -->
 
           <!--//Content Monica -->
           <!--//title -->
         </div>
-        <!--//Container MOnica -->
         <!--Banner 2 -->
-        <svg
-          viewBox="0 0 380 136"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style="transform: translate(-1px, -1px)"
-        >
-          <path
-            d="M380 0C243.379 1.19438e-05 161.306 1.91189e-05 -8.30516e-06 3.32207e-05L3.05176e-05 95C204.344 95 285.916 95 380 95L380 0Z"
-            fill="#FFD2D2"
-          />
-          <path
-            d="M380 76.1643L380 114.331L0.337494 114.331L0.337484 0.226107C155.24 152.102 299.68 29.2394 380 76.1643Z"
-            fill="#AF384F"
-          />
-          <path
-            d="M380 97.2314C246.021 47.7483 190.115 134.687 0.337486 47.2583L0.337492 109.235L380 132.533L380 97.2314Z"
-            fill="#D16A7D"
-          />
-          <path
-            d="M380 107.03C246.021 57.5474 150.178 145.245 0.337458 77.6345L0.337494 136C204.5 136 286 136 380 136L380 107.03Z"
-            fill="white"
-          />
-        </svg>
+        <div class="w-full borderBanner"></div>
+        <!--//Container MOnica -->
         <!--// Banner 2 -->
-      </div>
 
+        <!-- Sezione Contatti -->
+        <div class="grid grid-rows-1 w-full">
+          <!-- Icone Social -->
+          <div
+            class="
+              gird
+              grid-cols-3
+              text-center
+              mx-auto
+              my-12
+              justify-items-stretch
+            "
+          >
+            <!-- Button Contatti -->
+            <div class="mx-auto my-6 mb-12 justify-self-center">
+              <nuxt-link :to="localePath('/lp')">
+                <div
+                  class="
+                    btnVideo
+                    text-white
+                    p-2
+                    px-3
+                    font-bold
+                    uppercase
+                    text-sm
+                    w-max
+                    btnShadow
+                    duration-300
+                    mx-auto
+                  "
+                >
+                  Contattaci
+                </div>
+              </nuxt-link>
+            </div>
+
+            <!-- Number 1 -->
+            <div
+              class="
+                font-medium
+                text-xl
+                my-4
+                cursor-point
+                justify-self-center
+                text-red
+              "
+            >
+              +39 334 8529 048
+            </div>
+            <!-- Number 2 -->
+            <div
+              class="
+                font-medium
+                text-xl
+                my-4
+                cursor-point
+                justify-self-center
+                text-red
+              "
+            >
+              +39 392 0748 016
+            </div>
+            <!-- Number email -->
+            <div
+              class="
+                font-medium
+                text-xl
+                my-4
+                cursor-point
+                justify-self-center
+                text-red
+              "
+            >
+              info@monicacentri.com
+            </div>
+        
+          </div>
+
+            <!-- Maps 1 Vasto -->
+            <div class="my-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046354.391878096!2d11.995535135937002!3d41.78617351707371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631206316856!5m2!1sit!2sit"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <!-- Maps 1 Vasto -->
+            <div class="my-2">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046354.391878096!2d11.995535135937002!3d41.78617351707371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631206316856!5m2!1sit!2sit"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
+
+        </div>
+        <!-- Sezione Contatti//**** */ -->
+      </div>
       <!-- div generale -->
       <foter style="transform: translateY(500px)" />
     </div>
@@ -369,7 +448,7 @@ import foter from "@/components/footer.vue";
 export default {
   data() {
     return {
-      btnvideo:false,
+      btnvideo: false,
       settings: {
         dots: true,
         arrows: false,
@@ -433,11 +512,11 @@ export default {
     topPostReview() {
       switch (this.$mq) {
         case "sm":
-          return "500px";
+          return "200px";
         case "md":
-          return "550px";
+          return "250px";
         case "lg":
-          return "600px";
+          return "300px";
       }
     },
   },
@@ -445,6 +524,11 @@ export default {
 </script>
 
 <style scope>
+.borderBanner {
+  background-color: #af384f;
+  color: #af384f;
+  height: 8px;
+}
 .contentMonica {
   font-size: 18px;
   font-style: normal;

@@ -79,7 +79,6 @@
             </div>
           </nuxt-link>
         </div>
-         
 
         <!-- Box home con i vari servizi -->
         <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">
@@ -233,8 +232,7 @@
       <!-- Bg Header Sezione Illustrazioni -->
       <div
         class="bg_illustrationContainer relative grid mt-40"
-     
-        :style="'top:'+topPostReview+'; transform: translateY(-1px);'"
+        :style="'top:' + topPostReview + '; transform: translateY(-1px);'"
       >
         <!-- Banner 1 -->
         <svg
@@ -281,8 +279,8 @@
           </div>
           <br />
           <!-- Button guarda Video -->
-          <div class="mx-auto my-16">
-            <nuxt-link :to="localePath('/lp')">
+          <div class="mx-auto my-16 cursor-pointer" @click="btnvideo=!btnvideo" v-if="!btnvideo">
+            <!-- <nuxt-link :to="localePath('/lp')"> -->
               <div
                 class="
                   btnVideo
@@ -305,8 +303,24 @@
               >
                 {{ $t("laser.info.btnVideo") }}
               </div>
-            </nuxt-link>
+            <!-- </nuxt-link> -->
           </div>
+
+          <!-- Frame Video  -->
+          <div v-else class="my-6">
+            <iframe
+            class="mx-auto"
+              width="300px"
+              height="540px"
+              src="https://www.youtube.com/embed/3nkYsn4GHgU?rel=0"
+              title="Chi è Monica Sciascia?"
+              frameborder="0"
+              playsinline="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Frame Video ////**** */ -->
 
           <!--//Content Monica -->
           <!--//title -->
@@ -355,6 +369,7 @@ import foter from "@/components/footer.vue";
 export default {
   data() {
     return {
+      btnvideo:false,
       settings: {
         dots: true,
         arrows: false,
@@ -433,7 +448,7 @@ export default {
 .contentMonica {
   font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   color: #af384f;
 }
@@ -480,8 +495,8 @@ export default {
   /* left: 50%;
   top: 373px;
   transform: translateX(-50%);*/
-      top: -30px;
-    position: relative;
+  top: -30px;
+  position: relative;
 }
 
 .bg-header {

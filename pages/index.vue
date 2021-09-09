@@ -75,7 +75,7 @@
                 duration-300
               "
             >
-              Contattaci
+              {{ $t("home.contattaci") }}
             </div>
           </nuxt-link>
         </div>
@@ -358,7 +358,7 @@
                     mx-auto
                   "
                 >
-                  Contattaci
+                  {{ $t("home.contattaci") }}
                 </div>
               </nuxt-link>
             </div>
@@ -402,38 +402,29 @@
             >
               info@monicacentri.com
             </div>
-        
           </div>
 
-            <!-- Maps 1 Vasto -->
-            <div class="my-4">
+          <!-- Maps 1 Vasto -->
+          <div class="my-4">
+            
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046354.391878096!2d11.995535135937002!3d41.78617351707371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631206316856!5m2!1sit!2sit"
-                width="100%"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-            <!-- Maps 1 Vasto -->
-            <div class="my-2">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046354.391878096!2d11.995535135937002!3d41.78617351707371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631206316856!5m2!1sit!2sit"
-                width="100%"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-
-
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <!-- Maps 1 Vasto -->
+          <div class="mt-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294.18345516797586!2d14.677825863254387!3d41.99633980854653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c21e0f95b84d%3A0x272a1436abff6a21!2s66050%20Lentella%20CH!5e0!3m2!1sit!2sit!4v1631218965250!5m2!1sit!2sit" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
         <!-- Sezione Contatti//**** */ -->
       </div>
       <!-- div generale -->
-      <foter style="transform: translateY(500px)" />
+      <foter style="transform: translateY(500px)" :home="true" />
     </div>
     <!-- header grid -->
   </div>
@@ -524,11 +515,6 @@ export default {
 </script>
 
 <style scope>
-.borderBanner {
-  background-color: #af384f;
-  color: #af384f;
-  height: 8px;
-}
 .contentMonica {
   font-size: 18px;
   font-style: normal;

@@ -30,6 +30,12 @@ a:hover {
     border-width: 1px;
 }
 
+.borderBanner {
+    background-color: #af384f;
+    color: #af384f;
+    height: 8px;
+}
+
 .scrollbar {}
 
 .scrollbar::-webkit-scrollbar-track {

@@ -47,7 +47,7 @@
       <div class="box-card z-20">
         <nuxt-link :to="localePath('/card')">
           <img
-            class="imgRenderCarta"
+            class="imgRenderCarta2"
             src="~/assets/img/home/render-carta.jpg"
             alt=""
             width="100%"
@@ -83,8 +83,8 @@
         <!-- Box home con i vari servizi -->
         <div class="containerBoxHome grid grid-col-1 gap-12 uppercase">
           <!-- Box Laser 1 -->
-          <nuxt-link :to="localePath('/laser')">
-            <div class="BoxHome duration-300 shadow-lg">
+          <div class="BoxHome duration-300 shadow-lg">
+            <nuxt-link :to="localePath('/laser')">
               <div
                 class="titleBoxHome text-2xl font-semibold text-left pt-2 pl-5"
               >
@@ -97,12 +97,12 @@
                   class="BoxHomeLaser"
                 />
               </div>
-            </div>
-          </nuxt-link>
+            </nuxt-link>
+          </div>
 
           <!-- Box Biolifting 2 -->
-          <nuxt-link :to="localePath('/biolifting')">
-            <div class="BoxHome duration-300 shadow-lg">
+          <div class="BoxHome duration-300 shadow-lg">
+            <nuxt-link :to="localePath('/biolifting')">
               <div
                 class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
               >
@@ -115,13 +115,13 @@
                   class="BoxHomeBiolifting"
                 />
               </div>
-            </div>
-          </nuxt-link>
+            </nuxt-link>
+          </div>
 
           <!--/// Box puliziaevo 3 -->
           <!-- Box PuliziaEvo 3 -->
-          <nuxt-link :to="localePath('/puliziaevo')">
-            <div class="BoxHome duration-300 shadow-lg">
+          <div class="BoxHome duration-300 shadow-lg">
+            <nuxt-link :to="localePath('/puliziaevo')">
               <div
                 class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
               >
@@ -129,7 +129,7 @@
                   {{ $t("navBuy.puliziaevo") }}
                 </h4>
                 <img
-                  src="~/assets/img/home/box/render-box-home.png"
+                  src="~/assets/img/home/box/boxPuliziaEvo.jpg"
                   alt="pulizia evolution"
                   class="BoxHomePuliziaEvo"
                   style="
@@ -138,16 +138,17 @@
                     height: 300px;
                     position: absolute;
                     z-index: -1;
+                    border-radius: 14px;
                   "
                 />
               </div>
-            </div>
-          </nuxt-link>
+            </nuxt-link>
+          </div>
           <!-- Box Laser 3 -->
 
           <!-- Box Mai+Xl 4 -->
-          <nuxt-link :to="localePath('/mai+xl')">
-            <div class="BoxHome duration-300 shadow-lgX">
+          <div class="BoxHome duration-300 shadow-lgX">
+            <nuxt-link :to="localePath('/mai+xl')">
               <div class="">
                 <!-- <h4>
                 {{ $t("navBuy.maipiuxl") }}
@@ -159,22 +160,10 @@
                   style="transform: scale(1.005)"
                 />
               </div>
-            </div>
-          </nuxt-link>
-        </div>
-        <!-- <nuxt-link :to="localePath('/mai+xl')">
-          <div class="BoxHome duration-300 shadow-lg">
-            <div
-              class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
-            >
-         
-            </div>
+            </nuxt-link>
           </div>
-        </nuxt-link> -->
-        <!-- </div> -->
-        <!--/// Box Biolifting 4 -->
+        </div>
       </div>
-
       <!-- Container Body -->
 
       <!-- Bg recensioni clienti con titolo -->
@@ -242,19 +231,48 @@
         <!--Container MOnica -->
         <div class="containerMonica transform1pxYZ">
           <!--title -->
-          <div class="titleMonica">Monica Sciascia</div>
+          <div class="titleMonica p-8">Monica Sciascia</div>
+          <!-- Onda Svg Img Monica 
+          <div>
+            <svg
+              width="100%"
+              height="auto"
+              viewBox="0 0 375 158"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M387.337 88.6911L389.327 115.69L314.954 105.081L106.739 131.706L-55.8983 109.391L-61.5456 32.7899C131.987 196.511 289.721 40.8949 387.337 88.6911Z"
+                fill="#AF384F"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M188.637 128.526C252.488 115.692 315.109 103.106 389.988 124.654L389.146 113.236C319.461 93.1824 269.166 101.878 215.808 111.103C146.372 123.107 71.7485 136.009 -57.5425 87.6207L-54.933 123.016C41.2386 158.151 115.739 143.177 188.637 128.526Z"
+                fill="#D16A7D"
+              />
+            </svg>
+          </div>-->
           <!-- Img Monica -->
-          <div class="imgMonica mx-auto my-12">
+          <div class="imgMonica mx-auto mb-12 " v-if="pc">
             <img
               src="~/assets/img/home/monica.png"
               class="mx-auto"
-              width="300px"
+              width="100%"
+              alt="Monica Sciscia"
+            />
+          </div>
+          <div class="imgMonica mx-auto mb-12 " v-else>
+            <img
+              src="~/assets/img/home/onlyMonica.png"
+              class="mx-auto"
+              width="100%"
               alt="Monica Sciscia"
             />
           </div>
           <!--// Img Monica -->
           <!-- Content Monica -->
-          <div class="contentMonica" style="max-width: 620px; margin: auto">
+          <div class="contentMonica p-8" style="max-width: 620px; margin: auto">
             {{ $t("home.contentMonica") }}
           </div>
           <br />
@@ -406,19 +424,36 @@
 
           <!-- Maps 1 Vasto -->
           <div class="my-4">
-            
-              <iframe
+            <div class="text-red text-xl font-bold text-center mb-4">
+              Le nostre Sedi
+            </div>
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
               width="100%"
-              height="250"
-              style="border: 0"
+              height="200"
+              style="
+                border-bottom-width: 3px;
+                border-color: #af384f;
+                border-top-width: 3px;
+              "
               allowfullscreen=""
               loading="lazy"
             ></iframe>
           </div>
           <!-- Maps 1 Vasto -->
           <div class="mt-2">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294.18345516797586!2d14.677825863254387!3d41.99633980854653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c21e0f95b84d%3A0x272a1436abff6a21!2s66050%20Lentella%20CH!5e0!3m2!1sit!2sit!4v1631218965250!5m2!1sit!2sit" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294.18345516797586!2d14.677825863254387!3d41.99633980854653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c21e0f95b84d%3A0x272a1436abff6a21!2s66050%20Lentella%20CH!5e0!3m2!1sit!2sit!4v1631218965250!5m2!1sit!2sit"
+              width="100%"
+              height="200"
+              style="
+                border-bottom-width: 3px;
+                border-color: #af384f;
+                border-top-width: 3px;
+              "
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
         <!-- Sezione Contatti//**** */ -->
@@ -510,6 +545,16 @@ export default {
           return "300px";
       }
     },
+    pc() {
+      switch (this.$mq) {
+        case "sm":
+          return true;
+        case "md":
+          return true;
+        case "lg":
+          return false;
+      }
+    },
   },
 };
 </script>
@@ -552,23 +597,23 @@ export default {
 
 /* Header */
 .box-card {
-  background: white;
+  /* background: white;*/
   border-radius: 15px;
-  height: 450px;
-  width: 290px;
+  width: 236px;
+  height: 364px;
   margin: 0 auto;
-  /*position: absolute;
-  /* border-radius: 20px;
-    top: 333px;*/
-  -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
-  box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
-  /* left: 50%;
-  top: 373px;
-  transform: translateX(-50%);*/
-  top: -30px;
   position: relative;
 }
-
+.imgRenderCarta2 {
+  width: 236px;
+  height: 364px;
+  top: -30px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.4);
+  border-radius: 15px;
+  position: relative;
+}
 .bg-header {
   background-image: url("~/assets/img/home/bg-header.svg");
   background-position: center;
@@ -581,13 +626,6 @@ export default {
   position: relative;
   left: 0;
   /*top: 490px;*/
-}
-
-.imgRenderCarta {
-  border-radius: 15px;
-  position: relative;
-  width: 100%;
-  height: auto;
 }
 
 /* Clienti Review */
@@ -631,7 +669,7 @@ export default {
 }
 
 .BoxHome {
-  background-color: white;
+  /*background-color: white;*/
   width: 300px;
   height: 300px;
   border-radius: 14px;
@@ -684,7 +722,7 @@ export default {
   background-color: #ffd2d2;
   width: 100%;
   height: auto;
-  padding: 2rem;
+  /* padding: 2rem;*/
 }
 
 .BoxHomeMaipiuxl {

@@ -1,13 +1,13 @@
 <template>
   <!-- Footer -->
   <div
-    class="footer grid flex text-2xl mt-16 borderBanner w-full"
+    class="footer grid flex text-2xl mt-0 borderBanner w-full"
     v-bind:class="{ FBorder: !home }"
   >
     <!-- Icon Social -->
     <div
       style="width: 300px"
-      class="grid grid-cols-3 mx-auto justify-items-stretch my-6"
+      class="grid grid-cols-3 mx-auto justify-items-stretch my-12"
     >
       <!-- Facebook -->
       <div class="justify-self-center">
@@ -89,7 +89,7 @@
       <div class="mb-3">
         <a
           href="https://www.iubenda.com/privacy-policy/52995361"
-          class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
+          class=""
           title="Privacy Policy "
           >{{ $t("footer.normePrivacy") }}
         </a>
@@ -124,7 +124,7 @@
 
 
       <!-- Copiright -->
-      <div class=" mt-2  text-center text-sm " style="color:">
+      <div class=" mb-3  text-center text-sm " style="color:">
 ©copyright all rights reserved 1994-2021
       </div>
     </div>

@@ -3,6 +3,15 @@ body {
     font-family: "Montserrat", sans-serif !important;
 }
 
+.slider-pages{
+    max-width: 600px;
+    margin: 0  auto;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+}
+
+
 a:hover {
     /*color: white !important;*/
     text-decoration: none;
@@ -407,7 +416,7 @@ a:hover {
     /*  bottom: -25px;*/
     bottom: 10px;
     display: block;
-    width: 100%;
+    width: 100px;
     padding: 0;
     margin: 0;
     list-style: none;

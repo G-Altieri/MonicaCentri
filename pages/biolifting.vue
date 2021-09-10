@@ -383,14 +383,42 @@
           </div>
         </nuxt-link>
       </div>
-
-    
-
-      <!-- Footer -->
-      <foter />
-
-
+      <!-- Container Fluid -->
     </div>
+    <!-- Slider Img Video -->
+    <div class="" style="width: 100%">
+      <VueSlickCarousel v-bind="settings2">
+        <!-- img 1 -->
+        <div class="slider-pages">
+          <img
+            src="~/assets/img/biolifting/slider/1.jpg"
+            alt="biolifting 1"
+            width="100%"
+            class="mx-auto"
+          />
+        </div>
+        <!-- img 2 -->
+        <div class="slider-pages">
+          <img
+            src="~/assets/img/biolifting/slider/2.jpg"
+            alt="biolifting 3"
+            width="100%"
+          />
+        </div>
+        <!-- img 3 -->
+        <div class="slider-pages">
+          <img
+            src="~/assets/img/biolifting/slider/3.jpg"
+            alt="biolifting 3"
+            width="100%"
+          />
+        </div>
+      </VueSlickCarousel>
+    </div>
+
+    <!-- Footer -->
+    <foter :home="true"/>
+
     <!-- Container Page -->
   </div>
 </template>
@@ -400,11 +428,36 @@
 <script>
 import navbarBuy from "@/components/navbarBuy.vue";
 import foter from "@/components/footer.vue";
+import VueSlickCarousel from "vue-slick-carousel";
 
 var t1;
 export default {
   data() {
-    return {};
+    return {
+      settings2: {
+        dots: true,
+        arrows: false,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "0px",
+        slidesPerRow: 1,
+        touchMove: true,
+        variableWidth: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnDotsHover: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        swipe: true,
+      },
+
+    };
   },
   mounted() {
     t1 = this.$anime({
@@ -456,6 +509,7 @@ export default {
   components: {
     navbarBuy,
     foter,
+    VueSlickCarousel
   },
 };
 </script>

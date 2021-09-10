@@ -254,7 +254,7 @@
             </svg>
           </div>-->
           <!-- Img Monica -->
-          <div class="imgMonica mx-auto mb-12 " v-if="pc">
+          <div class="imgMonica mx-auto mb-12" v-if="pc">
             <img
               src="~/assets/img/home/monica.png"
               class="mx-auto"
@@ -262,11 +262,11 @@
               alt="Monica Sciscia"
             />
           </div>
-          <div class="imgMonica mx-auto mb-12 " v-else>
+          <div class="imgMonica mx-auto mb-12" v-else>
             <img
               src="~/assets/img/home/onlyMonica.png"
               class="mx-auto"
-              width="100%"
+              width="450px"
               alt="Monica Sciscia"
             />
           </div>
@@ -725,25 +725,8 @@ export default {
   /* padding: 2rem;*/
 }
 
-.BoxHomeMaipiuxl {
-  /*    width: 300px;
-  height: 300px;
-  border-radius: 14px;
-  position: relative;
-  margin: 0 auto;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.6);
-  background-color: transparent;*/
-}
-
 /*
 1 freccietta che va giu aggiustare iphoe
-2 pulizia evo ridesign
-3 ridesign mai piu xl  *******
-4 spazio giu recensioni 
-5 pulsante video monica ****** 
-6 footer
 */
 </style>
 

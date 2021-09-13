@@ -11,7 +11,7 @@
     >
       <!-- Facebook -->
       <div class="justify-self-center">
-        <nuxt-link :to="localePath('/lp')">
+        <a href="https://www.facebook.com/monicacentrii"  target="_blank">
           <svg
             width="48"
             height="48"
@@ -28,12 +28,12 @@
               fill="white"
             />
           </svg>
-        </nuxt-link>
+        </a>
       </div>
 
       <!-- Instagram -->
       <div class="justify-self-center">
-        <nuxt-link :to="localePath('/lp')">
+        <a href="https://www.instagram.com/monica_centri/"  target="_blank">
           <svg
             width="48"
             height="48"
@@ -58,12 +58,12 @@
               fill="white"
             />
           </svg>
-        </nuxt-link>
+        </a>
       </div>
 
       <!-- Youtube -->
       <div class="justify-self-center">
-        <nuxt-link :to="localePath('/lp')">
+        <a href="https://www.youtube.com/channel/UCgQZR6GKr5DyWeVlkBOCCqQ"  target="_blank">
           <svg
             width="48"
             height="48"
@@ -80,7 +80,7 @@
               fill="white"
             />
           </svg>
-        </nuxt-link>
+        </a>
       </div>
     </div>
 

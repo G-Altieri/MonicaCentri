@@ -133,7 +133,7 @@
                   alt="pulizia evolution"
                   class="BoxHomePuliziaEvo"
                   style="
-                    transform: translate(-21px, -53px);
+                    transform: translate(-20px, -53px);
                     width: 300px;
                     height: 300px;
                     position: absolute;
@@ -392,7 +392,7 @@
                 text-red
               "
             >
-              +39 334 8529 048
+              <a href="tel:+393348529048"> +39 334 8529 048 </a>
             </div>
             <!-- Number 2 -->
             <div
@@ -405,7 +405,7 @@
                 text-red
               "
             >
-              +39 392 0748 016
+              <a href="tel:+393920748016"> +39 392 0748 016 </a>
             </div>
             <!-- Number email -->
             <div
@@ -416,7 +416,9 @@
                 cursor-point
                 justify-self-center
                 text-red
+                cursor-pointer
               "
+              @click="copyEmail()"
             >
               info@monicacentri.com
             </div>
@@ -442,7 +444,18 @@
           </div>
           <!-- Maps 1 Vasto -->
           <div class="mt-2">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit"
+              width="100%"
+              height="200"
+              style="
+                border-bottom-width: 3px;
+                border-color: #af384f;
+                border-top-width: 3px;
+              "
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
         <!-- Sezione Contatti//**** */ -->
@@ -514,6 +527,23 @@ export default {
     ScrollPixel() {
       console.log("asd");
       window.scrollBy({ top: 200, left: 0, behavior: "smooth" });
+    },
+
+    copyEmail() {
+      //Creating textarea element
+      let textarea = document.createElement("textarea");
+      //Settings its value to the thing you want to copy
+      //textarea.value = this.$refs.asd.innerText;
+      textarea.value = "info@monicacentri.com";
+      //Appending the textarea to body
+      document.body.appendChild(textarea);
+      //Selecting its content
+      textarea.focus();
+      textarea.select();
+      //Copying the selected content to clipboard
+      document.execCommand("copy");
+      //Removing the textarea
+      document.body.removeChild(textarea);
     },
   },
   mounted() {},

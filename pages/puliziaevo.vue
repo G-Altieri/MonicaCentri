@@ -31,26 +31,57 @@
         </div>
 
         <!-- Button Video -->
-        <div class="mx-auto my-6">
-          <nuxt-link :to="localePath('/')">
-            <div
-              class="
-                btnVideo
-                text-white
-                p-2
-                px-3
-                font-bold
-                uppercase
-                text-sm
-                w-max
-                btnShadow
-                duration-300
-              "
-            >
-              {{ $t("puliziaevo.info.btnVideo") }}
-            </div>
-          </nuxt-link>
+        <div
+          class="mx-auto my-6"
+          @click="btnvideo = !btnvideo"
+          v-if="!btnvideo"
+        >
+          <div
+            class="
+              btnVideo
+              text-white
+              p-2
+              px-3
+              font-bold
+              uppercase
+              text-sm
+              w-max
+              btnShadow
+              duration-300
+            "
+          >
+            {{ $t("puliziaevo.info.btnVideo") }}
+          </div>
         </div>
+
+        <!-- Frame Video  -->
+        <div v-else class="my-6">
+          <iframe
+            class="mx-auto"
+            width="300px"
+            height="540px"
+            src="https://www.youtube.com/embed/0QViAih8uhg?rel=0"
+            title="Come ho risolto il problema dei peli"
+            frameborder="0"
+            playsinline="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div
+            class="
+              text-md
+              font-light
+              mx-auto
+              cursor-pointer
+              text-red text-center
+              my-4
+            "
+            @click="btnvideo = !btnvideo"
+          >
+            {{ $t("home.nascondiVideo") }}
+          </div>
+        </div>
+        <!-- Frame Video ////**** */ -->
 
         <!-- Seconda Parte -->
         <div class="text-left my-10 text-center">
@@ -77,7 +108,7 @@
       <!-- Sezione Illustrazioni -->
       <div class="grid text-center self-center">
         <!-- Bg Header Sezione Illustrazioni -->
-        <div class="bg_illustrationContainer transform1pxY ">
+        <div class="bg_illustrationContainer transform1pxY">
           <svg
             viewBox="0 0 375 210"
             class="relative"
@@ -99,7 +130,16 @@
         </div>
 
         <!-- Box content Illustrazioni -->
-        <div class="box_Illustrazioni_content flex grid text-center lg:grid-cols-3 pt-1">
+        <div
+          class="
+            box_Illustrazioni_content
+            flex
+            grid
+            text-center
+            lg:grid-cols-3
+            pt-1
+          "
+        >
           <!-- Illustration One -->
           <div class="">
             <div class="">
@@ -324,7 +364,6 @@
 
           <!-- Illustration  Three-->
           <div class="mb-16">
-       
             <div>
               <svg
                 alt="Trattamento Specifico illustration"
@@ -335,15 +374,14 @@
                 fill="none"
               >
                 <path
-                         id="illustrationthreelente"
+                  id="illustrationthreelente"
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M137.865 51C137.865 73.0914 119.956 91 97.8648 91C75.7734 91 57.8648 73.0914 57.8648 51C57.8648 28.9086 75.7734 11 97.8648 11C119.956 11 137.865 28.9086 137.865 51ZM148.865 51C148.865 79.1665 126.031 102 97.8648 102C82.336 102 68.4283 95.0597 59.0741 84.1117L58.5748 84.4385L10.0605 116.193C7.05688 118.159 3.02818 117.318 1.06217 114.314C-0.903833 111.311 -0.0626679 107.282 2.94097 105.316L51.4553 73.5614L51.954 73.235C48.6934 66.5148 46.8648 58.971 46.8648 51C46.8648 22.8335 69.6982 0 97.8648 0C126.031 0 148.865 22.8335 148.865 51Z"
                   fill="#AF384F"
                 />
                 <path
-                id="illustrationthreeglass"
-                
+                  id="illustrationthreeglass"
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M79.5007 50.507L79.538 50.4697C88.8958 49.8812 96.382 42.395 96.9704 33.0373L97.0077 33L97.045 33.0373C97.6335 42.395 105.12 49.8812 114.477 50.4697L114.515 50.507L114.477 50.5442C105.12 51.1326 97.6334 58.6189 97.045 67.9767L97.0077 68.0139L96.9704 67.9767C96.382 58.6189 88.8958 51.1327 79.538 50.5442L79.5007 50.507Z"
@@ -404,12 +442,46 @@
           </div>
         </nuxt-link>
       </div>
-
-      <!-- Footer -->
-      <foter />
-
-
     </div>
+    <!-- Container Fluid -->
+
+    <!-- Slider Img Video -->
+    <div class="" style="width: 100%">
+      <VueSlickCarousel v-bind="settings2">
+        <!-- img 1 -->
+        <div class="slider-pages">
+          <img
+            src="~/assets/img/pulizia evo/slider/1.gif"
+            alt="Pulizia Evo 1"
+            width="100%"
+            class="mx-auto"
+          />
+        </div>
+        <!-- img 2 -->
+        <div class="slider-pages">
+          <img
+            src="~/assets/img/pulizia evo/slider/2.jpg"
+            alt="Pulizia Evo 3"
+            width="100%"
+          />
+        </div>
+        <!-- img 3 -->
+        <div class="slider-pages">
+          <video
+            src="~/assets/img/pulizia evo/slider/3.mp4"
+            alt="Pulizia Evo 3"
+            width="100%"
+            autoplay
+            loop
+            muted
+            playsinline
+          />
+        </div>
+      </VueSlickCarousel>
+    </div>
+
+    <!-- Footer -->
+    <foter :home="true" />
     <!-- Container Page -->
   </div>
 </template>
@@ -419,11 +491,35 @@
 <script>
 import navbarBuy from "@/components/navbarBuy.vue";
 import foter from "@/components/footer.vue";
-
+import VueSlickCarousel from "vue-slick-carousel";
 
 export default {
   data() {
-    return {};
+    return {
+      btnvideo: false,
+      settings2: {
+        dots: true,
+        arrows: false,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "0px",
+        slidesPerRow: 1,
+        touchMove: true,
+        variableWidth: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnDotsHover: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        swipe: true,
+      },
+    };
   },
   mounted() {
     this.$anime({
@@ -439,7 +535,7 @@ export default {
       complete: () => {},
     });
 
-      //Illustration 1 pelle
+    //Illustration 1 pelle
     this.$anime({
       targets: "#illustrationcircle1",
       scale: ["60%", "100%"],
@@ -450,7 +546,7 @@ export default {
       duration: 1000,
       complete: () => {},
     });
-      //Illustration 2 cellula
+    //Illustration 2 cellula
     this.$anime({
       targets: "#illustrationonecircle1",
       scale: ["63%", "100%"],
@@ -465,7 +561,7 @@ export default {
     this.$anime({
       targets: "#illustrationthreeglass2",
       scale: ["70%", "110%"],
-    // rotate:'360deg',
+      // rotate:'360deg',
       easing: "easeInOutQuad",
       direction: "alternate",
       autoplay: true,
@@ -476,9 +572,9 @@ export default {
     //Illustration 3 Lente
     this.$anime({
       targets: "#illustrationthreelente",
-       translateX: ["0px", "-5px"],
+      translateX: ["0px", "-5px"],
       translateY: ["0px", "5px"],
-      rotate: ["0deg", "-5deg"],  
+      rotate: ["0deg", "-5deg"],
       easing: "easeInOutQuad",
       direction: "alternate",
       autoplay: true,
@@ -490,6 +586,7 @@ export default {
   components: {
     navbarBuy,
     foter,
+    VueSlickCarousel,
   },
 };
 </script>

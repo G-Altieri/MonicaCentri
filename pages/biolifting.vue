@@ -31,26 +31,57 @@
         </div>
 
         <!-- Button Video -->
-        <div class="mx-auto my-6">
-          <nuxt-link :to="localePath('/')">
-            <div
-              class="
-                btnVideo
-                text-white
-                p-2
-                px-3
-                font-bold
-                uppercase
-                text-sm
-                w-max
-                btnShadow
-                duration-300
-              "
-            >
-              {{ $t("biolifting.info.btnVideo") }}
-            </div>
-          </nuxt-link>
+        <div
+          class="mx-auto my-6"
+          @click="btnvideo = !btnvideo"
+          v-if="!btnvideo"
+        >
+          <div
+            class="
+              btnVideo
+              text-white
+              p-2
+              px-3
+              font-bold
+              uppercase
+              text-sm
+              w-max
+              btnShadow
+              duration-300
+            "
+          >
+            {{ $t("biolifting.info.btnVideo") }}
+          </div>
         </div>
+
+        <!-- Frame Video  -->
+        <div v-else class="my-6">
+          <iframe
+            class="mx-auto"
+            width="300px"
+            height="540px"
+            src="https://www.youtube.com/embed/0QViAih8uhg?rel=0"
+            title="Come ho risolto il problema dei peli"
+            frameborder="0"
+            playsinline="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div
+            class="
+              text-md
+              font-light
+              mx-auto
+              cursor-pointer
+              text-red text-center
+              my-4
+            "
+            @click="btnvideo = !btnvideo"
+          >
+            {{ $t("home.nascondiVideo") }}
+          </div>
+        </div>
+        <!-- Frame Video ////**** */ -->
 
         <!-- Seconda Parte -->
         <div class="text-left my-10 text-center">
@@ -417,7 +448,7 @@
     </div>
 
     <!-- Footer -->
-    <foter :home="true"/>
+    <foter :home="true" />
 
     <!-- Container Page -->
   </div>
@@ -434,6 +465,7 @@ var t1;
 export default {
   data() {
     return {
+      btnvideo: false,
       settings2: {
         dots: true,
         arrows: false,
@@ -456,7 +488,6 @@ export default {
         pauseOnHover: false,
         swipe: true,
       },
-
     };
   },
   mounted() {
@@ -509,7 +540,7 @@ export default {
   components: {
     navbarBuy,
     foter,
-    VueSlickCarousel
+    VueSlickCarousel,
   },
 };
 </script>

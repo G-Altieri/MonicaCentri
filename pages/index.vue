@@ -101,8 +101,8 @@
           </div>
 
           <!-- Box Biolifting 2 -->
-          <div class="BoxHome duration-300 shadow-lg">
-            <nuxt-link :to="localePath('/biolifting')">
+            <div class="BoxHome duration-300 shadow-lg">
+          <nuxt-link :to="localePath('/biolifting')">
               <div
                 class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
               >
@@ -110,13 +110,21 @@
                   {{ $t("navBuy.biolifting") }}
                 </h4>
                 <img
-                  src="~/assets/img/home/box/biolifting.png"
+                  src="~/assets/img/home/box/boxBiolifting.jpg"
                   alt="laser"
                   class="BoxHomeBiolifting"
+                  style="
+                    transform: translate(-12px, -35px);
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    z-index: -1;
+                    border-radius: 14px;
+                  "
                 />
               </div>
-            </nuxt-link>
-          </div>
+          </nuxt-link>
+            </div>
 
           <!--/// Box puliziaevo 3 -->
           <!-- Box PuliziaEvo 3 -->
@@ -433,13 +441,13 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
               width="100%"
               height="200"
+              allowfullscreen=""
+              loading="lazy"
               style="
                 border-bottom-width: 3px;
                 border-color: #af384f;
                 border-top-width: 3px;
               "
-              allowfullscreen=""
-              loading="lazy"
             ></iframe>
           </div>
           <!-- Maps 1 Vasto -->
@@ -448,13 +456,13 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit"
               width="100%"
               height="200"
+              allowfullscreen=""
+              loading="lazy"
               style="
                 border-bottom-width: 3px;
                 border-color: #af384f;
                 border-top-width: 3px;
               "
-              allowfullscreen=""
-              loading="lazy"
             ></iframe>
           </div>
         </div>

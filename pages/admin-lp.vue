@@ -142,10 +142,11 @@ this.textCopied = params;
     async renderRequest() {
       await this.$axios
         .$get(
-          "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
+          "https://shielded-island-95040.herokuapp.com/api/client"
         )
         //Local http://127.0.0.1:8000/api/client
         //Production https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
+        //Old SiteGround "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
         .then((response) => {
           this.loading = "";
           console.log(response);

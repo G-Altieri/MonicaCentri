@@ -14,11 +14,11 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_58fb42e8 from 'nuxt_plugin_plugin_58fb42e8' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_googlegtag_0540650c from 'nuxt_plugin_googlegtag_0540650c' // Source: .\\google-gtag.js (mode: 'client')
 import nuxt_plugin_amp_bb58f506 from 'nuxt_plugin_amp_bb58f506' // Source: .\\amp.js (mode: 'all')
 import nuxt_plugin_pluginrouting_0b06c964 from 'nuxt_plugin_pluginrouting_0b06c964' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_6a9cc2e1 from 'nuxt_plugin_pluginmain_6a9cc2e1' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
 import nuxt_plugin_axios_cddc59ea from 'nuxt_plugin_axios_cddc59ea' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_googleanalytics_53f47f8a from 'nuxt_plugin_googleanalytics_53f47f8a' // Source: .\\google-analytics.js (mode: 'client')
 import nuxt_plugin_animejsModule_20e031d0 from 'nuxt_plugin_animejsModule_20e031d0' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueMq_3319afd8 from 'nuxt_plugin_vueMq_3319afd8' // Source: ..\\plugins\\vueMq (mode: 'all')
 import nuxt_plugin_vueslickcarousel_1c6345a5 from 'nuxt_plugin_vueslickcarousel_1c6345a5' // Source: ..\\plugins\\vue-slick-carousel.js (mode: 'all')
@@ -103,7 +103,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"MonicaCentri","htmlAttrs":{"lang":"it"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"script":[{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.1.1\u002Fjquery.min.js"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.svg"},{"rel":"stylesheet"}],"style":[]},
+    head: {"title":"MonicaCentri","htmlAttrs":{"lang":"it"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"script":[{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.1.1\u002Fjquery.min.js"},{"src":"https:\u002F\u002Fwww.googletagmanager.com\u002Fgtag\u002Fjs?id=G-V34VSD554J","async":true}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.svg"},{"rel":"stylesheet"}],"style":[]},
 
     store,
     router,
@@ -236,6 +236,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_58fb42e8(app.context, inject)
   }
 
+  if (process.client && typeof nuxt_plugin_googlegtag_0540650c === 'function') {
+    await nuxt_plugin_googlegtag_0540650c(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_amp_bb58f506 === 'function') {
     await nuxt_plugin_amp_bb58f506(app.context, inject)
   }
@@ -250,10 +254,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_cddc59ea === 'function') {
     await nuxt_plugin_axios_cddc59ea(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_googleanalytics_53f47f8a === 'function') {
-    await nuxt_plugin_googleanalytics_53f47f8a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_animejsModule_20e031d0 === 'function') {

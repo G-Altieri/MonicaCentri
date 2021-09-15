@@ -121,9 +121,14 @@ export default {
 
         //  'mdbvue/nuxt',
 
+        '@nuxtjs/amp'
+
     ],
 
-
+    /*Amp Modules Options */
+    amp: {
+        // Options
+      },
 
     /*Impostazioni Google Analytics*/
     googleAnalytics: {

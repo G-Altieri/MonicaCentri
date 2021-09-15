@@ -101,8 +101,8 @@
           </div>
 
           <!-- Box Biolifting 2 -->
-            <div class="BoxHome duration-300 shadow-lg">
           <nuxt-link :to="localePath('/biolifting')">
+            <div class="BoxHome duration-300 shadow-lg">
               <div
                 class="titleBoxHome text-3xl font-semibold text-left pt-2 pl-5"
               >
@@ -123,8 +123,8 @@
                   "
                 />
               </div>
-          </nuxt-link>
             </div>
+          </nuxt-link>
 
           <!--/// Box puliziaevo 3 -->
           <!-- Box PuliziaEvo 3 -->

@@ -96,7 +96,7 @@
                   src="~/assets/img/home/box/laser.png"
                   alt="laser"
                   class="BoxHomeLaser"
-                   loading="lazy"
+                  loading="lazy"
                 />
               </div>
             </nuxt-link>
@@ -139,7 +139,7 @@
                   {{ $t("navBuy.puliziaevo") }}
                 </h4>
                 <img
-                 loading="lazy"
+                  loading="lazy"
                   src="~/assets/img/home/box/boxPuliziaEvo.webp"
                   alt="pulizia evolution"
                   class="BoxHomePuliziaEvo"
@@ -165,7 +165,7 @@
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
                 <img
-                 loading="lazy"
+                  loading="lazy"
                   src="~/assets/img/home/box/mai+xl2.svg"
                   alt="maipiuxl"
                   class="BoxHomeMaipiuxl"
@@ -269,7 +269,7 @@
           <!-- Img Monica -->
           <div class="imgMonica mx-auto mb-12" v-if="pc">
             <img
-             loading="lazy"
+              loading="lazy"
               src="~/assets/img/home/monica.png"
               class="mx-auto"
               width="100%"
@@ -278,7 +278,7 @@
           </div>
           <div class="imgMonica mx-auto mb-12" v-else>
             <img
-             loading="lazy"
+              loading="lazy"
               src="~/assets/img/home/onlyMonica.png"
               class="mx-auto"
               width="450px"
@@ -444,11 +444,9 @@
             <a
               href="https://wa.me/393348529048?text=Posso%20prenotare%20una%20consulenza%20gratuita%20?"
             >
-       
               <div
-              style="border-radius: 25px;"
+                style="border-radius: 25px"
                 class="
-             
                   text-white
                   p-2
                   px-3
@@ -459,56 +457,96 @@
                   btnShadow
                   duration-300
                   mx-auto
-                  flex
-                  flex-inizial
+                  flex flex-inizial
                   items-center
                   bg-green-500
                 "
               >
                 {{ $t("home.contattaciwa") }}
-                <svg viewBox="0 0 32 32" class="whatsapp-ico flex flex-auto items-center" width="32px">
+                <svg
+                  viewBox="0 0 32 32"
+                  class="whatsapp-ico flex flex-auto items-center"
+                  width="32px"
+                >
                   <path
                     d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
                     fill="white"
                   ></path>
                 </svg>
               </div>
-              
             </a>
           </div>
 
-          <!-- Maps 1 Vasto -->
-          <div class="my-4">
-            <div class="text-red text-xl font-bold text-center mb-4">
-              Le nostre Sedi
+          <!--Maps Mobile -->
+          <div class="" v-if="!tablet">
+            <!-- Vasto -->
+            <div
+              class="w-full"
+              style="
+                height: 200px;
+                border-bottom-width: 3px;
+                border-color: #af384f;
+                border-top-width: 3px;
+              "
+            >
+              <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A"  target="_blank">
+                <img src="~/assets/img/home/mapsVasto.jpg" alt="Maps Vasto" />
+              </a>
             </div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
-              width="100%"
-              height="200"
-              allowfullscreen=""
-              loading="lazy"
+            <!-- Lentella -->
+            <div
+              class="w-full mt-4"
               style="
+                height: 200px;
                 border-bottom-width: 3px;
                 border-color: #af384f;
                 border-top-width: 3px;
               "
-            ></iframe>
+            >
+              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"  target="_blank">
+                <img
+                  src="~/assets/img/home/mapsLentella.jpg"
+                  alt="Maps Lentella"
+                />
+              </a>
+            </div>
           </div>
-          <!-- Maps 1 Vasto -->
-          <div class="mt-2">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit"
-              width="100%"
-              height="200"
-              allowfullscreen=""
-              loading="lazy"
-              style="
-                border-bottom-width: 3px;
-                border-color: #af384f;
-                border-top-width: 3px;
-              "
-            ></iframe>
+          <!-- Maps Tablet e PC -->
+          <div v-else>
+            <!-- Maps 1 Vasto -->
+            <div class="my-4">
+              <div class="text-red text-xl font-bold text-center mb-4">
+                Le nostre Sedi
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
+                width="100%"
+                height="200"
+                allowfullscreen=""
+                loading="lazy"
+                style="
+                  border-bottom-width: 3px;
+                  border-color: #af384f;
+                  border-top-width: 3px;
+                "
+              ></iframe>
+            </div>
+            <!-- Maps 1 Vasto -->
+            <div class="mt-2">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit"
+                width="100%"
+                height="200"
+                allowfullscreen=""
+                loading="lazy"
+                style="
+                  border-bottom-width: 3px;
+                  border-color: #af384f;
+                  border-top-width: 3px;
+                "
+              ></iframe>
+            </div>
+            <!-- V-else -->
           </div>
         </div>
         <!-- Sezione Contatti//**** */ -->
@@ -625,6 +663,16 @@ export default {
           return true;
         case "lg":
           return false;
+      }
+    },
+    tablet() {
+      switch (this.$mq) {
+        case "sm":
+          return false;
+        case "md":
+          return true;
+        case "lg":
+          return true;
       }
     },
   },

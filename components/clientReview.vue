@@ -51,7 +51,7 @@
         <div class="flex">
           <a
             target="_blank"
-            href="https://www.facebook.com/centroesteticomonika"
+            href="https://www.facebook.com/pg/monicacentrii/reviews/?ref=page_internal"
             class="opacity-75 hover:opacity-100 transition-opacity duration-200 text-pink"
             ><span class="sr-only">Facebook</span>
             <svg

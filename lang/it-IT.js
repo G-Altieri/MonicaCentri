@@ -27,6 +27,7 @@ export default {
         contentMonica: "La mia passione per il bello, per l’estetica nasce da quando ero poco più di una bambina. Sognavo di gestire un centro estetico, dritta per i miei obiettivi, a soli 21 anni il sogno si realizza. Continuo a studiare e frequentare accademie professionali per creare protocolli unici e dare sempre più risultati ai miei  clienti. Dopo 22 anni apro il secondo centro specializzandomi sempre di più ottenendo risultati straordinari. Non mi sento mai arrivata, ho sempre sete e voglia di imparare",
         nascondiVideo: "Nascondi il video",
         contattaci: "Contattaci",
+        contattaciwa: "Scrivici su whatapp",
     },
     laser: {
         info: {
@@ -56,7 +57,7 @@ export default {
                 content: "L’epidermide diventerà liscia, levigata, vengono eliminate macchie, discromie e follicolite per una pelle meravigliosa e senza più peli",
             },
         },
-        BtnBuyNow: "Acquista Ora",
+        BtnBuyNow: "Prenota Ora",
     },
     biolifting: {
         info: {
@@ -86,7 +87,7 @@ export default {
                 content: "Il nostro biolifting, non invasivo, stimola la produzione biologica di acido ialuronico, collagene ed elastina, cursori principali del ringiovanimento della pelle",
             },
         },
-        BtnBuyNow: "Acquista Ora",
+        BtnBuyNow: "Prenota Ora",
     },
     puliziaevo: {
         info: {
@@ -116,7 +117,7 @@ export default {
                 content: "Trattamento personalizzato con prodotti altamente professionali per garantire alla pelle bellezza e luminosità",
             },
         },
-        BtnBuyNow: "Acquista Ora",
+        BtnBuyNow: "Prenota Ora",
     },
     maipiuxl: {
         info: {
@@ -150,7 +151,7 @@ export default {
                 content: "La nostra biologa nutrizionista studierà un piano alimentare personalizzato per te, facendo varie analisi tra cui una bioimpedenziometria per calibrare un’alimentazione precisamente mirata.",
             },
         },
-        BtnBuyNow: "Acquista Ora",
+        BtnBuyNow: "Prenota Ora",
     },
     header: {
         title: "Monica Centri",

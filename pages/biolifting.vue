@@ -95,7 +95,7 @@
         </div>
 
         <!-- Terza Parte -->
-        <div class="text-center my-16">
+        <div class="text-center my-16 px-2">
           <div
             class="text-red text-2xl font-normalmx-auto max-w-sm md:text-2xl"
           >
@@ -258,7 +258,7 @@
               {{ $t("biolifting.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("biolifting.illustration.one.content") }}
             </div>
@@ -327,7 +327,7 @@
               {{ $t("biolifting.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("biolifting.illustration.two.content") }}
             </div>
@@ -367,7 +367,7 @@
               {{ $t("biolifting.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("biolifting.illustration.three.content") }}
             </div>

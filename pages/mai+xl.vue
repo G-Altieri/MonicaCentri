@@ -98,7 +98,7 @@
         </div>
 
         <!-- Terza Parte -->
-        <div class="text-center my-16">
+        <div class="text-center my-16 px-2">
           <div
             class="
               text-red text-xl
@@ -201,7 +201,7 @@
               {{ $t("maipiuxl.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.one.content") }}
             </div>
@@ -275,7 +275,7 @@
               {{ $t("maipiuxl.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.two.content") }}
             </div>
@@ -329,7 +329,7 @@
               {{ $t("maipiuxl.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.three.content") }}
             </div>
@@ -451,7 +451,7 @@
               {{ $t("maipiuxl.illustration.four.title") }}
             </div>
             <div
-              class="text-pink font-normal mx-auto text-md text-center wMax-18"
+              class="text-pink font-medium mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.four.content") }}
             </div>
@@ -482,7 +482,7 @@
       <!-- **Fine sezione content illutrazioni** -->
 
       <!-- Button Acquista Ora -->
-      <div class="mx-auto my-16">
+      <div class="mx-auto my-16 ">
         <nuxt-link :to="localePath('/lp')">
           <div
             class="

@@ -3,7 +3,7 @@
   <div>
     <!-- Video or GIF -->
     <div class="grid" style="padding-top: 56px">
-      <video
+      <!-- <video
         class="mx-auto"
         src="~/assets/videos/cosmetici.mp4"
         type="video/mp4"
@@ -13,7 +13,7 @@
         playsinline
         width="100%"
         style="max-height: 500px; background: #af384f"
-      ></video>
+      ></video> -->
     </div>
 
     <!-- Div header home page -->
@@ -420,7 +420,7 @@
               class="
                 font-medium
                 text-xl
-                my-4
+                mt-4
                 cursor-point
                 justify-self-center
                 text-red
@@ -430,6 +430,44 @@
             >
               info@monicacentri.com
             </div>
+          </div>
+
+          <!-- Button Contatti per whatapp -->
+          <div class="mx-auto my-0 mb-12 justify-self-center">
+            <a
+              href="https://wa.me/393348529048?text=Posso%20prenotare%20una%20consulenza%20gratuita%20?"
+            >
+       
+              <div
+              style="border-radius: 25px;"
+                class="
+             
+                  text-white
+                  p-2
+                  px-3
+                  font-bold
+                  uppercase
+                  text-sm
+                  w-max
+                  btnShadow
+                  duration-300
+                  mx-auto
+                  flex
+                  flex-inizial
+                  items-center
+                  bg-green-500
+                "
+              >
+                {{ $t("home.contattaciwa") }}
+                <svg viewBox="0 0 32 32" class="whatsapp-ico flex flex-auto items-center" width="32px">
+                  <path
+                    d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </div>
+              
+            </a>
           </div>
 
           <!-- Maps 1 Vasto -->
@@ -731,7 +769,7 @@ export default {
   transform: scale(0.9);
   float: right;
   right: -14px;
-  top: 32px;
+  top: 33px;
 }
 .BoxHomeBiolifting {
   position: absolute;

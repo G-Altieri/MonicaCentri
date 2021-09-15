@@ -9,7 +9,7 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'MonicaCentri',
+        title: 'Monica Centri',
         htmlAttrs: {
             lang: 'it'
         },
@@ -18,7 +18,8 @@ export default {
             },
             {
                 name: 'viewport',
-                content: 'width=device-width, initial-scale=1'
+                content: 'width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no'
+                  
             },
             {
                 hid: 'description',

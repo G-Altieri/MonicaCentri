@@ -14,82 +14,83 @@ export default {
             lang: 'it'
         },
         meta: [{
-            charset: 'utf-8'
-        },
-        {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no'
+                charset: 'utf-8'
+            },
+            {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no'
 
-        },
-        {
-            name: "keywords",
-            content: 'centro, estetico, monica, lentella, vasto, bellezza, beauty, monica centri, centro estetico, crema, laser, epilazione, biolifting, depilazione, mai+xl, pulizia evoluition, monica sciscia,'
+            },
+            {
+                name: "keywords",
+                content: 'centro, estetico, monica, lentella, vasto, bellezza, beauty, monica centri, centro estetico, crema, laser, epilazione, biolifting, depilazione, mai+xl, pulizia evoluition, monica sciscia,'
 
-        },
-        {
-            property: "og:description",
-            content: 'Non il solito centro estetico.'
+            },
+            {
+                property: "og:description",
+                content: 'Non il solito centro estetico.'
 
-        },
-        {
-            property: "og:title",
-            content: 'Monica Centri'
+            },
+            {
+                property: "og:title",
+                content: 'Monica Centri'
 
-        },
-        {
-            name: "description",
-            content: 'Non il solito centro estetico.'
+            },
+            {
+                name: "description",
+                content: 'Non il solito centro estetico.'
 
-        },
-        {
-            name: "title",
-            content: 'Monica Centri'
+            },
+            {
+                name: "title",
+                content: 'Monica Centri'
 
-        },
-        {
-            name: "google-site-verification", content: "q9GpriJR7UqD9iv7GtaJmFxC5wK1k0-kvwDTYWT0Y5c"
-        },
+            },
+            {
+                name: "google-site-verification",
+                content: "q9GpriJR7UqD9iv7GtaJmFxC5wK1k0-kvwDTYWT0Y5c"
+            },
 
         ],
         script: [{
-            // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-            //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-            //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
+                // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+                //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
 
-        },
+            },
 
         ],
 
         link: [{
-            rel: 'icon',
-            type: 'image/x-icon',
-            href: '/favicon.svg'
-        },
-        {
-            rel: 'apple-touch-icon',
-            href: '/logo.png'
-        },
-        {
-            rel: 'apple-touch-icon',
-            sizes: "76x76",
-            href: '/logo.png'
-        },
-        {
-            rel: 'apple-touch-icon',
-            sizes: "120x120",
-            href: '/logo.png'
-        },
-        {
-            rel: 'apple-touch-icon',
-            sizes: "152x152",
-            href: '/logo.png'
-        },
-        {
-            rel: 'stylesheet',
-            // href: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
-            //href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.4.0/mdb.rtl.min.css'
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: '/favicon.svg'
+            },
+            {
+                rel: 'apple-touch-icon',
+                href: '/logo.png'
+            },
+            {
+                rel: 'apple-touch-icon',
+                sizes: "76x76",
+                href: '/logo.png'
+            },
+            {
+                rel: 'apple-touch-icon',
+                sizes: "120x120",
+                href: '/logo.png'
+            },
+            {
+                rel: 'apple-touch-icon',
+                sizes: "152x152",
+                href: '/logo.png'
+            },
+            {
+                rel: 'stylesheet',
+                // href: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
+                //href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.4.0/mdb.rtl.min.css'
 
-        },
+            },
 
 
 
@@ -146,23 +147,23 @@ export default {
         ['nuxt-i18n', {
             lazy: true,
             locales: [{
-                name: 'Italiano',
-                code: 'it',
-                iso: 'it-IT',
-                file: 'it-IT.js'
-            },
-            /*{
-                name: 'English',
-                code: 'en',
-                iso: 'en-US',
-                file: 'en-US.js'
-            },*/
-            {
-                name: 'English',
-                code: 'en',
-                iso: 'it-IT',
-                file: 'it-IT.js'
-            },
+                    name: 'Italiano',
+                    code: 'it',
+                    iso: 'it-IT',
+                    file: 'it-IT.js'
+                },
+                /*{
+                    name: 'English',
+                    code: 'en',
+                    iso: 'en-US',
+                    file: 'en-US.js'
+                },*/
+                {
+                    name: 'English',
+                    code: 'en',
+                    iso: 'it-IT',
+                    file: 'it-IT.js'
+                },
 
             ],
             langDir: 'lang/',
@@ -173,9 +174,16 @@ export default {
 
         '@nuxtjs/amp',
 
-        '@nuxtjs/google-gtag'
+        '@nuxtjs/google-gtag',
+
+        'nuxt-compress',
 
     ],
+
+    //Nuxt Compress
+    brotli: {
+        threshold: 8192,
+    },
 
     /*Amp Modules Options */
     amp: {

@@ -7,8 +7,7 @@
     "meta": {},
     "alias": [
       "/amp/admin-lp"
-    ],
-    "_name": "_059f7124"
+    ]
   },
   {
     "name": "biolifting___it",
@@ -18,8 +17,7 @@
     "meta": {},
     "alias": [
       "/amp/biolifting"
-    ],
-    "_name": "_2a57c35e"
+    ]
   },
   {
     "name": "card___it",
@@ -29,8 +27,7 @@
     "meta": {},
     "alias": [
       "/amp/card"
-    ],
-    "_name": "_36c9651c"
+    ]
   },
   {
     "name": "dashboard___it",
@@ -40,8 +37,7 @@
     "meta": {},
     "alias": [
       "/amp/dashboard"
-    ],
-    "_name": "_fde94cbc"
+    ]
   },
   {
     "name": "index___en",
@@ -51,8 +47,7 @@
     "meta": {},
     "alias": [
       "/amp/en"
-    ],
-    "_name": "_e0301840"
+    ]
   },
   {
     "name": "forgotPassword___it",
@@ -62,8 +57,7 @@
     "meta": {},
     "alias": [
       "/amp/forgotPassword"
-    ],
-    "_name": "_606eb5c0"
+    ]
   },
   {
     "name": "laser___it",
@@ -73,8 +67,7 @@
     "meta": {},
     "alias": [
       "/amp/laser"
-    ],
-    "_name": "_1f6ee559"
+    ]
   },
   {
     "name": "lingue___it",
@@ -84,8 +77,7 @@
     "meta": {},
     "alias": [
       "/amp/lingue"
-    ],
-    "_name": "_4a069430"
+    ]
   },
   {
     "name": "login___it",
@@ -95,8 +87,7 @@
     "meta": {},
     "alias": [
       "/amp/login"
-    ],
-    "_name": "_598f96f7"
+    ]
   },
   {
     "name": "logout___it",
@@ -106,8 +97,7 @@
     "meta": {},
     "alias": [
       "/amp/logout"
-    ],
-    "_name": "_2574506c"
+    ]
   },
   {
     "name": "lp___it",
@@ -117,8 +107,7 @@
     "meta": {},
     "alias": [
       "/amp/lp"
-    ],
-    "_name": "_c25c1f34"
+    ]
   },
   {
     "name": "mai+xl___it",
@@ -128,8 +117,7 @@
     "meta": {},
     "alias": [
       "/amp/mai+xl"
-    ],
-    "_name": "_756fcc68"
+    ]
   },
   {
     "name": "puliziaevo___it",
@@ -139,8 +127,7 @@
     "meta": {},
     "alias": [
       "/amp/puliziaevo"
-    ],
-    "_name": "_17cc7a30"
+    ]
   },
   {
     "name": "register___it",
@@ -150,8 +137,7 @@
     "meta": {},
     "alias": [
       "/amp/register"
-    ],
-    "_name": "_0b020a85"
+    ]
   },
   {
     "name": "test___it",
@@ -161,8 +147,7 @@
     "meta": {},
     "alias": [
       "/amp/test"
-    ],
-    "_name": "_be82f418"
+    ]
   },
   {
     "name": "admin-lp___en",
@@ -172,8 +157,7 @@
     "meta": {},
     "alias": [
       "/amp/en/admin-lp"
-    ],
-    "_name": "_059f7124"
+    ]
   },
   {
     "name": "biolifting___en",
@@ -183,8 +167,7 @@
     "meta": {},
     "alias": [
       "/amp/en/biolifting"
-    ],
-    "_name": "_2a57c35e"
+    ]
   },
   {
     "name": "card___en",
@@ -194,8 +177,7 @@
     "meta": {},
     "alias": [
       "/amp/en/card"
-    ],
-    "_name": "_36c9651c"
+    ]
   },
   {
     "name": "dashboard___en",
@@ -205,8 +187,7 @@
     "meta": {},
     "alias": [
       "/amp/en/dashboard"
-    ],
-    "_name": "_fde94cbc"
+    ]
   },
   {
     "name": "forgotPassword___en",
@@ -216,8 +197,7 @@
     "meta": {},
     "alias": [
       "/amp/en/forgotPassword"
-    ],
-    "_name": "_606eb5c0"
+    ]
   },
   {
     "name": "laser___en",
@@ -227,8 +207,7 @@
     "meta": {},
     "alias": [
       "/amp/en/laser"
-    ],
-    "_name": "_1f6ee559"
+    ]
   },
   {
     "name": "lingue___en",
@@ -238,8 +217,7 @@
     "meta": {},
     "alias": [
       "/amp/en/lingue"
-    ],
-    "_name": "_4a069430"
+    ]
   },
   {
     "name": "login___en",
@@ -249,8 +227,7 @@
     "meta": {},
     "alias": [
       "/amp/en/login"
-    ],
-    "_name": "_598f96f7"
+    ]
   },
   {
     "name": "logout___en",
@@ -260,8 +237,7 @@
     "meta": {},
     "alias": [
       "/amp/en/logout"
-    ],
-    "_name": "_2574506c"
+    ]
   },
   {
     "name": "lp___en",
@@ -271,8 +247,7 @@
     "meta": {},
     "alias": [
       "/amp/en/lp"
-    ],
-    "_name": "_c25c1f34"
+    ]
   },
   {
     "name": "mai+xl___en",
@@ -282,8 +257,7 @@
     "meta": {},
     "alias": [
       "/amp/en/mai+xl"
-    ],
-    "_name": "_756fcc68"
+    ]
   },
   {
     "name": "puliziaevo___en",
@@ -293,8 +267,7 @@
     "meta": {},
     "alias": [
       "/amp/en/puliziaevo"
-    ],
-    "_name": "_17cc7a30"
+    ]
   },
   {
     "name": "register___en",
@@ -304,8 +277,7 @@
     "meta": {},
     "alias": [
       "/amp/en/register"
-    ],
-    "_name": "_0b020a85"
+    ]
   },
   {
     "name": "test___en",
@@ -315,8 +287,7 @@
     "meta": {},
     "alias": [
       "/amp/en/test"
-    ],
-    "_name": "_be82f418"
+    ]
   },
   {
     "name": "index___it",
@@ -326,7 +297,6 @@
     "meta": {},
     "alias": [
       "/amp/"
-    ],
-    "_name": "_e0301840"
+    ]
   }
 ]

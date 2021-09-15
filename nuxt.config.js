@@ -151,11 +151,17 @@ export default {
                 iso: 'it-IT',
                 file: 'it-IT.js'
             },
-            {
+            /*{
                 name: 'English',
                 code: 'en',
                 iso: 'en-US',
                 file: 'en-US.js'
+            },*/
+            {
+                name: 'English',
+                code: 'en',
+                iso: 'it-IT',
+                file: 'it-IT.js'
             },
 
             ],

@@ -84,30 +84,31 @@
     src: url('Montserrat-ExtraBold.ttf') format('truetype');
 }
 
-@font-face {
+
+/*@font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    src: url('Montserrat-Light.ttf') format('truetype');
+    src: url('Montserrat-Light.ttf2') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url('Montserrat-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('Montserrat-Regular.ttf') format('truetype');
+    src: url('Montserrat-Medium.ttf2') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    src: url('Montserrat-SemiBold.ttf') format('truetype');
+    src: url('Montserrat-SemiBold.ttf2') format('truetype');
+}*/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Montserrat-Regular.ttf') format('truetype');
 }

@@ -10,7 +10,7 @@
         <!--  box Login -->
         <div class="grid grid-cols-1">
           <!-- Freccia back -->
-          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step < 3">
+          <div class="cursor-pointer mt-20" @click="UnStep()" v-if="step < 4">
             <svg
               width="19"
               height="19"
@@ -42,8 +42,8 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page1.content')"
-                  id="step1Content"
-                  name="step1Content"
+                  id="name"
+                  name="name"
                   type="name"
                   v-model="form.name"
                   :errorMsg="error_name"
@@ -76,8 +76,8 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page2.content')"
-                  id="step2Content"
-                  name="step2Content"
+                  id="telephone"
+                  name="telephone"
                   type="tel"
                   v-model="form.number"
                   :errorMsg="error_number"
@@ -126,9 +126,9 @@
               <div class="mt-11">
                 <ginput
                   :text="$t('lp.page3.content')"
-                  id="step3Content"
-                  name="step3Content"
-                  type="city"
+                  id="city"
+                  name="city"
+                  type="text"
                   v-model="form.city"
                   :errorMsg="error_city"
                   ref="step3Input"
@@ -311,9 +311,9 @@ export default {
     };
   }, //data
   mounted() {
-    setTimeout(() => {
-      this.$refs.step1Input.$el.firstChild.focus();
-    }, 600);
+    //setTimeout(() => {
+    // this.$refs.step1Input.$el.firstChild.focus();
+    //}, 600);
   }, //mounted
   created() {
     //Ricezione evento Enter Event
@@ -327,7 +327,6 @@ export default {
         console.log(response.ip);
       });
     */
-
   }, //created
   computed: {
     responsive() {
@@ -355,14 +354,16 @@ export default {
         } else {
           this.error_name = "";
           this.$refs.carouselLP.next();
-          setTimeout(() => {
-            this.$refs.step2Input.$el.firstChild.focus();
-          }, 600);
+          //  setTimeout(() => {
+          //    this.$refs.step2Input.$el.firstChild.focus();
+          //  }, 600);
           this.step += 1;
         }
 
         /*Step 2*/
       } else if (this.step == 2) {
+        var re = new RegExp("^[0-9]*$");
+        console.log(re.test(this.form.number));
         if (
           this.form.number == "" ||
           this.form.number == null ||
@@ -370,12 +371,13 @@ export default {
         ) {
           this.error_number = "Inserire il Numero";
         } else {
-          this.error_number = "";
-          this.step += 1;
-          this.$refs.carouselLP.next();
-          setTimeout(() => {
-            this.$refs.step3Input.$el.firstChild.focus();
-          }, 600);
+          if (re.test(this.form.number)) {
+            this.error_number = "";
+            this.step += 1;
+            this.$refs.carouselLP.next();
+          } else {
+            this.error_number = "Numero non corretto";
+          }
         }
 
         /*Step 3*/

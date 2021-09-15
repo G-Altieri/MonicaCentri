@@ -37,7 +37,9 @@
               {{ utente.name }}
             </td>
             <td class="px-4 py-3" @click="copyToClipBoard(utente.number)">
+              <a :href="'tel:+39'+utente.number"> 
               {{ utente.number }}
+              </a>
             </td>
             <td class="px-4 py-3" @click="copyToClipBoard(utente.city)">
               {{ utente.city }}

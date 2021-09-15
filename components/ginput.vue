@@ -9,6 +9,7 @@
       :id="id"
       :type="type"
       :name="name"
+    
       class="
         h-full
         w-full
@@ -113,6 +114,7 @@ export default {
       type: String,
       default: "",
     },
+   
   },
   mounted() {},
 };

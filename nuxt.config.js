@@ -27,26 +27,29 @@ export default {
 
         },
         {
-            property:"og:description",
+            property: "og:description",
             content: 'Non il solito centro estetico.'
 
         },
         {
-            property:"og:title",
+            property: "og:title",
             content: 'Monica Centri'
 
         },
         {
-            name:"description",
+            name: "description",
             content: 'Non il solito centro estetico.'
 
         },
         {
-            name:"title",
+            name: "title",
             content: 'Monica Centri'
 
         },
-       
+        {
+            name: "google-site-verification", content: "q9GpriJR7UqD9iv7GtaJmFxC5wK1k0-kvwDTYWT0Y5c"
+        },
+
         ],
         script: [{
             // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
@@ -68,17 +71,17 @@ export default {
         },
         {
             rel: 'apple-touch-icon',
-            sizes:"76x76",
+            sizes: "76x76",
             href: '/logo.png'
         },
         {
             rel: 'apple-touch-icon',
-            sizes:"120x120",
+            sizes: "120x120",
             href: '/logo.png'
         },
         {
             rel: 'apple-touch-icon',
-            sizes:"152x152",
+            sizes: "152x152",
             href: '/logo.png'
         },
         {

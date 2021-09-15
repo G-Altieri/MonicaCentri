@@ -13,16 +13,16 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_0d2f12d1 from 'nuxt_plugin_plugin_0d2f12d1' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_amp_2be57126 from 'nuxt_plugin_amp_2be57126' // Source: .\\amp.js (mode: 'all')
-import nuxt_plugin_pluginrouting_5623c345 from 'nuxt_plugin_pluginrouting_5623c345' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_3f24764a from 'nuxt_plugin_pluginmain_3f24764a' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_axios_05d77874 from 'nuxt_plugin_axios_05d77874' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_googleanalytics_58d8619c from 'nuxt_plugin_googleanalytics_58d8619c' // Source: .\\google-analytics.js (mode: 'client')
-import nuxt_plugin_animejsModule_9a1bd8fe from 'nuxt_plugin_animejsModule_9a1bd8fe' // Source: .\\animejsModule.js (mode: 'all')
+import nuxt_plugin_plugin_58fb42e8 from 'nuxt_plugin_plugin_58fb42e8' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_amp_bb58f506 from 'nuxt_plugin_amp_bb58f506' // Source: .\\amp.js (mode: 'all')
+import nuxt_plugin_pluginrouting_0b06c964 from 'nuxt_plugin_pluginrouting_0b06c964' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_6a9cc2e1 from 'nuxt_plugin_pluginmain_6a9cc2e1' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_axios_cddc59ea from 'nuxt_plugin_axios_cddc59ea' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_googleanalytics_53f47f8a from 'nuxt_plugin_googleanalytics_53f47f8a' // Source: .\\google-analytics.js (mode: 'client')
+import nuxt_plugin_animejsModule_20e031d0 from 'nuxt_plugin_animejsModule_20e031d0' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueMq_3319afd8 from 'nuxt_plugin_vueMq_3319afd8' // Source: ..\\plugins\\vueMq (mode: 'all')
 import nuxt_plugin_vueslickcarousel_1c6345a5 from 'nuxt_plugin_vueslickcarousel_1c6345a5' // Source: ..\\plugins\\vue-slick-carousel.js (mode: 'all')
-import nuxt_plugin_auth_5ec1523c from 'nuxt_plugin_auth_5ec1523c' // Source: .\\auth.js (mode: 'all')
+import nuxt_plugin_auth_93d46e76 from 'nuxt_plugin_auth_93d46e76' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -232,32 +232,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_0d2f12d1 === 'function') {
-    await nuxt_plugin_plugin_0d2f12d1(app.context, inject)
+  if (typeof nuxt_plugin_plugin_58fb42e8 === 'function') {
+    await nuxt_plugin_plugin_58fb42e8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_amp_2be57126 === 'function') {
-    await nuxt_plugin_amp_2be57126(app.context, inject)
+  if (typeof nuxt_plugin_amp_bb58f506 === 'function') {
+    await nuxt_plugin_amp_bb58f506(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_5623c345 === 'function') {
-    await nuxt_plugin_pluginrouting_5623c345(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_0b06c964 === 'function') {
+    await nuxt_plugin_pluginrouting_0b06c964(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_3f24764a === 'function') {
-    await nuxt_plugin_pluginmain_3f24764a(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_6a9cc2e1 === 'function') {
+    await nuxt_plugin_pluginmain_6a9cc2e1(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_05d77874 === 'function') {
-    await nuxt_plugin_axios_05d77874(app.context, inject)
+  if (typeof nuxt_plugin_axios_cddc59ea === 'function') {
+    await nuxt_plugin_axios_cddc59ea(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_googleanalytics_58d8619c === 'function') {
-    await nuxt_plugin_googleanalytics_58d8619c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_53f47f8a === 'function') {
+    await nuxt_plugin_googleanalytics_53f47f8a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_animejsModule_9a1bd8fe === 'function') {
-    await nuxt_plugin_animejsModule_9a1bd8fe(app.context, inject)
+  if (typeof nuxt_plugin_animejsModule_20e031d0 === 'function') {
+    await nuxt_plugin_animejsModule_20e031d0(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueMq_3319afd8 === 'function') {
@@ -268,8 +268,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_vueslickcarousel_1c6345a5(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_auth_5ec1523c === 'function') {
-    await nuxt_plugin_auth_5ec1523c(app.context, inject)
+  if (typeof nuxt_plugin_auth_93d46e76 === 'function') {
+    await nuxt_plugin_auth_93d46e76(app.context, inject)
   }
 
   // Lock enablePreview in context

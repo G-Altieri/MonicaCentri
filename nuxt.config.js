@@ -14,38 +14,38 @@ export default {
             lang: 'it'
         },
         meta: [{
-            charset: 'utf-8'
-        },
-        {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1'
-        },
-        {
-            hid: 'description',
-            name: 'description',
-            content: ''
-        }
+                charset: 'utf-8'
+            },
+            {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1'
+            },
+            {
+                hid: 'description',
+                name: 'description',
+                content: ''
+            }
         ],
         script: [{
-            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-            //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-            //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+                //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
 
-        },
+            },
 
         ],
 
         link: [{
-            rel: 'icon',
-            type: 'image/x-icon',
-            href: '/favicon.svg'
-        },
-        {
-            rel: 'stylesheet',
-            // href: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
-            //href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.4.0/mdb.rtl.min.css'
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: '/favicon.svg'
+            },
+            {
+                rel: 'stylesheet',
+                // href: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
+                //href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.4.0/mdb.rtl.min.css'
 
-        },
+            },
 
 
 
@@ -102,17 +102,17 @@ export default {
         ['nuxt-i18n', {
             lazy: true,
             locales: [{
-                name: 'Italiano',
-                code: 'it',
-                iso: 'it-IT',
-                file: 'it-IT.js'
-            },
-            {
-                name: 'English',
-                code: 'en',
-                iso: 'en-US',
-                file: 'en-US.js'
-            },
+                    name: 'Italiano',
+                    code: 'it',
+                    iso: 'it-IT',
+                    file: 'it-IT.js'
+                },
+                {
+                    name: 'English',
+                    code: 'en',
+                    iso: 'en-US',
+                    file: 'en-US.js'
+                },
 
             ],
             langDir: 'lang/',
@@ -128,11 +128,11 @@ export default {
     /*Amp Modules Options */
     amp: {
         // Options
-      },
+    },
 
     /*Impostazioni Google Analytics*/
     googleAnalytics: {
-        id: 'G-V34VSD554J'
+        id: '286478103'
     },
 
     //*Impostazioni Auth */

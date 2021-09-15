@@ -52,6 +52,7 @@
             alt=""
             width="100%"
             height="100%"
+            loading="lazy"
           />
         </nuxt-link>
       </div>
@@ -95,6 +96,7 @@
                   src="~/assets/img/home/box/laser.png"
                   alt="laser"
                   class="BoxHomeLaser"
+                   loading="lazy"
                 />
               </div>
             </nuxt-link>
@@ -110,7 +112,7 @@
                   {{ $t("navBuy.biolifting") }}
                 </h4>
                 <img
-                  src="~/assets/img/home/box/boxBiolifting.jpg"
+                  src="~/assets/img/home/box/boxBiolifting.webp"
                   alt="laser"
                   class="BoxHomeBiolifting"
                   style="
@@ -137,7 +139,8 @@
                   {{ $t("navBuy.puliziaevo") }}
                 </h4>
                 <img
-                  src="~/assets/img/home/box/boxPuliziaEvo.jpg"
+                 loading="lazy"
+                  src="~/assets/img/home/box/boxPuliziaEvo.webp"
                   alt="pulizia evolution"
                   class="BoxHomePuliziaEvo"
                   style="
@@ -162,6 +165,7 @@
                 {{ $t("navBuy.maipiuxl") }}
               </h4> -->
                 <img
+                 loading="lazy"
                   src="~/assets/img/home/box/mai+xl2.svg"
                   alt="maipiuxl"
                   class="BoxHomeMaipiuxl"
@@ -208,6 +212,7 @@
                 :text="$t('review.text4')"
                 name="Domenica Albanese"
                 img="Domenica Albanese"
+                :webp="true"
               ></clientReview>
               <clientReview
                 class=""
@@ -264,6 +269,7 @@
           <!-- Img Monica -->
           <div class="imgMonica mx-auto mb-12" v-if="pc">
             <img
+             loading="lazy"
               src="~/assets/img/home/monica.png"
               class="mx-auto"
               width="100%"
@@ -272,6 +278,7 @@
           </div>
           <div class="imgMonica mx-auto mb-12" v-else>
             <img
+             loading="lazy"
               src="~/assets/img/home/onlyMonica.png"
               class="mx-auto"
               width="450px"

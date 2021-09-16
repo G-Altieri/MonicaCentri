@@ -28,6 +28,7 @@ export default {
         nascondiVideo: "Nascondi il video",
         contattaci: "Contattaci",
         contattaciwa: "Scrivici su whatapp",
+        contentConsulenza:"Richiedi una consulenza totalmente gratuita!",
     },
     laser: {
         info: {

@@ -16,7 +16,6 @@
       ></video> -->
     </div>
 
-
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center text-4xl">
@@ -45,7 +44,7 @@
     <!-- Bg-Header -->
     <div class="bg-header">
       <!-- Box Carta con render -->
-      <div class="box-card z-20" @click="test()" >
+      <div class="box-card z-20" @click="test()">
         <nuxt-link :to="localePath('/card')">
           <img
             class="imgRenderCarta2"
@@ -193,131 +192,24 @@
       </div>
       <!-- Container Body -->
 
-      <!-- Bg recensioni clienti con titolo -->
-      <div class="clientsReviewsHome">
-        <div class="TitleClientsReviews z-20 text-2xl sm:text-4xl md:text-5xl">
-          {{ $t("header.cosa") }}
-        </div>
-
-        <!-- box recensioni clienti -->
-        <div class="containerReviews" style="z-index: 2">
-          <!-- Carosello Review Clienti -->
-          <div class="mx-auto mt-12 text-black">
-            <VueSlickCarousel v-bind="settings">
-              <clientReview
-                class=""
-                :text="$t('review.text1')"
-                name="Umberto Giuliani"
-                img="Umberto Giuliani"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text2')"
-                name="Gianrocco Reale"
-                img="Gianrocco Reale"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text3')"
-                name="Donatella Longo"
-                img="Donatella Longo"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text4')"
-                name="Domenica Albanese"
-                img="Domenica Albanese"
-                :webp="true"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text5')"
-                name="Chiara Battista"
-                img="Chiara Battista"
-              ></clientReview>
-              <clientReview
-                class=""
-                :text="$t('review.text6')"
-                name="Annalisa Bucciarelli"
-                img="Annalisa Bucciarelli"
-              ></clientReview>
-            </VueSlickCarousel>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bg Header Sezione Monica-->
+      <!-- COnsulenza Gratuita -->
       <div
-        class="bg_illustrationContainer relative grid mt-40"
-        :style="
-          'margin-top:' + topPostReview + '; transform: translateY(-1px);'
-        "
+        class="mt-24 relative grid mx-auto flex items-center"
+        style="background: #af384f; width: 100%; height: 180px"
       >
-        <!-- Banner 1 -->
-        <div class="w-full borderBanner"></div>
-        <!--// Banner 1 -->
-        <!--Container MOnica -->
-        <div class="containerMonica transform1pxYZ">
-          <!--title -->
-          <div class="titleMonica p-8">Monica Sciascia</div>
-          <!-- Onda Svg Img Monica 
-          <div>
-            <svg
-              width="100%"
-              height="auto"
-              viewBox="0 0 375 158"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M387.337 88.6911L389.327 115.69L314.954 105.081L106.739 131.706L-55.8983 109.391L-61.5456 32.7899C131.987 196.511 289.721 40.8949 387.337 88.6911Z"
-                fill="#AF384F"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M188.637 128.526C252.488 115.692 315.109 103.106 389.988 124.654L389.146 113.236C319.461 93.1824 269.166 101.878 215.808 111.103C146.372 123.107 71.7485 136.009 -57.5425 87.6207L-54.933 123.016C41.2386 158.151 115.739 143.177 188.637 128.526Z"
-                fill="#D16A7D"
-              />
-            </svg>
-          </div>-->
-          <!-- Img Monica -->
-          <div class="imgMonica mx-auto mb-12" v-if="pc">
-            <img
-              loading="lazy"
-              src="~/assets/img/home/monica.png"
-              class="mx-auto"
-              width="100%"
-              height="auto"
-              alt="Monica Sciscia"
-            />
-          </div>
-          <div class="imgMonica mx-auto mb-12" v-else>
-            <img
-              loading="lazy"
-              src="~/assets/img/home/onlyMonica.png"
-              class="mx-auto"
-              width="450px"
-              alt="Monica Sciscia"
-            />
-          </div>
-          <!--// Img Monica -->
-          <!-- Content Monica -->
-          <div class="contentMonica p-8" style="max-width: 620px; margin: auto">
-            {{ $t("home.contentMonica") }}
-          </div>
-          <br />
-          <!-- Button guarda Video -->
-          <div
-            class="mx-auto my-16 cursor-pointer"
-            @click="btnvideo = !btnvideo"
-            v-if="!btnvideo"
-          >
-            <!-- <nuxt-link :to="localePath('/lp')"> -->
+        <!-- Content -->
+        <div
+          class="text-white font-semibold text-center p-2 text-2xl mx-auto mt-2"
+          style="width: 320px;"
+        >
+          {{ $t("home.contentConsulenza") }}
+        </div>
+        <!-- Button -->
+        <div class="mx-auto mb-6">
+          <nuxt-link :to="localePath('/lp')">
             <div
               class="
-                btnVideo
-                text-white
+                text-red
                 p-2
                 px-3
                 font-bold
@@ -326,56 +218,177 @@
                 w-max
                 btnShadow
                 duration-300
-                mx-auto
               "
-              style="
-                background: #af384f;
-
-                border-radius: 80px;
-              "
+              style="background: white; border-radius: 25px"
             >
-              {{ $t("laser.info.btnVideo") }}
+              {{ $t("home.contattaci") }}
             </div>
-            <!-- </nuxt-link> -->
-          </div>
-
-          <!-- Frame Video  -->
-          <div v-else class="my-6">
-            <iframe
-              class="mx-auto"
-              width="300px"
-              height="540px"
-              src="https://www.youtube.com/embed/3nkYsn4GHgU?rel=0"
-              title="Chi è Monica Sciascia?"
-              frameborder="0"
-              playsinline="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <div
-              class="
-                text-md
-                font-light
-                mx-auto
-                cursor-pointer
-                text-red text-center
-                my-4
-              "
-              @click="btnvideo = !btnvideo"
-            >
-              {{ $t("home.nascondiVideo") }}
-            </div>
-          </div>
-          <!-- Frame Video ////**** */ -->
-
-          <!--//Content Monica -->
-          <!--//title -->
+          </nuxt-link>
         </div>
-        <!--Banner 2 -->
-        <div class="w-full borderBanner"></div>
-        <!--//Container MOnica -->
-        <!--// Banner 2 -->
+      </div>
+      <!-- Consulenza Gratuita -->
 
+      <!-- Monica Storia Exsperienz -->
+      <!--Container MOnica -->
+      <div class="containerMonica">
+        <!--title -->
+        <div class="titleMonica p-8">Monica Sciascia</div>
+        <!-- Img Monica -->
+        <div class="imgMonica mx-auto mb-12" v-if="pc">
+          <img
+            loading="lazy"
+            src="~/assets/img/home/monica.png"
+            class="mx-auto"
+            width="100%"
+            height="auto"
+            alt="Monica Sciscia"
+          />
+        </div>
+        <div class="imgMonica mx-auto mb-12" v-else>
+          <img
+            loading="lazy"
+            src="~/assets/img/home/onlyMonica.png"
+            class="mx-auto"
+            width="450px"
+            alt="Monica Sciscia"
+          />
+        </div>
+        <!--// Img Monica -->
+        <!-- Content Monica -->
+        <div class="contentMonica p-8" style="max-width: 620px; margin: auto">
+          {{ $t("home.contentMonica") }}
+        </div>
+        <br />
+        <!-- Button guarda Video -->
+        <div
+          class="mx-auto mt-4 pb-12 cursor-pointer"
+          @click="btnvideo = !btnvideo"
+          v-if="!btnvideo"
+        >
+          <!-- <nuxt-link :to="localePath('/lp')"> -->
+          <div
+            class="
+              btnVideo
+              text-white
+              p-2
+              px-3
+              font-bold
+              uppercase
+              text-sm
+              w-max
+              btnShadow
+              duration-300
+              mx-auto
+            "
+            style="
+              background: #af384f;
+
+              border-radius: 80px;
+            "
+          >
+            {{ $t("laser.info.btnVideo") }}
+          </div>
+          <!-- </nuxt-link> -->
+        </div>
+
+        <!-- Frame Video  -->
+        <div v-else class="my-6">
+          <iframe
+            class="mx-auto"
+            width="300px"
+            height="540px"
+            src="https://www.youtube.com/embed/3nkYsn4GHgU?rel=0"
+            title="Chi è Monica Sciascia?"
+            frameborder="0"
+            playsinline="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div
+            class="
+              text-md
+              font-light
+              mx-auto
+              cursor-pointer
+              text-red text-center
+              my-4
+            "
+            @click="btnvideo = !btnvideo"
+          >
+            {{ $t("home.nascondiVideo") }}
+          </div>
+        </div>
+        <!-- Frame Video ////**** */ -->
+
+        <!--//Content Monica -->
+        <!-- Monica Storia -->
+      </div>
+
+      <!-- Cosa dicono di noi -->
+      <div
+        class="text-center grid mx-auto flex items-center"
+        style="width: 100%; height: 100px; background: #d16a7d"
+      >
+        <div class="text-white z-20 text-2xl sm:text-4xl md:text-5xl">
+          {{ $t("header.cosa") }}
+        </div>
+      </div>
+
+      <!-- box recensioni clienti -->
+      <div class="containerReviews" style="z-index: 2">
+        <!-- Carosello Review Clienti -->
+        <div class="mx-auto mt-0 text-black">
+          <VueSlickCarousel v-bind="settings">
+            <clientReview
+              class=""
+              :text="$t('review.text1')"
+              name="Umberto Giuliani"
+              img="Umberto Giuliani"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text2')"
+              name="Gianrocco Reale"
+              img="Gianrocco Reale"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text3')"
+              name="Donatella Longo"
+              img="Donatella Longo"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text4')"
+              name="Domenica Albanese"
+              img="Domenica Albanese"
+              :webp="true"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text5')"
+              name="Chiara Battista"
+              img="Chiara Battista"
+            ></clientReview>
+            <clientReview
+              class=""
+              :text="$t('review.text6')"
+              name="Annalisa Bucciarelli"
+              img="Annalisa Bucciarelli"
+            ></clientReview>
+          </VueSlickCarousel>
+        </div>
+      </div>
+
+      <!-- Bg Header Sezione Monica
+        :style="
+          'margin-top:' + topPostReview + '; transform: translateY(-1px);'
+        "
+      
+      -->
+      <div
+        class="relative grid mt-0"
+      >
         <!-- Sezione Contatti -->
         <div class="grid grid-rows-1 w-full">
           <!-- Icone Social -->
@@ -575,7 +588,7 @@
         <!-- Sezione Contatti//**** */ -->
       </div>
       <!-- div generale -->
-      <foter style="transform: translateY(500px)" :home="true" />
+      <foter style="" :home="true" />
     </div>
     <!-- header grid -->
   </div>
@@ -643,10 +656,10 @@ export default {
       window.scrollBy({ top: 200, left: 0, behavior: "smooth" });
     },
 
-test(){
-  console.log("asd");
-  this.$gtag('Rocco', 'AZZ', {})
-},
+    test() {
+      console.log("asd");
+      this.$gtag("Rocco", "AZZ", {});
+    },
 
     copyEmail() {
       //Creating textarea element
@@ -791,20 +804,10 @@ test(){
   /* top: 2280px;*/
 }
 
-.TitleClientsReviews {
-  color: #af384f;
-  position: relative;
-  width: 100%;
-  top: 50%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
 .containerReviews {
   position: relative;
   width: 95%;
-  top: 40vh; /*450px*/
+  /* top: 40vh; /*450px*/
   left: 50%;
   transform: translateX(-50%);
 }
@@ -863,9 +866,7 @@ test(){
   top: 35px;
 }
 
-.bg_illustrationContainer {
-  top: 500px;
-}
+
 .containerMonica {
   background-color: #ffd2d2;
   width: 100%;

@@ -16,6 +16,7 @@
       ></video> -->
     </div>
 
+
     <!-- Div header home page -->
     <div class="bgred flex items-center grid">
       <h1 class="text-white text-center text-4xl">
@@ -44,7 +45,7 @@
     <!-- Bg-Header -->
     <div class="bg-header">
       <!-- Box Carta con render -->
-      <div class="box-card z-20">
+      <div class="box-card z-20" @click="test()" >
         <nuxt-link :to="localePath('/card')">
           <img
             class="imgRenderCarta2"
@@ -641,6 +642,11 @@ export default {
       console.log("asd");
       window.scrollBy({ top: 200, left: 0, behavior: "smooth" });
     },
+
+test(){
+  console.log("asd");
+  this.$gtag('Rocco', 'AZZ', {})
+},
 
     copyEmail() {
       //Creating textarea element

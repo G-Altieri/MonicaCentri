@@ -40,6 +40,8 @@
             alt=""
             class="w-16 h-16 bg-trasparent rounded-full"
             loading="lazy"
+            width="100%"
+            height="100%"
           />
         </div>
         <!-- nome utente profilo -->

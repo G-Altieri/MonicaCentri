@@ -170,6 +170,8 @@
                   alt="maipiuxl"
                   class="BoxHomeMaipiuxl"
                   style="transform: scale(1.005)"
+                  width="100%"
+                  height="100%"
                 />
               </div>
             </nuxt-link>
@@ -273,6 +275,7 @@
               src="~/assets/img/home/monica.png"
               class="mx-auto"
               width="100%"
+              height="auto"
               alt="Monica Sciscia"
             />
           </div>
@@ -490,7 +493,7 @@
               "
             >
               <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A"  target="_blank">
-                <img src="~/assets/img/home/mapsVasto.jpg" alt="Maps Vasto" />
+                <img src="~/assets/img/home/mapsVasto.jpg" alt="Maps Vasto" width="100%" height="250" />
               </a>
             </div>
             <!-- Lentella -->
@@ -503,7 +506,7 @@
                 border-top-width: 3px;
               "
             >
-              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"  target="_blank">
+              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"  target="_blank" width="100%" height="250">
                 <img
                   src="~/assets/img/home/mapsLentella.jpg"
                   alt="Maps Lentella"

@@ -37,6 +37,7 @@
                 class="h-10 w-10 text-center justify-self-center logo-centraln"
                 src="~/assets/img/navbar/logo.svg"
                 alt="Logo Monica Centri"
+                width="100%"
               />
             </div>
           </nuxt-link>

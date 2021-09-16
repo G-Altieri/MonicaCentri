@@ -1,16 +1,16 @@
 html,
 body {
     font-family: "Montserrat", sans-serif !important;
+    font-display: auto;
 }
 
-.slider-pages{
+.slider-pages {
     max-width: 600px;
-    margin: 0  auto;
+    margin: 0 auto;
     transform: translateX(-50%);
     left: 50%;
     position: relative;
 }
-
 
 a:hover {
     /*color: white !important;*/

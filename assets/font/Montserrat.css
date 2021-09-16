@@ -111,9 +111,34 @@
     src: url('Montserrat-SemiBold.ttf2') format('truetype');
 }*/
 
+
+/*
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     src: url('Montserrat-Regular.ttf') format('truetype');
+    font-display: auto;
+}
+
+*/
+
+
+/*
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('montserrat-regular.woff') format('woff');
+    font-display: auto;
+}
+
+*/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('montserrat-regular.woff2') format('woff2');
+    font-display: auto;
 }

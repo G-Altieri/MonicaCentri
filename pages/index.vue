@@ -329,7 +329,7 @@
         class="text-center grid mx-auto flex items-center"
         style="width: 100%; height: 100px; background: #d16a7d"
       >
-        <div class="text-white z-20 text-2xl sm:text-4xl md:text-5xl">
+        <div class=" font-semibold text-white z-20 text-2xl sm:text-4xl md:text-5xl">
           {{ $t("header.cosa") }}
         </div>
       </div>
@@ -523,7 +523,7 @@
                   src="~/assets/img/home/mapsVasto.jpg"
                   alt="Maps Vasto"
                   width="100%"
-                  height="250"
+                  height="100%"
                 />
               </a>
             </div>
@@ -542,7 +542,7 @@
                   src="~/assets/img/home/mapsLentella.jpg"
                   alt="Maps Lentella"
                   width="100%"
-                  height="250"
+                  height="100%"
                 />
               </a>
             </div>

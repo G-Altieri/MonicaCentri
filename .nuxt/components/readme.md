@@ -13,6 +13,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Ginput>` | `<ginput>` (components/ginput.vue)
 - `<InputLabel>` | `<input-label>` (components/inputLabel.vue)
 - `<MenuOverlay>` | `<menu-overlay>` (components/menuOverlay.vue)
-- `<Modal>` | `<modal>` (components/modal.vue)
 - `<Navbar>` | `<navbar>` (components/navbar.vue)
 - `<NavbarBuy>` | `<navbar-buy>` (components/navbarBuy.vue)

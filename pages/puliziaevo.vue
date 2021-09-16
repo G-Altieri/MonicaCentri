@@ -230,7 +230,7 @@
               {{ $t("puliziaevo.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("puliziaevo.illustration.one.content") }}
             </div>
@@ -356,7 +356,7 @@
               {{ $t("puliziaevo.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("puliziaevo.illustration.two.content") }}
             </div>
@@ -395,7 +395,7 @@
               {{ $t("puliziaevo.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("puliziaevo.illustration.three.content") }}
             </div>

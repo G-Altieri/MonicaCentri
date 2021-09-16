@@ -170,10 +170,6 @@ export default {
             defaultLocale: 'it',
         }],
 
-        //  'mdbvue/nuxt',
-
-        '@nuxtjs/amp',
-
         '@nuxtjs/google-gtag',
 
 

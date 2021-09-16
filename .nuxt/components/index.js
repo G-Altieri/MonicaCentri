@@ -5,7 +5,6 @@ export { default as Gbutton } from '../..\\components\\gbutton.vue'
 export { default as Ginput } from '../..\\components\\ginput.vue'
 export { default as InputLabel } from '../..\\components\\inputLabel.vue'
 export { default as MenuOverlay } from '../..\\components\\menuOverlay.vue'
-export { default as Modal } from '../..\\components\\modal.vue'
 export { default as Navbar } from '../..\\components\\navbar.vue'
 export { default as NavbarBuy } from '../..\\components\\navbarBuy.vue'
 
@@ -16,6 +15,5 @@ export const LazyGbutton = import('../..\\components\\gbutton.vue' /* webpackChu
 export const LazyGinput = import('../..\\components\\ginput.vue' /* webpackChunkName: "components/ginput" */).then(c => c.default || c)
 export const LazyInputLabel = import('../..\\components\\inputLabel.vue' /* webpackChunkName: "components/input-label" */).then(c => c.default || c)
 export const LazyMenuOverlay = import('../..\\components\\menuOverlay.vue' /* webpackChunkName: "components/menu-overlay" */).then(c => c.default || c)
-export const LazyModal = import('../..\\components\\modal.vue' /* webpackChunkName: "components/modal" */).then(c => c.default || c)
 export const LazyNavbar = import('../..\\components\\navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c)
 export const LazyNavbarBuy = import('../..\\components\\navbarBuy.vue' /* webpackChunkName: "components/navbar-buy" */).then(c => c.default || c)

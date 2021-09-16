@@ -201,7 +201,7 @@
               {{ $t("maipiuxl.illustration.one.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.one.content") }}
             </div>
@@ -275,7 +275,7 @@
               {{ $t("maipiuxl.illustration.two.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.two.content") }}
             </div>
@@ -329,7 +329,7 @@
               {{ $t("maipiuxl.illustration.three.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.three.content") }}
             </div>
@@ -451,7 +451,7 @@
               {{ $t("maipiuxl.illustration.four.title") }}
             </div>
             <div
-              class="text-pink font-medium mx-auto text-md text-center wMax-18"
+              class="text-pink font-semibold mx-auto text-md text-center wMax-18"
             >
               {{ $t("maipiuxl.illustration.four.content") }}
             </div>

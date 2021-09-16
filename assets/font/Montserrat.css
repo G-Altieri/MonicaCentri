@@ -129,7 +129,7 @@
     font-style: normal;
     font-weight: 600;
     src: url('montserrat-semibold.woff2') format('woff2'), url('montserrat-semibold.woff') format('woff'), url('Montserrat-SemiBold.ttf') format('truetype');
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -137,13 +137,13 @@
     font-style: normal;
     font-weight: 400;
     src: url('montserrat-regular.woff2') format('woff2'), url('montserrat-regular.woff') format('woff'), url('Montserrat-Regular.ttf') format('truetype');
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
+    font-display: block;
     src: url('montserrat-bold.woff2') format('woff2'), url('montserrat-bold.woff') format('woff'), url('Montserrat-Bold.ttf') format('truetype');
 }

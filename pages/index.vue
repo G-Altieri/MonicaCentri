@@ -49,7 +49,7 @@
           <img
             class="imgRenderCarta2"
             src="~/assets/img/home/render-carta.jpg"
-            alt=""
+            alt="Carta Premium"
             width="100%"
             height="100%"
             loading="lazy"
@@ -414,7 +414,7 @@
             <!-- Number 1 -->
             <div
               class="
-                font-medium
+                font-semibold
                 text-xl
                 my-4
                 cursor-point
@@ -427,7 +427,7 @@
             <!-- Number 2 -->
             <div
               class="
-                font-medium
+                font-semibold
                 text-xl
                 my-4
                 cursor-point
@@ -440,7 +440,7 @@
             <!-- Number email -->
             <div
               class="
-                font-medium
+                font-semibold
                 text-xl
                 mt-4
                 cursor-point
@@ -523,15 +523,12 @@
                 border-top-width: 3px;
               "
             >
-              <a
-                href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"
-                target="_blank"
-              >
+              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9" target="_blank">
                 <img
                   src="~/assets/img/home/mapsLentella.jpg"
                   alt="Maps Lentella"
                   width="100%"
-                height="250"
+                  height="250"
                 />
               </a>
             </div>

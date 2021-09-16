@@ -1,5 +1,5 @@
 {
-    "name": "MonicaCentri",
+    "name": "Monica Centri",
     "version": "1.0.0",
     "private": true,
     "scripts": {
@@ -15,7 +15,6 @@
         "@nuxtjs/google-gtag": "^1.0.4",
         "axios": "^0.21.1",
         "core-js": "^3.8.3",
-        "jquery": "^3.6.0",
         "nuxt": "^2.14.12",
         "nuxt-i18n": "^6.21.0",
         "vue-mq": "^1.0.1",

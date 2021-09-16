@@ -135,8 +135,8 @@ export default {
         //Anime js
         ['nuxt-animejs'],
 
-        //Google Analytics
-
+        //nuxt compressor
+        'nuxt-compress',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
@@ -176,7 +176,7 @@ export default {
 
         '@nuxtjs/google-gtag',
 
-        'nuxt-compress',
+
 
     ],
 

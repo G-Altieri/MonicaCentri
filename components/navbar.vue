@@ -38,6 +38,7 @@
                 src="~/assets/img/navbar/logo.svg"
                 alt="Logo Monica Centri"
                 width="100%"
+                height="100%"
               />
             </div>
           </nuxt-link>

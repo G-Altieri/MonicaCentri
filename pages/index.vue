@@ -111,19 +111,25 @@
                 <h4>
                   {{ $t("navBuy.biolifting") }}
                 </h4>
-                <img
-                  src="~/assets/img/home/box/boxBiolifting.webp"
-                  alt="laser"
-                  class="BoxHomeBiolifting"
-                  style="
-                    transform: translate(-12px, -35px);
-                    width: 300px;
-                    height: 300px;
-                    position: absolute;
-                    z-index: -1;
-                    border-radius: 14px;
-                  "
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="~/assets/img/home/box/boxBiolifting.webp"
+                  />
+                  <img
+                    src="~/assets/img/home/box/boxBiolifting.jpg"
+                    alt="biolifting"
+                    class="BoxHomeBiolifting"
+                    style="
+                      transform: translate(-12px, -35px);
+                      width: 300px;
+                      height: 300px;
+                      position: absolute;
+                      z-index: -1;
+                      border-radius: 14px;
+                    "
+                  />
+                </picture>
               </div>
             </div>
           </nuxt-link>
@@ -138,20 +144,26 @@
                 <h4>
                   {{ $t("navBuy.puliziaevo") }}
                 </h4>
-                <img
-                  loading="lazy"
-                  src="~/assets/img/home/box/boxPuliziaEvo.webp"
-                  alt="pulizia evolution"
-                  class="BoxHomePuliziaEvo"
-                  style="
-                    transform: translate(-20px, -53px);
-                    width: 300px;
-                    height: 300px;
-                    position: absolute;
-                    z-index: -1;
-                    border-radius: 14px;
-                  "
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="~/assets/img/home/box/boxPuliziaEvo.webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="~/assets/img/home/box/boxPuliziaEvo.jpg"
+                    alt="pulizia evolution"
+                    class="BoxHomePuliziaEvo"
+                    style="
+                      transform: translate(-20px, -53px);
+                      width: 300px;
+                      height: 300px;
+                      position: absolute;
+                      z-index: -1;
+                      border-radius: 14px;
+                    "
+                  />
+                </picture>
               </div>
             </div>
           </nuxt-link>
@@ -492,8 +504,13 @@
                 border-top-width: 3px;
               "
             >
-              <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A"  target="_blank">
-                <img src="~/assets/img/home/mapsVasto.jpg" alt="Maps Vasto" width="100%" height="250" />
+              <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A" target="_blank">
+                <img
+                  src="~/assets/img/home/mapsVasto.jpg"
+                  alt="Maps Vasto"
+                  width="100%"
+                  height="250"
+                />
               </a>
             </div>
             <!-- Lentella -->
@@ -506,10 +523,15 @@
                 border-top-width: 3px;
               "
             >
-              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"  target="_blank" width="100%" height="250">
+              <a
+                href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"
+                target="_blank"
+              >
                 <img
                   src="~/assets/img/home/mapsLentella.jpg"
                   alt="Maps Lentella"
+                  width="100%"
+                height="250"
                 />
               </a>
             </div>

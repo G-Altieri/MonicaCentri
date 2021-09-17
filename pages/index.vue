@@ -200,7 +200,7 @@
         <!-- Content -->
         <div
           class="text-white font-semibold text-center p-2 text-2xl mx-auto mt-2"
-          style="width: 320px;"
+          style="width: 320px"
         >
           {{ $t("home.contentConsulenza") }}
         </div>
@@ -241,7 +241,7 @@
             class="mx-auto"
             width="100%"
             height="auto"
-            alt="Monica Sciscia"
+            alt="Monica Sciascia"
           />
         </div>
         <div class="imgMonica mx-auto mb-12" v-else>
@@ -250,7 +250,7 @@
             src="~/assets/img/home/onlyMonica.png"
             class="mx-auto"
             width="450px"
-            alt="Monica Sciscia"
+            alt="Monica Sciascia"
           />
         </div>
         <!--// Img Monica -->
@@ -329,7 +329,9 @@
         class="text-center grid mx-auto flex items-center"
         style="width: 100%; height: 100px; background: #d16a7d"
       >
-        <div class=" font-semibold text-white z-20 text-2xl sm:text-4xl md:text-5xl">
+        <div
+          class="font-semibold text-white z-20 text-2xl sm:text-4xl md:text-5xl"
+        >
           {{ $t("header.cosa") }}
         </div>
       </div>
@@ -386,9 +388,7 @@
         "
       
       -->
-      <div
-        class="relative grid mt-0"
-      >
+      <div class="relative grid mt-0">
         <!-- Sezione Contatti -->
         <div class="grid grid-rows-1 w-full">
           <!-- Icone Social -->
@@ -506,58 +506,43 @@
             </a>
           </div>
 
+          <!-- Maps -->
+          <div class="text-red text-xl font-bold text-center my-2">
+            Le nostre Sedi
+          </div>
+
           <!--Maps Mobile -->
           <div class="" v-if="!tablet">
             <!-- Vasto -->
-            <div
-              class="w-full"
-              style="
-                height: 200px;
-                border-bottom-width: 3px;
-                border-color: #af384f;
-                border-top-width: 3px;
-              "
-            >
-              <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A" target="_blank">
-                <img
+            <a href="https://goo.gl/maps/vThDdXbFEzEKLxC4A" target="_blank">
+              <div class="w-full mapsIndexMobile" style="">
+                <!-- <img
                   src="~/assets/img/home/mapsVasto.jpg"
                   alt="Maps Vasto"
-                  width="100%"
+                  class="bg-cover"
                   height="100%"
-                />
-              </a>
-            </div>
+                /> -->
+              </div>
+            </a>
             <!-- Lentella -->
-            <div
-              class="w-full mt-4"
-              style="
-                height: 200px;
-                border-bottom-width: 3px;
-                border-color: #af384f;
-                border-top-width: 3px;
-              "
-            >
-              <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9" target="_blank">
-                <img
+            <a href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9" target="_blank">
+              <div class="w-full mt-4 mapsIndexMobile" style="">
+                <!-- <img
                   src="~/assets/img/home/mapsLentella.jpg"
                   alt="Maps Lentella"
-                  width="100%"
                   height="100%"
-                />
-              </a>
-            </div>
+                /> -->
+              </div>
+            </a>
           </div>
           <!-- Maps Tablet e PC -->
           <div v-else>
             <!-- Maps 1 Vasto -->
             <div class="my-4">
-              <div class="text-red text-xl font-bold text-center mb-4">
-                Le nostre Sedi
-              </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1613.781484724213!2d14.707024747132175!3d42.114146171597504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330dd829f451e95%3A0x85fc03ffee8a20a1!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631218877360!5m2!1sit!2sit"
                 width="100%"
-                height="200"
+                height="300px"
                 allowfullscreen=""
                 loading="lazy"
                 style="
@@ -572,7 +557,7 @@
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1110.6860100472036!2d14.677201325397194!3d41.99651782375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330c3c74e2a8b55%3A0xd1e82ab38ba62883!2sMonica%20Centri!5e0!3m2!1sit!2sit!4v1631305511159!5m2!1sit!2sit"
                 width="100%"
-                height="200"
+                height="300px"
                 allowfullscreen=""
                 loading="lazy"
                 style="
@@ -804,6 +789,31 @@ export default {
   /* top: 2280px;*/
 }
 
+.mapsIndexMobile {
+  background-image: url("~/assets/img/home/mapsVasto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  height: 200px;
+  border-bottom-width: 3px;
+  border-color: #af384f;
+  border-top-width: 3px;
+}
+.mapsIndexMobile2 {
+  background-image: url("~/assets/img/home/mapsVasto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  height: 200px;
+  border-bottom-width: 3px;
+  border-color: #af384f;
+  border-top-width: 3px;
+}
+
 .containerReviews {
   position: relative;
   width: 95%;
@@ -865,7 +875,6 @@ export default {
   right: -12px;
   top: 35px;
 }
-
 
 .containerMonica {
   background-color: #ffd2d2;

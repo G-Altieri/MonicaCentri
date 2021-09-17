@@ -56,7 +56,7 @@ export default {
                 // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
                 //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
                 //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
-
+                src:   '~/plugins/pixel.js',
             },
 
         ],

@@ -16,6 +16,11 @@ export default {
         meta: [{
                 charset: 'utf-8'
             },
+            
+            {
+                name:"facebook-domain-verification", content:"hvp0juxvk628ysiqdpbdu4zku0rd8m"
+
+            },
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no'

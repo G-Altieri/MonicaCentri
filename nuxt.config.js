@@ -13,6 +13,16 @@ export default {
         htmlAttrs: {
             lang: 'it'
         },
+        script: [{
+            // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+            //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
+            //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
+            src:   '~/plugins/pixel.js',
+            src:   '~/plugins/googleTagManager.js',
+
+        },
+
+    ],
         meta: [{
                 charset: 'utf-8'
             },
@@ -57,14 +67,7 @@ export default {
             },
 
         ],
-        script: [{
-                // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-                //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-                //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
-                src:   '~/plugins/pixel.js',
-            },
-
-        ],
+       
 
         link: [{
                 rel: 'icon',
@@ -272,12 +275,7 @@ export default {
         //local confing http://127.0.0.1:8000/api
 
     },
-    mdbvue: {
-        // icons: false, // FA5
-        roboto: false, // font Roboto
-        // css: false, // MDB CSS
-        bootstrap: false // Bootstrap CSS
-    },
+ 
 
     //**Barra Loading tra pagine */
     loading: {
@@ -334,11 +332,7 @@ export default {
     build: {
         //*Jquery  */
         plugins: [
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery',
-                'window.jQuery': 'jquery'
-            })
+          
         ]
     }, //build 
 }

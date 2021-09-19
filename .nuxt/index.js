@@ -13,15 +13,15 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_0d2f12d1 from 'nuxt_plugin_plugin_0d2f12d1' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_googlegtag_19040023 from 'nuxt_plugin_googlegtag_19040023' // Source: .\\google-gtag.js (mode: 'client')
-import nuxt_plugin_pluginrouting_5623c345 from 'nuxt_plugin_pluginrouting_5623c345' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_3f24764a from 'nuxt_plugin_pluginmain_3f24764a' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_axios_05d77874 from 'nuxt_plugin_axios_05d77874' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_animejsModule_9a1bd8fe from 'nuxt_plugin_animejsModule_9a1bd8fe' // Source: .\\animejsModule.js (mode: 'all')
+import nuxt_plugin_plugin_58fb42e8 from 'nuxt_plugin_plugin_58fb42e8' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_googletagmanager_982ad772 from 'nuxt_plugin_googletagmanager_982ad772' // Source: .\\google-tag-manager.js (mode: 'client')
+import nuxt_plugin_pluginrouting_0b06c964 from 'nuxt_plugin_pluginrouting_0b06c964' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_6a9cc2e1 from 'nuxt_plugin_pluginmain_6a9cc2e1' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_axios_cddc59ea from 'nuxt_plugin_axios_cddc59ea' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_animejsModule_20e031d0 from 'nuxt_plugin_animejsModule_20e031d0' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueMq_3319afd8 from 'nuxt_plugin_vueMq_3319afd8' // Source: ..\\plugins\\vueMq (mode: 'all')
 import nuxt_plugin_vueslickcarousel_1c6345a5 from 'nuxt_plugin_vueslickcarousel_1c6345a5' // Source: ..\\plugins\\vue-slick-carousel.js (mode: 'all')
-import nuxt_plugin_auth_5ec1523c from 'nuxt_plugin_auth_5ec1523c' // Source: .\\auth.js (mode: 'all')
+import nuxt_plugin_auth_93d46e76 from 'nuxt_plugin_auth_93d46e76' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -102,7 +102,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Monica Centri","htmlAttrs":{"lang":"it"},"script":[{"src":"~\u002Fplugins\u002FgoogleTagManager.js"},{"src":"https:\u002F\u002Fwww.googletagmanager.com\u002Fgtag\u002Fjs?id=G-V34VSD554J","async":true}],"meta":[{"charset":"utf-8"},{"name":"facebook-domain-verification","content":"hvp0juxvk628ysiqdpbdu4zku0rd8m"},{"name":"viewport","content":"width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"},{"name":"keywords","content":"centro, estetico, monica, lentella, vasto, bellezza, beauty, monica centri, centro estetico, crema, laser, epilazione, biolifting, depilazione, mai+xl, pulizia evoluition, monica sciscia,"},{"property":"og:description","content":"Non il solito centro estetico."},{"property":"og:title","content":"Monica Centri"},{"name":"description","content":"Non il solito centro estetico."},{"name":"title","content":"Monica Centri"},{"name":"google-site-verification","content":"q9GpriJR7UqD9iv7GtaJmFxC5wK1k0-kvwDTYWT0Y5c"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.svg"},{"rel":"apple-touch-icon","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"76x76","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"120x120","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"152x152","href":"\u002Flogo.png"},{"rel":"stylesheet"}],"style":[]},
+    head: {"title":"Monica Centri","htmlAttrs":{"lang":"it"},"script":[{},{"src":"\u002F\u002Fwww.googletagmanager.com\u002Fgtm.js?id=GTM-WRH6KZ5&l=dataLayer","async":true}],"meta":[{"charset":"utf-8"},{"name":"facebook-domain-verification","content":"hvp0juxvk628ysiqdpbdu4zku0rd8m"},{"name":"viewport","content":"width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"},{"name":"keywords","content":"centro, estetico, monica, lentella, vasto, bellezza, beauty, monica centri, centro estetico, crema, laser, epilazione, biolifting, depilazione, mai+xl, pulizia evoluition, monica sciscia,"},{"property":"og:description","content":"Non il solito centro estetico."},{"property":"og:title","content":"Monica Centri"},{"name":"description","content":"Non il solito centro estetico."},{"name":"title","content":"Monica Centri"},{"name":"google-site-verification","content":"q9GpriJR7UqD9iv7GtaJmFxC5wK1k0-kvwDTYWT0Y5c"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.svg"},{"rel":"apple-touch-icon","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"76x76","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"120x120","href":"\u002Flogo.png"},{"rel":"apple-touch-icon","sizes":"152x152","href":"\u002Flogo.png"},{"rel":"stylesheet"}],"style":[],"noscript":[{"hid":"gtm-noscript","innerHTML":"\u003Ciframe src=\"\u002F\u002Fwww.googletagmanager.com\u002Fns.html?id=GTM-WRH6KZ5&l=dataLayer\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"\u003E\u003C\u002Fiframe\u003E","pbody":true}],"__dangerouslyDisableSanitizersByTagID":{"gtm-noscript":["innerHTML"]}},
 
     store,
     router,
@@ -231,28 +231,28 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_0d2f12d1 === 'function') {
-    await nuxt_plugin_plugin_0d2f12d1(app.context, inject)
+  if (typeof nuxt_plugin_plugin_58fb42e8 === 'function') {
+    await nuxt_plugin_plugin_58fb42e8(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_googlegtag_19040023 === 'function') {
-    await nuxt_plugin_googlegtag_19040023(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googletagmanager_982ad772 === 'function') {
+    await nuxt_plugin_googletagmanager_982ad772(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_5623c345 === 'function') {
-    await nuxt_plugin_pluginrouting_5623c345(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_0b06c964 === 'function') {
+    await nuxt_plugin_pluginrouting_0b06c964(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_3f24764a === 'function') {
-    await nuxt_plugin_pluginmain_3f24764a(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_6a9cc2e1 === 'function') {
+    await nuxt_plugin_pluginmain_6a9cc2e1(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_05d77874 === 'function') {
-    await nuxt_plugin_axios_05d77874(app.context, inject)
+  if (typeof nuxt_plugin_axios_cddc59ea === 'function') {
+    await nuxt_plugin_axios_cddc59ea(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_animejsModule_9a1bd8fe === 'function') {
-    await nuxt_plugin_animejsModule_9a1bd8fe(app.context, inject)
+  if (typeof nuxt_plugin_animejsModule_20e031d0 === 'function') {
+    await nuxt_plugin_animejsModule_20e031d0(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueMq_3319afd8 === 'function') {
@@ -263,8 +263,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_vueslickcarousel_1c6345a5(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_auth_5ec1523c === 'function') {
-    await nuxt_plugin_auth_5ec1523c(app.context, inject)
+  if (typeof nuxt_plugin_auth_93d46e76 === 'function') {
+    await nuxt_plugin_auth_93d46e76(app.context, inject)
   }
 
   // Lock enablePreview in context

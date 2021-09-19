@@ -14,21 +14,22 @@ export default {
             lang: 'it'
         },
         script: [{
-            // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-            //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-            //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
-            src:   '~/plugins/pixel.js',
-            src:   '~/plugins/googleTagManager.js',
+                // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+                //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
+                // src: '~/plugins/pixel.js',
+                // src: '~/plugins/googleTagManager.js',
 
-        },
+            },
 
-    ],
+        ],
         meta: [{
                 charset: 'utf-8'
             },
-            
+
             {
-                name:"facebook-domain-verification", content:"hvp0juxvk628ysiqdpbdu4zku0rd8m"
+                name: "facebook-domain-verification",
+                content: "hvp0juxvk628ysiqdpbdu4zku0rd8m"
 
             },
             {
@@ -67,7 +68,7 @@ export default {
             },
 
         ],
-       
+
 
         link: [{
                 rel: 'icon',
@@ -178,8 +179,8 @@ export default {
             defaultLocale: 'it',
         }],
 
-        '@nuxtjs/google-gtag',
-
+        //GOogle Tag
+        ['@nuxtjs/google-tag-manager', { id: 'GTM-WRH6KZ5' }]
 
 
     ],
@@ -194,27 +195,6 @@ export default {
         // Options
     },
 
-    'google-gtag': {
-        id: 'G-V34VSD554J', // required
-        config: {
-            // this are the config options for `gtag
-            // check out official docs: https://developers.google.com/analytics/devguides/collection/gtagjs/
-            anonymize_ip: true, // anonymize IP 
-            send_page_view: false, // might be necessary to avoid duplicated page track on page reload
-            linker: {
-                domains: ['monicacentri.com', 'www.monicacentri.com']
-            }
-        },
-        debug: true, // enable to track in dev mode
-        disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...)
-        // optional you can add more configuration like [AdWords](https://developers.google.com/adwords-remarketing-tag/#configuring_the_global_site_tag_for_multiple_accounts)
-        additionalAccounts: [{
-            id: 'AW-XXXX-XX', // required if you are adding additional IDs
-            config: {
-                send_page_view: false // optional configurations
-            }
-        }]
-    },
 
     //*Impostazioni Auth */
     auth: {
@@ -275,7 +255,7 @@ export default {
         //local confing http://127.0.0.1:8000/api
 
     },
- 
+
 
     //**Barra Loading tra pagine */
     loading: {
@@ -332,7 +312,7 @@ export default {
     build: {
         //*Jquery  */
         plugins: [
-          
+
         ]
     }, //build 
 }

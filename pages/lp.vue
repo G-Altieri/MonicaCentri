@@ -437,6 +437,7 @@ export default {
           console.log("Inserimento Effettuato:");
           console.log(response);
           this.ringrazziamenti();
+         // this.sendEventPixelNewClient();
         })
         .catch((error) => {
           this.viewErrorRingraziamenti = true;
@@ -456,6 +457,29 @@ export default {
       console.log(a);
       return a;
     },
+
+
+
+sendEventPixelNewClient(){
+console.log("Send Event PixelFB");
+const axios = require("axios");
+      axios
+        .post("https://graph.facebook.com/{API_VERSION}/932376301035637/events?access_token=EAAJYkcnw3iQBAFZCsFmDzkV9gphzERbXC1sA5slgB0vIoDNRSZCd1HeiVsfhGp9CZAFoZA13BNakEhJ6NGD4wavC9R9tsSKmo0XlkQGs70IxfhGVFF8uhfT6zsUvmZCZBlvZCb2sg2kKbgeToIoT7UFqAiMh5aZCP024t3jcKiPAI55I9HATXobH", {
+          name: this.form.name,
+          number: this.form.number,
+          city: this.form.city,
+          ip: this.form.ip,
+        })
+        .then((response) => {
+          console.log("Invio Effettuato con Successo");
+        })
+        .catch((error) => {
+          console.error("Errore nel invio evento");
+          console.error(error);
+        });
+},
+
+
   }, //methods
   components: {
     ginput,

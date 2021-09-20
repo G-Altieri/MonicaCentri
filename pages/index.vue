@@ -471,7 +471,7 @@
           <!-- Button Contatti per whatapp -->
           <div class="mx-auto my-0 mb-12 justify-self-center">
             <a
-              href="https://wa.me/393348529048?text=Posso%20prenotare%20una%20consulenza%20gratuita%20?"
+              href="https://wa.me/393348529048?text=Posso%20prenotare%20una%20consulenza%20gratuita?"
             >
               <div
                 style="border-radius: 25px"

@@ -73,7 +73,7 @@ export default {
         link: [{
             rel: 'icon',
             type: 'image/x-icon',
-            href: '/favicon.svg'
+            href: '/favicon.ico'
         },
         {
             rel: 'apple-touch-icon',
@@ -97,7 +97,7 @@ export default {
         {
             rel: "icon",
             type: "image/x-icon",
-            href: "favicon.ico",
+            href: "/favicon.svg",
         },
         {
             rel: 'stylesheet',

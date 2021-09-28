@@ -47,22 +47,20 @@
           </div>
         </div>
 
-        <!-- Attend Response -->
-        <div
-          style="padding-top: 6rem"
-          class="px-4 grid"
-          v-show="showResponseServer"
-        >
-          <div
-            class="mx-auto items-center p-4 text-white rounded-full"
-            style="background: #af384f"
-          >
-            {{ loading }}
-          </div>
-        </div>
-
         <!-- Button Update  Search Bar e Order By-->
-        <div class="flex gap-4 px-4 text-center items-stretch w-5/6 mx-auto grid grid-cols-2 md:grid-cols-3 ">
+        <div
+          class="
+            flex
+            gap-4
+            px-4
+            text-center
+            items-stretch
+            w-5/6
+            mx-auto
+            grid grid-cols-2
+            md:grid-cols-3
+          "
+        >
           <!-- Button Update -->
           <div
             class="p-2 text-white rounded-full flex-1 self-center"
@@ -79,23 +77,26 @@
             Ordina
           </div>
           <!-- Search Bar -->
-            <input
-              id="inputRicerca"
-              type="text"
-              name="inputRicerca"
-              placeholder="Ricerca"
-              class="
-             flex-none
+          <input
+            v-model="search"
+            id="inputRicerca"
+            type="text"
+            name="inputRicerca"
+            placeholder="Ricerca"
+            class="
+              flex-none
               self-center
-                px-4
-                py-2
-                rounded-lg
-                border border-red-200
-                focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-red-400  
-                col-span-2 md:col-span-1
-              "
-            />
-        
+              px-4
+              py-2
+              rounded-lg
+              border border-red-200
+              focus:outline-none
+              focus:ring-2 focus:ring-indigo-300
+              focus:border-red-400
+              col-span-2
+              md:col-span-1
+            "
+          />
         </div>
 
         <!-- Table -->
@@ -138,10 +139,25 @@
               {{ utente.city }}
             </td>
           </tr>
+          <!--**Table -->
         </table>
-        <!--**Table -->
+
+        <!-- Attend Response -->
+        <div
+          style="padding-top: 0rem"
+          class="px-4 grid"
+          v-show="showResponseServer"
+        >
+          <div
+            class="mx-auto items-center p-4 text-white rounded-full"
+            style="background: #af384f"
+          >
+            {{ loading }}
+          </div>
+        </div>
 
         <!-- <pre><code>{{request }}</code></pre> -->
+        <!-- <pre><code>{{search }}</code></pre> -->
       </div>
     </div>
   </div>
@@ -151,9 +167,10 @@
 export default {
   data() {
     return {
+      search: "",
       ip: "no ip",
       loading: "Caricamento in corso",
-      request: null,
+      request: "",
       textCopied: null,
       showCopied: false,
       showResponseServer: true,
@@ -191,6 +208,11 @@ export default {
           return false;
       }
     },
+    filterResponse: function () {
+      return this.request.filter((x) => {
+        return x.name.match(this.search);
+      });
+    },
   },
 
   methods: {
@@ -211,9 +233,9 @@ export default {
       document.body.removeChild(textarea);
     },
 */
-reload(){
-  window.location.reload();
-},
+    reload() {
+      window.location.reload();
+    },
     copyToClipBoard(params) {
       // console.log(params);
 

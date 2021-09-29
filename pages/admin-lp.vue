@@ -6,7 +6,7 @@
         style="padding-top: 6rem"
       >
         <!-- Test Button Copy into Clipboard -->
-        <div style="padding-top: 6rem" class="px-4" v-show="showCopied">
+        <div style="top: 0px" class="px-4" v-show="showCopied">
           <div
             class="
               py-3
@@ -19,6 +19,7 @@
               flex
               items-center
               justify-between
+              absolute
             "
             role="alert"
           >
@@ -63,7 +64,14 @@
         >
           <!-- Button Update -->
           <div
-            class="p-2 text-white rounded-full flex-1 self-center"
+            class="
+              p-2
+              text-white
+              rounded-full
+              flex-1
+              self-center
+              cursor-pointer
+            "
             style="background: #af384f"
             @click="reload()"
           >
@@ -71,11 +79,20 @@
           </div>
           <!-- Order By -->
           <div
-            class="p-2 text-white rounded-full flex-1 self-center"
+            class="
+              p-2
+              text-white
+              rounded-full
+              flex-1
+              self-center
+              cursor-pointer
+            "
             style="background: #af384f"
+            @click="showOrder = !showOrder"
           >
             Ordina
           </div>
+
           <!-- Search Bar -->
           <input
             v-model="search"
@@ -99,34 +116,173 @@
           />
         </div>
 
+        <!-- Modal Ordina -->
+        <div
+          v-show="showOrder"
+          class="
+            absolute
+            mx-auto
+            grid
+            flex
+            w-4/5
+            bg-white
+            rounded-lg
+            shadow-md
+            bg-pink-100
+          "
+          style="
+            height: auto;
+            top: 153px;
+            left: 50%;
+            transform: translateX(-50%);
+          "
+        >
+          <!-- Modal Option -->
+          <div class="text-red font-bold text-xl grid grid-cols-2 gap-6">
+            <!-- Title e X -->
+            <div class="justify-self-start px-6 py-2">Visulizza</div>
+            <div
+              @click="showOrder = !showOrder"
+              class="justify-self-end px-6 py-2 cursor-pointer"
+            >
+              X
+            </div>
+            <!-- Visualizza Indici Table -->
+            <div class="grid grid-cols-1 px-6 col-span-2 gap-y-2">
+              <!-- ID -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxID"
+                  v-model="tableIndices.id"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxID">Id</label>
+              </div>
+              <!-- Name -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxName"
+                  v-model="tableIndices.name"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxName">Nome</label>
+              </div>
+              <!-- number -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxNumber"
+                  v-model="tableIndices.number"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxNumber">Numero</label>
+              </div>
+              <!-- City -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxCity"
+                  v-model="tableIndices.city"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxCity">Cittá</label>
+              </div>
+              <!-- Data -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxData"
+                  v-model="tableIndices.data"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxData">Data</label>
+              </div>
+            </div>
+
+            <!-- Order -->
+            <div class="col-span-2 justify-self-start px-6 py-2">Ordina (questa funzionalitá é in sviluppo)   </div>
+
+            <!-- Visualizza Indici Ordini -->
+            <div class="flex items-center px-6 gap-y-2 grid grid-cols-1">
+              <div>
+                <input
+                  type="radio"
+                  id="radioA-Z"
+                  class="h-6 w-6 mr-2"
+                  value="az"
+                  v-model="tableOrder"
+                />
+                <label for="radioA-Z">Alfabetico A-Z</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="radioZ-A"
+                  class="h-6 w-6 mr-2"
+                  value="za"
+                  v-model="tableOrder"
+                />
+                <label for="radioZ-A">Alfabetico Z-A</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="radioZ-A"
+                  class="h-6 w-6 mr-2"
+                  value="cre"
+                  v-model="tableOrder"
+                />
+                <label for="radioZ-A">Crescente per data</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="radioZ-A"
+                  class="h-6 w-6 mr-2"
+                  value="decr"
+                  v-model="tableOrder"
+                />
+                <label for="radioZ-A">Decrescente per data</label>
+              </div>
+            </div>
+
+            <!-- Modal Option -->
+          </div>
+        </div>
+
         <!-- Table -->
         <table
           class="rounded-t-lg m-5 w-5/6 mx-auto bg-red-200 text-gray-800 mt-16"
         >
           <tr class="text-left border-my-red border-b-2">
-            <th class="px-4 py-3">#</th>
-            <th class="px-4 py-3">Nome</th>
-            <th class="px-4 py-3">Numero</th>
-            <th class="px-4 py-3">Cittá</th>
+            <th class="px-4 py-3" v-show="tableIndices.id">#</th>
+            <th class="px-4 py-3" v-show="tableIndices.name">Nome</th>
+            <th class="px-4 py-3" v-show="tableIndices.number">Numero</th>
+            <th class="px-4 py-3" v-show="tableIndices.city">Cittá</th>
+            <th class="px-4 py-3" v-show="tableIndices.data">Data</th>
           </tr>
 
           <tr
             class="bg-gray-100 border-b border-my-pink"
-            v-for="(utente, index) in request"
+            v-for="(utente, index) in filterResponse"
             :key="utente.id"
           >
-            <td class="px-4 py-3">
+            <td class="px-4 py-3" v-show="tableIndices.id">
               {{ index + 1 }}
             </td>
             <td
               class="px-4 py-3 cursor-pointer"
               @click="copyToClipBoard(utente.name)"
+              v-show="tableIndices.name"
             >
               {{ utente.name }}
             </td>
             <td
               class="px-4 py-3 cursor-pointer"
               @click="copyToClipBoard(utente.number)"
+              v-show="tableIndices.number"
             >
               <a :href="'tel:+39' + utente.number">
                 {{ utente.number }}
@@ -135,8 +291,12 @@
             <td
               class="px-4 py-3 cursor-pointer"
               @click="copyToClipBoard(utente.city)"
+              v-show="tableIndices.city"
             >
               {{ utente.city }}
+            </td>
+            <td class="px-4 py-3 cursor-pointer" v-show="tableIndices.data">
+              {{ new Date(utente.created_at).toLocaleString("en-GB") }}
             </td>
           </tr>
           <!--**Table -->
@@ -157,7 +317,8 @@
         </div>
 
         <!-- <pre><code>{{request }}</code></pre> -->
-        <!-- <pre><code>{{search }}</code></pre> -->
+        <!-- <pre><code>{{tableOrder }}</code></pre> -->
+        <!-- <pre><code>{{filterResponse}}</code></pre> -->
       </div>
     </div>
   </div>
@@ -174,6 +335,15 @@ export default {
       textCopied: null,
       showCopied: false,
       showResponseServer: true,
+      tableIndices: {
+        id: true,
+        name: true,
+        number: true,
+        city: true,
+        data: false,
+      },
+      tableOrder: "cre",
+      showOrder: false,
     };
   }, //data
   mounted() {}, //mounted
@@ -184,7 +354,6 @@ export default {
     this.$axios
       .$get("https://api.ipify.org/?format=json", {
         headers: {
-        
         },
       })
       .then((response) => {
@@ -208,10 +377,18 @@ export default {
           return false;
       }
     },
-    filterResponse: function () {
-      return this.request.filter((x) => {
-        return x.name.match(this.search);
-      });
+    filterResponse() {
+      if (this.request != "") {
+        //return this.request.sort((a, b) => b.name.localeCompare(a.name))
+        return this.request.filter((x) => {
+          return (
+            x.city.toLowerCase().match(this.search.toLowerCase()) ||
+            x.name.toLowerCase().match(this.search.toLowerCase()) ||
+            x.number.toString().match(this.search)
+            //  x.created_at.toString().match(this.search)
+          );
+        });
+      }
     },
   },
 

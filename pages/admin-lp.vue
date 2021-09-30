@@ -202,10 +202,23 @@
             </div>
 
             <!-- Order -->
-            <div class="col-span-2 justify-self-start px-6 py-2">Ordina <div class="text-sm">(questa funzionalitá é in sviluppo)</div>   </div>
+            <div class="col-span-2 justify-self-start px-6 py-2">
+              Ordina
+              <!-- <div class="text-sm">(questa funzionalitá é in sviluppo)</div> -->
+            </div>
 
             <!-- Visualizza Indici Ordini -->
-            <div class="flex items-center px-6 gap-y-2 grid grid-cols-1 col-span-2 text-lg">
+            <div
+              class="
+                flex
+                items-center
+                px-6
+                gap-y-2
+                grid grid-cols-1
+                col-span-2
+                text-lg
+              "
+            >
               <div>
                 <input
                   type="radio"
@@ -379,6 +392,30 @@ export default {
     },
     filterResponse() {
       if (this.request != "") {
+        console.log(this.request);
+        switch (this.tableOrder) {
+          case "az":
+            this.request = this.request.sort((a, b) =>
+              a.name.localeCompare(b.name)
+            );
+            break;
+          case "za":
+            this.request = this.request.sort((a, b) =>
+              b.name.localeCompare(a.name)
+            );
+            break;
+          case "decr":
+            this.request = this.request.sort(
+              (a, b) =>   b.created_at.localeCompare(a.created_at)
+            );
+            break;
+          case "cre":
+                this.request = this.request.sort(
+              (a, b) =>   a.created_at.localeCompare(b.created_at)
+            );
+            break;
+        }
+
         //return this.request.sort((a, b) => b.name.localeCompare(a.name))
         return this.request.filter((x) => {
           return (

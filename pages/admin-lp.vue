@@ -138,7 +138,7 @@
           "
         >
           <!-- Modal Option -->
-          <div class="text-red font-bold text-xl grid grid-cols-2 gap-6">
+          <div class="text-red font-semibold text-xl grid grid-cols-2 gap-6">
             <!-- Title e X -->
             <div class="justify-self-start px-6 py-2">Visulizza</div>
             <div
@@ -202,10 +202,10 @@
             </div>
 
             <!-- Order -->
-            <div class="col-span-2 justify-self-start px-6 py-2">Ordina (questa funzionalitá é in sviluppo)   </div>
+            <div class="col-span-2 justify-self-start px-6 py-2">Ordina <div class="text-sm">(questa funzionalitá é in sviluppo)</div>   </div>
 
             <!-- Visualizza Indici Ordini -->
-            <div class="flex items-center px-6 gap-y-2 grid grid-cols-1">
+            <div class="flex items-center px-6 gap-y-2 grid grid-cols-1 col-span-2 text-lg">
               <div>
                 <input
                   type="radio"

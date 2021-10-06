@@ -202,10 +202,20 @@
             </div>
 
             <!-- Order -->
-            <div class="col-span-2 justify-self-start px-6 py-2">Ordina <div class="text-sm">(questa funzionalitá é in sviluppo)</div>   </div>
+            <div class="col-span-2 justify-self-start px-6 py-2">Ordina</div>
 
             <!-- Visualizza Indici Ordini -->
-            <div class="flex items-center px-6 gap-y-2 grid grid-cols-1 col-span-2 text-lg">
+            <div
+              class="
+                flex
+                items-center
+                px-6
+                gap-y-2
+                grid grid-cols-1
+                col-span-2
+                text-lg
+              "
+            >
               <div>
                 <input
                   type="radio"
@@ -379,8 +389,27 @@ export default {
     },
     filterResponse() {
       if (this.request != "") {
-        //return this.request.sort((a, b) => b.name.localeCompare(a.name))
-        return this.request.filter((x) => {
+       //Ordinamento
+        switch (this.tableOrder) {
+          case "az":
+            this.request.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+          case "za":
+            this.request.sort((a, b) => b.name.localeCompare(a.name));
+            break;
+          case "cre":
+            this.request.sort((a, b) =>
+              a.created_at.localeCompare(b.created_at)
+            );
+            break;
+          case "decr":
+            this.request.sort((a, b) =>
+              b.created_at.localeCompare(a.created_at)
+            );
+            break;
+        }
+//Ricerca
+return this.request.filter((x) => {
           return (
             x.city.toLowerCase().match(this.search.toLowerCase()) ||
             x.name.toLowerCase().match(this.search.toLowerCase()) ||

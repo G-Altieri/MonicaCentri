@@ -91,6 +91,7 @@
           href="https://www.iubenda.com/privacy-policy/52995361"
           class=""
           title="Privacy Policy "
+          target="_blank"
           >{{ $t("footer.normePrivacy") }}
         </a>
         <script type="text/javascript">
@@ -124,9 +125,10 @@
 
 
       <!-- Copiright -->
-      <div class=" mb-3  text-center text-sm " style="color:">
-©copyright all rights reserved 1994-2021
+      <div class=" text-center text-sm " style="color:">
+©1994-2021
       </div>
+      <a href="https://www.instagram.com/digital_flow.er/" class=" text-center text-xs " target="_blank">Design and Develop by digital_flow.er</a>
     </div>
     <!-- FIne Text -->
   </div>

@@ -81,7 +81,7 @@
         role="menu"
       >
         <div v-if="!$auth.loggedIn">
-          <Nuxt-Link :to="localePath('/login')">
+          <Nuxt-Link :to="localePath('/lp')">
             <div class="px-4 py-3">
               <p class="text-sm leading-5">Accedi</p>
             </div>

@@ -1,50 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://monicacentri.com/</loc>
+    <loc>https://www.monicacentri.com/</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://monicacentri.com/lp</loc>
+    <loc>https://www.monicacentri.com/lp</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
   <url>
-    <loc>https://monicacentri.com/login</loc>
+    <loc>https://www.monicacentri.com/login</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
   <url>
-    <loc>https://monicacentri.com/laser</loc>
+    <loc>https://www.monicacentri.com/laser</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
   <url>
-    <loc>https://monicacentri.com/biolifting</loc>
+    <loc>https://www.monicacentri.com/biolifting</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
   <url>
-    <loc>https://monicacentri.com/puliziaevo</loc>
+    <loc>https://www.monicacentri.com/puliziaevo</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
   <url>
-    <loc>https://monicacentri.com/mai+xl</loc>
+    <loc>https://www.monicacentri.com/mai+xl</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
-    <loc>https://monicacentri.com/card</loc>
+    <loc>https://www.monicacentri.com/card</loc>
     <lastmod>2021-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+
   </url>
 </urlset>

@@ -70,13 +70,6 @@
     "_name": "_2f0f4a58"
   },
   {
-    "name": "qr2___it",
-    "path": "/qr2",
-    "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\qr2.vue",
-    "chunkName": "pages/qr2",
-    "_name": "_9a1cabec"
-  },
-  {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\test.vue",
@@ -145,13 +138,6 @@
     "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\qr.vue",
     "chunkName": "pages/qr",
     "_name": "_2f0f4a58"
-  },
-  {
-    "name": "qr2___en",
-    "path": "/en/qr2",
-    "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\qr2.vue",
-    "chunkName": "pages/qr2",
-    "_name": "_9a1cabec"
   },
   {
     "name": "test___en",

@@ -39,13 +39,14 @@
           </div>
 
           <!-- Body with links -->
+          <div class="py-5"></div>
           <!-- Internet -->
           <qrlink
             link="https://www.monicacentri.com/"
             borderColor="#39ACAC"
             text="Visita il nostro sito web"
             icon="internet"
-             :type="true"
+             :type="false"
           />
           <!-- Facebook -->
           <qrlink
@@ -53,7 +54,7 @@
             borderColor="#039BE5"
             text="Visita il nostro profilo facebook"
             icon="facebook"
-             :type="true"
+             :type="false"
           />
           <!-- Instagram -->
           <qrlink
@@ -61,7 +62,7 @@
             borderColor="#AE44AE"
             text="Visita il nostro profilo instagram"
             icon="instagram"
-            :type="true"
+            :type="false"
           />
           <!-- WhatsApp -->
           <qrlink
@@ -69,7 +70,7 @@
             borderColor="#40C351"
             text="Scrivici su whatsapp"
             icon="whatsapp"
-             :type="true"
+             :type="false"
           />
           <!-- Google -->
           <qrlink
@@ -77,7 +78,7 @@
             borderColor="#FBC02D"
             text="Visita il nostro profilo google"
             icon="google"
-             :type="true"
+             :type="false"
           />
           <!-- Youtube -->
           <qrlink
@@ -85,13 +86,13 @@
             borderColor="#F44F5A"
             text="Guarda i nostri video su youtube"
             icon="youtube"
-             :type="true"
+             :type="false"
           />
           <!-- Button Condividi -->
 
           <div class="" @click="shareButton">
             <svg
-            class=" absolute right-0 bottom-0 mr-5 mb-8"
+            class=" absolute right-0 top-48 mr-5 mb-8"
               width="48"
               height="48"
               viewBox="0 0 48 48"
@@ -172,6 +173,9 @@ export default {
 }
 .bg-red:hover {
   background: #882c3e;
+}
+.top-48{
+    top: 12rem;
 }
 </style>
 

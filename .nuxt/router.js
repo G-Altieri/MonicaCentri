@@ -14,6 +14,7 @@ const _266ae03b = () => interopDefault(import('..\\pages\\lp.vue' /* webpackChun
 const _16e9d1be = () => interopDefault(import('..\\pages\\mai+xl.vue' /* webpackChunkName: "pages/mai+xl" */))
 const _701275f6 = () => interopDefault(import('..\\pages\\puliziaevo.vue' /* webpackChunkName: "pages/puliziaevo" */))
 const _2f0f4a58 = () => interopDefault(import('..\\pages\\qr.vue' /* webpackChunkName: "pages/qr" */))
+const _9a1cabec = () => interopDefault(import('..\\pages\\qr2.vue' /* webpackChunkName: "pages/qr2" */))
 const _b44a56ee = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -68,6 +69,10 @@ export const routerOptions = {
     component: _2f0f4a58,
     name: "qr___it"
   }, {
+    path: "/qr2",
+    component: _9a1cabec,
+    name: "qr2___it"
+  }, {
     path: "/test",
     component: _b44a56ee,
     name: "test___it"
@@ -107,6 +112,10 @@ export const routerOptions = {
     path: "/en/qr",
     component: _2f0f4a58,
     name: "qr___en"
+  }, {
+    path: "/en/qr2",
+    component: _9a1cabec,
+    name: "qr2___en"
   }, {
     path: "/en/test",
     component: _b44a56ee,

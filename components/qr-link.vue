@@ -14,6 +14,7 @@
             w-10
             text-gray-400
           "
+
         >
           <i class="text-blue-500 ml-6">
             <!-- ICON -->
@@ -231,9 +232,17 @@
           </i>
         </div>
 
-        <div
+        <div v-if="type"
           class="pl-10 pr-4 rounded-full border-2 w-full py-4"
-          :style="'border-color:' + borderColor + ';'"
+          :style="'border-color:'+borderColor+';'"
+          
+        >
+          <div class="text-center font-medium text-sm">
+            {{ text }}
+          </div>
+        </div>
+        <div v-else
+          class="pl-10 pr-4 rounded-full ombraInterna w-full py-4"
         >
           <div class="text-center font-medium text-sm">
             {{ text }}
@@ -247,9 +256,14 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+        
+    };
   },
-  computed: {}, //computed
+ 
+  computed: {
+  
+  }, //computed
 
   methods: {}, //metodi
 
@@ -275,18 +289,19 @@ export default {
       type: String,
       default: "",
     },
-    click: {
-      type: String,
-      default: "",
-    },
-    uppercase: {
+    type: {
       type: Boolean,
       default: false,
     },
+ 
   },
 };
 </script>
 
-
 <style lang="scss" scoped>
+.ombraInterna{
+       -moz-box-shadow:    inset 0 0 4px rgba(0, 0, 0, 0.15);
+   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.15);
+   box-shadow:         inset 0 0 4px rgba(0, 0, 0, 0.15);
+}
 </style>

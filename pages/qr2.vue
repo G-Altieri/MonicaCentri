@@ -45,7 +45,7 @@
             borderColor="#39ACAC"
             text="Visita il nostro sito web"
             icon="internet"
-             :type="true"
+             :type="false"
           />
           <!-- Facebook -->
           <qrlink
@@ -53,7 +53,7 @@
             borderColor="#039BE5"
             text="Visita il nostro profilo facebook"
             icon="facebook"
-             :type="true"
+             :type="false"
           />
           <!-- Instagram -->
           <qrlink
@@ -61,7 +61,7 @@
             borderColor="#AE44AE"
             text="Visita il nostro profilo instagram"
             icon="instagram"
-            :type="true"
+            :type="false"
           />
           <!-- WhatsApp -->
           <qrlink
@@ -69,7 +69,7 @@
             borderColor="#40C351"
             text="Scrivici su whatsapp"
             icon="whatsapp"
-             :type="true"
+             :type="false"
           />
           <!-- Google -->
           <qrlink
@@ -77,7 +77,7 @@
             borderColor="#FBC02D"
             text="Visita il nostro profilo google"
             icon="google"
-             :type="true"
+             :type="false"
           />
           <!-- Youtube -->
           <qrlink
@@ -85,7 +85,7 @@
             borderColor="#F44F5A"
             text="Guarda i nostri video su youtube"
             icon="youtube"
-             :type="true"
+             :type="false"
           />
           <!-- Button Condividi -->
 

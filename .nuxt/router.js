@@ -13,6 +13,7 @@ const _0a3fb33d = () => interopDefault(import('..\\pages\\lingue.vue' /* webpack
 const _266ae03b = () => interopDefault(import('..\\pages\\lp.vue' /* webpackChunkName: "pages/lp" */))
 const _16e9d1be = () => interopDefault(import('..\\pages\\mai+xl.vue' /* webpackChunkName: "pages/mai+xl" */))
 const _701275f6 = () => interopDefault(import('..\\pages\\puliziaevo.vue' /* webpackChunkName: "pages/puliziaevo" */))
+const _2f0f4a58 = () => interopDefault(import('..\\pages\\qr.vue' /* webpackChunkName: "pages/qr" */))
 const _b44a56ee = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
@@ -63,6 +64,10 @@ export const routerOptions = {
     component: _701275f6,
     name: "puliziaevo___it"
   }, {
+    path: "/qr",
+    component: _2f0f4a58,
+    name: "qr___it"
+  }, {
     path: "/test",
     component: _b44a56ee,
     name: "test___it"
@@ -98,6 +103,10 @@ export const routerOptions = {
     path: "/en/puliziaevo",
     component: _701275f6,
     name: "puliziaevo___en"
+  }, {
+    path: "/en/qr",
+    component: _2f0f4a58,
+    name: "qr___en"
   }, {
     path: "/en/test",
     component: _b44a56ee,

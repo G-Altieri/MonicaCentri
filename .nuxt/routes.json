@@ -63,6 +63,13 @@
     "_name": "_701275f6"
   },
   {
+    "name": "qr___it",
+    "path": "/qr",
+    "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\qr.vue",
+    "chunkName": "pages/qr",
+    "_name": "_2f0f4a58"
+  },
+  {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\test.vue",
@@ -124,6 +131,13 @@
     "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
     "chunkName": "pages/puliziaevo",
     "_name": "_701275f6"
+  },
+  {
+    "name": "qr___en",
+    "path": "/en/qr",
+    "component": "C:\\\\Users\\\\giova\\\\Desktop\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\qr.vue",
+    "chunkName": "pages/qr",
+    "_name": "_2f0f4a58"
   },
   {
     "name": "test___en",

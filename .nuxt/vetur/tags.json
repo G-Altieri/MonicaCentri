@@ -25,5 +25,8 @@
   },
   "NavbarBuy": {
     "description": "Auto imported from components/navbarBuy.vue"
+  },
+  "QrLink": {
+    "description": "Auto imported from components/qr-link.vue"
   }
 }

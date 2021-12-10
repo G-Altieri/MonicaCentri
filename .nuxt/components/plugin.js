@@ -9,7 +9,8 @@ const components = {
   InputLabel: () => import('../..\\components\\inputLabel.vue' /* webpackChunkName: "components/input-label" */).then(c => c.default || c),
   MenuOverlay: () => import('../..\\components\\menuOverlay.vue' /* webpackChunkName: "components/menu-overlay" */).then(c => c.default || c),
   Navbar: () => import('../..\\components\\navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c),
-  NavbarBuy: () => import('../..\\components\\navbarBuy.vue' /* webpackChunkName: "components/navbar-buy" */).then(c => c.default || c)
+  NavbarBuy: () => import('../..\\components\\navbarBuy.vue' /* webpackChunkName: "components/navbar-buy" */).then(c => c.default || c),
+  QrLink: () => import('../..\\components\\qr-link.vue' /* webpackChunkName: "components/qr-link" */).then(c => c.default || c)
 }
 
 for (const name in components) {

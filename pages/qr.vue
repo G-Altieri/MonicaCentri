@@ -5,7 +5,7 @@
       <div class="lg:w-2/5 md:w-4/5 w-11/12 relative">
         <div class="bg-white p-5 rounded-xl shadow-lg min-w-full">
           <!-- Intestazione -->
-          <div class="flex justify-center items-center grid grid-cols-1 stiked">
+          <div class="flex justify-center items-center grid grid-cols-1 mb-2">
             <svg
               width="28"
               height="88"
@@ -175,7 +175,7 @@ export default {
   background: #882c3e;
 }
 .top-48{
-    top: 12rem;
+    top: 12.5rem;
 }
 </style>
 

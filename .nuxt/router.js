@@ -4,17 +4,17 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _70186d39 = () => interopDefault(import('..\\pages\\admin-lp.vue' /* webpackChunkName: "pages/admin-lp" */))
-const _ca032db4 = () => interopDefault(import('..\\pages\\biolifting.vue' /* webpackChunkName: "pages/biolifting" */))
-const _2c90c7f2 = () => interopDefault(import('..\\pages\\card.vue' /* webpackChunkName: "pages/card" */))
-const _2e5577eb = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _84472d38 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
-const _0a3fb33d = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
-const _266ae03b = () => interopDefault(import('..\\pages\\lp.vue' /* webpackChunkName: "pages/lp" */))
-const _16e9d1be = () => interopDefault(import('..\\pages\\mai+xl.vue' /* webpackChunkName: "pages/mai+xl" */))
-const _701275f6 = () => interopDefault(import('..\\pages\\puliziaevo.vue' /* webpackChunkName: "pages/puliziaevo" */))
-const _2f0f4a58 = () => interopDefault(import('..\\pages\\qr.vue' /* webpackChunkName: "pages/qr" */))
-const _b44a56ee = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
+const _49c11e46 = () => interopDefault(import('..\\pages\\admin-lp.vue' /* webpackChunkName: "pages/admin-lp" */))
+const _605313ca = () => interopDefault(import('..\\pages\\biolifting.vue' /* webpackChunkName: "pages/biolifting" */))
+const _680bdcaa = () => interopDefault(import('..\\pages\\card.vue' /* webpackChunkName: "pages/card" */))
+const _d73c9272 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _23e8a840 = () => interopDefault(import('..\\pages\\laser.vue' /* webpackChunkName: "pages/laser" */))
+const _65bb4fe1 = () => interopDefault(import('..\\pages\\lingue.vue' /* webpackChunkName: "pages/lingue" */))
+const _15566edf = () => interopDefault(import('..\\pages\\lp.vue' /* webpackChunkName: "pages/lp" */))
+const _5006b3c5 = () => interopDefault(import('..\\pages\\mai+xl.vue' /* webpackChunkName: "pages/mai+xl" */))
+const _e56920ae = () => interopDefault(import('..\\pages\\puliziaevo.vue' /* webpackChunkName: "pages/puliziaevo" */))
+const _1dfad8fc = () => interopDefault(import('..\\pages\\qr.vue' /* webpackChunkName: "pages/qr" */))
+const _efc56ba6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
 
 const emptyFn = () => {}
 
@@ -29,91 +29,91 @@ export const routerOptions = {
 
   routes: [{
     path: "/admin-lp",
-    component: _70186d39,
+    component: _49c11e46,
     name: "admin-lp___it"
   }, {
     path: "/biolifting",
-    component: _ca032db4,
+    component: _605313ca,
     name: "biolifting___it"
   }, {
     path: "/card",
-    component: _2c90c7f2,
+    component: _680bdcaa,
     name: "card___it"
   }, {
     path: "/en",
-    component: _2e5577eb,
+    component: _d73c9272,
     name: "index___en"
   }, {
     path: "/laser",
-    component: _84472d38,
+    component: _23e8a840,
     name: "laser___it"
   }, {
     path: "/lingue",
-    component: _0a3fb33d,
+    component: _65bb4fe1,
     name: "lingue___it"
   }, {
     path: "/lp",
-    component: _266ae03b,
+    component: _15566edf,
     name: "lp___it"
   }, {
     path: "/mai+xl",
-    component: _16e9d1be,
+    component: _5006b3c5,
     name: "mai+xl___it"
   }, {
     path: "/puliziaevo",
-    component: _701275f6,
+    component: _e56920ae,
     name: "puliziaevo___it"
   }, {
     path: "/qr",
-    component: _2f0f4a58,
+    component: _1dfad8fc,
     name: "qr___it"
   }, {
     path: "/test",
-    component: _b44a56ee,
+    component: _efc56ba6,
     name: "test___it"
   }, {
     path: "/en/admin-lp",
-    component: _70186d39,
+    component: _49c11e46,
     name: "admin-lp___en"
   }, {
     path: "/en/biolifting",
-    component: _ca032db4,
+    component: _605313ca,
     name: "biolifting___en"
   }, {
     path: "/en/card",
-    component: _2c90c7f2,
+    component: _680bdcaa,
     name: "card___en"
   }, {
     path: "/en/laser",
-    component: _84472d38,
+    component: _23e8a840,
     name: "laser___en"
   }, {
     path: "/en/lingue",
-    component: _0a3fb33d,
+    component: _65bb4fe1,
     name: "lingue___en"
   }, {
     path: "/en/lp",
-    component: _266ae03b,
+    component: _15566edf,
     name: "lp___en"
   }, {
     path: "/en/mai+xl",
-    component: _16e9d1be,
+    component: _5006b3c5,
     name: "mai+xl___en"
   }, {
     path: "/en/puliziaevo",
-    component: _701275f6,
+    component: _e56920ae,
     name: "puliziaevo___en"
   }, {
     path: "/en/qr",
-    component: _2f0f4a58,
+    component: _1dfad8fc,
     name: "qr___en"
   }, {
     path: "/en/test",
-    component: _b44a56ee,
+    component: _efc56ba6,
     name: "test___en"
   }, {
     path: "/",
-    component: _2e5577eb,
+    component: _d73c9272,
     name: "index___it"
   }],
 

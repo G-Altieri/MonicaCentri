@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- Container di page -->
-    <div class="h-screen bg-red-100 flex justify-center items-center">
-      <div class="lg:w-2/5 md:w-4/5 w-11/12 relative">
+    <div class="h-screen bg-red-100 flex justify-center items-center boxCentrale">
+      <div class="lg:w-2/5 md:w-4/5 w-11/12 relative ">
         <div class="bg-white rounded-xl shadow-lg min-w-full">
           <!-- Intestazione -->
           <div class="flex justify-center items-center grid grid-cols-1 mb-2 p-5">
@@ -69,7 +69,7 @@
             :type="false"
             /> -->
             <!-- TIKTOK -->
-            <qrlink link="https://www.youtube.com/channel/UCgQZR6GKr5DyWeVlkBOCCqQ" borderColor="#F44F5A"
+            <qrlink link='https://www.tiktok.com/@monicacentri' borderColor="#F44F5A"
               text="Scrivici su TikTok" icon="tiktok" :type="false" />
           </div>
           <!-- Button Condividi -->
@@ -202,6 +202,10 @@ export default {
   text-align: center;
 
   color: #AF384F;
+}
+
+.boxCentrale{
+  height: 120vh;
 }
 </style>
 

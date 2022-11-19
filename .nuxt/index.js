@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_24f440c4 from 'nuxt_plugin_plugin_24f440c4' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_googletagmanager_671151eb from 'nuxt_plugin_googletagmanager_671151eb' // Source: .\\google-tag-manager.js (mode: 'client')
+import nuxt_plugin_pluginutils_35a4fe67 from 'nuxt_plugin_pluginutils_35a4fe67' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
 import nuxt_plugin_pluginrouting_165f8df2 from 'nuxt_plugin_pluginrouting_165f8df2' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_73eb72bd from 'nuxt_plugin_pluginmain_73eb72bd' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
 import nuxt_plugin_axios_2b13bae7 from 'nuxt_plugin_axios_2b13bae7' // Source: .\\axios.js (mode: 'all')
@@ -50,7 +51,11 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    return this.$root.$options.$nuxt
+    const globalNuxt = this.$root.$options.$nuxt
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
   },
   configurable: true
 })
@@ -239,6 +244,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_googletagmanager_671151eb(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_pluginutils_35a4fe67 === 'function') {
+    await nuxt_plugin_pluginutils_35a4fe67(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_pluginrouting_165f8df2 === 'function') {
     await nuxt_plugin_pluginrouting_165f8df2(app.context, inject)
   }
@@ -274,26 +283,33 @@ async function createApp(ssrContext, config = {}) {
     }
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, (err) => {
-        // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
-        if (!err._isRouter) return reject(err)
-        if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    // Ignore 404s rather than blindly replacing URL in browser
+    if (process.client) {
+      const { route } = router.resolve(app.context.route.fullPath)
+      if (!route.matched.length) {
+        return resolve()
+      }
+    }
+    router.replace(app.context.route.fullPath, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
 
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from) => {
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     store,

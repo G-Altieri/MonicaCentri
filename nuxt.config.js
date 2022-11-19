@@ -157,6 +157,7 @@ export default {
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/auth-next',
+        
         //Libreria per la gestione delle lingue
         ['nuxt-i18n', {
             lazy: true,
@@ -316,8 +317,14 @@ export default {
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         //*Jquery  */
-        plugins: [
+        plugins: 
+       [],
+       postcss: {
+        plugins: {
+        },
+        preset: {
+        }
+      }
 
-        ]
     }, //build 
 }

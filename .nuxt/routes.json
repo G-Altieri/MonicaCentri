@@ -50,7 +50,7 @@
   },
   {
     "name": "mai+xl___it",
-    "path": "/mai+xl",
+    "path": "/mai%2Bxl",
     "component": "C:\\\\Users\\\\giova\\\\Documents\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
     "chunkName": "pages/mai+xl",
     "_name": "_5006b3c5"
@@ -120,7 +120,7 @@
   },
   {
     "name": "mai+xl___en",
-    "path": "/en/mai+xl",
+    "path": "/en/mai%2Bxl",
     "component": "C:\\\\Users\\\\giova\\\\Documents\\\\File\\\\Work\\\\Website MonicaCentri\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
     "chunkName": "pages/mai+xl",
     "_name": "_5006b3c5"

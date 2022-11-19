@@ -56,7 +56,7 @@ export const routerOptions = {
     component: _15566edf,
     name: "lp___it"
   }, {
-    path: "/mai+xl",
+    path: "/mai%2Bxl",
     component: _5006b3c5,
     name: "mai+xl___it"
   }, {
@@ -96,7 +96,7 @@ export const routerOptions = {
     component: _15566edf,
     name: "lp___en"
   }, {
-    path: "/en/mai+xl",
+    path: "/en/mai%2Bxl",
     component: _5006b3c5,
     name: "mai+xl___en"
   }, {
@@ -121,7 +121,7 @@ export const routerOptions = {
 }
 
 export function createRouter (ssrContext, config) {
-  const base = (config.app && config.app.basePath) || routerOptions.base
+  const base = (config._app && config._app.basePath) || routerOptions.base
   const router = new Router({ ...routerOptions, base  })
 
   // TODO: remove in Nuxt 3

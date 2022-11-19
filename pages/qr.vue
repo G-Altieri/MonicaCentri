@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- Container di page -->
-    <div class=" bg-red-100 flex justify-center items-center boxCentrale ">
-      <div class="lg:w-2/5 md:w-4/5 w-11/12 relative ">
+    <div class="h-screen bg-red-100 flex justify-center items-center">
+      <div class="lg:w-2/5 md:w-4/5 w-11/12 relative">
         <div class="bg-white rounded-xl shadow-lg min-w-full">
           <!-- Intestazione -->
           <div class="flex justify-center items-center grid grid-cols-1 mb-2 p-5">
@@ -69,13 +69,13 @@
             :type="false"
             /> -->
             <!-- TIKTOK -->
-            <qrlink link='https://www.tiktok.com/@monicacentri' borderColor="#F44F5A"
+            <qrlink link="https://www.youtube.com/channel/UCgQZR6GKr5DyWeVlkBOCCqQ" borderColor="#F44F5A"
               text="Scrivici su TikTok" icon="tiktok" :type="false" />
           </div>
           <!-- Button Condividi -->
           <div class="" @click="shareButton">
-            <svg class=" absolute right-0 top-48 mr-5 mb-8 cursor-pointer" width="48" height="48" viewBox="0 0 48 48"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class=" absolute right-0 top-48 mr-5 mb-8" width="48" height="48" viewBox="0 0 48 48" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="24" fill="#AF384F" />
               <path
                 d="M31.7206 8.13232C30.4581 8.13232 29.2473 8.63386 28.3545 9.52659C27.4618 10.4193 26.9603 11.6301 26.9603 12.8927C26.9612 13.1912 26.9903 13.489 27.047 13.7821L15.7568 20.3679C14.8968 19.6394 13.8063 19.2396 12.6793 19.2398C11.4168 19.2398 10.2059 19.7413 9.31321 20.634C8.42048 21.5268 7.91895 22.7376 7.91895 24.0001C7.91895 25.2626 8.42048 26.4734 9.31321 27.3662C10.2059 28.2589 11.4168 28.7604 12.6793 28.7604C13.8046 28.7582 14.8927 28.3574 15.7506 27.6292L27.047 34.2181C26.9903 34.5112 26.9612 34.809 26.9603 35.1075C26.9603 36.37 27.4618 37.5809 28.3545 38.4736C29.2473 39.3663 30.4581 39.8679 31.7206 39.8679C32.9831 39.8679 34.1939 39.3663 35.0867 38.4736C35.9794 37.5809 36.4809 36.37 36.4809 35.1075C36.4809 33.845 35.9794 32.6342 35.0867 31.7415C34.1939 30.8487 32.9831 30.3472 31.7206 30.3472C30.5943 30.3487 29.5049 30.7495 28.6462 31.4784L17.3528 24.8896C17.4096 24.5964 17.4386 24.2986 17.4396 24.0001C17.4386 23.7015 17.4096 23.4037 17.3528 23.1106L28.6431 16.5249C29.5031 17.2534 30.5936 17.6531 31.7206 17.653C32.9831 17.653 34.1939 17.1515 35.0867 16.2587C35.9794 15.366 36.4809 14.1552 36.4809 12.8927C36.4809 11.6301 35.9794 10.4193 35.0867 9.52659C34.1939 8.63386 32.9831 8.13232 31.7206 8.13232Z"
@@ -202,9 +202,6 @@ export default {
   text-align: center;
 
   color: #AF384F;
-}
-.boxCentrale{
-  height: 120vh;
 }
 </style>
 

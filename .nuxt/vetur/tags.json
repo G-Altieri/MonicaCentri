@@ -28,5 +28,8 @@
   },
   "QrLink": {
     "description": "Auto imported from components/qr-link.vue"
+  },
+  "WebViewer": {
+    "description": "Auto imported from components/WebViewer.vue"
   }
 }

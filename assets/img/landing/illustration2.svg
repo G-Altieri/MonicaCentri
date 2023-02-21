@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 110.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f3f3f;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #ec6566;
+        font-family: MontserratRoman-Bold, Montserrat;
+        font-size: 32px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Livello_1-2" data-name="Livello 1">
+    <g>
+      <text class="cls-6" transform="translate(100.71 27.2)"><tspan x="0" y="0">Ri</tspan><tspan class="cls-3" x="33.15" y="0">v</tspan><tspan x="51.81" y="0">oluziona il tuo </tspan><tspan class="cls-2" x="297.5" y="0">c</tspan><tspan class="cls-5" x="316.19" y="0">o</tspan><tspan class="cls-4" x="337.15" y="0">r</tspan><tspan x="350.81" y="0">po </tspan><tspan x="90.24" y="38.4">senza bistu</tspan><tspan class="cls-4" x="280.32" y="38.4">r</tspan><tspan x="293.98" y="38.4">i</tspan></text>
+      <path class="cls-1" d="m514.82,14.72h80.45v8.38h-80.45c-.73,0-1.33-.59-1.33-1.33v-5.72c0-.73.59-1.33,1.33-1.33Z"/>
+      <path class="cls-1" d="m0,14.72h80.45c.73,0,1.33.59,1.33,1.33v5.72c0,.73-.59,1.33-1.33,1.33H0v-8.38h0Z"/>
+    </g>
+  </g>
+</svg>

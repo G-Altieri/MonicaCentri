@@ -16,3 +16,4 @@ You can directly use them in pages and other components without the need to impo
 - `<Navbar>` | `<navbar>` (components/navbar.vue)
 - `<NavbarBuy>` | `<navbar-buy>` (components/navbarBuy.vue)
 - `<QrLink>` | `<qr-link>` (components/qr-link.vue)
+- `<WebViewer>` | `<web-viewer>` (components/WebViewer.vue)

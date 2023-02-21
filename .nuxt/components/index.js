@@ -8,6 +8,7 @@ export { default as MenuOverlay } from '../..\\components\\menuOverlay.vue'
 export { default as Navbar } from '../..\\components\\navbar.vue'
 export { default as NavbarBuy } from '../..\\components\\navbarBuy.vue'
 export { default as QrLink } from '../..\\components\\qr-link.vue'
+export { default as WebViewer } from '../..\\components\\WebViewer.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

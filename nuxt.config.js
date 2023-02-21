@@ -15,14 +15,12 @@ export default {
         },
         script: [{
             // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-            //src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-            //src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
+            // src: 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
+            // src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
             // src: '~/plugins/pixel.js',
             // src: '~/plugins/googleTagManager.js',
+        }],
 
-        },
-
-        ],
         meta: [{
             charset: 'utf-8'
         },
@@ -132,9 +130,7 @@ export default {
         {
             src: '~/plugins/vueMq'
         },
-
         '~/plugins/vue-slick-carousel.js',
-
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -151,13 +147,14 @@ export default {
 
         //nuxt compressor
         'nuxt-compress',
+        '@nuxt/postcss8',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/auth-next',
-        
+
         //Libreria per la gestione delle lingue
         ['nuxt-i18n', {
             lazy: true,
@@ -316,15 +313,21 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        //*Jquery  */
-        plugins: 
-       [],
-       postcss: {
-        plugins: {
+        postcss: {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            },
         },
-        preset: {
+        //*Jquery  */
+        plugins:
+            [],
+        postcss: {
+            plugins: {
+            },
+            preset: {
+            }
         }
-      }
 
     }, //build 
 }

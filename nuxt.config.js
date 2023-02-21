@@ -131,6 +131,7 @@ export default {
             src: '~/plugins/vueMq'
         },
         '~/plugins/vue-slick-carousel.js',
+        { src: '~/plugins/vue-pdf.js', ssr: false }
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -313,6 +314,7 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
+        
         postcss: {
             plugins: {
                 tailwindcss: {},
@@ -327,7 +329,8 @@ export default {
             },
             preset: {
             }
-        }
+        },
+        
 
     }, //build 
 }

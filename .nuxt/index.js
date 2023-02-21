@@ -22,6 +22,7 @@ import nuxt_plugin_axios_5286af6f from 'nuxt_plugin_axios_5286af6f' // Source: .
 import nuxt_plugin_animejsModule_a1b7c108 from 'nuxt_plugin_animejsModule_a1b7c108' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueMq_3319afd8 from 'nuxt_plugin_vueMq_3319afd8' // Source: ..\\plugins\\vueMq (mode: 'all')
 import nuxt_plugin_vueslickcarousel_1c6345a5 from 'nuxt_plugin_vueslickcarousel_1c6345a5' // Source: ..\\plugins\\vue-slick-carousel.js (mode: 'all')
+import nuxt_plugin_vuepdf_16ca6c3c from 'nuxt_plugin_vuepdf_16ca6c3c' // Source: ..\\plugins\\vue-pdf.js (mode: 'client')
 import nuxt_plugin_auth_03bc603e from 'nuxt_plugin_auth_03bc603e' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -270,6 +271,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vueslickcarousel_1c6345a5 === 'function') {
     await nuxt_plugin_vueslickcarousel_1c6345a5(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuepdf_16ca6c3c === 'function') {
+    await nuxt_plugin_vuepdf_16ca6c3c(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_03bc603e === 'function') {

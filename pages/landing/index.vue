@@ -29,7 +29,7 @@
 
     <!-- Container -->
     <div
-      class="w-full mx-auto flex flex-col items-center border-0 lg:border-x-12 border-redSecondary lg:drop-shadow-lg"
+      class="w-full mx-auto flex flex-col items-center border-0 lg:border-x-12 border-redSecondary "
       style="max-width: 1024px"
     >
       <!-- Image Header Page -->
@@ -37,7 +37,7 @@
         class=""
         src="~/assets/img/landing/photo1.png"
         alt="Monica Centri"
-        width="100%"
+     
         height="100%"
       />
 
@@ -96,7 +96,7 @@
       />
       <div class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2">Cambia te <br> stesso</div>
       <div class="text-white text-xl sm:text-4xl font-medium text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">PROVA LA SEDUTA <br> BODY REFRESH</div>
-      <button class="text-redSecondary text-xl sm:text-4xl font-semiBold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2 py-4  bg-white w-40 sm:w-80 rounded-full">Prenota ora</button>
+      <button class="text-redSecondary text-xl sm:text-4xl font-semibold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2 py-4  bg-white w-40 sm:w-80 rounded-full">Prenota ora</button>
      </div>
 
 <!-- Text Risultati Visibili -->
@@ -124,7 +124,7 @@
     <div class="text-center text-redSecondary w-full mx-4 my-6 font-bold text-3xl lg:text-5xl">
       Scopri il <br> cambiamento
     </div>
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full">Prenota ora</button>
 
 <!-- Title Illustration Body Reset -->
       <img
@@ -169,11 +169,11 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     </div>
     
     <div class="text-center text-2xl font-bold mt-4">
-      Andiamo a lavorare su <span class="text-redSecondary"> idratazione, ritenzione idrica, detossinazione, manovre di sblocco </span> e tanto altro.
+      Andiamo a lavorare su <br> <span class="text-redSecondary"> idratazione, ritenzione <br>idrica, detossinazione,<br>manovre di sblocco </span> e<br> tanto altro.
     </div>
 
 
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
 
     <!-- Section 2 -->
@@ -205,7 +205,7 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     </div>
 
 
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
     
     
@@ -238,7 +238,7 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     </div>
 
 
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
 
 
@@ -271,7 +271,7 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     </div>
 
 
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
 
 
@@ -303,7 +303,7 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     </div>
 
 
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
 
     <!-- Section 6 -->
@@ -333,7 +333,7 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
     <span class="text-redSecondary">L’autostima</span> gioca un <br> ruolo fondamentale <br> nella vita di ognuno di <br>noi ed <span class="text-redSecondary">essere <br> consapevoli e credere  <br>in noi stessi </span>
       ci dà la <br> forza di vivere la vita <br> dei nostri sogni.
     </div>
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold  text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold  text-center mx-auto py-4 px-8 text-white  rounded-full mt-16">Prenota ora</button>
     <hr class="mt-16 border-t-2 border-redSecondary w-8/12">
     
     <!-- Section 7 -->
@@ -373,8 +373,159 @@ Vengono analizzati stile di vita, condizione fisica <br> e mentale e tutti gli a
 
     <!-- Title Prova la seduta body refresh -->
     <div class="text-3xl sm:text-4xl font-bold mx-4 text-redSecondary text-center my-10">PROVA LA SEDUTA <br> BODY REFRESH</div>
-    <button class="bg-redSecondary text-xl sm:text-4xl font-semiBold text-center mx-auto py-4 px-8 text-white  rounded-full">Prenota ora</button>
-    <div class="text-3xl sm:text-3xl font-bold mx-6 text-center">Da <span class="text-redSecondary"> 30 anni  </span>  esperti<br>nel mondo del<br><span class="text-redSecondary"> benessere </span>  e della<br><span class="text-redSecondary">bellezza </span> </div>
+    <button class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white  rounded-full">Prenota ora</button>
+    <div class="text-3xl sm:text-3xl font-bold mx-6 text-center mt-10">Da <span class="text-redSecondary"> 30 anni  </span>  esperti<br>nel mondo del<br><span class="text-redSecondary"> benessere </span>  e della<br><span class="text-redSecondary">bellezza </span> </div>
+    
+
+    <!-- Sezione Video -->
+    <div class="mt-10">
+      <img
+        class=""
+        src="~/assets/img/landing/video.png"
+        alt="Monica Centri"
+        width="100%"
+        height="100%"
+      />
+    </div>
+    <div class="mt-6">
+      <img
+        class=""
+        src="~/assets/img/landing/video.png"
+        alt="Monica Centri"
+        width="100%"
+        height="100%"
+      />
+    </div>
+    <div class="mt-6">
+      <img
+        class=""
+        src="~/assets/img/landing/video.png"
+        alt="Monica Centri"
+        width="100%"
+        height="100%"
+      />
+    </div>
+
+    <!-- Title prenota la seduta di prova body reset -->
+    <div class="mx-auto font-bold text-white bg-redSecondary mt-16 mb-24 p-3 text-3xl rounded-3xl text-center">Prenota la <br> seduta di prova <br> Body Reset</div>
+    
+
+    <!-- Section Review -->
+
+    <!-- Review 1 -->
+       <img
+        class=""
+        src="~/assets/img/landing/avatar1.png"
+        alt="Monica Centri"
+        width="70px"
+        height="70px"
+      />
+    <div class="text-xl font-bold text-redSecondary mt-4 text-center">Giampiera Bardeglinu</div>
+    <img
+    class="mt-3"
+        src="~/assets/img/landing/star.svg"
+        alt="Monica Centri"
+        width="190px"
+      />
+      <div class="mt-4 text-xl text-center font-medium">Disponibili, efficienti e <br> pazienti... ma soprattutto <br> attente nel comprendere lo <br> stato d'animo delle clienti</div>
+
+    <!-- Review 2 -->
+       <img
+        class="mt-12"
+        src="~/assets/img/landing/avatar2.png"
+        alt="Monica Centri"
+        width="70px"
+        height="70px"
+      />
+    <div class="text-xl font-bold text-redSecondary mt-4 text-center">Gianrocco Reale</div>
+    <img
+    class="mt-3"
+        src="~/assets/img/landing/star.svg"
+        alt="Monica Centri"
+        width="190px"
+      />
+      <div class="mt-4 text-xl text-center font-medium">Un luogo in cui ho trovato la <br> massima cordialità e <br> professionalità ma <br> soprattutto dedizione e reale
+      <br> interesse nei confronti delle <br> esigenze del cliente. Centro <br> curato, ordinato ed <br> estremamente pulito. <br>
+      Esperienza davvero piacevole <br> oltre le aspettative.
+      </div>
+
+    <!-- Review 3 -->
+       <img
+        class="mt-12"
+        src="~/assets/img/landing/avatar3.png"
+        alt="Monica Centri"
+        width="70px"
+        height="70px"
+      />
+    <div class="text-xl font-bold text-redSecondary mt-4 text-center">Domenica Albanese</div>
+    <img
+    class="mt-3"
+        src="~/assets/img/landing/star.svg"
+        alt="Monica Centri"
+        width="190px"
+      />
+      <div class="mt-4 text-xl text-center font-medium">A volte facciamo tanti km <br> per recarci nella Spa e invece <br> abbiamo un oasi della  <br> bellezza dentro casa. Un 
+      <br> ambiente super accogliente <br> e rilassante dove per qualche <br> ora ti liberi da tutti i pensieri <br>e ti affidi alla grande  <br> professionalità di Monica e  <br> delle sue collaboratrici per
+      <br>rigenerarti e diventare più<br>bella.
+      </div>
+
+    <!-- Review 4 -->
+       <img
+        class="mt-12"
+        src="~/assets/img/landing/avatar4.png"
+        alt="Monica Centri"
+        width="70px"
+        height="70px"
+      />
+    <div class="text-xl font-bold text-redSecondary mt-4 text-center">Alessandro Paladino</div>
+    <img
+    class="mt-3"
+        src="~/assets/img/landing/star.svg"
+        alt="Monica Centri"
+        width="190px"
+      />
+      <div class="mt-4 text-xl text-center font-medium">Centro davvero ottimo:<br> moderno, all’avanguardia e
+      <br>attrezzato in ogni aspetto   <br> nella cura della persona.
+      <br> La pulizia e l’ordine, uniti <br> all’accoglienza e alla grande <br> professionalità del personale, <br>rendono la struttura unica <br> nel suo genere, attrattiva e
+       <br>ricettiva alle esigenze del 
+      <br>cliente.<br><br>Consiglio a pieni voti!
+      </div>
+
+
+      <!-- Title Body Reset -->
+      <img
+        class="mt-14"
+        src="~/assets/img/landing/illustration4.svg"
+        alt="Monica Centri"
+        width="300px"
+      />
+       <img
+         class="mx-auto mt-4 w-80"
+        src="~/assets/img/landing/photo12.png"
+        alt="Monica Centri"
+        width="100%"
+        height="100%"
+      />
+
+    <div class="text-xl font-bold mx-4 text-center mt-6">Relax, benessere e bellezza in<br>un unico trattamento</div>
+    
+
+  <!-- Testi pre form -->
+  <div class="text-5xl font-bold text-redSecondary text-center mt-20"><span class="text-redPrimary">A 79€</span> invece<br> di 150€</div>
+  <div class="text-3xl font-bold text-redPrimary  text-center mt-4">I posti sono limitati</div>
+  <div class="text-2xl font-semibold text-redSecondary  text-center mt-4">Per noi ogni persona è una<br> storia da ascoltare, un<br> percorso da intraprendere<br> insieme</div>
+  <div class="text-xl font-medium text-black  text-center mt-4">I tuoi risultati sono i nostri<br> risultati!<br>
+Ci prenderemo tutto il tempo<br> necessario per raggiungere gli<br> obiettivi prefissati</div>
+
+<hr class="mt-12 border-t-2 border-redSecondary w-8/12">
+    
+  <div class="text-3xl font-bold text-redPrimary text-center mt-12">Dopo aver compilato<br>il form... </div>
+  <div class="text-2xl font-semibold text-redSecondary  text-center mt-6">verrai ricontattata/o da<br> noi per prendere un<br> appuntamento</div>
+  <div class="text-2xl font-medium text-black  text-center mt-6">Sarà un primo momento di <br>  consulenza in cui potresti<br>  parlarci di cosa vorresti <br> cambiare del tuo corpo e<br>  farci tutte le domande che <br> hai su Body Reset </div>
+   
+   <!-- FORM -->
+    <div class="mt-12 w-full h-screen bg-redSecondary ">
+    </div>
     </div>
   </div>
 </template>

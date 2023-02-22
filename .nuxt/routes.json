@@ -3,156 +3,182 @@
     "name": "admin-lp___it",
     "path": "/admin-lp",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\admin-lp.vue",
-    "chunkName": "pages/admin-lp"
+    "chunkName": "pages/admin-lp",
+    "_name": "_2b80598a"
   },
   {
     "name": "biolifting___it",
     "path": "/biolifting",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\biolifting.vue",
-    "chunkName": "pages/biolifting"
+    "chunkName": "pages/biolifting",
+    "_name": "_28e456a8"
   },
   {
     "name": "card___it",
     "path": "/card",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\card.vue",
-    "chunkName": "pages/card"
+    "chunkName": "pages/card",
+    "_name": "_c01359ee"
   },
   {
     "name": "documents___it",
     "path": "/documents",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\documents.vue",
-    "chunkName": "pages/documents"
+    "chunkName": "pages/documents",
+    "_name": "_8c9e1ee2"
   },
   {
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_3feda129"
   },
   {
     "name": "landing___it",
     "path": "/landing",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\landing\\\\index.vue",
-    "chunkName": "pages/landing/index"
+    "chunkName": "pages/landing/index",
+    "_name": "_1477ded8"
   },
   {
     "name": "laser___it",
     "path": "/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser"
+    "chunkName": "pages/laser",
+    "_name": "_6116dabc"
   },
   {
     "name": "lingue___it",
     "path": "/lingue",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\lingue.vue",
-    "chunkName": "pages/lingue"
+    "chunkName": "pages/lingue",
+    "_name": "_2bacb1bf"
   },
   {
     "name": "lp___it",
     "path": "/lp",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\lp.vue",
-    "chunkName": "pages/lp"
+    "chunkName": "pages/lp",
+    "_name": "_d8e12086"
   },
   {
     "name": "mai+xl___it",
     "path": "/mai%2Bxl",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
-    "chunkName": "pages/mai+xl"
+    "chunkName": "pages/mai+xl",
+    "_name": "_15f815a3"
   },
   {
     "name": "puliziaevo___it",
     "path": "/puliziaevo",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
-    "chunkName": "pages/puliziaevo"
+    "chunkName": "pages/puliziaevo",
+    "_name": "_55dcb287"
   },
   {
     "name": "qr___it",
     "path": "/qr",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\qr.vue",
-    "chunkName": "pages/qr"
+    "chunkName": "pages/qr",
+    "_name": "_c7984c4c"
   },
   {
     "name": "test___it",
     "path": "/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test"
+    "chunkName": "pages/test",
+    "_name": "_5c198b8b"
   },
   {
     "name": "admin-lp___en",
     "path": "/en/admin-lp",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\admin-lp.vue",
-    "chunkName": "pages/admin-lp"
+    "chunkName": "pages/admin-lp",
+    "_name": "_2b80598a"
   },
   {
     "name": "biolifting___en",
     "path": "/en/biolifting",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\biolifting.vue",
-    "chunkName": "pages/biolifting"
+    "chunkName": "pages/biolifting",
+    "_name": "_28e456a8"
   },
   {
     "name": "card___en",
     "path": "/en/card",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\card.vue",
-    "chunkName": "pages/card"
+    "chunkName": "pages/card",
+    "_name": "_c01359ee"
   },
   {
     "name": "documents___en",
     "path": "/en/documents",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\documents.vue",
-    "chunkName": "pages/documents"
+    "chunkName": "pages/documents",
+    "_name": "_8c9e1ee2"
   },
   {
     "name": "landing___en",
     "path": "/en/landing",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\landing\\\\index.vue",
-    "chunkName": "pages/landing/index"
+    "chunkName": "pages/landing/index",
+    "_name": "_1477ded8"
   },
   {
     "name": "laser___en",
     "path": "/en/laser",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\laser.vue",
-    "chunkName": "pages/laser"
+    "chunkName": "pages/laser",
+    "_name": "_6116dabc"
   },
   {
     "name": "lingue___en",
     "path": "/en/lingue",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\lingue.vue",
-    "chunkName": "pages/lingue"
+    "chunkName": "pages/lingue",
+    "_name": "_2bacb1bf"
   },
   {
     "name": "lp___en",
     "path": "/en/lp",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\lp.vue",
-    "chunkName": "pages/lp"
+    "chunkName": "pages/lp",
+    "_name": "_d8e12086"
   },
   {
     "name": "mai+xl___en",
     "path": "/en/mai%2Bxl",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\mai+xl.vue",
-    "chunkName": "pages/mai+xl"
+    "chunkName": "pages/mai+xl",
+    "_name": "_15f815a3"
   },
   {
     "name": "puliziaevo___en",
     "path": "/en/puliziaevo",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\puliziaevo.vue",
-    "chunkName": "pages/puliziaevo"
+    "chunkName": "pages/puliziaevo",
+    "_name": "_55dcb287"
   },
   {
     "name": "qr___en",
     "path": "/en/qr",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\qr.vue",
-    "chunkName": "pages/qr"
+    "chunkName": "pages/qr",
+    "_name": "_c7984c4c"
   },
   {
     "name": "test___en",
     "path": "/en/test",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\test.vue",
-    "chunkName": "pages/test"
+    "chunkName": "pages/test",
+    "_name": "_5c198b8b"
   },
   {
     "name": "index___it",
     "path": "/",
     "component": "C:\\\\Users\\\\Giovanni\\\\Desktop\\\\File\\\\Dev\\\\MonicaCentri\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_3feda129"
   }
 ]

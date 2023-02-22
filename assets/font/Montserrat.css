@@ -147,3 +147,10 @@
     font-display: block;
     src: url('montserrat-bold.woff2') format('woff2'), url('montserrat-bold.woff') format('woff'), url('Montserrat-Bold.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src: url('Montserrat-Medium.woff2') format('woff2'), url('Montserrat-Medium.woff') format('woff'), url('Montserrat-Medium.ttf') format('truetype');
+}

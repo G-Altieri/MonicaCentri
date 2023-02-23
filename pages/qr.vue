@@ -34,7 +34,7 @@
           <!-- Box Scopri cosa puoi fare con noi -->
           <div class="boxScopriDiPiu">
             <div class="text_ScopriDiPiu">SCOPRI COSA PUOI FARE CON NOI</div>
-            <button class="button_ScopriDiPiu">Scarica il menù servizi</button>
+            <button class="button_ScopriDiPiu" onclick="window.location.href='https://drive.google.com/file/d/1sgGgebCnvNjaop8Lrod3uqG9l_0Ps2dt/view?usp=sharing';">Scarica il menù servizi</button>
           </div>
 
           <!-- Body with links -->

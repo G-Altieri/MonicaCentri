@@ -17,6 +17,7 @@ const _5006b3c5 = () => interopDefault(import('..\\pages\\mai+xl.vue' /* webpack
 const _e56920ae = () => interopDefault(import('..\\pages\\puliziaevo.vue' /* webpackChunkName: "pages/puliziaevo" */))
 const _1dfad8fc = () => interopDefault(import('..\\pages\\qr.vue' /* webpackChunkName: "pages/qr" */))
 const _efc56ba6 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
+const _4c6d5171 = () => interopDefault(import('..\\pages\\landing\\invioCorretto.vue' /* webpackChunkName: "pages/landing/invioCorretto" */))
 
 const emptyFn = () => {}
 
@@ -129,6 +130,14 @@ export const routerOptions = {
     path: "/en/test",
     component: _efc56ba6,
     name: "test___en"
+  }, {
+    path: "/landing/invioCorretto",
+    component: _4c6d5171,
+    name: "landing-invioCorretto___it"
+  }, {
+    path: "/en/landing/invioCorretto",
+    component: _4c6d5171,
+    name: "landing-invioCorretto___en"
   }, {
     path: "/",
     component: _d73c9272,

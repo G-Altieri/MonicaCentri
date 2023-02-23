@@ -5,7 +5,7 @@
                                 relative
                                 top-0
                                 h-16
-                                w-screen
+                                w-full
                                 bg-white
                                 flex flex-row
                                 items-center
@@ -456,7 +456,7 @@
           <input type="text" id="Cognome" name="Cognome" placeholder="Rossi" class="rounded-md bg-white p-4 w-full mb-4">
           <!-- Telefono  -->
           <label for="Telefono" class="text-lg text-black font-medium">Telefono</label>
-          <input type="number" id="Telefono" name="Telefono" placeholder="332 789 412"
+          <input type="tel" id="Telefono" name="Telefono" placeholder="332 789 412"
             class="rounded-md bg-white p-4 w-full mb-4">
           <!-- Email  -->
           <label for="Email" class="text-lg text-black font-medium">Email</label>
@@ -500,7 +500,7 @@
 
 
         <!-- Button -->
-        <button
+        <button  onclick="window.location.href='/landing/invioCorretto';"
           class="text-redSecondary text-3xl bg-white text-center font-bold rounded-xl py-5 w-9/12 mt-12 mb-16 relative left-1/2 transform -translate-x-1/2">INVIA</button>
       </div>
 

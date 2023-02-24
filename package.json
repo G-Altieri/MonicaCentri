@@ -17,7 +17,6 @@
         "core-js": "^3.26.1",
         "nuxt": "^2.15.8",
         "nuxt-i18n": "^6.28.1",
-        "pdf-viewer-vue": "^0.2.7",
         "postcss-plugins": "^1.13.1",
         "share-api-polyfill": "^1.1.1",
         "vue-mq": "^1.0.1",

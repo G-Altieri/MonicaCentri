@@ -131,7 +131,7 @@ export default {
             src: '~/plugins/vueMq'
         },
         '~/plugins/vue-slick-carousel.js',
-        { src: '~/plugins/vue-pdf.js', ssr: false }
+      
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -254,7 +254,7 @@ export default {
     },
 
     axios: {
-        baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
+     //   baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
         //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/me
         //local confing http://127.0.0.1:8000/api
 

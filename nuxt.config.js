@@ -19,6 +19,7 @@ export default {
             // src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js',
             // src: '~/plugins/pixel.js',
             // src: '~/plugins/googleTagManager.js',
+        //    src: "https://www.google.com/recaptcha/api.js"
         }],
 
         meta: [{
@@ -131,7 +132,7 @@ export default {
             src: '~/plugins/vueMq'
         },
         '~/plugins/vue-slick-carousel.js',
-      
+
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -254,7 +255,7 @@ export default {
     },
 
     axios: {
-     //   baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
+        //   baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
         //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/me
         //local confing http://127.0.0.1:8000/api
         proxyHeaders: false,
@@ -315,7 +316,7 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        
+
         postcss: {
             plugins: {
                 tailwindcss: {},
@@ -331,7 +332,7 @@ export default {
             preset: {
             }
         },
-        
+
 
     }, //build 
 }

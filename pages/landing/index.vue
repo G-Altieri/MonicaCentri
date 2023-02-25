@@ -595,7 +595,15 @@
           width="100%"
           height="100%"
         /> -->
-        <iframe width="315" height="170" src="https://www.youtube.com/embed/r4UGSlEkweI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="315"
+          height="170"
+          src="https://www.youtube.com/embed/r4UGSlEkweI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="mt-6">
         <img
@@ -614,7 +622,15 @@
           width="100%"
           height="100%"
         /> -->
-        <iframe width="315" height="170" src="https://www.youtube.com/embed/D_H9zjCvP6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="315"
+          height="170"
+          src="https://www.youtube.com/embed/D_H9zjCvP6g"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <!-- Title prenota la seduta di prova body reset -->
@@ -940,6 +956,7 @@
         </div>
 
         <!-- Recaptcha -->
+  
 
         <!-- Alert -->
         <div
@@ -1106,8 +1123,8 @@ export default {
           )
           .then((response) => {
             console.log("Inserimento Effettuato con successo");
-           // console.log(response);
-            this.$router.push({ path: "/landing/invioCorretto" })
+            // console.log(response);
+            this.$router.push({ path: "/landing/invioCorretto" });
           })
           .catch((error) => {
             console.error("Oh Error");
@@ -1116,6 +1133,9 @@ export default {
             console.error(error);
           });
       }
+    },
+    onSubmit(token) {
+      document.getElementById("demo-form").submit();
     },
     controlloForm() {
       /* console.log("Dati inseriti: ");

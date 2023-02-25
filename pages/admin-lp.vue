@@ -277,7 +277,7 @@
             <th class="px-4 py-3" v-show="tableIndices.data">Data</th>
           </tr>
 
-          <tr
+          <!-- <tr
             class="bg-gray-100 border-b border-my-pink"
             v-for="(utente, index) in filterResponse"
             :key="utente.id"
@@ -311,7 +311,7 @@
             <td class="px-4 py-3 cursor-pointer" v-show="tableIndices.data">
               {{ new Date(utente.created_at).toLocaleString("en-GB") }}
             </td>
-          </tr>
+          </tr> -->
           <!--**Table -->
         </table>
 
@@ -329,7 +329,7 @@
           </div>
         </div>
 
-        <!-- <pre><code>{{request }}</code></pre> -->
+        <pre><code>{{request }}</code></pre>
         <!-- <pre><code>{{tableOrder }}</code></pre> -->
         <!-- <pre><code>{{filterResponse}}</code></pre> -->
       </div>
@@ -361,7 +361,7 @@ export default {
   }, //data
   mounted() {}, //mounted
   created() {
-    this.renderRequest();
+   this.renderRequest();
 
     /* Richiede Ip
     this.$axios
@@ -474,15 +474,15 @@ export default {
 
     async renderRequest() {
       await this.$axios
-        .$get("https://shielded-island-95040.herokuapp.com/api/client")
+        .$get("https://vivicalascio.altervista.org/MonicaCentri/receiveForm.php")
         //Local http://127.0.0.1:8000/api/client
         //Production https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
         //Old SiteGround "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
         .then((response) => {
-          this.showResponseServer = false;
+        this.showResponseServer = false;
           this.loading = "Caricamento Effettuato :)";
           console.log(response);
-          this.request = response;
+        this.request = response;
         })
         .catch((error) => {
           this.loading = "Ops, qualcosa é andato storto";

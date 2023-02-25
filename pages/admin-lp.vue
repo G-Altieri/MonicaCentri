@@ -8,19 +8,7 @@
         <!-- Test Button Copy into Clipboard -->
         <div style="top: 0px" class="px-4" v-show="showCopied">
           <div
-            class="
-              py-3
-              px-5
-              mb-4
-              bg-green-100
-              text-green-900 text-sm
-              rounded-md
-              border border-green-200
-              flex
-              items-center
-              justify-between
-              absolute
-            "
+            class="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 flex items-center justify-between absolute"
             role="alert"
           >
             <span><b>Copiato! </b> {{ textCopied }} </span>
@@ -50,28 +38,11 @@
 
         <!-- Button Update  Search Bar e Order By-->
         <div
-          class="
-            flex
-            gap-4
-            px-4
-            text-center
-            items-stretch
-            w-5/6
-            mx-auto
-            grid grid-cols-2
-            md:grid-cols-3
-          "
+          class="flex gap-4 px-4 text-center items-stretch w-5/6 mx-auto grid grid-cols-2 md:grid-cols-3"
         >
           <!-- Button Update -->
           <div
-            class="
-              p-2
-              text-white
-              rounded-full
-              flex-1
-              self-center
-              cursor-pointer
-            "
+            class="p-2 text-white rounded-full flex-1 self-center cursor-pointer"
             style="background: #af384f"
             @click="reload()"
           >
@@ -79,14 +50,7 @@
           </div>
           <!-- Order By -->
           <div
-            class="
-              p-2
-              text-white
-              rounded-full
-              flex-1
-              self-center
-              cursor-pointer
-            "
+            class="p-2 text-white rounded-full flex-1 self-center cursor-pointer"
             style="background: #af384f"
             @click="showOrder = !showOrder"
           >
@@ -100,36 +64,14 @@
             type="text"
             name="inputRicerca"
             placeholder="Ricerca"
-            class="
-              flex-none
-              self-center
-              px-4
-              py-2
-              rounded-lg
-              border border-red-200
-              focus:outline-none
-              focus:ring-2 focus:ring-indigo-300
-              focus:border-red-400
-              col-span-2
-              md:col-span-1
-            "
+            class="flex-none self-center px-4 py-2 rounded-lg border border-red-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-red-400 col-span-2 md:col-span-1"
           />
         </div>
 
         <!-- Modal Ordina -->
         <div
           v-show="showOrder"
-          class="
-            absolute
-            mx-auto
-            grid
-            flex
-            w-4/5
-            bg-white
-            rounded-lg
-            shadow-md
-            bg-pink-100
-          "
+          class="absolute mx-auto grid flex w-4/5 bg-white rounded-lg shadow-md bg-pink-100"
           style="
             height: auto;
             top: 153px;
@@ -164,17 +106,27 @@
                 <input
                   type="checkbox"
                   id="checkboxName"
-                  v-model="tableIndices.name"
+                  v-model="tableIndices.nome"
                   class="h-6 w-6"
                 />
                 <label for="checkboxName">Nome</label>
+              </div>
+              <!-- Cognome -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxName"
+                  v-model="tableIndices.cognome"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxName">Cognome</label>
               </div>
               <!-- number -->
               <div>
                 <input
                   type="checkbox"
                   id="checkboxNumber"
-                  v-model="tableIndices.number"
+                  v-model="tableIndices.tel"
                   class="h-6 w-6"
                 />
                 <label for="checkboxNumber">Numero</label>
@@ -184,20 +136,40 @@
                 <input
                   type="checkbox"
                   id="checkboxCity"
-                  v-model="tableIndices.city"
+                  v-model="tableIndices.email"
                   class="h-6 w-6"
                 />
-                <label for="checkboxCity">Cittá</label>
+                <label for="checkboxCity">Email</label>
+              </div>
+              <!-- Sesso -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxCity"
+                  v-model="tableIndices.sesso"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxCity">Sesso</label>
               </div>
               <!-- Data -->
               <div>
                 <input
                   type="checkbox"
                   id="checkboxData"
-                  v-model="tableIndices.data"
+                  v-model="tableIndices.dataOra"
                   class="h-6 w-6"
                 />
                 <label for="checkboxData">Data</label>
+              </div>
+              <!-- Marketing -->
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkboxData"
+                  v-model="tableIndices.marketing"
+                  class="h-6 w-6"
+                />
+                <label for="checkboxData">consenso Marketing</label>
               </div>
             </div>
 
@@ -209,15 +181,7 @@
 
             <!-- Visualizza Indici Ordini -->
             <div
-              class="
-                flex
-                items-center
-                px-6
-                gap-y-2
-                grid grid-cols-1
-                col-span-2
-                text-lg
-              "
+              class="flex items-center px-6 gap-y-2 grid grid-cols-1 col-span-2 text-lg"
             >
               <div>
                 <input
@@ -271,47 +235,76 @@
         >
           <tr class="text-left border-my-red border-b-2">
             <th class="px-4 py-3" v-show="tableIndices.id">#</th>
-            <th class="px-4 py-3" v-show="tableIndices.name">Nome</th>
-            <th class="px-4 py-3" v-show="tableIndices.number">Numero</th>
-            <th class="px-4 py-3" v-show="tableIndices.city">Cittá</th>
-            <th class="px-4 py-3" v-show="tableIndices.data">Data</th>
+            <th class="px-4 py-3" v-show="tableIndices.nome">Nome</th>
+            <th class="px-4 py-3" v-show="tableIndices.cognome">Cognome</th>
+            <th class="px-4 py-3" v-show="tableIndices.tel">Numero</th>
+            <th class="px-4 py-3" v-show="tableIndices.email">Email</th>
+            <th class="px-4 py-3" v-show="tableIndices.sesso">Sesso</th>
+            <th class="px-4 py-3" v-show="tableIndices.dataOra">Data</th>
+            <th class="px-4 py-3" v-show="tableIndices.marketing">
+              Consenso Marketing
+            </th>
           </tr>
 
-          <!-- <tr
-            class="bg-gray-100 border-b border-my-pink"
+          <tr
+            class="border-b border-my-pink"
+            :class="index % 2 ? 'bg-gray-200' : 'bg-white'"
             v-for="(utente, index) in filterResponse"
-            :key="utente.id"
+            :key="index"
           >
             <td class="px-4 py-3" v-show="tableIndices.id">
               {{ index + 1 }}
             </td>
             <td
               class="px-4 py-3 cursor-pointer"
-              @click="copyToClipBoard(utente.name)"
-              v-show="tableIndices.name"
+              @click="copyToClipBoard(utente.nome)"
+              v-show="tableIndices.nome"
             >
-              {{ utente.name }}
+              {{ utente.nome }}
             </td>
             <td
               class="px-4 py-3 cursor-pointer"
-              @click="copyToClipBoard(utente.number)"
-              v-show="tableIndices.number"
+              @click="copyToClipBoard(utente.cognome)"
+              v-show="tableIndices.cognome"
             >
-              <a :href="'tel:+39' + utente.number">
-                {{ utente.number }}
+              {{ utente.cognome }}
+            </td>
+            <td
+              class="px-4 py-3 cursor-pointer"
+              @click="copyToClipBoard(utente.tel)"
+              v-show="tableIndices.tel"
+            >
+              <a :href="'tel:+39' + utente.tel">
+                {{ utente.tel }}
               </a>
             </td>
             <td
               class="px-4 py-3 cursor-pointer"
-              @click="copyToClipBoard(utente.city)"
-              v-show="tableIndices.city"
+              @click="copyToClipBoard(utente.email)"
+              v-show="tableIndices.email"
             >
-              {{ utente.city }}
+              {{ utente.email }}
             </td>
-            <td class="px-4 py-3 cursor-pointer" v-show="tableIndices.data">
-              {{ new Date(utente.created_at).toLocaleString("en-GB") }}
+            <td
+              class="px-4 py-3 cursor-pointer"
+              @click="copyToClipBoard(utente.sesso)"
+              v-show="tableIndices.sesso"
+            >
+              {{ utente.sesso }}
             </td>
-          </tr> -->
+
+            <td class="px-4 py-3 cursor-pointer" v-show="tableIndices.dataOra">
+              {{ utente.dataOra }}
+              <!-- {{ new Date(utente.created_at).toLocaleString("en-GB") }} -->
+            </td>
+            <td
+              class="px-4 py-3 cursor-pointer"
+              @click="copyToClipBoard(utente.marketing)"
+              v-show="tableIndices.marketing"
+            >
+              {{ utente.consensoMarketing ? "Consentito" : "Negato" }}
+            </td>
+          </tr>
           <!--**Table -->
         </table>
 
@@ -329,9 +322,18 @@
           </div>
         </div>
 
-        <pre><code>{{request }}</code></pre>
+        <!-- <pre><code>{{request }}</code></pre> -->
         <!-- <pre><code>{{tableOrder }}</code></pre> -->
         <!-- <pre><code>{{filterResponse}}</code></pre> -->
+
+        <!-- 
+        <div v-for="(utente) in request" :key="utente.id">
+            {{utente.nome}}
+            {{utente.cognome}}
+            {{utente.email}}
+            {{utente.tel}}
+            {{utente.dataOra}}
+        </div> -->
       </div>
     </div>
   </div>
@@ -350,18 +352,21 @@ export default {
       showResponseServer: true,
       tableIndices: {
         id: true,
-        name: true,
-        number: true,
-        city: true,
-        data: false,
+        nome: true,
+        cognome: true,
+        tel: true,
+        email: true,
+        dataOra: true,
+        sesso: true,
+        marketing: true,
       },
-      tableOrder: "cre",
+      tableOrder: "az",
       showOrder: false,
     };
   }, //data
   mounted() {}, //mounted
   created() {
-   this.renderRequest();
+    this.renderRequest();
 
     /* Richiede Ip
     this.$axios
@@ -392,39 +397,55 @@ export default {
     },
     filterResponse() {
       if (this.request != "") {
-        console.log(this.request);
+        //console.log(this.request);
         switch (this.tableOrder) {
           case "az":
-            this.request = this.request.sort((a, b) =>
-              a.name.localeCompare(b.name)
-            );
+            this.request = this.request.sort((a, b) => {
+              if (a.nome < b.nome) {
+                return -1;
+              }
+            });
             break;
           case "za":
-            this.request = this.request.sort((a, b) =>
-              b.name.localeCompare(a.name)
-            );
+            this.request = this.request.sort((a, b) => {
+              if (a.nome > b.nome) {
+                return -1;
+              }
+            });
             break;
           case "decr":
-            this.request = this.request.sort(
-              (a, b) =>   b.created_at.localeCompare(a.created_at)
-            );
+            this.request = this.request.sort((a, b) => {
+              if (a.dataOra < b.dataOra) {
+                return -1;
+              }
+            });
             break;
           case "cre":
-                this.request = this.request.sort(
-              (a, b) =>   a.created_at.localeCompare(b.created_at)
-            );
+            this.request = this.request.sort((a, b) => {
+              if (a.dataOra > b.dataOra) {
+                return -1;
+              }
+            });
             break;
         }
-
-        //return this.request.sort((a, b) => b.name.localeCompare(a.name))
-        return this.request.filter((x) => {
+      
+     
+     //return this.request;
+      
+          return this.request.filter((x) => {
           return (
-            x.city.toLowerCase().match(this.search.toLowerCase()) ||
-            x.name.toLowerCase().match(this.search.toLowerCase()) ||
-            x.number.toString().match(this.search)
+            x.nome.toLowerCase().match(this.search.toLowerCase()) ||
+            x.cognome.toLowerCase().match(this.search.toLowerCase()) ||
+            x.tel.match(this.search) ||
+            x.email.toLowerCase().match(this.search) ||
+            x.sesso.toLowerCase().match(this.search) ||
+            x.dataOra.toLowerCase().match(this.search) ||
+            x.marketing.match(this.search) 
+
             //  x.created_at.toString().match(this.search)
           );
         });
+        
       }
     },
   },
@@ -474,15 +495,17 @@ export default {
 
     async renderRequest() {
       await this.$axios
-        .$get("https://vivicalascio.altervista.org/MonicaCentri/receiveForm.php")
+        .$get(
+          "https://vivicalascio.altervista.org/MonicaCentri/receiveForm.php"
+        )
         //Local http://127.0.0.1:8000/api/client
         //Production https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
         //Old SiteGround "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
         .then((response) => {
-        this.showResponseServer = false;
+          this.showResponseServer = false;
           this.loading = "Caricamento Effettuato :)";
           console.log(response);
-        this.request = response;
+          this.request = response;
         })
         .catch((error) => {
           this.loading = "Ops, qualcosa é andato storto";

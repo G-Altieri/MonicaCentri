@@ -428,24 +428,34 @@ export default {
             });
             break;
         }
-      
-     
-     //return this.request;
-      
-          return this.request.filter((x) => {
+
+        //return this.request;
+        const result = JSON.stringify(this.request);
+        const obg = JSON.parse(result);
+       // console.log(obg);
+
+        return obg.filter((obj) => {
           return (
+            obj.nome.toLowerCase().match(this.search.toLowerCase()) || 
+            obj.cognome.toLowerCase().match(this.search.toLowerCase()) ||
+            obj.tel.match(this.search.toLowerCase()) ||
+            obj.email.toLowerCase().match(this.search.toLowerCase()) ||
+            obj.sesso.toLowerCase().match(this.search.toLowerCase()) ||
+            obj.dataOra.toLowerCase().match(this.search.toLowerCase())
+          );
+        });
+
+        /*  return (
             x.nome.toLowerCase().match(this.search.toLowerCase()) ||
             x.cognome.toLowerCase().match(this.search.toLowerCase()) ||
             x.tel.match(this.search) ||
             x.email.toLowerCase().match(this.search) ||
             x.sesso.toLowerCase().match(this.search) ||
             x.dataOra.toLowerCase().match(this.search) ||
-            x.marketing.match(this.search) 
+            x.marketing.match(this.search)
 
             //  x.created_at.toString().match(this.search)
-          );
-        });
-        
+          ); */
       }
     },
   },
@@ -504,7 +514,9 @@ export default {
         .then((response) => {
           this.showResponseServer = false;
           this.loading = "Caricamento Effettuato :)";
-          console.log(response);
+          //       console.log(response.filter((obj) => obj.nome === "gio"));
+          //  const obj = JSON.parse('['+response+']');
+          //  console.log(obj);
           this.request = response;
         })
         .catch((error) => {

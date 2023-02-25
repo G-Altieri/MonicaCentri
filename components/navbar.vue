@@ -48,7 +48,7 @@
           <div class="flex-1 grid text-right float-right">
             <nuxt-link
               class="spanClick justify-self-end grid"
-            :to="localePath('/lp')"
+            :to="localePath('/landing#formPrenotazione')"
             >
             <!--   @click="activatNewLogin()" -->
               <img

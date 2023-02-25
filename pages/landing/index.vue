@@ -1092,7 +1092,7 @@ export default {
       if (this.controlloForm()) {
         const ip = await this.$axios
           .post(
-            "http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php",
+            "https://vivicalascio.altervista.org/MonicaCentri/receiveForm.php",
             {
               nome: this.nome,
               cognome: this.cognome,

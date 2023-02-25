@@ -588,13 +588,14 @@
 
       <!-- Sezione Video -->
       <div class="mt-10">
-        <img
+        <!-- <img
           class=""
           src="~/assets/img/landing/video.png"
           alt="Monica Centri"
           width="100%"
           height="100%"
-        />
+        /> -->
+        <iframe width="315" height="170" src="https://www.youtube.com/embed/r4UGSlEkweI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="mt-6">
         <img
@@ -606,13 +607,14 @@
         />
       </div>
       <div class="mt-6">
-        <img
+        <!-- <img
           class=""
           src="~/assets/img/landing/video.png"
           alt="Monica Centri"
           width="100%"
           height="100%"
-        />
+        /> -->
+        <iframe width="315" height="170" src="https://www.youtube.com/embed/D_H9zjCvP6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
 
       <!-- Title prenota la seduta di prova body reset -->
@@ -1088,32 +1090,35 @@ export default {
 
     async inviaBTN() {
       if (this.controlloForm()) {
-         const ip = await this.$axios
-        .post(
-          "https://inf5.altervista.org/formmonica.php",
-          {
-            nome: this.nome,
-            cognome: this.cognome,
-            tel: this.tel,
-            email: this.email,
-            sesso: this.sesso,
-            consensoPrivacy: this.consensoPrivacy,
-            consensoMarketing: this.consensoMarketing,
-          },
-          {}
-        )
-        .then((response) => {
-          console.log("Inserimento Effettuato:");
-          console.log(response);
-        })
-        .catch((error) => {
-          console.error("Oh Error2");
-          console.error(error);
-        });
+        const ip = await this.$axios
+          .post(
+            "http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php",
+            {
+              nome: this.nome,
+              cognome: this.cognome,
+              tel: this.tel,
+              email: this.email,
+              sesso: this.sesso,
+              consensoPrivacy: this.consensoPrivacy,
+              consensoMarketing: this.consensoMarketing,
+            },
+            {}
+          )
+          .then((response) => {
+            console.log("Inserimento Effettuato con successo");
+           // console.log(response);
+            this.$router.push({ path: "/landing/invioCorretto" })
+          })
+          .catch((error) => {
+            console.error("Oh Error");
+            this.errorMsg = "Qualcosa é andato storto, Riprovare";
+            this.showError = true;
+            console.error(error);
+          });
       }
     },
     controlloForm() {
-     /* console.log("Dati inseriti: ");
+      /* console.log("Dati inseriti: ");
       console.log(this.nome);
       console.log(this.cognome);
       console.log(this.tel);

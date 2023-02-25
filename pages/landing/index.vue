@@ -936,7 +936,7 @@
         <!-- onclick="window.location.href='/landing/invioCorretto';"   -->
         <div
           @click="inviaBTN()"
-          class="text-redSecondary text-3xl bg-white text-center font-bold rounded-xl py-5 w-9/12 mt-12 mb-16 relative left-1/2 transform -translate-x-1/2"
+          class="text-redSecondary cursor-pointer text-3xl bg-white text-center font-bold rounded-xl py-5 w-9/12 mt-12 mb-16 relative left-1/2 transform -translate-x-1/2"
         >
           INVIA
         </div>
@@ -1043,23 +1043,45 @@ export default {
       }
     },
 
-  async  inviaBTN() {
+    async inviaBTN() {
+      const axios = require("axios");
+      const ip = await axios
+        .post("https://inf5.altervista.org/formmonica.php", {
+          name: "alfredo",
+        })
+        .then((response) => {
+          console.log("Inserimento Effettuato:");
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error("Oh Error");
+          console.error(error);
+        });
+      console.log(ip);
+      /*
+      const ip = await this.$axios
+        .$post("https://inf5.altervista.org/formmonica.php", {
+          "name": "alfredo",
+        })
+        .then((response) => {
+          console.log("Inserimento Effettuato:");
+          console.log(response);
+             })
+        .catch((error) => {
+          console.error("Oh Error");
+          console.error(error);
+        });
+      console.log(ip);
 
-
-
-    const ip = await this.$axios.$get('http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php')
-   console.log(ip);
-
-
-    /*
+      /*
     console.log("Test GET ");
     const axios = require("axios");
 
     const ip = await axios.get('http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php')
     console.log(ip);
     */
-  
-     /* const axios = require("axios");
+
+      /* const axios = require("axios");
       axios
         .get(
           "http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php",

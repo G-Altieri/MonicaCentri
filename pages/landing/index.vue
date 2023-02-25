@@ -831,6 +831,7 @@
             name="Nome"
             placeholder="Mario"
             class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="nome"
           />
           <!-- Cognome  -->
           <label for="Cognome" class="text-lg text-black font-medium"
@@ -842,6 +843,7 @@
             name="Cognome"
             placeholder="Rossi"
             class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="cognome"
           />
           <!-- Telefono  -->
           <label for="Telefono" class="text-lg text-black font-medium"
@@ -853,6 +855,7 @@
             name="Telefono"
             placeholder="332 789 412"
             class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="tel"
           />
           <!-- Email  -->
           <label for="Email" class="text-lg text-black font-medium"
@@ -864,6 +867,7 @@
             name="Email"
             placeholder="mario@email.it"
             class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="email"
           />
           <!-- Sesso  -->
           <label for="Sesso" class="text-lg text-black font-medium"
@@ -873,11 +877,12 @@
             id="Sesso"
             name="Sesso"
             class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="sesso"
           >
-            <option value="0">Seleziona Sesso:</option>
-            <option value="1">Donna</option>
-            <option value="1">Uomo</option>
-            <option value="2">Altro</option>
+            <option value="" disabled>Seleziona Sesso:</option>
+            <option>Donna</option>
+            <option>Uomo</option>
+            <option>Altro</option>
           </select>
           <!-- Privacy -->
           <div class="font-medium text-md mt-6">
@@ -889,8 +894,9 @@
               type="radio"
               id="checkPrivacy"
               name="checkPrivacy"
-              value="false"
+              :value="true"
               class="w-4 h-4"
+              v-model="consensoPrivacy"
             />
             <label for="checkPrivacy" class="text-black text-sm ml-2"
               >Acconsento</label
@@ -908,8 +914,9 @@
                 type="radio"
                 id="checkMarketing"
                 name="checkMarketing"
-                value="false"
+                :value="true"
                 class="w-4 h-4"
+                v-model="consensoMarketing"
               />
               <label for="checkMarketing" class="text-black text-sm ml-2"
                 >Acconsento</label
@@ -920,7 +927,7 @@
                 type="radio"
                 id="checkMarketing"
                 name="checkMarketing"
-                value="false"
+                :value="false"
                 class="w-4 h-4"
               />
               <label for="checkMarketing" class="text-black text-sm ml-2"
@@ -931,6 +938,32 @@
         </div>
 
         <!-- Recaptcha -->
+
+        <!-- Alert -->
+        <div
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-8 mx-8"
+          role="alert"
+          v-show="showError"
+        >
+          <strong class="font-bold">Attenzione!</strong>
+          <span class="block sm:inline">{{ errorMsg }}</span>
+          <span
+            class="absolute top-0 bottom-0 right-0 px-4 py-3"
+            @click="showError = false"
+          >
+            <svg
+              class="fill-current h-6 w-6 text-red-500"
+              role="button"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <title>Close</title>
+              <path
+                d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+              />
+            </svg>
+          </span>
+        </div>
 
         <!-- Button -->
         <!-- onclick="window.location.href='/landing/invioCorretto';"   -->
@@ -1009,7 +1042,17 @@
 export default {
   layout: "empty",
   data() {
-    return {};
+    return {
+      nome: "",
+      cognome: "",
+      tel: "",
+      email: "",
+      sesso: "",
+      consensoPrivacy: false,
+      consensoMarketing: false,
+      errorMsg: "Hei",
+      showError: false,
+    };
   }, //data
   mounted() {}, //mounted
   created() {}, //created
@@ -1044,66 +1087,77 @@ export default {
     },
 
     async inviaBTN() {
-      const axios = require("axios");
-      const ip = await axios
-        .post("https://inf5.altervista.org/formmonica.php", {
-          name: "alfredo",
-        })
-        .then((response) => {
-          console.log("Inserimento Effettuato:");
-          console.log(response);
-        })
-        .catch((error) => {
-          console.error("Oh Error");
-          console.error(error);
-        });
-      console.log(ip);
-      /*
-      const ip = await this.$axios
-        .$post("https://inf5.altervista.org/formmonica.php", {
-          "name": "alfredo",
-        })
-        .then((response) => {
-          console.log("Inserimento Effettuato:");
-          console.log(response);
-             })
-        .catch((error) => {
-          console.error("Oh Error");
-          console.error(error);
-        });
-      console.log(ip);
-
-      /*
-    console.log("Test GET ");
-    const axios = require("axios");
-
-    const ip = await axios.get('http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php')
-    console.log(ip);
-    */
-
-      /* const axios = require("axios");
-      axios
-        .get(
-          "http://vivicalascio.altervista.org/MonicaCentri/receiveForm.php",
+      if (this.controlloForm()) {
+         const ip = await this.$axios
+        .post(
+          "https://inf5.altervista.org/formmonica.php",
           {
-            //Old SiteGround "https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client"
-            //production confing https://www.monicacentri.com/BackEnd/booking-monicacentri-app/public/api/client
-            //local http://127.0.0.1:8000/api/client
-            //name: 'Giovanni1',
-          }
+            nome: this.nome,
+            cognome: this.cognome,
+            tel: this.tel,
+            email: this.email,
+            sesso: this.sesso,
+            consensoPrivacy: this.consensoPrivacy,
+            consensoMarketing: this.consensoMarketing,
+          },
+          {}
         )
         .then((response) => {
           console.log("Inserimento Effettuato:");
           console.log(response);
-          this.ringrazziamenti();
-          // this.sendEventPixelNewClient();
         })
         .catch((error) => {
-          this.viewErrorRingraziamenti = true;
-          console.error("Oh Error");
+          console.error("Oh Error2");
           console.error(error);
         });
-        */
+      }
+    },
+    controlloForm() {
+     /* console.log("Dati inseriti: ");
+      console.log(this.nome);
+      console.log(this.cognome);
+      console.log(this.tel);
+      console.log(this.email);
+      console.log(this.sesso);
+      console.log(this.consensoPrivacy);
+      console.log(this.consensoMarketing);
+      */
+
+      //Controllo Nome
+      if (this.nome == "" || this.nome == null) {
+        this.errorMsg = "Inserisci un nome";
+        this.showError = true;
+        return false;
+      }
+      //Controllo Telefono
+      if (this.tel == "" || this.tel == null) {
+        this.errorMsg = "Inserisci un numero di telefono";
+        this.showError = true;
+        return false;
+      }
+
+      //Controllo Email
+      var email_valid =
+        /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+$/;
+      if (
+        !email_valid.test(this.email) ||
+        this.email == "" ||
+        this.email == null
+      ) {
+        this.errorMsg = "Inserisci un email Valida";
+        this.showError = true;
+        return false;
+      }
+
+      //Controllo Privacy
+      if (!this.consensoPrivacy) {
+        this.errorMsg = "Accetta le normative sulla privacy";
+        this.showError = true;
+        return false;
+      }
+
+      this.showError = false;
+      return true;
     },
   }, //methods
   components: {},

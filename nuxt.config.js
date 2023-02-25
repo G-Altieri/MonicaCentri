@@ -257,7 +257,8 @@ export default {
      //   baseURL: 'https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api',
         //production confing https://www.monicacentri.com/BackEnd/BackEndMonicaCentri/public/api/auth/me
         //local confing http://127.0.0.1:8000/api
-
+        proxyHeaders: false,
+        credentials: false
     },
 
 

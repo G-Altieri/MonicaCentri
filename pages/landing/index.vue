@@ -63,18 +63,18 @@
         totalmente <br />
         <span class="text-redSecondary">personalizzato</span> su di te, ti
         portiamo al <br />
-        <span class="text-redSecondary">benessere</span> psicopatico a 360
+        <span class="text-redSecondary">benessere</span> psicofisico a 360
         gradi. <br />
         <br />
-        Sarai sostenuta da
+        Saraí sostenuta da
         <span class="text-redSecondary">professionisti</span> dei vari <br />
-        campi che ti portanno alla migliore versione <br />
-        di te stessa <br />
+        campi che ti porteranno alla migliore versione <br />
+        di té stessa <br />
       </div>
 
       <!-- Title Illustration Body Reset -->
       <img
-        class="max-w-xs w-1/2 mt-11"
+        class="max-w-md w-4/5 mt-16"
         src="~/assets/img/landing/photo2.png"
         alt="Monica Centri"
         width="100%"
@@ -82,7 +82,7 @@
       />
 
       <!-- Cambia te stesso -->
-      <div class="w-full relative mt-16 border-y-8 border-redSecondary">
+      <div class="w-full relative mt-20 border-y-8 border-redSecondary">
         <img
           class=""
           src="~/assets/img/landing/photo3.png"
@@ -93,7 +93,7 @@
         <div
           class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2"
         >
-          Cambia te <br />
+          Cambia té <br />
           stesso
         </div>
         <div
@@ -185,7 +185,7 @@
         la <span class="text-redSecondary">consulenza.</span>
         <br />
         La consulenza consiste nella valutazione,<br />
-        effetuata da profesionisti, del tuo
+        effettuata da professionisti, del tuo
         <span class="text-redSecondary"
           >punto di <br />
           partenza.</span
@@ -284,7 +284,7 @@
         <span class="text-redSecondary">
           radiofrequenza, <br />
           infrarossi, <br />
-          elettrostimolazione,<br />ultrasioni, vacuum, <br />blue light
+          elettrostimolazione,<br />ultrasuoni, vacuum, <br />blue light
         </span>
         e tanto altro.
       </div>
@@ -336,7 +336,7 @@
           grande quantità di <br />
           principi attivi, senza <br />
           parabeni e <br />
-          completamente <br />biologici e vegani </span
+          completamente <br />biologici e vegani</span
         >.
       </div>
 
@@ -369,7 +369,7 @@
       />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
-        Infatti oltre che a livello <br />
+        Oltre che a livello <br />
         fisico, l’alimentazione gioca <br />
         un ruolo fondamentale <br />
         nell’ambito della felicità, <br />
@@ -634,8 +634,8 @@
       </div>
 
       <!-- Title prenota la seduta di prova body reset -->
-      <div
-        class="mx-auto font-bold text-white bg-redSecondary mt-16 mb-24 p-3 text-3xl rounded-3xl text-center"
+      <div  onclick="window.location.href='#formPrenotazione';"
+        class="mx-auto font-bold text-white bg-redSecondary mt-16 mb-24 p-3 text-3xl rounded-3xl text-center cursor-pointer"
       >
         Prenota la <br />
         seduta di prova <br />
@@ -829,7 +829,7 @@
         </div>
         <div class="text-black text-4xl text-center font-bold mt-12">
           <span class="text-white">IN PROMOZIONE <br /><br /></span> a
-          <span class="text-white">87€</span> invece che <br />
+          <span class="text-white">79€</span> invece che <br />
           <span class="text-white">150€</span>
         </div>
 

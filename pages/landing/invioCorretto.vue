@@ -27,7 +27,7 @@
                 <img class="" src="~/assets/img/landing/video.png" alt="Monica Centri" width="100%" height="100%" />
             </div>
 
-            <div class="my-32"></div>
+            <div class="my-8"></div>
         </div>
     </div>
 </template>

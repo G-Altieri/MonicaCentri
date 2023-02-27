@@ -1,50 +1,25 @@
 <template>
   <div class="">
     <!-- NavBar -->
-    <div
-      class="relative top-0 h-16 w-full bg-white flex flex-row items-center justify-center font-bold text-red"
-    >
+    <div class="relative top-0 h-16 w-full bg-white flex flex-row items-center justify-center font-bold text-red">
       <span>MONICA</span>
       <!-- Logo -->
-      <img
-        class="h-10 w-10 text-center justify-self-center"
-        src="~/assets/img/navbar/logo.svg"
-        alt="Logo Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="h-10 w-10 text-center justify-self-center" src="~/assets/img/navbar/logo.svg" alt="Logo Monica Centri"
+        width="100%" height="100%" />
       <span>CENTRI</span>
     </div>
 
     <!-- Container -->
-    <div
-      class="w-full mx-auto flex flex-col items-center border-0 lg:border-x-12 border-redSecondary"
-      style="max-width: 1024px"
-    >
+    <div class="w-full mx-auto flex flex-col items-center border-0 lg:border-x-12 border-redSecondary"
+      style="max-width: 1024px">
       <!-- Image Header Page -->
-      <img
-        class=""
-        src="~/assets/img/landing/photo1.png"
-        alt="Monica Centri"
-        height="100%"
-      />
+      <img class="" src="~/assets/img/landing/photo1.png" alt="Monica Centri" height="100%" />
 
       <!-- Title Illustration Body Reset -->
-      <img
-        class="max-w-xs w-1/2 mt-11"
-        src="~/assets/img/landing/illustration1.svg"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="max-w-xs w-1/2 mt-11" src="~/assets/img/landing/illustration1.svg" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- Title Illustration rivoluziona il tuo corpo -->
-      <img
-        class="mt-14"
-        src="~/assets/img/landing/illustration2.svg"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mt-14" src="~/assets/img/landing/illustration2.svg" alt="Monica Centri" width="100%" height="100%" />
 
       <!-- 
 <div style="width: 100%; height: 20px; border-bottom: 5px solid black; text-align: center" class="h-20">
@@ -66,117 +41,75 @@
         <span class="text-redSecondary">benessere</span> psicofisico a 360
         gradi. <br />
         <br />
-        Saraí sostenuta da
+        Sarai sostenutə da
         <span class="text-redSecondary">professionisti</span> dei vari <br />
         campi che ti porteranno alla migliore versione <br />
-        di té stessa <br />
+        di té stessə <br />
       </div>
 
       <!-- Title Illustration Body Reset -->
-      <img
-        class="max-w-md w-4/5 mt-16"
-        src="~/assets/img/landing/photo2.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="max-w-md w-4/5 mt-16" src="~/assets/img/landing/photo2.png" alt="Monica Centri" width="100%"
+        height="100%" />
 
       <!-- Cambia te stesso -->
       <div class="w-full relative mt-20 border-y-8 border-redSecondary">
-        <img
-          class=""
-          src="~/assets/img/landing/photo3.png"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
+        <img class="" src="~/assets/img/landing/photo3.png" alt="Monica Centri" width="100%" height="100%" />
         <div
-          class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2"
-        >
-          Cambia té <br />
-          stesso
+          class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2">
+          Cambia te <br />
+          stessə
         </div>
         <div
-          class="text-white text-xl sm:text-4xl font-medium text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
-        >
+          class="text-white text-xl sm:text-4xl font-medium text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
           PROVA LA SEDUTA <br />
           BODY REFRESH
         </div>
-        <button
-          onclick="window.location.href='#formPrenotazione';"
-          class="text-redSecondary text-xl sm:text-4xl font-semibold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2 py-4 bg-white w-40 sm:w-80 rounded-full"
-        >
+        <button @click="goToForm()"
+          class="text-redSecondary text-xl sm:text-4xl font-semibold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2 py-4 bg-white w-40 sm:w-80 rounded-full">
           Prenota ora
         </button>
       </div>
 
       <!-- Text Risultati Visibili -->
-      <div
-        class="text-redTertiary text-3xl sm:text-5xl font-bold text-center my-16"
-      >
+      <div class="text-redTertiary text-3xl sm:text-5xl font-bold text-center my-16">
         Risultati visibili e <br />
         misurabili dalla <br />
         prima seduta
       </div>
 
       <!-- Section Barre e testo -->
-      <div
-        class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4"
-      >
+      <div class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4">
         PERDITA DI CENTIMETRI
       </div>
-      <div
-        class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4"
-      >
+      <div class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4">
         CORPO TONIFICATO
       </div>
-      <div
-        class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4"
-      >
+      <div class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4">
         PELLE RASSODATA
       </div>
-      <div
-        class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4"
-      >
+      <div class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4">
         RIDUZIONE CELLULITE
       </div>
-      <div
-        class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4"
-      >
+      <div class="font-bold bg-redTertiary w-full py-3 text-white text-center text-xl sm:text-3xl mb-4">
         LEGGEREZZA ED ENERGIA
       </div>
 
       <!-- Photo di Monica -->
-      <img
-        class="mx-auto mt-12 w-80"
-        src="~/assets/img/landing/photo4.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-12 w-80" src="~/assets/img/landing/photo4.png" alt="Monica Centri" width="100%"
+        height="100%" />
 
       <!-- Text Scopri il Cambiamento -->
-      <div
-        class="text-center text-redSecondary w-full mx-4 my-6 font-bold text-3xl lg:text-5xl"
-      >
+      <div class="text-center text-redSecondary w-full mx-4 my-6 font-bold text-3xl lg:text-5xl">
         Scopri il <br />
         cambiamento
       </div>
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full">
         Prenota ora
       </button>
 
       <!-- Title Illustration Body Reset -->
-      <img
-        class="mt-14"
-        src="~/assets/img/landing/illustration3.svg"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mt-14" src="~/assets/img/landing/illustration3.svg" alt="Monica Centri" width="100%" height="100%" />
 
       <div class="text-center font-bold text-sm sm:text-lg mt-6">
         Prima di iniziare il vero e proprio percorso è<br />
@@ -186,10 +119,8 @@
         <br />
         La consulenza consiste nella valutazione,<br />
         effettuata da professionisti, del tuo
-        <span class="text-redSecondary"
-          >punto di <br />
-          partenza.</span
-        >
+        <span class="text-redSecondary">punto di <br />
+          partenza.</span>
         <br />
         Vengono analizzati stile di vita, condizione fisica <br />
         e mentale e tutti gli aspetti per strutturare il <br />
@@ -199,8 +130,7 @@
       <!-- Inizio sezione coi pallini -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         1
       </div>
       <!-- title bottom pallino -->
@@ -208,13 +138,8 @@
         Manualità
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo5.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo5.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         Dopo l’analisi che avviene <br />
@@ -237,10 +162,8 @@
         tanto altro.
       </div>
 
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -248,8 +171,7 @@
       <!-- Section 2 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         2
       </div>
       <!-- title bottom pallino -->
@@ -257,13 +179,8 @@
         Tecnologie
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo6.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo6.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         In questo percorso <br />
@@ -289,10 +206,8 @@
         e tanto altro.
       </div>
 
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -300,8 +215,7 @@
       <!-- Section 3 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         3
       </div>
       <!-- title bottom pallino -->
@@ -309,13 +223,8 @@
         Cosmetica
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo7.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo7.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         30 anni di studio e ricerca ci <br />
@@ -336,14 +245,11 @@
           grande quantità di <br />
           principi attivi, senza <br />
           parabeni e <br />
-          completamente <br />biologici e vegani</span
-        >.
+          completamente <br />biologici e vegani</span>.
       </div>
 
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -351,8 +257,7 @@
       <!-- Section 4 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         4
       </div>
       <!-- title bottom pallino -->
@@ -360,13 +265,8 @@
         Nutrizione
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo8.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo8.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         Oltre che a livello <br />
@@ -395,10 +295,8 @@
         di quanto pensi!
       </div>
 
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -406,8 +304,7 @@
       <!-- Section 5 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         5
       </div>
       <!-- title bottom pallino -->
@@ -415,13 +312,8 @@
         Integrazione
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo9.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo9.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         Un apporto di micronutrienti <br />
@@ -436,16 +328,13 @@
         Gli integratori <br />
         alimentari ci aiutano a <br />
         colmare le carenze di <br />micronutrienti come <br />
-        <span class="text-redSecondary"
-          >vitamine, calcio, zinco, <br />ferro
+        <span class="text-redSecondary">vitamine, calcio, zinco, <br />ferro
         </span>
         e tanti altri.
       </div>
 
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -453,8 +342,7 @@
       <!-- Section 6 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         6
       </div>
       <!-- title bottom pallino -->
@@ -462,13 +350,8 @@
         Psicologia
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo10.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo10.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-xl font-semibold mt-6">
         Nell’avanzare di questo <br />
@@ -487,18 +370,15 @@
         <span class="text-redSecondary">L’autostima</span> gioca un <br />
         ruolo fondamentale <br />
         nella vita di ognuno di <br />noi ed
-        <span class="text-redSecondary"
-          >essere <br />
+        <span class="text-redSecondary">essere <br />
           consapevoli e credere <br />in noi stessi
         </span>
         ci dà la <br />
         forza di vivere la vita <br />
         dei nostri sogni.
       </div>
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full mt-16">
         Prenota ora
       </button>
       <hr class="mt-16 border-t-2 border-redSecondary w-8/12" />
@@ -506,8 +386,7 @@
       <!-- Section 7 -->
       <!-- pallino -->
       <div
-        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10"
-      >
+        class="rounded-full bg-redSecondary text-white text-3xl h-12 w-12 relative flex items-center justify-center flex-row font-serif mt-10">
         7
       </div>
       <!-- title bottom pallino -->
@@ -515,27 +394,19 @@
         Allenamento
       </div>
       <!-- img bottom title -->
-      <img
-        class="mx-auto mt-6 w-80"
-        src="~/assets/img/landing/photo11.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mx-auto mt-6 w-80" src="~/assets/img/landing/photo11.png" alt="Monica Centri" width="100%"
+        height="100%" />
       <!-- content -->
       <div class="text-center text-2xl font-bold mt-6">
         Per raggiungere
-        <span class="text-redSecondary"
-          >più <br />
+        <span class="text-redSecondary">più <br />
           velocemente i tuoi <br />
           risultati
         </span>
         disponiamo di <br />
         due tipi diversi di <br />allenamento:
-        <span class="text-redSecondary"
-          >passivo e <br />
-          attivo</span
-        >, che calibreremo <br />
+        <span class="text-redSecondary">passivo e <br />
+          attivo</span>, che calibreremo <br />
         naturalmente in base <br />
         al tuo fisico e al tuo <br />
         punto di partenza.
@@ -543,41 +414,28 @@
 
       <!--Energia Benessere Bellezza -->
       <div class="w-full relative mt-20 border-y-8 border-redSecondary">
-        <img
-          class=""
-          src="~/assets/img/landing/photo3.png"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
+        <img class="" src="~/assets/img/landing/photo3.png" alt="Monica Centri" width="100%" height="100%" />
         <div
-          class="text-white text-4xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2"
-        >
+          class="text-white text-4xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2">
           ENERGIA
         </div>
         <div
-          class="text-white text-4xl sm:text-5xl font-bold text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
-        >
+          class="text-white text-4xl sm:text-5xl font-bold text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
           BENESSERE
         </div>
         <div
-          class="text-white text-4xl sm:text-5xl font-bold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2"
-        >
+          class="text-white text-4xl sm:text-5xl font-bold text-center absolute left-1/2 bottom-6 transform -translate-x-1/2">
           BELLEZZA
         </div>
       </div>
 
       <!-- Title Prova la seduta body refresh -->
-      <div
-        class="text-3xl sm:text-4xl font-bold mx-4 text-redSecondary text-center my-10"
-      >
+      <div class="text-3xl sm:text-4xl font-bold mx-4 text-redSecondary text-center my-10">
         PROVA LA SEDUTA <br />
         BODY REFRESH
       </div>
-      <button
-        onclick="window.location.href='#formPrenotazione';"
-        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full"
-      >
+      <button @click="goToForm()"
+        class="bg-redSecondary text-xl sm:text-4xl font-semibold text-center mx-auto py-4 px-8 text-white rounded-full">
         Prenota ora
       </button>
       <div class="text-3xl sm:text-3xl font-bold mx-6 text-center mt-10">
@@ -595,24 +453,10 @@
           width="100%"
           height="100%"
         /> -->
-        <iframe
-          width="315"
-          height="170"
-          src="https://www.youtube.com/embed/r4UGSlEkweI"
-          title="YouTube video player"
+        <iframe width="315" height="170" src="https://www.youtube.com/embed/r4UGSlEkweI" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="mt-6">
-        <img
-          class=""
-          src="~/assets/img/landing/video.png"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
+          allowfullscreen></iframe>
       </div>
       <div class="mt-6">
         <!-- <img
@@ -622,21 +466,28 @@
           width="100%"
           height="100%"
         /> -->
-        <iframe
-          width="315"
-          height="170"
-          src="https://www.youtube.com/embed/D_H9zjCvP6g"
-          title="YouTube video player"
+        <iframe width="315" height="170" src="https://www.youtube.com/embed/Lb03T4O_VsA" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
+      </div>
+      <div class="mt-6">
+        <!-- <img
+          class=""
+          src="~/assets/img/landing/video.png"
+          alt="Monica Centri"
+          width="100%"
+          height="100%"
+        /> -->
+        <iframe width="315" height="170" src="https://www.youtube.com/embed/D_H9zjCvP6g" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
 
       <!-- Title prenota la seduta di prova body reset -->
-      <div  onclick="window.location.href='#formPrenotazione';"
-        class="mx-auto font-bold text-white bg-redSecondary mt-16 mb-24 p-3 text-3xl rounded-3xl text-center cursor-pointer"
-      >
+      <div @click="goToForm()"
+        class="mx-auto font-bold text-white bg-redSecondary mt-16 mb-24 p-3 text-3xl rounded-3xl text-center cursor-pointer">
         Prenota la <br />
         seduta di prova <br />
         Body Reset
@@ -645,22 +496,11 @@
       <!-- Section Review -->
 
       <!-- Review 1 -->
-      <img
-        class=""
-        src="~/assets/img/landing/avatar1.png"
-        alt="Monica Centri"
-        width="70px"
-        height="70px"
-      />
+      <img class="" src="~/assets/img/landing/avatar1.png" alt="Monica Centri" width="70px" height="70px" />
       <div class="text-xl font-bold text-redSecondary mt-4 text-center">
         Giampiera Bardeglinu
       </div>
-      <img
-        class="mt-3"
-        src="~/assets/img/landing/star.svg"
-        alt="Monica Centri"
-        width="190px"
-      />
+      <img class="mt-3" src="~/assets/img/landing/star.svg" alt="Monica Centri" width="190px" />
       <div class="mt-4 text-xl text-center font-medium">
         Disponibili, efficienti e <br />
         pazienti... ma soprattutto <br />
@@ -669,22 +509,11 @@
       </div>
 
       <!-- Review 2 -->
-      <img
-        class="mt-12"
-        src="~/assets/img/landing/avatar2.png"
-        alt="Monica Centri"
-        width="70px"
-        height="70px"
-      />
+      <img class="mt-12" src="~/assets/img/landing/avatar2.png" alt="Monica Centri" width="70px" height="70px" />
       <div class="text-xl font-bold text-redSecondary mt-4 text-center">
         Gianrocco Reale
       </div>
-      <img
-        class="mt-3"
-        src="~/assets/img/landing/star.svg"
-        alt="Monica Centri"
-        width="190px"
-      />
+      <img class="mt-3" src="~/assets/img/landing/star.svg" alt="Monica Centri" width="190px" />
       <div class="mt-4 text-xl text-center font-medium">
         Un luogo in cui ho trovato la <br />
         massima cordialità e <br />
@@ -699,22 +528,11 @@
       </div>
 
       <!-- Review 3 -->
-      <img
-        class="mt-12"
-        src="~/assets/img/landing/avatar3.png"
-        alt="Monica Centri"
-        width="70px"
-        height="70px"
-      />
+      <img class="mt-12" src="~/assets/img/landing/avatar3.png" alt="Monica Centri" width="70px" height="70px" />
       <div class="text-xl font-bold text-redSecondary mt-4 text-center">
         Domenica Albanese
       </div>
-      <img
-        class="mt-3"
-        src="~/assets/img/landing/star.svg"
-        alt="Monica Centri"
-        width="190px"
-      />
+      <img class="mt-3" src="~/assets/img/landing/star.svg" alt="Monica Centri" width="190px" />
       <div class="mt-4 text-xl text-center font-medium">
         A volte facciamo tanti km <br />
         per recarci nella Spa e invece <br />
@@ -728,22 +546,11 @@
       </div>
 
       <!-- Review 4 -->
-      <img
-        class="mt-12"
-        src="~/assets/img/landing/avatar4.png"
-        alt="Monica Centri"
-        width="70px"
-        height="70px"
-      />
+      <img class="mt-12" src="~/assets/img/landing/avatar4.png" alt="Monica Centri" width="70px" height="70px" />
       <div class="text-xl font-bold text-redSecondary mt-4 text-center">
         Alessandro Paladino
       </div>
-      <img
-        class="mt-3"
-        src="~/assets/img/landing/star.svg"
-        alt="Monica Centri"
-        width="190px"
-      />
+      <img class="mt-3" src="~/assets/img/landing/star.svg" alt="Monica Centri" width="190px" />
       <div class="mt-4 text-xl text-center font-medium">
         Centro davvero ottimo:<br />
         moderno, all’avanguardia e <br />attrezzato in ogni aspetto <br />
@@ -756,26 +563,16 @@
       </div>
 
       <!-- Title Body Reset -->
-      <img
-        class="mt-14"
-        src="~/assets/img/landing/illustration4.svg"
-        alt="Monica Centri"
-        width="300px"
-      />
-      <img
-        class="mx-auto mt-4 w-80"
-        src="~/assets/img/landing/photo12.png"
-        alt="Monica Centri"
-        width="100%"
-        height="100%"
-      />
+      <img class="mt-14" src="~/assets/img/landing/illustration4.svg" alt="Monica Centri" width="300px" />
+      <img class="mx-auto mt-4 w-80" src="~/assets/img/landing/photo12.png" alt="Monica Centri" width="100%"
+        height="100%" />
 
       <div class="text-xl font-bold mx-4 text-center mt-6">
         Relax, benessere e bellezza in<br />un unico trattamento
       </div>
 
       <!-- Testi pre form -->
-      <a name="formPrenotazione"></a>
+      <a name="formPrenotazione" id="formPrenotazione"></a>
       <div class="text-5xl font-bold text-redSecondary text-center mt-20">
         <span class="text-redPrimary">A 79€</span> invece<br />
         di 150€
@@ -843,60 +640,23 @@
         <div class="mt-20 mx-8">
           <!-- Nome  -->
           <label for="Nome" class="text-lg text-black font-medium">Nome</label>
-          <input
-            type="text"
-            id="Nome"
-            name="Nome"
-            placeholder="Mario"
-            class="rounded-md bg-white p-4 w-full mb-4"
-            v-model="nome"
-          />
+          <input type="text" id="Nome" name="Nome" placeholder="Mario" class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="nome" />
           <!-- Cognome  -->
-          <label for="Cognome" class="text-lg text-black font-medium"
-            >Cognome</label
-          >
-          <input
-            type="text"
-            id="Cognome"
-            name="Cognome"
-            placeholder="Rossi"
-            class="rounded-md bg-white p-4 w-full mb-4"
-            v-model="cognome"
-          />
+          <label for="Cognome" class="text-lg text-black font-medium">Cognome</label>
+          <input type="text" id="Cognome" name="Cognome" placeholder="Rossi" class="rounded-md bg-white p-4 w-full mb-4"
+            v-model="cognome" />
           <!-- Telefono  -->
-          <label for="Telefono" class="text-lg text-black font-medium"
-            >Telefono</label
-          >
-          <input
-            type="tel"
-            id="Telefono"
-            name="Telefono"
-            placeholder="332 789 412"
-            class="rounded-md bg-white p-4 w-full mb-4"
-            v-model="tel"
-          />
+          <label for="Telefono" class="text-lg text-black font-medium">Telefono</label>
+          <input type="tel" id="Telefono" name="Telefono" placeholder="332 789 412"
+            class="rounded-md bg-white p-4 w-full mb-4" v-model="tel" />
           <!-- Email  -->
-          <label for="Email" class="text-lg text-black font-medium"
-            >Email</label
-          >
-          <input
-            type="email"
-            id="Email"
-            name="Email"
-            placeholder="mario@email.it"
-            class="rounded-md bg-white p-4 w-full mb-4"
-            v-model="email"
-          />
+          <label for="Email" class="text-lg text-black font-medium">Email</label>
+          <input type="email" id="Email" name="Email" placeholder="mario@email.it"
+            class="rounded-md bg-white p-4 w-full mb-4" v-model="email" />
           <!-- Sesso  -->
-          <label for="Sesso" class="text-lg text-black font-medium"
-            >Sesso</label
-          >
-          <select
-            id="Sesso"
-            name="Sesso"
-            class="rounded-md bg-white p-4 w-full mb-4"
-            v-model="sesso"
-          >
+          <label for="Sesso" class="text-lg text-black font-medium">Sesso</label>
+          <select id="Sesso" name="Sesso" class="rounded-md bg-white p-4 w-full mb-4" v-model="sesso">
             <option value="" disabled>Seleziona Sesso:</option>
             <option>Donna</option>
             <option>Uomo</option>
@@ -908,17 +668,9 @@
             l’informativa privacy
           </div>
           <div class="flex flex-row items-center">
-            <input
-              type="radio"
-              id="checkPrivacy"
-              name="checkPrivacy"
-              :value="true"
-              class="w-4 h-4"
-              v-model="consensoPrivacy"
-            />
-            <label for="checkPrivacy" class="text-black text-sm ml-2"
-              >Acconsento</label
-            >
+            <input type="radio" id="checkPrivacy" name="checkPrivacy" :value="true" class="w-4 h-4"
+              v-model="consensoPrivacy" />
+            <label for="checkPrivacy" class="text-black text-sm ml-2">Acconsento</label>
           </div>
 
           <!-- Marketing -->
@@ -928,29 +680,13 @@
           </div>
           <div class="flex flex-row items-center justify-start">
             <div class="flex flex-row items-center">
-              <input
-                type="radio"
-                id="checkMarketing"
-                name="checkMarketing"
-                :value="true"
-                class="w-4 h-4"
-                v-model="consensoMarketing"
-              />
-              <label for="checkMarketing" class="text-black text-sm ml-2"
-                >Acconsento</label
-              >
+              <input type="radio" id="checkMarketing" name="checkMarketing" :value="true" class="w-4 h-4"
+                v-model="consensoMarketing" />
+              <label for="checkMarketing" class="text-black text-sm ml-2">Acconsento</label>
             </div>
             <div class="flex flex-row items-center ml-4">
-              <input
-                type="radio"
-                id="checkMarketing"
-                name="checkMarketing"
-                :value="false"
-                class="w-4 h-4"
-              />
-              <label for="checkMarketing" class="text-black text-sm ml-2"
-                >Non acconsento</label
-              >
+              <input type="radio" id="checkMarketing" name="checkMarketing" :value="false" class="w-4 h-4" />
+              <label for="checkMarketing" class="text-black text-sm ml-2">Non acconsento</label>
             </div>
           </div>
         </div>
@@ -958,37 +694,24 @@
         <!-- Recaptcha -->
 
         <!-- Alert -->
-        <div
-          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-8 mx-8"
-          role="alert"
-          v-show="showError"
-        >
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-8 mx-8" role="alert"
+          v-show="showError">
           <strong class="font-bold">Attenzione!</strong>
           <span class="block sm:inline">{{ errorMsg }}</span>
-          <span
-            class="absolute top-0 bottom-0 right-0 px-4 py-3"
-            @click="showError = false"
-          >
-            <svg
-              class="fill-current h-6 w-6 text-red-500"
-              role="button"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
+          <span class="absolute top-0 bottom-0 right-0 px-4 py-3" @click="showError = false">
+            <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20">
               <title>Close</title>
               <path
-                d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
-              />
+                d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
             </svg>
           </span>
         </div>
 
         <!-- Button -->
         <!-- onclick="window.location.href='/landing/invioCorretto';"   -->
-        <div
-          @click="inviaBTN()"
-          class="text-redSecondary cursor-pointer text-3xl bg-white text-center font-bold rounded-xl py-5 w-9/12 mt-12 mb-16 relative left-1/2 transform -translate-x-1/2"
-        >
+        <div @click="inviaBTN()"
+          class="text-redSecondary cursor-pointer text-3xl bg-white text-center font-bold rounded-xl py-5 w-9/12 mt-12 mb-16 relative left-1/2 transform -translate-x-1/2">
           INVIA
         </div>
       </div>
@@ -996,57 +719,26 @@
       <!-- Sezione Contatti -->
       <div class="w-full bg-white mx-4 mb-4 text-center">
         <!--Posizione -->
-        <img
-          class="mx-auto mt-8 w-8 h-8"
-          src="~/assets/img/landing/position.svg"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
-        <a
-          class="text-black text-xl text-center font-semibold mt-3"
-          href="https://goo.gl/maps/vThDdXbFEzEKLxC4A"
-          target="_blank"
-          >Viale Gabriele D’Annunzio, 3, Vasto</a
-        >
+        <img class="mx-auto mt-8 w-8 h-8" src="~/assets/img/landing/position.svg" alt="Monica Centri" width="100%"
+          height="100%" />
+        <a class="text-black text-xl text-center font-semibold mt-3" href="https://goo.gl/maps/vThDdXbFEzEKLxC4A"
+          target="_blank">Viale Gabriele D’Annunzio, 3, Vasto</a>
         <br />
-        <a
-          class="text-black text-xl text-center font-semibold mt-3"
-          href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"
-          target="_blank"
-          >Viale Mattia e Mangiocco, 1, Lentella</a
-        >
+        <a class="text-black text-xl text-center font-semibold mt-3" href="https://goo.gl/maps/8hFu63hQ2fTvaZbe9"
+          target="_blank">Viale Mattia e Mangiocco, 1, Lentella</a>
         <!-- Email -->
-        <img
-          class="mx-auto mt-8 w-8 h-8"
-          src="~/assets/img/landing/email.svg"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
-        <a class="text-black text-xl text-center font-semibold mt-3"
-          >infomonicacentri@gmail.com</a
-        >
+        <img class="mx-auto mt-8 w-8 h-8" src="~/assets/img/landing/email.svg" alt="Monica Centri" width="100%"
+          height="100%" />
+        <a class="text-black text-xl text-center font-semibold mt-3">infomonicacentri@gmail.com</a>
         <!-- Numero -->
-        <img
-          class="mx-auto mt-8 w-8 h-8"
-          src="~/assets/img/landing/phone.svg"
-          alt="Monica Centri"
-          width="100%"
-          height="100%"
-        />
-        <a
-          class="text-black text-xl text-center font-semibold mt-3"
-          href="tel:+393920748016"
-          >3920748016</a
-        >
+        <img class="mx-auto mt-8 w-8 h-8" src="~/assets/img/landing/phone.svg" alt="Monica Centri" width="100%"
+          height="100%" />
+        <a class="text-black text-xl text-center font-semibold mt-3" href="tel:+393920748016">3920748016</a>
       </div>
 
       <!-- Footer -->
       <div class="bg-black text-white text-center mt-4 pt-8 pb-8 w-full">
-        <a class="text-lg text-center font-semibold"
-          >Privacy and cookie policy</a
-        >
+        <a class="text-lg text-center font-semibold">Privacy and cookie policy</a>
         <br />
         <a class="text-2xl text-center font-semibold">WWW.MONICACENTRI.COM</a>
       </div>
@@ -1072,8 +764,8 @@ export default {
       showError: false,
     };
   }, //data
-  mounted() {}, //mounted
-  created() {}, //created
+  mounted() { }, //mounted
+  created() { }, //created
   computed: {
     responsive() {
       switch (this.$mq) {
@@ -1103,7 +795,17 @@ export default {
         console.log("Error: " + err);
       }
     },
-
+    goToForm() {
+      console.log("Hei Form GO")
+      const scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
+      const elem = document.getElementById("formPrenotazione");
+      this.$anime({
+        targets: scrollElement,
+        scrollTop: 15700,
+        duration: 500,
+        easing: 'easeInOutQuad'
+      });
+    },
     async inviaBTN() {
       if (this.controlloForm()) {
         const ip = await this.$axios

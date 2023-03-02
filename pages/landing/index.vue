@@ -19,7 +19,17 @@
       <img class="max-w-xs w-1/2 mt-11" src="~/assets/img/landing/illustration1.svg" alt="Monica Centri" width="100%"
         height="100%" />
       <!-- Title Illustration rivoluziona il tuo corpo -->
-      <img class="mt-14" src="~/assets/img/landing/illustration2.svg" alt="Monica Centri" width="100%" height="100%" />
+      <!-- <img class="mt-14" src="~/assets/img/landing/illustration2.svg" alt="Monica Centri" width="100%" height="100%" /> -->
+
+
+
+      <!-- Title Illustration rivoluziona il tuo corpo -->
+      <div class="flex flex-row items-center justify-start w-full text-center">
+        <div class="h-2 md:h-4 md:rounded-r-md bg-gray-800 rounded-r-sm w-full"></div>
+        <div class="text-redSecondary text-2xl md:text-5xl font-bold mx-2 justify-self-end 	titleR " >
+          Rivoluziona il tuo corpo<br>senza bisturi </div>
+        <div class="h-2 md:h-4 md:rounded-l-md bg-gray-800 rounded-l-sm w-full"></div>
+      </div>
 
       <!-- 
 <div style="width: 100%; height: 20px; border-bottom: 5px solid black; text-align: center" class="h-20">
@@ -41,14 +51,14 @@
         <span class="text-redSecondary">benessere</span> psicofisico a 360
         gradi. <br />
         <br />
-        Sarai sostenutə da
+        Sarai sostenut<div class="inline-block" style="transform: rotate(180deg);">e</div> da
         <span class="text-redSecondary">professionisti</span> dei vari <br />
         campi che ti porteranno alla migliore versione <br />
-        di té stessə <br />
+        di tè stess<div class="inline-block" style="transform: rotate(180deg);">e</div><br />
       </div>
 
       <!-- Title Illustration Body Reset -->
-      <img class="max-w-md w-4/5 mt-16" src="~/assets/img/landing/photo2.png" alt="Monica Centri" width="100%"
+      <img class="max-w-md w-4/5 mt-16" src="~/assets/img/landing/illustration6.svg" alt="Monica Centri" width="100%"
         height="100%" />
 
       <!-- Cambia te stesso -->
@@ -57,7 +67,7 @@
         <div
           class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2">
           Cambia te <br />
-          stessə
+          stess<div class="inline-block" style="transform: rotate(180deg);">e</div>
         </div>
         <div
           class="text-white text-xl sm:text-4xl font-medium text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
@@ -890,5 +900,16 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ .titleR {
+    min-width: 300px;
+  }
+
+@media screen and (min-width: 768px) {
+  .titleR {
+    min-width: 620px;
+  }
+}
+
+</style>
 

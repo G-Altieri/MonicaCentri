@@ -24,7 +24,7 @@
 
 
       <!-- Title Illustration rivoluziona il tuo corpo -->
-      <div class="flex flex-row items-center justify-start w-full text-center">
+      <div class="flex flex-row items-center justify-start w-full text-center mt-14">
         <div class="h-2 md:h-4 md:rounded-r-md bg-gray-800 rounded-r-sm w-full"></div>
         <div class="text-redSecondary text-2xl md:text-5xl font-bold mx-2 justify-self-end 	titleR " >
           Rivoluziona il tuo corpo<br>senza bisturi </div>
@@ -39,7 +39,7 @@
 </div> -->
 
       <!-- Content rivoluziona il tuo corpo -->
-      <div class="text-center font-bold text-md sm:text-lg">
+      <div class="text-center font-bold text-md sm:text-lg mt-3">
         Il protocollo <span class="text-redSecondary">Body Reset</span> é un
         percorso ideato,<br />
         studiato e strutturato da <br />

@@ -39,8 +39,8 @@
 </div> -->
 
       <!-- Content rivoluziona il tuo corpo -->
-      <div class="text-center font-bold text-md sm:text-lg mt-3">
-        Il protocollo <span class="text-redSecondary">Body Reset</span> é un
+      <div class="text-center font-bold text-md sm:text-lg mt-6">
+        Il protocollo <span class="text-redSecondary">Body Reset</span> è un
         percorso ideato,<br />
         studiato e strutturato da <br />
         Monica Centri <br /><br />
@@ -58,7 +58,7 @@
       </div>
 
       <!-- Title Illustration Body Reset -->
-      <img class="max-w-md w-4/5 mt-16" src="~/assets/img/landing/illustration6.svg" alt="Monica Centri" width="100%"
+      <img class="max-w-md w-4/5 mt-16" src="~/assets/img/landing/illustration6_2.svg" alt="Monica Centri" width="100%"
         height="100%" />
 
       <!-- Cambia te stesso -->
@@ -839,7 +839,7 @@ export default {
           })
           .catch((error) => {
             console.error("Oh Error");
-            this.errorMsg = "Qualcosa é andato storto, Riprovare";
+            this.errorMsg = "Qualcosa è andato storto, Riprovare";
             this.showError = true;
             console.error(error);
           });
@@ -903,11 +903,13 @@ export default {
 <style lang="scss" scoped>
  .titleR {
     min-width: 300px;
+    transform: translateY(17px);
   }
 
 @media screen and (min-width: 768px) {
   .titleR {
     min-width: 620px;
+    transform: translateY(26px);
   }
 }
 

@@ -39,7 +39,7 @@
 </div> -->
 
       <!-- Content rivoluziona il tuo corpo -->
-      <div class="text-center font-bold text-md sm:text-lg mt-6">
+      <div class="text-center font-bold text-md sm:text-lg mt-6 lg:mt-10">
         Il protocollo <span class="text-redSecondary">Body Reset</span> è un
         percorso ideato,<br />
         studiato e strutturato da <br />
@@ -51,10 +51,10 @@
         <span class="text-redSecondary">benessere</span> psicofisico a 360
         gradi. <br />
         <br />
-        Sarai sostenut<div class="inline-block" style="transform: rotate(180deg);">e</div> da
+        Sarai sostenutə da
         <span class="text-redSecondary">professionisti</span> dei vari <br />
         campi che ti porteranno alla migliore versione <br />
-        di tè stess<div class="inline-block" style="transform: rotate(180deg);">e</div><br />
+        di tè stessə<br />
       </div>
 
       <!-- Title Illustration Body Reset -->
@@ -67,7 +67,7 @@
         <div
           class="text-white text-3xl sm:text-5xl font-bold text-center absolute top-4 left-1/2 transform -translate-x-1/2">
           Cambia te <br />
-          stess<div class="inline-block" style="transform: rotate(180deg);">e</div>
+          stessə
         </div>
         <div
           class="text-white text-xl sm:text-4xl font-medium text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">

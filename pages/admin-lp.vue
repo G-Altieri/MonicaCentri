@@ -360,7 +360,7 @@ export default {
         sesso: true,
         marketing: true,
       },
-      tableOrder: "az",
+      tableOrder: "cre",
       showOrder: false,
     };
   }, //data
